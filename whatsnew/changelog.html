@@ -1000,6 +1000,10 @@ displayed.</p>
 <section id="library">
 <h3>Library<a class="headerlink" href="#library" title="本標題的永久連結">¶</a></h3>
 <ul class="simple">
+<li><p><a class="reference external" href="https://bugs.python.org/issue35474">bpo-35474</a>: Calling <a class="reference internal" href="../library/mimetypes.html#mimetypes.guess_all_extensions" title="mimetypes.guess_all_extensions"><code class="xref py py-func docutils literal notranslate"><span class="pre">mimetypes.guess_all_extensions()</span></code></a> with
+<code class="docutils literal notranslate"><span class="pre">strict=False</span></code> no longer affects the result of the following call with
+<code class="docutils literal notranslate"><span class="pre">strict=True</span></code>. Also, mutating the returned list no longer affects the
+global state.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue45097">bpo-45097</a>: Remove deprecation warnings about the loop argument in
 <a class="reference internal" href="../library/asyncio.html#module-asyncio" title="asyncio: Asynchronous I/O."><code class="xref py py-mod docutils literal notranslate"><span class="pre">asyncio</span></code></a> incorrectly emitted in cases when the user does not pass
 the loop argument.</p></li>
@@ -1013,6 +1017,8 @@ iterator.</p></li>
 <section id="tests">
 <h3>Tests<a class="headerlink" href="#tests" title="本標題的永久連結">¶</a></h3>
 <ul class="simple">
+<li><p><a class="reference external" href="https://bugs.python.org/issue45156">bpo-45156</a>: Fixes infinite loop on <a class="reference internal" href="../library/unittest.mock.html#unittest.mock.seal" title="unittest.mock.seal"><code class="xref py py-func docutils literal notranslate"><span class="pre">unittest.mock.seal()</span></code></a> of mocks
+created by <code class="xref py py-func docutils literal notranslate"><span class="pre">create_autospec()</span></code>.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue45042">bpo-45042</a>: Fixes that test classes decorated with
 <code class="docutils literal notranslate"><span class="pre">&#64;hashlib_helper.requires_hashdigest</span></code> were skipped all the time.</p></li>
 </ul>
@@ -22492,7 +22498,7 @@ Kilburn.</p></li>
 <br />
     <br />
 
-    最後更新於 9月 13, 2021。
+    最後更新於 9月 15, 2021。
     <a href="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
 
