@@ -1144,7 +1144,8 @@ already finished.</p>
 <p>This number is not equivalent to the number of CPUs the current process can
 use.  The number of usable CPUs can be obtained with
 <code class="docutils literal notranslate"><span class="pre">len(os.sched_getaffinity(0))</span></code></p>
-<p>May raise <a class="reference internal" href="exceptions.html#NotImplementedError" title="NotImplementedError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">NotImplementedError</span></code></a>.</p>
+<p>When the number of CPUs cannot be determined a <a class="reference internal" href="exceptions.html#NotImplementedError" title="NotImplementedError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">NotImplementedError</span></code></a>
+is raised.</p>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <p><a class="reference internal" href="os.html#os.cpu_count" title="os.cpu_count"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.cpu_count()</span></code></a></p>
@@ -3604,7 +3605,7 @@ processes and collect the results:</p>
 <br />
     <br />
 
-    最後更新於 9月 17, 2021。
+    最後更新於 9月 23, 2021。
     <a href="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
 
