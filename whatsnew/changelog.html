@@ -1010,12 +1010,26 @@ displayed.</p>
 <section id="library">
 <h3>Library<a class="headerlink" href="#library" title="本標題的永久連結">¶</a></h3>
 <ul class="simple">
+<li><p><a class="reference external" href="https://bugs.python.org/issue45467">bpo-45467</a>: Fix incremental decoder and stream reader in the
+&quot;raw-unicode-escape&quot; codec. Previously they failed if the escape sequence
+was split.</p></li>
+<li><p><a class="reference external" href="https://bugs.python.org/issue45461">bpo-45461</a>: Fix incremental decoder and stream reader in the
+&quot;unicode-escape&quot; codec. Previously they failed if the escape sequence was
+split.</p></li>
+<li><p><a class="reference external" href="https://bugs.python.org/issue45239">bpo-45239</a>: Fixed <a class="reference internal" href="../library/email.utils.html#email.utils.parsedate_tz" title="email.utils.parsedate_tz"><code class="xref py py-func docutils literal notranslate"><span class="pre">email.utils.parsedate_tz()</span></code></a> crashing with
+<a class="reference internal" href="../library/exceptions.html#UnboundLocalError" title="UnboundLocalError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">UnboundLocalError</span></code></a> on certain invalid input instead of returning
+<code class="docutils literal notranslate"><span class="pre">None</span></code>. Patch by Ben Hoyt.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue45262">bpo-45262</a>: Prevent use-after-free in asyncio. Make sure the cached running
 loop holder gets cleared on dealloc to prevent use-after-free in
 get_running_loop</p></li>
+<li><p><a class="reference external" href="https://bugs.python.org/issue45386">bpo-45386</a>: Make <a class="reference internal" href="../library/xmlrpc.client.html#module-xmlrpc.client" title="xmlrpc.client: XML-RPC client access."><code class="xref py py-mod docutils literal notranslate"><span class="pre">xmlrpc.client</span></code></a> more robust to C runtimes where the
+underlying C <code class="docutils literal notranslate"><span class="pre">strftime</span></code> function results in a <code class="docutils literal notranslate"><span class="pre">ValueError</span></code> when
+testing for year formatting options.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue45371">bpo-45371</a>: Fix clang rpath issue in <a class="reference internal" href="../library/distutils.html#module-distutils" title="distutils: Support for building and installing Python modules into an existing Python installation."><code class="xref py py-mod docutils literal notranslate"><span class="pre">distutils</span></code></a>. The UnixCCompiler
 now uses correct clang option to add a runtime library directory (rpath)
 to a shared library.</p></li>
+<li><p><a class="reference external" href="https://bugs.python.org/issue20028">bpo-20028</a>: Improve error message of <a class="reference internal" href="../library/csv.html#csv.Dialect" title="csv.Dialect"><code class="xref py py-class docutils literal notranslate"><span class="pre">csv.Dialect</span></code></a> when
+initializing. Patch by Vajrasky Kok and Dong-hee Na.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue45343">bpo-45343</a>: Update bundled pip to 21.2.4 and setuptools to 58.1.0</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue41710">bpo-41710</a>: On Unix, if the <code class="docutils literal notranslate"><span class="pre">sem_clockwait()</span></code> function is available in
 the C library (glibc 2.30 and newer), the <a class="reference internal" href="../library/threading.html#threading.Lock.acquire" title="threading.Lock.acquire"><code class="xref py py-meth docutils literal notranslate"><span class="pre">threading.Lock.acquire()</span></code></a>
@@ -1055,6 +1069,9 @@ the loop argument.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue45081">bpo-45081</a>: Fix issue when dataclasses that inherit from
 <code class="docutils literal notranslate"><span class="pre">typing.Protocol</span></code> subclasses have wrong <code class="docutils literal notranslate"><span class="pre">__init__</span></code>. Patch provided by
 Yurii Karabas.</p></li>
+<li><p><a class="reference external" href="https://bugs.python.org/issue24444">bpo-24444</a>: Fixed an error raised in <a class="reference internal" href="../library/argparse.html#module-argparse" title="argparse: Command-line option and argument parsing library."><code class="xref py py-mod docutils literal notranslate"><span class="pre">argparse</span></code></a> help display when help
+for an option is set to 1+ blank spaces or when <em>choices</em> arg is an empty
+container.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue45021">bpo-45021</a>: Fix a potential deadlock at shutdown of forked children when
 using <a class="reference internal" href="../library/concurrent.futures.html#module-concurrent.futures" title="concurrent.futures: Execute computations concurrently using threads or processes."><code class="xref py py-mod docutils literal notranslate"><span class="pre">concurrent.futures</span></code></a> module</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue45030">bpo-45030</a>: Fix integer overflow in pickling and copying the range
@@ -1070,6 +1087,8 @@ exception is in flight.</p></li>
 <section id="documentation">
 <h3>Documentation<a class="headerlink" href="#documentation" title="本標題的永久連結">¶</a></h3>
 <ul class="simple">
+<li><p><a class="reference external" href="https://bugs.python.org/issue20692">bpo-20692</a>: Add Programming FAQ entry explaining that int literal attribute
+access requires either a space after or parentheses around the literal.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue45216">bpo-45216</a>: Remove extra documentation listing methods in <code class="docutils literal notranslate"><span class="pre">difflib</span></code>. It
 was rendering twice in pydoc and was outdated in some places.</p></li>
 </ul>
@@ -1095,6 +1114,8 @@ created by <code class="xref py py-func docutils literal notranslate"><span clas
 <section id="build">
 <h3>Build<a class="headerlink" href="#build" title="本標題的永久連結">¶</a></h3>
 <ul class="simple">
+<li><p><a class="reference external" href="https://bugs.python.org/issue45405">bpo-45405</a>: Prevent <code class="docutils literal notranslate"><span class="pre">internal</span> <span class="pre">configure</span> <span class="pre">error</span></code> when running <code class="docutils literal notranslate"><span class="pre">configure</span></code>
+with recent versions of non-Apple clang.  Patch by David Bohman.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue45220">bpo-45220</a>: Avoid building with the Windows 11 SDK previews automatically.
 This may be overridden by setting the <code class="docutils literal notranslate"><span class="pre">DefaultWindowsSDKVersion</span></code>
 environment variable before building.</p></li>
@@ -22605,7 +22626,7 @@ Kilburn.</p></li>
 <br />
     <br />
 
-    最後更新於 10月 08, 2021。
+    最後更新於 10月 17, 2021。
     <a href="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
 
