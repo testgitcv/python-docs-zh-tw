@@ -994,6 +994,7 @@ arbitrary file descriptors. In particular, this affects <a class="reference inte
 <a class="reference internal" href="../library/os.html#os.device_encoding" title="os.device_encoding"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.device_encoding()</span></code></a> and <a class="reference internal" href="../library/io.html#io.TextIOWrapper" title="io.TextIOWrapper"><code class="xref py py-class docutils literal notranslate"><span class="pre">io.TextIOWrapper</span></code></a>. By extension,
 <a class="reference internal" href="../library/io.html#io.open" title="io.open"><code class="xref py py-func docutils literal notranslate"><span class="pre">io.open()</span></code></a> in text mode is also affected. This change solves a
 deadlock in <a class="reference internal" href="../library/os.html#os.isatty" title="os.isatty"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.isatty()</span></code></a>. Patch by Vincent Michel in <a class="reference external" href="https://bugs.python.org/issue44219">bpo-44219</a>.</p></li>
+<li><p><a class="reference external" href="https://bugs.python.org/issue44959">bpo-44959</a>: Added fallback to extension modules with '.sl' suffix on HP-UX</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue44050">bpo-44050</a>: Extensions that indicate they use global state (by setting
 <code class="docutils literal notranslate"><span class="pre">m_size</span></code> to -1) can again be used in multiple interpreters. This reverts
 to behavior of Python 3.8.</p></li>
@@ -1067,6 +1068,8 @@ provided namespace when using a subparser with defaults.</p></li>
 implementing the <code class="docutils literal notranslate"><span class="pre">os.PathLike</span></code> protocol.</p>
 <p>Patch by Kyungmin Lee.</p>
 </li>
+<li><p><a class="reference external" href="https://bugs.python.org/issue45160">bpo-45160</a>: When tracing a tkinter variable used by a ttk OptionMenu,
+callbacks are no longer made twice.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue35474">bpo-35474</a>: Calling <a class="reference internal" href="../library/mimetypes.html#mimetypes.guess_all_extensions" title="mimetypes.guess_all_extensions"><code class="xref py py-func docutils literal notranslate"><span class="pre">mimetypes.guess_all_extensions()</span></code></a> with
 <code class="docutils literal notranslate"><span class="pre">strict=False</span></code> no longer affects the result of the following call with
 <code class="docutils literal notranslate"><span class="pre">strict=True</span></code>. Also, mutating the returned list no longer affects the
@@ -1110,6 +1113,9 @@ was rendering twice in pydoc and was outdated in some places.</p></li>
 <section id="tests">
 <h3>Tests<a class="headerlink" href="#tests" title="本標題的永久連結">¶</a></h3>
 <ul class="simple">
+<li><p><a class="reference external" href="https://bugs.python.org/issue43592">bpo-43592</a>: <code class="xref py py-mod docutils literal notranslate"><span class="pre">test.libregrtest</span></code> now raises the soft resource limit for
+the maximum number of file descriptors when the default is too low for our
+test suite as was often the case on macOS.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue40173">bpo-40173</a>: Fix <code class="xref py py-func docutils literal notranslate"><span class="pre">test.support.import_helper.import_fresh_module()</span></code>.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue45280">bpo-45280</a>: Add a test case for empty <a class="reference internal" href="../library/typing.html#typing.NamedTuple" title="typing.NamedTuple"><code class="xref py py-class docutils literal notranslate"><span class="pre">typing.NamedTuple</span></code></a>.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue45269">bpo-45269</a>: Cover case when invalid <code class="docutils literal notranslate"><span class="pre">markers</span></code> type is supplied to
@@ -1128,6 +1134,8 @@ created by <code class="xref py py-func docutils literal notranslate"><span clas
 <section id="build">
 <h3>Build<a class="headerlink" href="#build" title="本標題的永久連結">¶</a></h3>
 <ul class="simple">
+<li><p><a class="reference external" href="https://bugs.python.org/issue45571">bpo-45571</a>: <code class="docutils literal notranslate"><span class="pre">Modules/Setup</span></code> now use <code class="docutils literal notranslate"><span class="pre">PY_CFLAGS_NODIST</span></code> instead of
+<code class="docutils literal notranslate"><span class="pre">PY_CFLAGS</span></code> to compile shared modules.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue45532">bpo-45532</a>: Update <a class="reference internal" href="../library/sys.html#sys.version" title="sys.version"><code class="xref py py-data docutils literal notranslate"><span class="pre">sys.version</span></code></a> to use <code class="docutils literal notranslate"><span class="pre">main</span></code> as fallback
 information. Patch by Jeong YunWon.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue45405">bpo-45405</a>: Prevent <code class="docutils literal notranslate"><span class="pre">internal</span> <span class="pre">configure</span> <span class="pre">error</span></code> when running <code class="docutils literal notranslate"><span class="pre">configure</span></code>
@@ -22642,7 +22650,7 @@ Kilburn.</p></li>
 <br />
     <br />
 
-    最後更新於 10月 21, 2021。
+    最後更新於 10月 23, 2021。
     <a href="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
 
