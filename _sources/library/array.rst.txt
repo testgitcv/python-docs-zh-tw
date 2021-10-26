@@ -177,15 +177,11 @@ The following data items and methods are also supported:
    array of some other type.
 
 
-.. method:: array.index(x[, start[, stop]])
+.. method:: array.index(x)
 
    Return the smallest *i* such that *i* is the index of the first occurrence of
-   *x* in the array.  The optional arguments *start* and *stop* can be
-   specified to search for *x* within a subsection of the array.  Raise
-   :exc:`ValueError` if *x* is not found.
+   *x* in the array.
 
-   .. versionchanged:: 3.10
-      Added optional *start* and *stop* parameters.
 
 .. method:: array.insert(i, x)
 

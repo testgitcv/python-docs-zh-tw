@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Subprocesses &#8212; Python 3.10.0 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subprocesses &#8212; Python 3.9.7 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2021.11.1" />
@@ -20,7 +20,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.0 說明文件 中搜尋"
+          title="在 Python 3.9.7 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -30,6 +30,8 @@
     <link rel="prev" title="Synchronization Primitives" href="asyncio-sync.html" />
     <link rel="canonical" href="https://docs.python.org/3/library/asyncio-subprocess.html" />
     
+      
+      <script type="text/javascript" src="../_static/switchers.js"></script>
       
     
 
@@ -95,7 +97,7 @@
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/library/asyncio-subprocess.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/library/asyncio-subprocess.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -131,8 +133,10 @@
           <li>
               
           </li>
-    <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.0 Documentation</a> &#187;
+    <li>
+      <span class="language_switcher_placeholder">zh_TW</span>
+      <span class="version_switcher_placeholder">3.9.7</span>
+      <a href="../index.html">說明文件 </a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -163,8 +167,8 @@
             
   <section id="subprocesses">
 <span id="asyncio-subprocess"></span><h1>Subprocesses<a class="headerlink" href="#subprocesses" title="本標題的永久連結">¶</a></h1>
-<p><strong>Source code:</strong> <a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/asyncio/subprocess.py">Lib/asyncio/subprocess.py</a>,
-<a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/asyncio/base_subprocess.py">Lib/asyncio/base_subprocess.py</a></p>
+<p><strong>Source code:</strong> <a class="reference external" href="https://github.com/python/cpython/tree/3.9/Lib/asyncio/subprocess.py">Lib/asyncio/subprocess.py</a>,
+<a class="reference external" href="https://github.com/python/cpython/tree/3.9/Lib/asyncio/base_subprocess.py">Lib/asyncio/base_subprocess.py</a></p>
 <hr class="docutils" />
 <p>This section describes high-level async/await asyncio APIs to
 create and manage subprocesses.</p>
@@ -212,7 +216,7 @@ to modify the above example to run several commands simultaneously:</p>
 <h2>Creating Subprocesses<a class="headerlink" href="#creating-subprocesses" title="本標題的永久連結">¶</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="asyncio.create_subprocess_exec">
-<em class="property"><span class="pre">coroutine</span> </em><span class="sig-prename descclassname"><span class="pre">asyncio.</span></span><span class="sig-name descname"><span class="pre">create_subprocess_exec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">program</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stdin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stdout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stderr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.create_subprocess_exec" title="本定義的永久連結">¶</a></dt>
+<em class="property"><span class="pre">coroutine</span> </em><span class="sig-prename descclassname"><span class="pre">asyncio.</span></span><span class="sig-name descname"><span class="pre">create_subprocess_exec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">program</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stdin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stdout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stderr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.create_subprocess_exec" title="本定義的永久連結">¶</a></dt>
 <dd><p>Create a subprocess.</p>
 <p>The <em>limit</em> argument sets the buffer limit for <a class="reference internal" href="asyncio-stream.html#asyncio.StreamReader" title="asyncio.StreamReader"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamReader</span></code></a>
 wrappers for <code class="xref py py-attr docutils literal notranslate"><span class="pre">Process.stdout</span></code> and <code class="xref py py-attr docutils literal notranslate"><span class="pre">Process.stderr</span></code>
@@ -221,16 +225,13 @@ wrappers for <code class="xref py py-attr docutils literal notranslate"><span cl
 <p>See the documentation of <a class="reference internal" href="asyncio-eventloop.html#asyncio.loop.subprocess_exec" title="asyncio.loop.subprocess_exec"><code class="xref py py-meth docutils literal notranslate"><span class="pre">loop.subprocess_exec()</span></code></a> for other
 parameters.</p>
 <div class="deprecated-removed">
-<p><span class="versionmodified">Deprecated since version 3.8, removed in version 3.10: </span>The <code class="docutils literal notranslate"><span class="pre">loop</span></code> parameter.  This function has been implicitly getting the
-current running loop since 3.7.  See
-<a class="reference internal" href="../whatsnew/3.10.html#whatsnew310-removed"><span class="std std-ref">What's New in 3.10's Removed section</span></a>
-for more information.</p>
+<p><span class="versionmodified">Deprecated since version 3.8, will be removed in version 3.10: </span>The <em>loop</em> parameter.</p>
 </div>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="asyncio.create_subprocess_shell">
-<em class="property"><span class="pre">coroutine</span> </em><span class="sig-prename descclassname"><span class="pre">asyncio.</span></span><span class="sig-name descname"><span class="pre">create_subprocess_shell</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cmd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stdin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stdout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stderr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.create_subprocess_shell" title="本定義的永久連結">¶</a></dt>
+<em class="property"><span class="pre">coroutine</span> </em><span class="sig-prename descclassname"><span class="pre">asyncio.</span></span><span class="sig-name descname"><span class="pre">create_subprocess_shell</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cmd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stdin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stdout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stderr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.create_subprocess_shell" title="本定義的永久連結">¶</a></dt>
 <dd><p>Run the <em>cmd</em> shell command.</p>
 <p>The <em>limit</em> argument sets the buffer limit for <a class="reference internal" href="asyncio-stream.html#asyncio.StreamReader" title="asyncio.StreamReader"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamReader</span></code></a>
 wrappers for <code class="xref py py-attr docutils literal notranslate"><span class="pre">Process.stdout</span></code> and <code class="xref py py-attr docutils literal notranslate"><span class="pre">Process.stderr</span></code>
@@ -247,10 +248,7 @@ escape whitespace and special shell characters in strings that are going
 to be used to construct shell commands.</p>
 </div>
 <div class="deprecated-removed">
-<p><span class="versionmodified">Deprecated since version 3.8, removed in version 3.10: </span>The <code class="docutils literal notranslate"><span class="pre">loop</span></code> parameter.  This function has been implicitly getting the
-current running loop since 3.7.  See
-<a class="reference internal" href="../whatsnew/3.10.html#whatsnew310-removed"><span class="std std-ref">What's New in 3.10's Removed section</span></a>
-for more information.</p>
+<p><span class="versionmodified">Deprecated since version 3.8, will be removed in version 3.10: </span>The <em>loop</em> parameter.</p>
 </div>
 </dd></dl>
 
@@ -540,7 +538,7 @@ written using low-level APIs.</p>
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/library/asyncio-subprocess.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/library/asyncio-subprocess.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -575,8 +573,10 @@ written using low-level APIs.</p>
           <li>
               
           </li>
-    <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.0 Documentation</a> &#187;
+    <li>
+      <span class="language_switcher_placeholder">zh_TW</span>
+      <span class="version_switcher_placeholder">3.9.7</span>
+      <a href="../index.html">說明文件 </a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
