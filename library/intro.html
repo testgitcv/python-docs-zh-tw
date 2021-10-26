@@ -164,14 +164,13 @@
 <p>Python 函式庫也囊括了內建函數與例外處理——這些物件都可以不用透過 <a class="reference internal" href="../reference/simple_stmts.html#import"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">import</span></code></a> 陳述式來引入 Python 程式中就能使用。函式庫中有部份是被 Python 核心所定義的，但在這裡僅解釋最核心的語意部分。</p>
 <p>整個函式庫中包含了許多模組，有許多方法可以從函式庫中取用這些模組。有些模組是以 C 語言撰寫並建置於 Python 編譯器之中，其他的是由 Python 撰寫並以源碼的方式 (source form) 引入。有些模組提供的功能是專屬於 Python 的，像是把 stack trace 印出來；有些則是針對特定作業系統，去試著存取特定硬體；還有些提供對特定應用的功能與操作介面，像是 World Wide Web。模組的使用情況會因機器與 Python 的版本而不同，部分模組是開放所有版本以及 Port 的 Python 來使用的，但有些會因系統支援或需求在某些版本或系統下無法使用，甚至有些僅限在特定的設定環境下才能使用。</p>
 <p>這個手冊會「深入淺出」地介紹 Python 函式庫。它會先介紹一些內建函式、資料型態、和一些例外處理，再來一章章的主題式介紹相關模組。</p>
-<p>這代表如果你從這個手冊的最開始讀起，並在感到無聊時跳到下一個章節，你仍然可以得到一個對 Python 函式庫所支援的模組與其合理應用的概觀。當然，你<em>沒有必要</em>像是在讀一本小說一樣讀這本手冊——你可以快速瀏覽目錄（在手冊的最前頭）、或是你可以利用最後面的索引來查詢特定的函式或模組。最後，如果你享受閱讀一些隨機的主題，你可以選擇一個隨機的數字並開始閱讀（見 <a class="reference internal" href="random.html#module-random" title="random: Generate pseudo-random numbers with various common distributions."><code class="xref py py-mod docutils literal notranslate"><span class="pre">random</span></code></a> 模組) 。不管你想要以什麼順序來閱讀這個手冊，<a class="reference internal" href="functions.html#built-in-funcs"><span class="std std-ref">內建函式</span></a> 會是一個很好的入門，因為手冊中其他章節都預設你已經對這個章節有一定的熟悉程度。</p>
+<p>這代表如果你從這個手冊的最開始讀起，並在感到無聊時跳到下一個章節，你仍然可以得到一個對 Python 函式庫所支援的模組與其合理應用的概觀。當然，你<em>沒有必要</em>像是在讀一本小說一樣讀這本手冊——你可以快速瀏覽目錄（在手冊的最前頭）、或是你可以利用最後面的索引來查詢特定的函式或模組。最後，如果你享受閱讀一些隨機的主題，你可以選擇一個隨機的數字並開始閱讀（見 <a class="reference internal" href="random.html#module-random" title="random: Generate pseudo-random numbers with various common distributions."><code class="xref py py-mod docutils literal notranslate"><span class="pre">random</span></code></a> 模組) 。不管你想要以什麼順序來閱讀這個手冊，<a class="reference internal" href="functions.html#built-in-funcs"><span class="std std-ref">內建函式</span></a>會是一個很好的入門，因為手冊中其他章節都預設你已經對這個章節有一定的熟悉程度。</p>
 <p>讓我們開始吧！</p>
 <section id="notes-on-availability">
 <span id="availability"></span><h2>可用性之註釋<a class="headerlink" href="#notes-on-availability" title="本標題的永久連結">¶</a></h2>
 <ul class="simple">
 <li><p>如果出現「適用：Unix」註釋，則代表該函數普遍存在於 Unix 系統中，但這並不保證其存在於某特定作業系統。</p></li>
-<li><p>If not separately noted, all functions that claim &quot;Availability: Unix&quot; are
-supported on macOS, which builds on a Unix core.</p></li>
+<li><p>如果沒有分別註釋的話，有標明「適用：Unix」註釋的所有函式也都於 macOS 上支援，因其建於 Unix 核心之上。</p></li>
 </ul>
 </section>
 </section>
