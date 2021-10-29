@@ -1035,6 +1035,8 @@ displayed.</p>
 <section id="library">
 <h3>Library<a class="headerlink" href="#library" title="本標題的永久連結">¶</a></h3>
 <ul>
+<li><p><a class="reference external" href="https://bugs.python.org/issue45438">bpo-45438</a>: Fix typing.Signature string representation for generic builtin
+types.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue45574">bpo-45574</a>: Fix warning about <code class="docutils literal notranslate"><span class="pre">print_escape</span></code> being unused.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue45557">bpo-45557</a>: pprint.pprint() now handles underscore_numbers correctly.
 Previously it was always setting it to False.</p></li>
@@ -1063,6 +1065,9 @@ Patch by Pablo Galindo</p></li>
 <a class="reference internal" href="../library/asyncio-sync.html#asyncio.Lock" title="asyncio.Lock"><code class="xref py py-class docutils literal notranslate"><span class="pre">asyncio.Lock</span></code></a> objects, which was a regression due to removal of
 explicit loop arguments. Patch by Joongi Kim.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue45419">bpo-45419</a>: Correct interfaces on DegenerateFiles.Path.</p></li>
+<li><p><a class="reference external" href="https://bugs.python.org/issue44904">bpo-44904</a>: Fix bug in the <a class="reference internal" href="../library/doctest.html#module-doctest" title="doctest: Test pieces of code within docstrings."><code class="xref py py-mod docutils literal notranslate"><span class="pre">doctest</span></code></a> module that caused it to fail if
+a docstring included an example with a <code class="docutils literal notranslate"><span class="pre">classmethod</span></code> <code class="docutils literal notranslate"><span class="pre">property</span></code>. Patch
+by Alex Waygood.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue45262">bpo-45262</a>: Prevent use-after-free in asyncio. Make sure the cached running
 loop holder gets cleared on dealloc to prevent use-after-free in
 get_running_loop</p></li>
@@ -1140,6 +1145,10 @@ exception is in flight.</p></li>
 <section id="documentation">
 <h3>Documentation<a class="headerlink" href="#documentation" title="本標題的永久連結">¶</a></h3>
 <ul class="simple">
+<li><p><a class="reference external" href="https://bugs.python.org/issue45655">bpo-45655</a>: Add a new &quot;relevant PEPs&quot; section to the top of the
+documentation for the <code class="docutils literal notranslate"><span class="pre">typing</span></code> module. Patch by Alex Waygood.</p></li>
+<li><p><a class="reference external" href="https://bugs.python.org/issue45604">bpo-45604</a>: Add <code class="docutils literal notranslate"><span class="pre">level</span></code> argument to <code class="docutils literal notranslate"><span class="pre">multiprocessing.log_to_stderr</span></code>
+function docs.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue45464">bpo-45464</a>: Mention in the documentation of <a class="reference internal" href="../library/exceptions.html#bltin-exceptions"><span class="std std-ref">Built-in Exceptions</span></a> that inheriting from multiple exception types in a
 single subclass is not recommended due to possible memory layout
 incompatibility.</p></li>
@@ -1158,6 +1167,7 @@ Hettinger.</p></li>
 <section id="tests">
 <h3>Tests<a class="headerlink" href="#tests" title="本標題的永久連結">¶</a></h3>
 <ul class="simple">
+<li><p><a class="reference external" href="https://bugs.python.org/issue45577">bpo-45577</a>: Add subtests for all <code class="docutils literal notranslate"><span class="pre">pickle</span></code> protocols in <code class="docutils literal notranslate"><span class="pre">test_zoneinfo</span></code>.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue45566">bpo-45566</a>: Fix <code class="docutils literal notranslate"><span class="pre">test_frozen_pickle</span></code> in <code class="docutils literal notranslate"><span class="pre">test_dataclasses</span></code> to check all
 <code class="docutils literal notranslate"><span class="pre">pickle</span></code> versions.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue43592">bpo-43592</a>: <code class="xref py py-mod docutils literal notranslate"><span class="pre">test.libregrtest</span></code> now raises the soft resource limit for
@@ -1230,6 +1240,9 @@ is required.</p></li>
 <section id="macos">
 <h3>macOS<a class="headerlink" href="#macos" title="本標題的永久連結">¶</a></h3>
 <ul class="simple">
+<li><p><a class="reference external" href="https://bugs.python.org/issue44828">bpo-44828</a>: Avoid tkinter file dialog failure on macOS 12 Monterey when
+using the Tk 8.6.11 provided by python.org macOS installers. Patch by Marc
+Culler of the Tk project.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue34602">bpo-34602</a>: When building CPython on macOS with <code class="docutils literal notranslate"><span class="pre">./configure</span>
 <span class="pre">--with-undefined-behavior-sanitizer</span> <span class="pre">--with-pydebug</span></code>, the stack size is
 now quadrupled to allow for the entire test suite to pass.</p></li>
@@ -24794,7 +24807,7 @@ Kilburn.</p></li>
 <br />
     <br />
 
-    最後更新於 10月 27, 2021。
+    最後更新於 10月 29, 2021。
     <a href="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
 

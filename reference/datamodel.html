@@ -2209,8 +2209,8 @@ functions <a class="reference internal" href="../library/math.html#math.trunc" t
 Unless <em>ndigits</em> is passed to <code class="xref py py-meth docutils literal notranslate"><span class="pre">__round__()</span></code> all these methods should
 return the value of the object truncated to an <a class="reference internal" href="../library/numbers.html#numbers.Integral" title="numbers.Integral"><code class="xref py py-class docutils literal notranslate"><span class="pre">Integral</span></code></a>
 (typically an <a class="reference internal" href="../library/functions.html#int" title="int"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>).</p>
-<p>If <a class="reference internal" href="#object.__int__" title="object.__int__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__int__()</span></code></a> is not defined then the built-in function <a class="reference internal" href="../library/functions.html#int" title="int"><code class="xref py py-func docutils literal notranslate"><span class="pre">int()</span></code></a>
-falls back to <a class="reference internal" href="#object.__trunc__" title="object.__trunc__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__trunc__()</span></code></a>.</p>
+<p>The built-in function <a class="reference internal" href="../library/functions.html#int" title="int"><code class="xref py py-func docutils literal notranslate"><span class="pre">int()</span></code></a> falls back to <a class="reference internal" href="#object.__trunc__" title="object.__trunc__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__trunc__()</span></code></a> if neither
+<a class="reference internal" href="#object.__int__" title="object.__int__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__int__()</span></code></a> nor <a class="reference internal" href="#object.__index__" title="object.__index__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__index__()</span></code></a> is defined.</p>
 </dd></dl>
 
 </section>
@@ -2687,7 +2687,7 @@ supported, which is why the reflected method is not called.</p>
 <br />
     <br />
 
-    最後更新於 10月 27, 2021。
+    最後更新於 10月 29, 2021。
     <a href="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
 

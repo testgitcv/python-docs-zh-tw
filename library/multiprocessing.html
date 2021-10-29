@@ -2849,11 +2849,12 @@ inherited.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="multiprocessing.log_to_stderr">
-<span class="sig-prename descclassname"><span class="pre">multiprocessing.</span></span><span class="sig-name descname"><span class="pre">log_to_stderr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multiprocessing.log_to_stderr" title="本定義的永久連結">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">multiprocessing.</span></span><span class="sig-name descname"><span class="pre">log_to_stderr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multiprocessing.log_to_stderr" title="本定義的永久連結">¶</a></dt>
 <dd><p>This function performs a call to <a class="reference internal" href="#multiprocessing.get_logger" title="multiprocessing.get_logger"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_logger()</span></code></a> but in addition to
 returning the logger created by get_logger, it adds a handler which sends
 output to <a class="reference internal" href="sys.html#sys.stderr" title="sys.stderr"><code class="xref py py-data docutils literal notranslate"><span class="pre">sys.stderr</span></code></a> using format
-<code class="docutils literal notranslate"><span class="pre">'[%(levelname)s/%(processName)s]</span> <span class="pre">%(message)s'</span></code>.</p>
+<code class="docutils literal notranslate"><span class="pre">'[%(levelname)s/%(processName)s]</span> <span class="pre">%(message)s'</span></code>.
+You can modify <code class="docutils literal notranslate"><span class="pre">levelname</span></code> of the logger by passing a <code class="docutils literal notranslate"><span class="pre">level</span></code> argument.</p>
 </dd></dl>
 
 <p>Below is an example session with logging turned on:</p>
@@ -3604,7 +3605,7 @@ processes and collect the results:</p>
 <br />
     <br />
 
-    最後更新於 10月 27, 2021。
+    最後更新於 10月 29, 2021。
     <a href="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
 
