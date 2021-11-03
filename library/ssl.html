@@ -2048,7 +2048,7 @@ match with the certificate.</p>
 <span class="sig-prename descclassname"><span class="pre">SSLContext.</span></span><span class="sig-name descname"><span class="pre">load_default_certs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">purpose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Purpose.SERVER_AUTH</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ssl.SSLContext.load_default_certs" title="本定義的永久連結">¶</a></dt>
 <dd><p>Load a set of default &quot;certification authority&quot; (CA) certificates from
 default locations. On Windows it loads CA certs from the <code class="docutils literal notranslate"><span class="pre">CA</span></code> and
-<code class="docutils literal notranslate"><span class="pre">ROOT</span></code> system stores. On other systems it calls
+<code class="docutils literal notranslate"><span class="pre">ROOT</span></code> system stores. On all systems it calls
 <a class="reference internal" href="#ssl.SSLContext.set_default_verify_paths" title="ssl.SSLContext.set_default_verify_paths"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SSLContext.set_default_verify_paths()</span></code></a>. In the future the method may
 load CA certificates from other locations, too.</p>
 <p>The <em>purpose</em> flag specifies what kind of CA certificates are loaded. The
@@ -3412,7 +3412,7 @@ signature algorithm configuration, and rekeying are not supported yet.</p></li>
 <br />
     <br />
 
-    最後更新於 10月 29, 2021。
+    最後更新於 11月 03, 2021。
     <a href="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
 

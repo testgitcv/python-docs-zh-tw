@@ -1628,6 +1628,13 @@ experimental SQLite date/time functions.</p>
 <p>If a timestamp stored in SQLite has a fractional part longer than 6
 numbers, its value will be truncated to microsecond precision by the
 timestamp converter.</p>
+<div class="admonition note">
+<p class="admonition-title">備註</p>
+<p>The default &quot;timestamp&quot; converter ignores UTC offsets in the database and
+always returns a naive <a class="reference internal" href="datetime.html#datetime.datetime" title="datetime.datetime"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime.datetime</span></code></a> object. To preserve UTC
+offsets in timestamps, either leave converters disabled, or register an
+offset-aware converter with <a class="reference internal" href="#sqlite3.register_converter" title="sqlite3.register_converter"><code class="xref py py-func docutils literal notranslate"><span class="pre">register_converter()</span></code></a>.</p>
+</div>
 </section>
 </section>
 <section id="controlling-transactions">
@@ -1883,7 +1890,7 @@ extension support, you must pass the
 <br />
     <br />
 
-    最後更新於 10月 29, 2021。
+    最後更新於 11月 03, 2021。
     <a href="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
 

@@ -310,9 +310,10 @@ process and user.</p>
 <dl class="py data">
 <dt class="sig sig-object py" id="os.environ">
 <span class="sig-prename descclassname"><span class="pre">os.</span></span><span class="sig-name descname"><span class="pre">environ</span></span><a class="headerlink" href="#os.environ" title="本定義的永久連結">¶</a></dt>
-<dd><p>A <a class="reference internal" href="../glossary.html#term-mapping"><span class="xref std std-term">mapping</span></a> object representing the string environment. For example,
-<code class="docutils literal notranslate"><span class="pre">environ['HOME']</span></code> is the pathname of your home directory (on some platforms),
-and is equivalent to <code class="docutils literal notranslate"><span class="pre">getenv(&quot;HOME&quot;)</span></code> in C.</p>
+<dd><p>A <a class="reference internal" href="../glossary.html#term-mapping"><span class="xref std std-term">mapping</span></a> object where keys and values are strings that represent
+the process environment.  For example, <code class="docutils literal notranslate"><span class="pre">environ['HOME']</span></code> is the pathname
+of your home directory (on some platforms), and is equivalent to
+<code class="docutils literal notranslate"><span class="pre">getenv(&quot;HOME&quot;)</span></code> in C.</p>
 <p>This mapping is captured the first time the <a class="reference internal" href="#module-os" title="os: Miscellaneous operating system interfaces."><code class="xref py py-mod docutils literal notranslate"><span class="pre">os</span></code></a> module is imported,
 typically during Python startup as part of processing <code class="file docutils literal notranslate"><span class="pre">site.py</span></code>.  Changes
 to the environment made after this time are not reflected in <code class="docutils literal notranslate"><span class="pre">os.environ</span></code>,
@@ -346,10 +347,10 @@ called.</p>
 <dl class="py data">
 <dt class="sig sig-object py" id="os.environb">
 <span class="sig-prename descclassname"><span class="pre">os.</span></span><span class="sig-name descname"><span class="pre">environb</span></span><a class="headerlink" href="#os.environb" title="本定義的永久連結">¶</a></dt>
-<dd><p>Bytes version of <a class="reference internal" href="#os.environ" title="os.environ"><code class="xref py py-data docutils literal notranslate"><span class="pre">environ</span></code></a>: a <a class="reference internal" href="../glossary.html#term-mapping"><span class="xref std std-term">mapping</span></a> object representing the
-environment as byte strings. <a class="reference internal" href="#os.environ" title="os.environ"><code class="xref py py-data docutils literal notranslate"><span class="pre">environ</span></code></a> and <a class="reference internal" href="#os.environb" title="os.environb"><code class="xref py py-data docutils literal notranslate"><span class="pre">environb</span></code></a> are
-synchronized (modify <a class="reference internal" href="#os.environb" title="os.environb"><code class="xref py py-data docutils literal notranslate"><span class="pre">environb</span></code></a> updates <a class="reference internal" href="#os.environ" title="os.environ"><code class="xref py py-data docutils literal notranslate"><span class="pre">environ</span></code></a>, and vice
-versa).</p>
+<dd><p>Bytes version of <a class="reference internal" href="#os.environ" title="os.environ"><code class="xref py py-data docutils literal notranslate"><span class="pre">environ</span></code></a>: a <a class="reference internal" href="../glossary.html#term-mapping"><span class="xref std std-term">mapping</span></a> object where both keys
+and values are <a class="reference internal" href="stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> objects representing the process environment.
+<a class="reference internal" href="#os.environ" title="os.environ"><code class="xref py py-data docutils literal notranslate"><span class="pre">environ</span></code></a> and <a class="reference internal" href="#os.environb" title="os.environb"><code class="xref py py-data docutils literal notranslate"><span class="pre">environb</span></code></a> are synchronized (modifying
+<a class="reference internal" href="#os.environb" title="os.environb"><code class="xref py py-data docutils literal notranslate"><span class="pre">environb</span></code></a> updates <a class="reference internal" href="#os.environ" title="os.environ"><code class="xref py py-data docutils literal notranslate"><span class="pre">environ</span></code></a>, and vice versa).</p>
 <p><a class="reference internal" href="#os.environb" title="os.environb"><code class="xref py py-data docutils literal notranslate"><span class="pre">environb</span></code></a> is only available if <a class="reference internal" href="#os.supports_bytes_environ" title="os.supports_bytes_environ"><code class="xref py py-data docutils literal notranslate"><span class="pre">supports_bytes_environ</span></code></a> is
 <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
 <div class="versionadded">
@@ -5172,7 +5173,7 @@ block in these cases, but instead immediately raises <a class="reference interna
 <br />
     <br />
 
-    最後更新於 10月 29, 2021。
+    最後更新於 11月 03, 2021。
     <a href="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
 

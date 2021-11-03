@@ -582,7 +582,7 @@ analogous to the <a class="reference internal" href="../reference/datamodel.html
 <code class="xref py py-meth docutils literal notranslate"><span class="pre">__lt__()</span></code>, and also called by <a class="reference internal" href="../c-api/object.html#c.PyObject_RichCompare" title="PyObject_RichCompare"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyObject_RichCompare()</span></code></a> and
 <a class="reference internal" href="../c-api/object.html#c.PyObject_RichCompareBool" title="PyObject_RichCompareBool"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyObject_RichCompareBool()</span></code></a>.</p>
 <p>This function is called with two Python objects and the operator as arguments,
-where the operator is one of <code class="docutils literal notranslate"><span class="pre">Py_EQ</span></code>, <code class="docutils literal notranslate"><span class="pre">Py_NE</span></code>, <code class="docutils literal notranslate"><span class="pre">Py_LE</span></code>, <code class="docutils literal notranslate"><span class="pre">Py_GT</span></code>,
+where the operator is one of <code class="docutils literal notranslate"><span class="pre">Py_EQ</span></code>, <code class="docutils literal notranslate"><span class="pre">Py_NE</span></code>, <code class="docutils literal notranslate"><span class="pre">Py_LE</span></code>, <code class="docutils literal notranslate"><span class="pre">Py_GE</span></code>,
 <code class="docutils literal notranslate"><span class="pre">Py_LT</span></code> or <code class="docutils literal notranslate"><span class="pre">Py_GT</span></code>.  It should compare the two objects with respect to the
 specified operator and return <code class="docutils literal notranslate"><span class="pre">Py_True</span></code> or <code class="docutils literal notranslate"><span class="pre">Py_False</span></code> if the comparison is
 successful, <code class="docutils literal notranslate"><span class="pre">Py_NotImplemented</span></code> to indicate that comparison is not
@@ -921,7 +921,7 @@ its use might be something like the following:</p>
 <br />
     <br />
 
-    最後更新於 10月 29, 2021。
+    最後更新於 11月 03, 2021。
     <a href="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
 
