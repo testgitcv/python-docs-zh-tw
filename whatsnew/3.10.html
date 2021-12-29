@@ -274,7 +274,7 @@
 <dd class="field-odd"><p>3.10.1</p>
 </dd>
 <dt class="field-even">日期</dt>
-<dd class="field-even"><p>12月 20, 2021</p>
+<dd class="field-even"><p>12月 29, 2021</p>
 </dd>
 <dt class="field-odd">編輯者</dt>
 <dd class="field-odd"><p>Pablo Galindo Salgado</p>
@@ -1480,7 +1480,7 @@ and to match the behavior of static type checkers specified in the PEP.</p>
 <ol class="arabic">
 <li><p><code class="docutils literal notranslate"><span class="pre">Literal</span></code> now de-duplicates parameters.</p></li>
 <li><p>Equality comparisons between <code class="docutils literal notranslate"><span class="pre">Literal</span></code> objects are now order independent.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Literal</span></code> comparisons now respects types.  For example,
+<li><p><code class="docutils literal notranslate"><span class="pre">Literal</span></code> comparisons now respect types.  For example,
 <code class="docutils literal notranslate"><span class="pre">Literal[0]</span> <span class="pre">==</span> <span class="pre">Literal[False]</span></code> previously evaluated to <code class="docutils literal notranslate"><span class="pre">True</span></code>.  It is
 now <code class="docutils literal notranslate"><span class="pre">False</span></code>.  To support this change, the internally used type cache now
 supports differentiating types.</p></li>
@@ -1671,13 +1671,12 @@ system now triggers an <a class="reference internal" href="../library/exceptions
 <code class="xref py py-meth docutils literal notranslate"><span class="pre">importlib.machinery.FrozenImporter.find_module()</span></code>,
 <code class="xref py py-meth docutils literal notranslate"><span class="pre">importlib.machinery.WindowsRegistryFinder.find_module()</span></code>,
 <a class="reference internal" href="../library/importlib.html#importlib.machinery.PathFinder.find_module" title="importlib.machinery.PathFinder.find_module"><code class="xref py py-meth docutils literal notranslate"><span class="pre">importlib.machinery.PathFinder.find_module()</span></code></a>,
-<a class="reference internal" href="../library/importlib.html#importlib.abc.MetaPathFinder.find_module" title="importlib.abc.MetaPathFinder.find_module"><code class="xref py py-meth docutils literal notranslate"><span class="pre">importlib.abc.MetaPathFinder.find_module()</span></code></a>),
+<a class="reference internal" href="../library/importlib.html#importlib.abc.MetaPathFinder.find_module" title="importlib.abc.MetaPathFinder.find_module"><code class="xref py py-meth docutils literal notranslate"><span class="pre">importlib.abc.MetaPathFinder.find_module()</span></code></a> ),
 <a class="reference internal" href="../library/importlib.html#importlib.abc.PathEntryFinder.find_module" title="importlib.abc.PathEntryFinder.find_module"><code class="xref py py-meth docutils literal notranslate"><span class="pre">importlib.abc.PathEntryFinder.find_module()</span></code></a> (
-<code class="xref py py-meth docutils literal notranslate"><span class="pre">importlib.machinery.FileFinder.find_module()</span></code>,
-), and
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">importlib.machinery.FileFinder.find_module()</span></code> ), and
 <a class="reference internal" href="../library/importlib.html#importlib.abc.PathEntryFinder.find_loader" title="importlib.abc.PathEntryFinder.find_loader"><code class="xref py py-meth docutils literal notranslate"><span class="pre">importlib.abc.PathEntryFinder.find_loader()</span></code></a> (
-<a class="reference internal" href="../library/importlib.html#importlib.machinery.FileFinder.find_loader" title="importlib.machinery.FileFinder.find_loader"><code class="xref py py-meth docutils literal notranslate"><span class="pre">importlib.machinery.FileFinder.find_loader()</span></code></a>
-) now raise <a class="reference internal" href="../library/exceptions.html#DeprecationWarning" title="DeprecationWarning"><code class="xref py py-exc docutils literal notranslate"><span class="pre">DeprecationWarning</span></code></a> and are slated for removal in
+<a class="reference internal" href="../library/importlib.html#importlib.machinery.FileFinder.find_loader" title="importlib.machinery.FileFinder.find_loader"><code class="xref py py-meth docutils literal notranslate"><span class="pre">importlib.machinery.FileFinder.find_loader()</span></code></a> )
+now raise <a class="reference internal" href="../library/exceptions.html#DeprecationWarning" title="DeprecationWarning"><code class="xref py py-exc docutils literal notranslate"><span class="pre">DeprecationWarning</span></code></a> and are slated for removal in
 Python 3.12 (previously they were documented as deprecated in Python 3.4).
 (Contributed by Brett Cannon in <a class="reference external" href="https://bugs.python.org/issue42135">bpo-42135</a>.)</p></li>
 <li><p><a class="reference internal" href="../library/importlib.html#importlib.abc.Finder" title="importlib.abc.Finder"><code class="xref py py-class docutils literal notranslate"><span class="pre">importlib.abc.Finder</span></code></a> is deprecated (including its sole method,
@@ -1712,7 +1711,7 @@ scheduled for removal in Python 3.12.
 <li><p><a class="reference internal" href="../library/asyncio-eventloop.html#asyncio.get_event_loop" title="asyncio.get_event_loop"><code class="xref py py-func docutils literal notranslate"><span class="pre">asyncio.get_event_loop()</span></code></a> now emits a deprecation warning if there is
 no running event loop. In the future it will be an alias of
 <a class="reference internal" href="../library/asyncio-eventloop.html#asyncio.get_running_loop" title="asyncio.get_running_loop"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_running_loop()</span></code></a>.
-<a class="reference internal" href="../library/asyncio.html#module-asyncio" title="asyncio: Asynchronous I/O."><code class="xref py py-mod docutils literal notranslate"><span class="pre">asyncio</span></code></a> functions which implicitly create a <a class="reference internal" href="../library/asyncio-future.html#asyncio.Future" title="asyncio.Future"><code class="xref py py-class docutils literal notranslate"><span class="pre">Future</span></code></a>
+<a class="reference internal" href="../library/asyncio.html#module-asyncio" title="asyncio: Asynchronous I/O."><code class="xref py py-mod docutils literal notranslate"><span class="pre">asyncio</span></code></a> functions which implicitly create <a class="reference internal" href="../library/asyncio-future.html#asyncio.Future" title="asyncio.Future"><code class="xref py py-class docutils literal notranslate"><span class="pre">Future</span></code></a>
 or <a class="reference internal" href="../library/asyncio-task.html#asyncio.Task" title="asyncio.Task"><code class="xref py py-class docutils literal notranslate"><span class="pre">Task</span></code></a> objects now emit
 a deprecation warning if there is no running event loop and no explicit
 <em>loop</em> argument is passed: <a class="reference internal" href="../library/asyncio-future.html#asyncio.ensure_future" title="asyncio.ensure_future"><code class="xref py py-func docutils literal notranslate"><span class="pre">ensure_future()</span></code></a>,
@@ -1826,7 +1825,7 @@ pass the event loop to the API in most normal use cases.</p></li>
 running in different threads.</p></li>
 </ol>
 <p>Note that the low-level API will still accept <code class="docutils literal notranslate"><span class="pre">loop</span></code>.
-See <a class="reference internal" href="#changes-in-the-python-api">Changes in the Python API</a> for examples of how to replace existing code.</p>
+See <a class="reference internal" href="#changes-python-api"><span class="std std-ref">Changes in the Python API</span></a> for examples of how to replace existing code.</p>
 <p>(Contributed by Yurii Karabas, Andrew Svetlov, Yury Selivanov and Kyle Stanley
 in <a class="reference external" href="https://bugs.python.org/issue42392">bpo-42392</a>.)</p>
 </li>
@@ -1849,7 +1848,7 @@ following keyword.
 </ul>
 </section>
 <section id="changes-in-the-python-api">
-<h3>Changes in the Python API<a class="headerlink" href="#changes-in-the-python-api" title="本標題的永久連結">¶</a></h3>
+<span id="changes-python-api"></span><h3>Changes in the Python API<a class="headerlink" href="#changes-in-the-python-api" title="本標題的永久連結">¶</a></h3>
 <ul>
 <li><p>The <em>etype</em> parameters of the <a class="reference internal" href="../library/traceback.html#traceback.format_exception" title="traceback.format_exception"><code class="xref py py-func docutils literal notranslate"><span class="pre">format_exception()</span></code></a>,
 <a class="reference internal" href="../library/traceback.html#traceback.format_exception_only" title="traceback.format_exception_only"><code class="xref py py-func docutils literal notranslate"><span class="pre">format_exception_only()</span></code></a>, and
@@ -1963,7 +1962,7 @@ longer supported.
 to build Python.
 (Contributed by Victor Stinner in <a class="reference external" href="https://bugs.python.org/issue36020">bpo-36020</a>.)</p></li>
 <li><p><a class="reference internal" href="../library/sqlite3.html#module-sqlite3" title="sqlite3: A DB-API 2.0 implementation using SQLite 3.x."><code class="xref py py-mod docutils literal notranslate"><span class="pre">sqlite3</span></code></a> requires SQLite 3.7.15 or higher. (Contributed by Sergey Fedoseev
-and Erlend E. Aasland <a class="reference external" href="https://bugs.python.org/issue40744">bpo-40744</a> and <a class="reference external" href="https://bugs.python.org/issue40810">bpo-40810</a>.)</p></li>
+and Erlend E. Aasland in <a class="reference external" href="https://bugs.python.org/issue40744">bpo-40744</a> and <a class="reference external" href="https://bugs.python.org/issue40810">bpo-40810</a>.)</p></li>
 <li><p>The <a class="reference internal" href="../library/atexit.html#module-atexit" title="atexit: Register and execute cleanup functions."><code class="xref py py-mod docutils literal notranslate"><span class="pre">atexit</span></code></a> module must now always be built as a built-in module.
 (Contributed by Victor Stinner in <a class="reference external" href="https://bugs.python.org/issue42639">bpo-42639</a>.)</p></li>
 <li><p>Add <a class="reference internal" href="../using/configure.html#cmdoption-disable-test-modules"><code class="xref std std-option docutils literal notranslate"><span class="pre">--disable-test-modules</span></code></a> option to the <code class="docutils literal notranslate"><span class="pre">configure</span></code> script:
@@ -2466,7 +2465,7 @@ only used internally by the compiler.
 <br />
     <br />
 
-    最後更新於 12月 20, 2021。
+    最後更新於 12月 29, 2021。
     <a href="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
 
