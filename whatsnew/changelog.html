@@ -1009,6 +1009,11 @@
 <section id="core-and-builtins">
 <h3>Core and Builtins<a class="headerlink" href="#core-and-builtins" title="本標題的永久連結">¶</a></h3>
 <ul class="simple">
+<li><p><a class="reference external" href="https://bugs.python.org/issue46070">bpo-46070</a>: <a class="reference internal" href="../c-api/init.html#c.Py_EndInterpreter" title="Py_EndInterpreter"><code class="xref c c-func docutils literal notranslate"><span class="pre">Py_EndInterpreter()</span></code></a> now explicitly untracks all objects
+currently tracked by the GC. Previously, if an object was used later by
+another interpreter, calling <a class="reference internal" href="../c-api/gcsupport.html#c.PyObject_GC_UnTrack" title="PyObject_GC_UnTrack"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyObject_GC_UnTrack()</span></code></a> on the object
+crashed if the previous or the next object of the <code class="xref c c-type docutils literal notranslate"><span class="pre">PyGC_Head</span></code>
+structure became a dangling pointer. Patch by Victor Stinner.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue46347">bpo-46347</a>: Fix memory leak in PyEval_EvalCodeEx.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue46289">bpo-46289</a>: ASDL declaration of <code class="docutils literal notranslate"><span class="pre">FormattedValue</span></code> has changed to reflect
 <code class="docutils literal notranslate"><span class="pre">conversion</span></code> field is not optional.</p></li>
@@ -1047,6 +1052,8 @@ always raise a <a class="reference internal" href="../library/exceptions.html#Sy
 <section id="library">
 <h3>Library<a class="headerlink" href="#library" title="本標題的永久連結">¶</a></h3>
 <ul class="simple">
+<li><p><a class="reference external" href="https://bugs.python.org/issue40479">bpo-40479</a>: Fix <a class="reference internal" href="../library/hashlib.html#module-hashlib" title="hashlib: Secure hash and message digest algorithms."><code class="xref py py-mod docutils literal notranslate"><span class="pre">hashlib</span></code></a> <em>usedforsecurity</em> option to work correctly
+with OpenSSL 3.0.0 in FIPS mode.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue46070">bpo-46070</a>: Fix possible segfault when importing the <a class="reference internal" href="../library/asyncio.html#module-asyncio" title="asyncio: Asynchronous I/O."><code class="xref py py-mod docutils literal notranslate"><span class="pre">asyncio</span></code></a> module
 from different sub-interpreters in parallel. Patch by Erlend E. Aasland.</p></li>
 <li><p><a class="reference external" href="https://bugs.python.org/issue46278">bpo-46278</a>: Reflect <code class="docutils literal notranslate"><span class="pre">context</span></code> argument in <code class="docutils literal notranslate"><span class="pre">AbstractEventLoop.call_*()</span></code>
@@ -25100,7 +25107,7 @@ Kilburn.</p></li>
 <br />
     <br />
 
-    最後更新於 1月 12, 2022。
+    最後更新於 1月 14, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

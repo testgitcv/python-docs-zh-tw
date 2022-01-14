@@ -264,10 +264,10 @@ and should be preferred.</p>
 </dd></dl>
 
 <p>Using <a class="reference internal" href="#hashlib.new" title="hashlib.new"><code class="xref py py-func docutils literal notranslate"><span class="pre">new()</span></code></a> with an algorithm provided by OpenSSL:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">h</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s1">&#39;sha512_256&#39;</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">h</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s1">&#39;sha256&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">h</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;Nobody inspects the spammish repetition&quot;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">h</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
-<span class="go">&#39;19197dc4d03829df858011c6c87600f994a858103bbc19005f20987aa19a97e2&#39;</span>
+<span class="go">&#39;031edd7d41651593c5fe5c006fa5752b37fddff7bc4e843aa6af0c950f4b9406&#39;</span>
 </pre></div>
 </div>
 <p>Hashlib provides the following constant attributes:</p>
@@ -1014,7 +1014,7 @@ what that means regarding their use.</p>
 <br />
     <br />
 
-    最後更新於 1月 12, 2022。
+    最後更新於 1月 14, 2022。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
