@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>3. Defining Extension Types: Assorted Topics &#8212; Python 3.10.2 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3. Defining Extension Types: Assorted Topics &#8212; Python 3.9.10 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -20,7 +20,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.2 說明文件 中搜尋"
+          title="在 Python 3.9.10 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -105,7 +105,7 @@
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/extending/newtypes.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/extending/newtypes.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -142,7 +142,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">擴充和嵌入 Python 直譯器</a> &#187;</li>
@@ -174,7 +174,7 @@
 <p id="dnt-type-methods">This section aims to give a quick fly-by on the various type methods you can
 implement and what they do.</p>
 <p>Here is the definition of <a class="reference internal" href="../c-api/type.html#c.PyTypeObject" title="PyTypeObject"><code class="xref c c-type docutils literal notranslate"><span class="pre">PyTypeObject</span></code></a>, with some fields only used in
-<a class="reference internal" href="../using/configure.html#debug-build"><span class="std std-ref">debug builds</span></a> omitted:</p>
+debug builds omitted:</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">_typeobject</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="n">PyObject_VAR_HEAD</span><span class="w"></span>
 <span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">tp_name</span><span class="p">;</span><span class="w"> </span><span class="cm">/* For printing, in format &quot;&lt;module&gt;.&lt;name&gt;&quot; */</span><span class="w"></span>
@@ -212,14 +212,12 @@ implement and what they do.</p>
 
 <span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">tp_doc</span><span class="p">;</span><span class="w"> </span><span class="cm">/* Documentation string */</span><span class="w"></span>
 
-<span class="w">    </span><span class="cm">/* Assigned meaning in release 2.0 */</span><span class="w"></span>
 <span class="w">    </span><span class="cm">/* call function for all accessible objects */</span><span class="w"></span>
 <span class="w">    </span><span class="n">traverseproc</span><span class="w"> </span><span class="n">tp_traverse</span><span class="p">;</span><span class="w"></span>
 
 <span class="w">    </span><span class="cm">/* delete references to contained objects */</span><span class="w"></span>
 <span class="w">    </span><span class="n">inquiry</span><span class="w"> </span><span class="n">tp_clear</span><span class="p">;</span><span class="w"></span>
 
-<span class="w">    </span><span class="cm">/* Assigned meaning in release 2.1 */</span><span class="w"></span>
 <span class="w">    </span><span class="cm">/* rich comparisons */</span><span class="w"></span>
 <span class="w">    </span><span class="n">richcmpfunc</span><span class="w"> </span><span class="n">tp_richcompare</span><span class="p">;</span><span class="w"></span>
 
@@ -234,7 +232,6 @@ implement and what they do.</p>
 <span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">PyMethodDef</span><span class="w"> </span><span class="o">*</span><span class="n">tp_methods</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">PyMemberDef</span><span class="w"> </span><span class="o">*</span><span class="n">tp_members</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">PyGetSetDef</span><span class="w"> </span><span class="o">*</span><span class="n">tp_getset</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="c1">// Strong reference on a heap type, borrowed reference on a static type</span>
 <span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">_typeobject</span><span class="w"> </span><span class="o">*</span><span class="n">tp_base</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="n">tp_dict</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="n">descrgetfunc</span><span class="w"> </span><span class="n">tp_descr_get</span><span class="p">;</span><span class="w"></span>
@@ -256,7 +253,7 @@ implement and what they do.</p>
 <span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">tp_version_tag</span><span class="p">;</span><span class="w"></span>
 
 <span class="w">    </span><span class="n">destructor</span><span class="w"> </span><span class="n">tp_finalize</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">vectorcallfunc</span><span class="w"> </span><span class="n">tp_vectorcall</span><span class="p">;</span><span class="w"></span>
+
 <span class="p">}</span><span class="w"> </span><span class="n">PyTypeObject</span><span class="p">;</span><span class="w"></span>
 </pre></div>
 </div>
@@ -405,7 +402,7 @@ described above is to <a class="reference internal" href="../library/functions.h
 to the <a class="reference internal" href="../c-api/typeobj.html#c.PyTypeObject.tp_repr" title="PyTypeObject.tp_repr"><code class="xref c c-member docutils literal notranslate"><span class="pre">tp_repr</span></code></a> function, but the resulting string is intended for human
 consumption.  If <a class="reference internal" href="../c-api/typeobj.html#c.PyTypeObject.tp_str" title="PyTypeObject.tp_str"><code class="xref c c-member docutils literal notranslate"><span class="pre">tp_str</span></code></a> is not specified, the <a class="reference internal" href="../c-api/typeobj.html#c.PyTypeObject.tp_repr" title="PyTypeObject.tp_repr"><code class="xref c c-member docutils literal notranslate"><span class="pre">tp_repr</span></code></a> handler is
 used instead.</p>
-<p>以下是個簡單的範例：</p>
+<p>Here is a simple example:</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="w"></span>
 <span class="nf">newdatatype_str</span><span class="p">(</span><span class="n">newdatatypeobject</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">obj</span><span class="p">)</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
@@ -506,7 +503,7 @@ combined using bitwise-OR.</p>
 <col style="width: 63%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p>常數</p></th>
+<tr class="row-odd"><th class="head"><p>Constant</p></th>
 <th class="head"><p>Meaning</p></th>
 </tr>
 </thead>
@@ -514,19 +511,17 @@ combined using bitwise-OR.</p>
 <tr class="row-even"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">READONLY</span></code></p></td>
 <td><p>Never writable.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">PY_AUDIT_READ</span></code></p></td>
-<td><p>Emit an <code class="docutils literal notranslate"><span class="pre">object.__getattr__</span></code>
-<a class="reference internal" href="../library/audit_events.html#audit-events"><span class="std std-ref">audit events</span></a> before
-reading.</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">READ_RESTRICTED</span></code></p></td>
+<td><p>Not readable in restricted mode.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">WRITE_RESTRICTED</span></code></p></td>
+<td><p>Not writable in restricted mode.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-const docutils literal notranslate"><span class="pre">RESTRICTED</span></code></p></td>
+<td><p>Not readable or writable in restricted mode.</p></td>
 </tr>
 </tbody>
 </table>
-<div class="versionchanged">
-<p><span class="versionmodified changed">在 3.10 版本變更: </span><code class="xref py py-const docutils literal notranslate"><span class="pre">RESTRICTED</span></code>, <code class="xref py py-const docutils literal notranslate"><span class="pre">READ_RESTRICTED</span></code> and <code class="xref py py-const docutils literal notranslate"><span class="pre">WRITE_RESTRICTED</span></code>
-are deprecated. However, <code class="xref py py-const docutils literal notranslate"><span class="pre">READ_RESTRICTED</span></code> is an alias for
-<code class="xref py py-const docutils literal notranslate"><span class="pre">PY_AUDIT_READ</span></code>, so fields that specify either <code class="xref py py-const docutils literal notranslate"><span class="pre">RESTRICTED</span></code>
-or <code class="xref py py-const docutils literal notranslate"><span class="pre">READ_RESTRICTED</span></code> will also raise an audit event.</p>
-</div>
 <p id="index-4">An interesting advantage of using the <a class="reference internal" href="../c-api/typeobj.html#c.PyTypeObject.tp_members" title="PyTypeObject.tp_members"><code class="xref c c-member docutils literal notranslate"><span class="pre">tp_members</span></code></a> table to build
 descriptors that are used at runtime is that any attribute defined this way can
 have an associated doc string simply by providing the text in the table.  An
@@ -547,7 +542,7 @@ what needs to be done.</p>
 <p>The <a class="reference internal" href="../c-api/typeobj.html#c.PyTypeObject.tp_getattr" title="PyTypeObject.tp_getattr"><code class="xref c c-member docutils literal notranslate"><span class="pre">tp_getattr</span></code></a> handler is called when the object requires an attribute
 look-up.  It is called in the same situations where the <code class="xref py py-meth docutils literal notranslate"><span class="pre">__getattr__()</span></code>
 method of a class would be called.</p>
-<p>舉例來說：</p>
+<p>Here is an example:</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="w"></span>
 <span class="nf">newdatatype_getattr</span><span class="p">(</span><span class="n">newdatatypeobject</span><span class="w"> </span><span class="o">*</span><span class="n">obj</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">name</span><span class="p">)</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
@@ -626,7 +621,7 @@ size of an internal pointer is equal:</p>
 <section id="abstract-protocol-support">
 <h2><span class="section-number">3.5. </span>Abstract Protocol Support<a class="headerlink" href="#abstract-protocol-support" title="本標題的永久連結">¶</a></h2>
 <p>Python supports a variety of <em>abstract</em> 'protocols;' the specific interfaces
-provided to use these interfaces are documented in <a class="reference internal" href="../c-api/abstract.html#abstract"><span class="std std-ref">抽象物件層 (Abstract Objects Layer)</span></a>.</p>
+provided to use these interfaces are documented in <a class="reference internal" href="../c-api/abstract.html#abstract"><span class="std std-ref">抽象物件層</span></a>.</p>
 <p>A number of these abstract interfaces were defined early in the development of
 the Python implementation.  In particular, the number, mapping, and sequence
 protocols have been part of Python since the beginning.  Other protocols have
@@ -861,7 +856,7 @@ its use might be something like the following:</p>
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/extending/newtypes.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/extending/newtypes.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -897,7 +892,7 @@ its use might be something like the following:</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >擴充和嵌入 Python 直譯器</a> &#187;</li>

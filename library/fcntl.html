@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>fcntl --- The fcntl and ioctl system calls &#8212; Python 3.10.2 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fcntl --- The fcntl and ioctl system calls &#8212; Python 3.9.10 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -20,7 +20,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.2 說明文件 中搜尋"
+          title="在 Python 3.9.10 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -85,7 +85,7 @@
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/library/fcntl.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/library/fcntl.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -122,7 +122,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -177,11 +177,6 @@ the path of a file from a file descriptor.
 On Linux(&gt;=3.15), the fcntl module exposes the <code class="docutils literal notranslate"><span class="pre">F_OFD_GETLK</span></code>, <code class="docutils literal notranslate"><span class="pre">F_OFD_SETLK</span></code>
 and <code class="docutils literal notranslate"><span class="pre">F_OFD_SETLKW</span></code> constants, which working with open file description locks.</p>
 </div>
-<div class="versionchanged">
-<p><span class="versionmodified changed">在 3.10 版本變更: </span>On Linux &gt;= 2.6.11, the fcntl module exposes the <code class="docutils literal notranslate"><span class="pre">F_GETPIPE_SZ</span></code> and
-<code class="docutils literal notranslate"><span class="pre">F_SETPIPE_SZ</span></code> constants, which allow to check and modify a pipe's size
-respectively.</p>
-</div>
 <p>The module defines the following functions:</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="fcntl.fcntl">
@@ -234,7 +229,7 @@ supplied buffer is less than 1024 bytes long it is first copied into a static
 buffer 1024 bytes long which is then passed to <a class="reference internal" href="#fcntl.ioctl" title="fcntl.ioctl"><code class="xref py py-func docutils literal notranslate"><span class="pre">ioctl()</span></code></a> and copied back
 into the supplied buffer.</p>
 <p>If the <code class="xref c c-func docutils literal notranslate"><span class="pre">ioctl()</span></code> fails, an <a class="reference internal" href="exceptions.html#OSError" title="OSError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a> exception is raised.</p>
-<p>範例：</p>
+<p>例子:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">array</span><span class="o">,</span> <span class="nn">fcntl</span><span class="o">,</span> <span class="nn">struct</span><span class="o">,</span> <span class="nn">termios</span><span class="o">,</span> <span class="nn">os</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">os</span><span class="o">.</span><span class="n">getpgrp</span><span class="p">()</span>
 <span class="go">13341</span>
@@ -312,7 +307,7 @@ using the <a class="reference internal" href="#fcntl.flock" title="fcntl.flock">
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><a class="reference internal" href="os.html#module-os" title="os: Miscellaneous operating system interfaces."><code class="xref py py-mod docutils literal notranslate"><span class="pre">os</span></code></a> 模組</dt><dd><p>If the locking flags <a class="reference internal" href="os.html#os.O_SHLOCK" title="os.O_SHLOCK"><code class="xref py py-data docutils literal notranslate"><span class="pre">O_SHLOCK</span></code></a> and <a class="reference internal" href="os.html#os.O_EXLOCK" title="os.O_EXLOCK"><code class="xref py py-data docutils literal notranslate"><span class="pre">O_EXLOCK</span></code></a> are
+<dt>Module <a class="reference internal" href="os.html#module-os" title="os: Miscellaneous operating system interfaces."><code class="xref py py-mod docutils literal notranslate"><span class="pre">os</span></code></a></dt><dd><p>If the locking flags <a class="reference internal" href="os.html#os.O_SHLOCK" title="os.O_SHLOCK"><code class="xref py py-data docutils literal notranslate"><span class="pre">O_SHLOCK</span></code></a> and <a class="reference internal" href="os.html#os.O_EXLOCK" title="os.O_EXLOCK"><code class="xref py py-data docutils literal notranslate"><span class="pre">O_EXLOCK</span></code></a> are
 present in the <a class="reference internal" href="os.html#module-os" title="os: Miscellaneous operating system interfaces."><code class="xref py py-mod docutils literal notranslate"><span class="pre">os</span></code></a> module (on BSD only), the <a class="reference internal" href="os.html#os.open" title="os.open"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.open()</span></code></a>
 function provides an alternative to the <a class="reference internal" href="#fcntl.lockf" title="fcntl.lockf"><code class="xref py py-func docutils literal notranslate"><span class="pre">lockf()</span></code></a> and <a class="reference internal" href="#fcntl.flock" title="fcntl.flock"><code class="xref py py-func docutils literal notranslate"><span class="pre">flock()</span></code></a>
 functions.</p>
@@ -343,7 +338,7 @@ functions.</p>
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/library/fcntl.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/library/fcntl.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -379,7 +374,7 @@ functions.</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>

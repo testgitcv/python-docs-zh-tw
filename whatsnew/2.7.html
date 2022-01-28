@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Python 2.7 有什麼新功能 &#8212; Python 3.10.2 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What&#39;s New in Python 2.7 &#8212; Python 3.9.10 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -20,14 +20,14 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.2 說明文件 中搜尋"
+          title="在 Python 3.9.10 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜尋" href="../search.html" />
     <link rel="copyright" title="版權" href="../copyright.html" />
-    <link rel="next" title="Python 2.6 有什麼新功能" href="2.6.html" />
-    <link rel="prev" title="Python 3.0 有什麼新功能" href="3.0.html" />
+    <link rel="next" title="What&#39;s New in Python 2.6" href="2.6.html" />
+    <link rel="prev" title="What&#39;s New In Python 3.0" href="3.0.html" />
     <link rel="canonical" href="https://docs.python.org/3/whatsnew/2.7.html" />
     
       
@@ -73,7 +73,7 @@
   <div>
     <h3><a href="../contents.html">目錄</a></h3>
     <ul>
-<li><a class="reference internal" href="#">Python 2.7 有什麼新功能</a><ul>
+<li><a class="reference internal" href="#">What's New in Python 2.7</a><ul>
 <li><a class="reference internal" href="#the-future-for-python-2-x">The Future for Python 2.x</a></li>
 <li><a class="reference internal" href="#changes-to-the-handling-of-deprecation-warnings">Changes to the Handling of Deprecation Warnings</a></li>
 <li><a class="reference internal" href="#python-3-1-features">Python 3.1 Features</a></li>
@@ -120,7 +120,7 @@
 <li><a class="reference internal" href="#removal-of-make-touch-build-target">Removal of <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">touch</span></code> build target</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#acknowledgements">致謝</a></li>
+<li><a class="reference internal" href="#acknowledgements">Acknowledgements</a></li>
 </ul>
 </li>
 </ul>
@@ -129,19 +129,19 @@
   <div>
     <h4>上個主題</h4>
     <p class="topless"><a href="3.0.html"
-                          title="上一章">Python 3.0 有什麼新功能</a></p>
+                          title="上一章">What's New In Python 3.0</a></p>
   </div>
   <div>
     <h4>下個主題</h4>
     <p class="topless"><a href="2.6.html"
-                          title="下一章">Python 2.6 有什麼新功能</a></p>
+                          title="下一章">What's New in Python 2.6</a></p>
   </div>
   <div role="note" aria-label="source link">
     <h3>此頁面</h3>
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/whatsnew/2.7.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/whatsnew/2.7.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -162,10 +162,10 @@
           <a href="../py-modindex.html" title="Python 模組索引"
              >模組</a> |</li>
         <li class="right" >
-          <a href="2.6.html" title="Python 2.6 有什麼新功能"
+          <a href="2.6.html" title="What&#39;s New in Python 2.6"
              accesskey="N">下一頁</a> |</li>
         <li class="right" >
-          <a href="3.0.html" title="Python 3.0 有什麼新功能"
+          <a href="3.0.html" title="What&#39;s New In Python 3.0"
              accesskey="P">上一頁</a> |</li>
 
           <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
@@ -178,11 +178,11 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Python 有什麼新功能？</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Python 2.7 有什麼新功能</a></li>
+        <li class="nav-item nav-item-this"><a href="">What's New in Python 2.7</a></li>
                 <li class="right">
                     
 
@@ -206,9 +206,9 @@
           <div class="body" role="main">
             
   <section id="what-s-new-in-python-2-7">
-<h1>Python 2.7 有什麼新功能<a class="headerlink" href="#what-s-new-in-python-2-7" title="本標題的永久連結">¶</a></h1>
+<h1>What's New in Python 2.7<a class="headerlink" href="#what-s-new-in-python-2-7" title="本標題的永久連結">¶</a></h1>
 <dl class="field-list simple">
-<dt class="field-odd">作者</dt>
+<dt class="field-odd">Author</dt>
 <dd class="field-odd"><p>A.M. Kuchling (amk at amk.ca)</p>
 </dd>
 </dl>
@@ -468,7 +468,7 @@ module, but it's easier to use.</p>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><span class="target" id="index-3"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0378"><strong>PEP 378</strong></a> - Format Specifier for Thousands Separator</dt><dd><p>由 Raymond Hettinger 撰寫 PEP；由 Eric Smith 實作。</p>
+<dt><span class="target" id="index-3"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0378"><strong>PEP 378</strong></a> - Format Specifier for Thousands Separator</dt><dd><p>PEP written by Raymond Hettinger; implemented by Eric Smith.</p>
 </dd>
 </dl>
 </div>
@@ -491,7 +491,7 @@ rejected as too messy and difficult.)</p>
 <p>In short, if you're writing a new script and don't need to worry
 about compatibility with earlier versions of Python, use
 <a class="reference internal" href="../library/argparse.html#module-argparse" title="argparse: Command-line option and argument parsing library."><code class="xref py py-mod docutils literal notranslate"><span class="pre">argparse</span></code></a> instead of <a class="reference internal" href="../library/optparse.html#module-optparse" title="optparse: Command-line option parsing library.（已棄用）"><code class="xref py py-mod docutils literal notranslate"><span class="pre">optparse</span></code></a>.</p>
-<p>以下是個範例：</p>
+<p>Here's an example:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">argparse</span>
 
 <span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">&#39;Command-line example.&#39;</span><span class="p">)</span>
@@ -558,12 +558,12 @@ standard input or output.</p>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><a class="reference internal" href="../library/argparse.html#module-argparse" title="argparse: Command-line option and argument parsing library."><code class="xref py py-mod docutils literal notranslate"><span class="pre">argparse</span></code></a> 文件</dt><dd><p>The documentation page of the argparse module.</p>
+<dt><a class="reference internal" href="../library/argparse.html#module-argparse" title="argparse: Command-line option and argument parsing library."><code class="xref py py-mod docutils literal notranslate"><span class="pre">argparse</span></code></a> documentation</dt><dd><p>The documentation page of the argparse module.</p>
 </dd>
 <dt><a class="reference internal" href="../library/argparse.html#upgrading-optparse-code"><span class="std std-ref">Upgrading optparse code</span></a></dt><dd><p>Part of the Python documentation, describing how to convert
 code that uses <a class="reference internal" href="../library/optparse.html#module-optparse" title="optparse: Command-line option parsing library.（已棄用）"><code class="xref py py-mod docutils literal notranslate"><span class="pre">optparse</span></code></a>.</p>
 </dd>
-<dt><span class="target" id="index-4"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0389"><strong>PEP 389</strong></a> - argparse - New Command Line Parsing Module</dt><dd><p>由 Steven Bethard 撰寫 PEP 與實作。</p>
+<dt><span class="target" id="index-4"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0389"><strong>PEP 389</strong></a> - argparse - New Command Line Parsing Module</dt><dd><p>PEP written and implemented by Steven Bethard.</p>
 </dd>
 </dl>
 </div>
@@ -654,7 +654,7 @@ process a message of that level of importance.</p></li>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><span class="target" id="index-5"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0391"><strong>PEP 391</strong></a> - Dictionary-Based Configuration For Logging</dt><dd><p>由 Vinay Sajip 撰寫 PEP 與實作。</p>
+<dt><span class="target" id="index-5"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0391"><strong>PEP 391</strong></a> - Dictionary-Based Configuration For Logging</dt><dd><p>PEP written and implemented by Vinay Sajip.</p>
 </dd>
 </dl>
 </div>
@@ -1461,7 +1461,7 @@ the path of a Python source file (<code class="file docutils literal notranslate
 bytecode file (<code class="file docutils literal notranslate"><span class="pre">example.pyc</span></code>), a directory
 (<code class="file docutils literal notranslate"><span class="pre">./package/</span></code>), or a zip archive (<code class="file docutils literal notranslate"><span class="pre">example.zip</span></code>).  If a
 directory or zip path is provided, it will be added to the front of
-<code class="docutils literal notranslate"><span class="pre">sys.path</span></code> and the module <a class="reference internal" href="../library/__main__.html#module-__main__" title="__main__: The environment where top-level code is run. Covers command-line interfaces, import-time behavior, and ``__name__ == '__main__'``."><code class="xref py py-mod docutils literal notranslate"><span class="pre">__main__</span></code></a> will be imported.  It's
+<code class="docutils literal notranslate"><span class="pre">sys.path</span></code> and the module <a class="reference internal" href="../library/__main__.html#module-__main__" title="__main__: The environment where the top-level script is run."><code class="xref py py-mod docutils literal notranslate"><span class="pre">__main__</span></code></a> will be imported.  It's
 expected that the directory or zip contains a <code class="file docutils literal notranslate"><span class="pre">__main__.py</span></code>;
 if it doesn't, some other <code class="file docutils literal notranslate"><span class="pre">__main__.py</span></code> might be imported from
 a location later in <code class="docutils literal notranslate"><span class="pre">sys.path</span></code>.  This makes more of the machinery
@@ -1700,7 +1700,7 @@ character, such as <code class="docutils literal notranslate"><span class="pre">
 will be used as the anchor for
 the relative import.  <a class="reference internal" href="../library/importlib.html#importlib.import_module" title="importlib.import_module"><code class="xref py py-func docutils literal notranslate"><span class="pre">import_module()</span></code></a> both inserts the imported
 module into <code class="docutils literal notranslate"><span class="pre">sys.modules</span></code> and returns the module object.</p>
-<p>以下是一些範例：</p>
+<p>Here are some examples:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">importlib</span> <span class="kn">import</span> <span class="n">import_module</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">anydbm</span> <span class="o">=</span> <span class="n">import_module</span><span class="p">(</span><span class="s1">&#39;anydbm&#39;</span><span class="p">)</span>  <span class="c1"># Standard absolute import</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">anydbm</span>
@@ -2570,7 +2570,7 @@ recompile generated files based on file modification times.</p>
 of these files when desired (e.g. after an initial version of Python has
 already been built based on the pregenerated versions).</p>
 <p>More selective regeneration targets are also defined - see
-<a class="reference external" href="https://github.com/python/cpython/tree/3.10/Makefile.pre.in">Makefile.pre.in</a> for details.</p>
+<a class="reference external" href="https://github.com/python/cpython/tree/3.9/Makefile.pre.in">Makefile.pre.in</a> for details.</p>
 <p>(Contributed by Victor Stinner in <a class="reference external" href="https://bugs.python.org/issue23404">bpo-23404</a>.)</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 2.7.14 版本新加入.</span></p>
@@ -2588,7 +2588,7 @@ of generated files by updating their modification times has been removed.</p>
 </section>
 </section>
 <section id="acknowledgements">
-<span id="acks27"></span><h2>致謝<a class="headerlink" href="#acknowledgements" title="本標題的永久連結">¶</a></h2>
+<span id="acks27"></span><h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="本標題的永久連結">¶</a></h2>
 <p>The author would like to thank the following people for offering
 suggestions, corrections and assistance with various drafts of this
 article: Nick Coghlan, Philip Jenvey, Ryan Lovett, R. David Murray,
@@ -2606,7 +2606,7 @@ Hugh Secker-Walker.</p>
   <div>
     <h3><a href="../contents.html">目錄</a></h3>
     <ul>
-<li><a class="reference internal" href="#">Python 2.7 有什麼新功能</a><ul>
+<li><a class="reference internal" href="#">What's New in Python 2.7</a><ul>
 <li><a class="reference internal" href="#the-future-for-python-2-x">The Future for Python 2.x</a></li>
 <li><a class="reference internal" href="#changes-to-the-handling-of-deprecation-warnings">Changes to the Handling of Deprecation Warnings</a></li>
 <li><a class="reference internal" href="#python-3-1-features">Python 3.1 Features</a></li>
@@ -2653,7 +2653,7 @@ Hugh Secker-Walker.</p>
 <li><a class="reference internal" href="#removal-of-make-touch-build-target">Removal of <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">touch</span></code> build target</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#acknowledgements">致謝</a></li>
+<li><a class="reference internal" href="#acknowledgements">Acknowledgements</a></li>
 </ul>
 </li>
 </ul>
@@ -2662,19 +2662,19 @@ Hugh Secker-Walker.</p>
   <div>
     <h4>上個主題</h4>
     <p class="topless"><a href="3.0.html"
-                          title="上一章">Python 3.0 有什麼新功能</a></p>
+                          title="上一章">What's New In Python 3.0</a></p>
   </div>
   <div>
     <h4>下個主題</h4>
     <p class="topless"><a href="2.6.html"
-                          title="下一章">Python 2.6 有什麼新功能</a></p>
+                          title="下一章">What's New in Python 2.6</a></p>
   </div>
   <div role="note" aria-label="source link">
     <h3>此頁面</h3>
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/whatsnew/2.7.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/whatsnew/2.7.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -2694,10 +2694,10 @@ Hugh Secker-Walker.</p>
           <a href="../py-modindex.html" title="Python 模組索引"
              >模組</a> |</li>
         <li class="right" >
-          <a href="2.6.html" title="Python 2.6 有什麼新功能"
+          <a href="2.6.html" title="What&#39;s New in Python 2.6"
              >下一頁</a> |</li>
         <li class="right" >
-          <a href="3.0.html" title="Python 3.0 有什麼新功能"
+          <a href="3.0.html" title="What&#39;s New In Python 3.0"
              >上一頁</a> |</li>
 
           <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
@@ -2710,11 +2710,11 @@ Hugh Secker-Walker.</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 有什麼新功能？</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Python 2.7 有什麼新功能</a></li>
+        <li class="nav-item nav-item-this"><a href="">What's New in Python 2.7</a></li>
                 <li class="right">
                     
 

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>smtplib --- SMTP protocol client &#8212; Python 3.10.2 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>smtplib --- SMTP protocol client &#8212; Python 3.9.10 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -20,7 +20,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.2 說明文件 中搜尋"
+          title="在 Python 3.9.10 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -74,8 +74,8 @@
     <h3><a href="../contents.html">目錄</a></h3>
     <ul>
 <li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">smtplib</span></code> --- SMTP protocol client</a><ul>
-<li><a class="reference internal" href="#smtp-objects">SMTP 物件</a></li>
-<li><a class="reference internal" href="#smtp-example">SMTP 範例</a></li>
+<li><a class="reference internal" href="#smtp-objects">SMTP Objects</a></li>
+<li><a class="reference internal" href="#smtp-example">SMTP Example</a></li>
 </ul>
 </li>
 </ul>
@@ -96,7 +96,7 @@
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/library/smtplib.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/library/smtplib.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -133,7 +133,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -163,10 +163,10 @@
             
   <section id="module-smtplib">
 <span id="smtplib-smtp-protocol-client"></span><h1><a class="reference internal" href="#module-smtplib" title="smtplib: SMTP protocol client (requires sockets)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">smtplib</span></code></a> --- SMTP protocol client<a class="headerlink" href="#module-smtplib" title="本標題的永久連結">¶</a></h1>
-<p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/smtplib.py">Lib/smtplib.py</a></p>
+<p><strong>Source code:</strong> <a class="reference external" href="https://github.com/python/cpython/tree/3.9/Lib/smtplib.py">Lib/smtplib.py</a></p>
 <hr class="docutils" id="index-0" />
 <p>The <a class="reference internal" href="#module-smtplib" title="smtplib: SMTP protocol client (requires sockets)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">smtplib</span></code></a> module defines an SMTP client session object that can be used
-to send mail to any internet machine with an SMTP or ESMTP listener daemon.  For
+to send mail to any Internet machine with an SMTP or ESMTP listener daemon.  For
 details of SMTP and ESMTP operation, consult <span class="target" id="index-1"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc821.html"><strong>RFC 821</strong></a> (Simple Mail Transfer
 Protocol) and <span class="target" id="index-2"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc1869.html"><strong>RFC 1869</strong></a> (SMTP Service Extensions).</p>
 <dl class="py class">
@@ -182,7 +182,7 @@ command.  Otherwise, the local hostname is found using
 than a success code, an <a class="reference internal" href="#smtplib.SMTPConnectError" title="smtplib.SMTPConnectError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">SMTPConnectError</span></code></a> is raised. The optional
 <em>timeout</em> parameter specifies a timeout in seconds for blocking operations
 like the connection attempt (if not specified, the global default timeout
-setting will be used).  If the timeout expires, <a class="reference internal" href="exceptions.html#TimeoutError" title="TimeoutError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TimeoutError</span></code></a> is
+setting will be used).  If the timeout expires, <a class="reference internal" href="socket.html#socket.timeout" title="socket.timeout"><code class="xref py py-exc docutils literal notranslate"><span class="pre">socket.timeout</span></code></a> is
 raised.  The optional source_address parameter allows binding
 to some specific source address in a machine with multiple network
 interfaces, and/or to some specific source TCP port. It takes a 2-tuple
@@ -211,7 +211,7 @@ where <code class="docutils literal notranslate"><span class="pre">data</span></
 <p><span class="versionmodified changed">在 3.3 版本變更: </span>Support for the <a class="reference internal" href="../reference/compound_stmts.html#with"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">with</span></code></a> statement was added.</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.3 版本變更: </span>新增 source_address 引數。</p>
+<p><span class="versionmodified changed">在 3.3 版本變更: </span>source_address argument was added.</p>
 </div>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.5 版本新加入: </span>The SMTPUTF8 extension (<span class="target" id="index-3"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc6531.html"><strong>RFC 6531</strong></a>) is now supported.</p>
@@ -239,10 +239,10 @@ best practices.</p>
 point to a PEM formatted private key and certificate chain file for the
 SSL connection.</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.3 版本變更: </span>新增 <em>context</em>。</p>
+<p><span class="versionmodified changed">在 3.3 版本變更: </span><em>context</em> was added.</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.3 版本變更: </span>新增 source_address 引數。</p>
+<p><span class="versionmodified changed">在 3.3 版本變更: </span>source_address argument was added.</p>
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.4 版本變更: </span>The class now supports hostname check with
@@ -274,7 +274,7 @@ socket, you must use an absolute path for <em>host</em>, starting with a '/'.</p
 Unix socket, LMTP generally don't support or require any authentication, but
 your mileage might vary.</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.9 版本變更: </span>新增 <em>timeout</em> 選用參數。</p>
+<p><span class="versionmodified changed">在 3.9 版本變更: </span>The optional <em>timeout</em> parameter was added.</p>
 </div>
 </dd></dl>
 
@@ -369,7 +369,7 @@ provided by the server, and defines a few additional commands.</p>
 </dl>
 </div>
 <section id="smtp-objects">
-<span id="id1"></span><h2>SMTP 物件<a class="headerlink" href="#smtp-objects" title="本標題的永久連結">¶</a></h2>
+<span id="id1"></span><h2>SMTP Objects<a class="headerlink" href="#smtp-objects" title="本標題的永久連結">¶</a></h2>
 <p>An <a class="reference internal" href="#smtplib.SMTP" title="smtplib.SMTP"><code class="xref py py-class docutils literal notranslate"><span class="pre">SMTP</span></code></a> instance has the following methods:</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="smtplib.SMTP.set_debuglevel">
@@ -429,10 +429,9 @@ defaults to the fully qualified domain name of the local host.  Examine the
 response for ESMTP option and store them for use by <a class="reference internal" href="#smtplib.SMTP.has_extn" title="smtplib.SMTP.has_extn"><code class="xref py py-meth docutils literal notranslate"><span class="pre">has_extn()</span></code></a>.
 Also sets several informational attributes: the message returned by
 the server is stored as the <code class="xref py py-attr docutils literal notranslate"><span class="pre">ehlo_resp</span></code> attribute, <code class="xref py py-attr docutils literal notranslate"><span class="pre">does_esmtp</span></code>
-is set to <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code> depending on whether the server supports
-ESMTP, and <code class="xref py py-attr docutils literal notranslate"><span class="pre">esmtp_features</span></code> will be a dictionary containing the names
-of the SMTP service extensions this server supports, and their parameters
-(if any).</p>
+is set to true or false depending on whether the server supports ESMTP, and
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">esmtp_features</span></code> will be a dictionary containing the names of the
+SMTP service extensions this server supports, and their parameters (if any).</p>
 <p>Unless you wish to use <a class="reference internal" href="#smtplib.SMTP.has_extn" title="smtplib.SMTP.has_extn"><code class="xref py py-meth docutils literal notranslate"><span class="pre">has_extn()</span></code></a> before sending mail, it should not be
 necessary to call this method explicitly.  It will be implicitly called by
 <a class="reference internal" href="#smtplib.SMTP.sendmail" title="smtplib.SMTP.sendmail"><code class="xref py py-meth docutils literal notranslate"><span class="pre">sendmail()</span></code></a> when necessary.</p>
@@ -569,7 +568,7 @@ certificates for you.</p>
 </dd>
 </dl>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.3 版本變更: </span>新增 <em>context</em>。</p>
+<p><span class="versionmodified changed">在 3.3 版本變更: </span><em>context</em> was added.</p>
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.4 版本變更: </span>The method now supports hostname check with
@@ -696,7 +695,7 @@ Normally these do not need to be called directly, so they are not documented
 here.  For details, consult the module code.</p>
 </section>
 <section id="smtp-example">
-<span id="id2"></span><h2>SMTP 範例<a class="headerlink" href="#smtp-example" title="本標題的永久連結">¶</a></h2>
+<span id="id2"></span><h2>SMTP Example<a class="headerlink" href="#smtp-example" title="本標題的永久連結">¶</a></h2>
 <p>This example prompts the user for addresses needed in the message envelope ('To'
 and 'From' addresses), and the message to be delivered.  Note that the headers
 to be included with the message must be included in the message as entered; this
@@ -751,8 +750,8 @@ via <a class="reference internal" href="#smtplib.SMTP.send_message" title="smtpl
     <h3><a href="../contents.html">目錄</a></h3>
     <ul>
 <li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">smtplib</span></code> --- SMTP protocol client</a><ul>
-<li><a class="reference internal" href="#smtp-objects">SMTP 物件</a></li>
-<li><a class="reference internal" href="#smtp-example">SMTP 範例</a></li>
+<li><a class="reference internal" href="#smtp-objects">SMTP Objects</a></li>
+<li><a class="reference internal" href="#smtp-example">SMTP Example</a></li>
 </ul>
 </li>
 </ul>
@@ -773,7 +772,7 @@ via <a class="reference internal" href="#smtplib.SMTP.send_message" title="smtpl
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/library/smtplib.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/library/smtplib.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -809,7 +808,7 @@ via <a class="reference internal" href="#smtplib.SMTP.send_message" title="smtpl
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>

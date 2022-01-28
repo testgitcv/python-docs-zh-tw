@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>shutil --- High-level file operations &#8212; Python 3.10.2 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shutil --- High-level file operations &#8212; Python 3.9.10 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -20,7 +20,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.2 說明文件 中搜尋"
+          title="在 Python 3.9.10 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -77,7 +77,7 @@
 <li><a class="reference internal" href="#directory-and-files-operations">Directory and files operations</a><ul>
 <li><a class="reference internal" href="#platform-dependent-efficient-copy-operations">Platform-dependent efficient copy operations</a></li>
 <li><a class="reference internal" href="#copytree-example">copytree example</a></li>
-<li><a class="reference internal" href="#rmtree-example">rmtree 範例</a></li>
+<li><a class="reference internal" href="#rmtree-example">rmtree example</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#archiving-operations">Archiving operations</a><ul>
@@ -106,7 +106,7 @@
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/library/shutil.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/library/shutil.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -143,7 +143,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -173,7 +173,7 @@
             
   <section id="module-shutil">
 <span id="shutil-high-level-file-operations"></span><h1><a class="reference internal" href="#module-shutil" title="shutil: High-level file operations, including copying."><code class="xref py py-mod docutils literal notranslate"><span class="pre">shutil</span></code></a> --- High-level file operations<a class="headerlink" href="#module-shutil" title="本標題的永久連結">¶</a></h1>
-<p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/shutil.py">Lib/shutil.py</a></p>
+<p><strong>Source code:</strong> <a class="reference external" href="https://github.com/python/cpython/tree/3.9/Lib/shutil.py">Lib/shutil.py</a></p>
 <hr class="docutils" id="index-0" />
 <p>The <a class="reference internal" href="#module-shutil" title="shutil: High-level file operations, including copying."><code class="xref py py-mod docutils literal notranslate"><span class="pre">shutil</span></code></a> module offers a number of high-level operations on files and
 collections of files.  In particular, functions are provided  which support file
@@ -260,7 +260,7 @@ platform; please see <a class="reference internal" href="#shutil.copystat" title
 is asked to do so, it will do nothing and return.</p>
 <p class="audit-hook">Raises an <a class="reference internal" href="sys.html#auditing"><span class="std std-ref">auditing event</span></a> <code class="docutils literal notranslate"><span class="pre">shutil.copymode</span></code> with arguments <code class="docutils literal notranslate"><span class="pre">src</span></code>, <code class="docutils literal notranslate"><span class="pre">dst</span></code>.</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.3 版本變更: </span>新增 <em>follow_symlinks</em> 引數。</p>
+<p><span class="versionmodified changed">在 3.3 版本變更: </span>Added <em>follow_symlinks</em> argument.</p>
 </div>
 </dd></dl>
 
@@ -299,7 +299,8 @@ all platforms.)</p></li>
 is unavailable, when asked to modify a symbolic link,
 <a class="reference internal" href="#shutil.copystat" title="shutil.copystat"><code class="xref py py-func docutils literal notranslate"><span class="pre">copystat()</span></code></a> will copy everything it can.
 <a class="reference internal" href="#shutil.copystat" title="shutil.copystat"><code class="xref py py-func docutils literal notranslate"><span class="pre">copystat()</span></code></a> never returns failure.</p>
-<p>更多資訊請見 <a class="reference internal" href="os.html#os.supports_follow_symlinks" title="os.supports_follow_symlinks"><code class="xref py py-data docutils literal notranslate"><span class="pre">os.supports_follow_symlinks</span></code></a>。</p>
+<p>Please see <a class="reference internal" href="os.html#os.supports_follow_symlinks" title="os.supports_follow_symlinks"><code class="xref py py-data docutils literal notranslate"><span class="pre">os.supports_follow_symlinks</span></code></a>
+for more information.</p>
 </div>
 <p class="audit-hook">Raises an <a class="reference internal" href="sys.html#auditing"><span class="std std-ref">auditing event</span></a> <code class="docutils literal notranslate"><span class="pre">shutil.copystat</span></code> with arguments <code class="docutils literal notranslate"><span class="pre">src</span></code>, <code class="docutils literal notranslate"><span class="pre">dst</span></code>.</p>
 <div class="versionchanged">
@@ -424,7 +425,7 @@ copy the file more efficiently. See
 <a class="reference internal" href="#shutil-platform-dependent-efficient-copy-operations"><span class="std std-ref">Platform-dependent efficient copy operations</span></a> section.</p>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">在 3.8 版本新加入: </span><em>dirs_exist_ok</em> 參數。</p>
+<p><span class="versionmodified added">在 3.8 版本新加入: </span>The <em>dirs_exist_ok</em> parameter.</p>
 </div>
 </dd></dl>
 
@@ -501,7 +502,7 @@ it to the behavior of GNU's <strong class="program">mv</strong>.
 Now returns <em>dst</em>.</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.5 版本變更: </span>新增 <em>copy_function</em> 關鍵字引數。</p>
+<p><span class="versionmodified changed">在 3.5 版本變更: </span>Added the <em>copy_function</em> keyword argument.</p>
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.8 版本變更: </span>Platform-specific fast-copy syscalls may be used internally in order to
@@ -526,7 +527,7 @@ directory.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.8 版本變更: </span>On Windows, <em>path</em> can now be a file or directory.</p>
 </div>
-<p class="availability"><a class="reference internal" href="intro.html#availability"><span class="std std-ref">適用</span></a>：Unix、Windows。</p>
+<p class="availability"><a class="reference internal" href="intro.html#availability"><span class="std std-ref">Availability</span></a>: Unix, Windows.</p>
 </dd></dl>
 
 <dl class="py function">
@@ -537,7 +538,7 @@ directory.</p>
 least one argument is required.</p>
 <p>See also <a class="reference internal" href="os.html#os.chown" title="os.chown"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.chown()</span></code></a>, the underlying function.</p>
 <p class="audit-hook">Raises an <a class="reference internal" href="sys.html#auditing"><span class="std std-ref">auditing event</span></a> <code class="docutils literal notranslate"><span class="pre">shutil.chown</span></code> with arguments <code class="docutils literal notranslate"><span class="pre">path</span></code>, <code class="docutils literal notranslate"><span class="pre">user</span></code>, <code class="docutils literal notranslate"><span class="pre">group</span></code>.</p>
-<p class="availability"><a class="reference internal" href="intro.html#availability"><span class="std std-ref">適用</span></a>：Unix。</p>
+<p class="availability"><a class="reference internal" href="intro.html#availability"><span class="std std-ref">Availability</span></a>: Unix.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.3 版本新加入.</span></p>
 </div>
@@ -659,7 +660,7 @@ name starts with <code class="docutils literal notranslate"><span class="pre">tm
 </div>
 </section>
 <section id="rmtree-example">
-<span id="shutil-rmtree-example"></span><h3>rmtree 範例<a class="headerlink" href="#rmtree-example" title="本標題的永久連結">¶</a></h3>
+<span id="shutil-rmtree-example"></span><h3>rmtree example<a class="headerlink" href="#rmtree-example" title="本標題的永久連結">¶</a></h3>
 <p>This example shows how to remove a directory tree on Windows where some
 of the files have their read-only bit set. It uses the onerror callback
 to clear the readonly bit and reattempt the remove. Any subsequent failure
@@ -683,7 +684,7 @@ will propagate.</p>
 <p><span class="versionmodified added">在 3.2 版本新加入.</span></p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.5 版本變更: </span>新增 <em>xztar</em> 格式的支援。</p>
+<p><span class="versionmodified changed">在 3.5 版本變更: </span>Added support for the <em>xztar</em> format.</p>
 </div>
 <p>High-level utilities to create and read compressed and archived files are also
 provided.  They rely on the <a class="reference internal" href="zipfile.html#module-zipfile" title="zipfile: Read and write ZIP-format archive files."><code class="xref py py-mod docutils literal notranslate"><span class="pre">zipfile</span></code></a> and <a class="reference internal" href="tarfile.html#module-tarfile" title="tarfile: Read and write tar-format archive files."><code class="xref py py-mod docutils literal notranslate"><span class="pre">tarfile</span></code></a> modules.</p>
@@ -922,7 +923,7 @@ size used by many terminal emulators.</p>
 <li><a class="reference internal" href="#directory-and-files-operations">Directory and files operations</a><ul>
 <li><a class="reference internal" href="#platform-dependent-efficient-copy-operations">Platform-dependent efficient copy operations</a></li>
 <li><a class="reference internal" href="#copytree-example">copytree example</a></li>
-<li><a class="reference internal" href="#rmtree-example">rmtree 範例</a></li>
+<li><a class="reference internal" href="#rmtree-example">rmtree example</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#archiving-operations">Archiving operations</a><ul>
@@ -951,7 +952,7 @@ size used by many terminal emulators.</p>
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/library/shutil.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/library/shutil.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -987,7 +988,7 @@ size used by many terminal emulators.</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>

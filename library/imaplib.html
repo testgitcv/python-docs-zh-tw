@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>imaplib --- IMAP4 protocol client &#8212; Python 3.10.2 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>imaplib --- IMAP4 protocol client &#8212; Python 3.9.10 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -20,7 +20,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.2 說明文件 中搜尋"
+          title="在 Python 3.9.10 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -74,8 +74,8 @@
     <h3><a href="../contents.html">目錄</a></h3>
     <ul>
 <li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">imaplib</span></code> --- IMAP4 protocol client</a><ul>
-<li><a class="reference internal" href="#imap4-objects">IMAP4 物件</a></li>
-<li><a class="reference internal" href="#imap4-example">IMAP4 範例</a></li>
+<li><a class="reference internal" href="#imap4-objects">IMAP4 Objects</a></li>
+<li><a class="reference internal" href="#imap4-example">IMAP4 Example</a></li>
 </ul>
 </li>
 </ul>
@@ -96,7 +96,7 @@
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/library/imaplib.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/library/imaplib.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -133,7 +133,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -163,7 +163,7 @@
             
   <section id="module-imaplib">
 <span id="imaplib-imap4-protocol-client"></span><h1><a class="reference internal" href="#module-imaplib" title="imaplib: IMAP4 protocol client (requires sockets)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">imaplib</span></code></a> --- IMAP4 protocol client<a class="headerlink" href="#module-imaplib" title="本標題的永久連結">¶</a></h1>
-<p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/imaplib.py">Lib/imaplib.py</a></p>
+<p><strong>Source code:</strong> <a class="reference external" href="https://github.com/python/cpython/tree/3.9/Lib/imaplib.py">Lib/imaplib.py</a></p>
 <hr class="docutils" id="index-0" />
 <p>This module defines three classes, <a class="reference internal" href="#imaplib.IMAP4" title="imaplib.IMAP4"><code class="xref py py-class docutils literal notranslate"><span class="pre">IMAP4</span></code></a>, <a class="reference internal" href="#imaplib.IMAP4_SSL" title="imaplib.IMAP4_SSL"><code class="xref py py-class docutils literal notranslate"><span class="pre">IMAP4_SSL</span></code></a> and
 <a class="reference internal" href="#imaplib.IMAP4_stream" title="imaplib.IMAP4_stream"><code class="xref py py-class docutils literal notranslate"><span class="pre">IMAP4_stream</span></code></a>, which encapsulate a connection to an IMAP4 server and
@@ -195,7 +195,7 @@ like this, the IMAP4 <code class="docutils literal notranslate"><span class="pre
 <p><span class="versionmodified changed">在 3.5 版本變更: </span>Support for the <a class="reference internal" href="../reference/compound_stmts.html#with"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">with</span></code></a> statement was added.</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.9 版本變更: </span>新增 <em>timeout</em> 選用參數。</p>
+<p><span class="versionmodified changed">在 3.9 版本變更: </span>The optional <em>timeout</em> parameter was added.</p>
 </div>
 </dd></dl>
 
@@ -245,7 +245,7 @@ if <em>keyfile</em>/<em>certfile</em> is provided along with <em>ssl_context</em
 connection attempt. If timeout is not given or is None, the global default
 socket timeout is used.</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.3 版本變更: </span>新增 <em>ssl_context</em> 參數。</p>
+<p><span class="versionmodified changed">在 3.3 版本變更: </span><em>ssl_context</em> parameter was added.</p>
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.4 版本變更: </span>The class now supports hostname check with
@@ -259,7 +259,7 @@ Please use <a class="reference internal" href="ssl.html#ssl.SSLContext.load_cert
 certificates for you.</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.9 版本變更: </span>新增 <em>timeout</em> 選用參數。</p>
+<p><span class="versionmodified changed">在 3.9 版本變更: </span>The optional <em>timeout</em> parameter was added.</p>
 </div>
 </dd></dl>
 
@@ -320,7 +320,7 @@ implementing it, by the University of Washington's IMAP Information Center
 can all be found at (<strong>Source Code</strong>) <a class="reference external" href="https://github.com/uw-imap/imap">https://github.com/uw-imap/imap</a> (<strong>Not Maintained</strong>).</p>
 </div>
 <section id="imap4-objects">
-<span id="id1"></span><h2>IMAP4 物件<a class="headerlink" href="#imap4-objects" title="本標題的永久連結">¶</a></h2>
+<span id="id1"></span><h2>IMAP4 Objects<a class="headerlink" href="#imap4-objects" title="本標題的永久連結">¶</a></h2>
 <p>All IMAP4rev1 commands are represented by methods of the same name, either
 upper-case or lower-case.</p>
 <p>All arguments to commands are converted to strings, except for <code class="docutils literal notranslate"><span class="pre">AUTHENTICATE</span></code>,
@@ -530,7 +530,7 @@ the <a class="reference internal" href="#imaplib.IMAP4.read" title="imaplib.IMAP
 and <a class="reference internal" href="#imaplib.IMAP4.shutdown" title="imaplib.IMAP4.shutdown"><code class="xref py py-meth docutils literal notranslate"><span class="pre">IMAP4.shutdown()</span></code></a> methods. You may override this method.</p>
 <p class="audit-hook">Raises an <a class="reference internal" href="sys.html#auditing"><span class="std std-ref">auditing event</span></a> <code class="docutils literal notranslate"><span class="pre">imaplib.open</span></code> with arguments <code class="docutils literal notranslate"><span class="pre">self</span></code>, <code class="docutils literal notranslate"><span class="pre">host</span></code>, <code class="docutils literal notranslate"><span class="pre">port</span></code>.</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.9 版本變更: </span>新增 <em>timeout</em> 參數。</p>
+<p><span class="versionmodified changed">在 3.9 版本變更: </span>The <em>timeout</em> parameter was added.</p>
 </div>
 </dd></dl>
 
@@ -589,7 +589,7 @@ protocol requires that at least one criterion be specified; an exception will be
 raised when the server returns an error.  <em>charset</em> must be <code class="docutils literal notranslate"><span class="pre">None</span></code> if
 the <code class="docutils literal notranslate"><span class="pre">UTF8=ACCEPT</span></code> capability was enabled using the <a class="reference internal" href="#imaplib.IMAP4.enable" title="imaplib.IMAP4.enable"><code class="xref py py-meth docutils literal notranslate"><span class="pre">enable()</span></code></a>
 command.</p>
-<p>範例：</p>
+<p>Example:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># M is a connected IMAP4 instance...</span>
 <span class="n">typ</span><span class="p">,</span> <span class="n">msgnums</span> <span class="o">=</span> <span class="n">M</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;FROM&#39;</span><span class="p">,</span> <span class="s1">&#39;&quot;LDJ&quot;&#39;</span><span class="p">)</span>
 
@@ -802,7 +802,7 @@ capability.</p>
 
 </section>
 <section id="imap4-example">
-<span id="id2"></span><h2>IMAP4 範例<a class="headerlink" href="#imap4-example" title="本標題的永久連結">¶</a></h2>
+<span id="id2"></span><h2>IMAP4 Example<a class="headerlink" href="#imap4-example" title="本標題的永久連結">¶</a></h2>
 <p>Here is a minimal example (without error checking) that opens a mailbox and
 retrieves and prints all messages:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">getpass</span><span class="o">,</span> <span class="nn">imaplib</span>
@@ -832,8 +832,8 @@ retrieves and prints all messages:</p>
     <h3><a href="../contents.html">目錄</a></h3>
     <ul>
 <li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">imaplib</span></code> --- IMAP4 protocol client</a><ul>
-<li><a class="reference internal" href="#imap4-objects">IMAP4 物件</a></li>
-<li><a class="reference internal" href="#imap4-example">IMAP4 範例</a></li>
+<li><a class="reference internal" href="#imap4-objects">IMAP4 Objects</a></li>
+<li><a class="reference internal" href="#imap4-example">IMAP4 Example</a></li>
 </ul>
 </li>
 </ul>
@@ -854,7 +854,7 @@ retrieves and prints all messages:</p>
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/library/imaplib.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/library/imaplib.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -890,7 +890,7 @@ retrieves and prints all messages:</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>re --- Regular expression operations &#8212; Python 3.10.2 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>re --- Regular expression operations &#8212; Python 3.9.10 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -20,7 +20,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.2 說明文件 中搜尋"
+          title="在 Python 3.9.10 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -75,7 +75,7 @@
     <ul>
 <li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">re</span></code> --- Regular expression operations</a><ul>
 <li><a class="reference internal" href="#regular-expression-syntax">Regular Expression Syntax</a></li>
-<li><a class="reference internal" href="#module-contents">模組內容</a></li>
+<li><a class="reference internal" href="#module-contents">Module Contents</a></li>
 <li><a class="reference internal" href="#regular-expression-objects">Regular Expression Objects</a></li>
 <li><a class="reference internal" href="#match-objects">Match Objects</a></li>
 <li><a class="reference internal" href="#regular-expression-examples">Regular Expression Examples</a><ul>
@@ -110,7 +110,7 @@
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/library/re.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/library/re.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -147,7 +147,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -177,7 +177,7 @@
             
   <section id="module-re">
 <span id="re-regular-expression-operations"></span><h1><a class="reference internal" href="#module-re" title="re: Regular expression operations."><code class="xref py py-mod docutils literal notranslate"><span class="pre">re</span></code></a> --- Regular expression operations<a class="headerlink" href="#module-re" title="本標題的永久連結">¶</a></h1>
-<p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/re.py">Lib/re.py</a></p>
+<p><strong>Source code:</strong> <a class="reference external" href="https://github.com/python/cpython/tree/3.9/Lib/re.py">Lib/re.py</a></p>
 <hr class="docutils" />
 <p>This module provides regular expression matching operations similar to
 those found in Perl.</p>
@@ -410,7 +410,7 @@ letters set the corresponding flags: <a class="reference internal" href="#re.A" 
 <a class="reference internal" href="#re.M" title="re.M"><code class="xref py py-const docutils literal notranslate"><span class="pre">re.M</span></code></a> (multi-line), <a class="reference internal" href="#re.S" title="re.S"><code class="xref py py-const docutils literal notranslate"><span class="pre">re.S</span></code></a> (dot matches all),
 <code class="xref py py-const docutils literal notranslate"><span class="pre">re.U</span></code> (Unicode matching), and <a class="reference internal" href="#re.X" title="re.X"><code class="xref py py-const docutils literal notranslate"><span class="pre">re.X</span></code></a> (verbose),
 for the entire regular expression.
-(The flags are described in <a class="reference internal" href="#contents-of-module-re"><span class="std std-ref">模組內容</span></a>.)
+(The flags are described in <a class="reference internal" href="#contents-of-module-re"><span class="std std-ref">Module Contents</span></a>.)
 This is useful if you wish to include the flags as part of the
 regular expression, instead of passing a <em>flag</em> argument to the
 <a class="reference internal" href="#re.compile" title="re.compile"><code class="xref py py-func docutils literal notranslate"><span class="pre">re.compile()</span></code></a> function.  Flags should be used first in the
@@ -431,7 +431,7 @@ The letters set or remove the corresponding flags:
 <a class="reference internal" href="#re.L" title="re.L"><code class="xref py py-const docutils literal notranslate"><span class="pre">re.L</span></code></a> (locale dependent), <a class="reference internal" href="#re.M" title="re.M"><code class="xref py py-const docutils literal notranslate"><span class="pre">re.M</span></code></a> (multi-line),
 <a class="reference internal" href="#re.S" title="re.S"><code class="xref py py-const docutils literal notranslate"><span class="pre">re.S</span></code></a> (dot matches all), <code class="xref py py-const docutils literal notranslate"><span class="pre">re.U</span></code> (Unicode matching),
 and <a class="reference internal" href="#re.X" title="re.X"><code class="xref py py-const docutils literal notranslate"><span class="pre">re.X</span></code></a> (verbose), for the part of the expression.
-(The flags are described in <a class="reference internal" href="#contents-of-module-re"><span class="std std-ref">模組內容</span></a>.)</p>
+(The flags are described in <a class="reference internal" href="#contents-of-module-re"><span class="std std-ref">Module Contents</span></a>.)</p>
 <p>The letters <code class="docutils literal notranslate"><span class="pre">'a'</span></code>, <code class="docutils literal notranslate"><span class="pre">'L'</span></code> and <code class="docutils literal notranslate"><span class="pre">'u'</span></code> are mutually exclusive when used
 as inline flags, so they can't be combined or follow <code class="docutils literal notranslate"><span class="pre">'-'</span></code>.  Instead,
 when one of them appears in an inline group, it overrides the matching mode
@@ -695,7 +695,7 @@ it expands to the named Unicode character (e.g. <code class="docutils literal no
 </div>
 </section>
 <section id="module-contents">
-<span id="contents-of-module-re"></span><h2>模組內容<a class="headerlink" href="#module-contents" title="本標題的永久連結">¶</a></h2>
+<span id="contents-of-module-re"></span><h2>Module Contents<a class="headerlink" href="#module-contents" title="本標題的永久連結">¶</a></h2>
 <p>The module defines several functions, constants, and an exception. Some of the
 functions are simplified versions of the full featured methods for compiled
 regular expressions.  Most non-trivial applications always use the compiled
@@ -718,7 +718,7 @@ Values can be any of the following variables, combined using bitwise OR (the
 <span class="n">result</span> <span class="o">=</span> <span class="n">prog</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">string</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>等價於：</p>
+<p>is equivalent to</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">string</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1123,7 +1123,7 @@ the following additional attributes:</p>
 </dd></dl>
 
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.5 版本變更: </span>新增額外屬性。</p>
+<p><span class="versionmodified changed">在 3.5 版本變更: </span>Added additional attributes.</p>
 </div>
 </dd></dl>
 
@@ -1367,7 +1367,7 @@ an individual group from a match:</p>
 <dd><p>Return a tuple containing all the subgroups of the match, from 1 up to however
 many groups are in the pattern.  The <em>default</em> argument is used for groups that
 did not participate in the match; it defaults to <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
-<p>舉例來說：</p>
+<p>For example:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">m</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;(\d+)\.(\d+)&quot;</span><span class="p">,</span> <span class="s2">&quot;24.1632&quot;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">m</span><span class="o">.</span><span class="n">groups</span><span class="p">()</span>
 <span class="go">(&#39;24&#39;, &#39;1632&#39;)</span>
@@ -1579,7 +1579,7 @@ expressions.</p>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">%u</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">\d+</span></code></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">%x</span></code>、<code class="docutils literal notranslate"><span class="pre">%X</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">%x</span></code>, <code class="docutils literal notranslate"><span class="pre">%X</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">[-+]?(0[xX])?[\dA-Fa-f]+</span></code></p></td>
 </tr>
 </tbody>
@@ -1603,7 +1603,7 @@ expressions.</p>
 <a class="reference internal" href="#re.match" title="re.match"><code class="xref py py-func docutils literal notranslate"><span class="pre">re.match()</span></code></a> checks for a match only at the beginning of the string, while
 <a class="reference internal" href="#re.search" title="re.search"><code class="xref py py-func docutils literal notranslate"><span class="pre">re.search()</span></code></a> checks for a match anywhere in the string (this is what Perl
 does by default).</p>
-<p>舉例來說：</p>
+<p>For example:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;abcdef&quot;</span><span class="p">)</span>    <span class="c1"># No match</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;abcdef&quot;</span><span class="p">)</span>   <span class="c1"># Match</span>
 <span class="go">&lt;re.Match object; span=(2, 3), match=&#39;c&#39;&gt;</span>
@@ -1848,7 +1848,7 @@ great detail.</p>
     <ul>
 <li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">re</span></code> --- Regular expression operations</a><ul>
 <li><a class="reference internal" href="#regular-expression-syntax">Regular Expression Syntax</a></li>
-<li><a class="reference internal" href="#module-contents">模組內容</a></li>
+<li><a class="reference internal" href="#module-contents">Module Contents</a></li>
 <li><a class="reference internal" href="#regular-expression-objects">Regular Expression Objects</a></li>
 <li><a class="reference internal" href="#match-objects">Match Objects</a></li>
 <li><a class="reference internal" href="#regular-expression-examples">Regular Expression Examples</a><ul>
@@ -1883,7 +1883,7 @@ great detail.</p>
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/library/re.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/library/re.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -1919,7 +1919,7 @@ great detail.</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>

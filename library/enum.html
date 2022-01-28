@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>enum --- Support for enumerations &#8212; Python 3.10.2 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>enum --- Support for enumerations &#8212; Python 3.9.10 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -20,7 +20,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.2 說明文件 中搜尋"
+          title="在 Python 3.9.10 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -74,7 +74,7 @@
     <h3><a href="../contents.html">目錄</a></h3>
     <ul>
 <li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">enum</span></code> --- Support for enumerations</a><ul>
-<li><a class="reference internal" href="#module-contents">模組內容</a></li>
+<li><a class="reference internal" href="#module-contents">Module Contents</a></li>
 <li><a class="reference internal" href="#creating-an-enum">Creating an Enum</a></li>
 <li><a class="reference internal" href="#programmatic-access-to-enumeration-members-and-their-attributes">Programmatic access to enumeration members and their attributes</a></li>
 <li><a class="reference internal" href="#duplicating-enum-members-and-values">Duplicating enum members and values</a></li>
@@ -143,7 +143,7 @@
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/library/enum.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/library/enum.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -180,7 +180,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -213,7 +213,7 @@
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.4 版本新加入.</span></p>
 </div>
-<p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/enum.py">Lib/enum.py</a></p>
+<p><strong>Source code:</strong> <a class="reference external" href="https://github.com/python/cpython/tree/3.9/Lib/enum.py">Lib/enum.py</a></p>
 <hr class="docutils" />
 <p>An enumeration is a set of symbolic names (members) bound to unique,
 constant values.  Within an enumeration, the members can be compared
@@ -226,7 +226,7 @@ UPPER_CASE names for enum members, and will be using that style
 in our examples.</p>
 </div>
 <section id="module-contents">
-<h2>模組內容<a class="headerlink" href="#module-contents" title="本標題的永久連結">¶</a></h2>
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="本標題的永久連結">¶</a></h2>
 <p>This module defines four enumeration classes that can be used to define unique
 sets of names and values: <a class="reference internal" href="#enum.Enum" title="enum.Enum"><code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></a>, <a class="reference internal" href="#enum.IntEnum" title="enum.IntEnum"><code class="xref py py-class docutils literal notranslate"><span class="pre">IntEnum</span></code></a>, <a class="reference internal" href="#enum.Flag" title="enum.Flag"><code class="xref py py-class docutils literal notranslate"><span class="pre">Flag</span></code></a>, and
 <a class="reference internal" href="#enum.IntFlag" title="enum.IntFlag"><code class="xref py py-class docutils literal notranslate"><span class="pre">IntFlag</span></code></a>.  It also defines one decorator, <a class="reference internal" href="#enum.unique" title="enum.unique"><code class="xref py py-func docutils literal notranslate"><span class="pre">unique()</span></code></a>, and one
@@ -619,7 +619,7 @@ any members.  So this is forbidden:</p>
 <span class="gp">...</span>
 <span class="gt">Traceback (most recent call last):</span>
 <span class="c">...</span>
-<span class="gr">TypeError</span>: <span class="n">MoreColor: cannot extend enumeration &#39;Color&#39;</span>
+<span class="gr">TypeError</span>: <span class="n">Cannot extend enumerations</span>
 </pre></div>
 </div>
 <p>But this is allowed:</p>
@@ -741,7 +741,7 @@ SomeData in the global scope:</p>
 </pre></div>
 </div>
 </dd>
-<dt class="field-odd">模組</dt>
+<dt class="field-odd">module</dt>
 <dd class="field-odd"><p>name of module where new Enum class can be found.</p>
 </dd>
 <dt class="field-even">qualname</dt>
@@ -755,7 +755,7 @@ SomeData in the global scope:</p>
 </dd>
 </dl>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.5 版本變更: </span>新增 <em>start</em> 參數。</p>
+<p><span class="versionmodified changed">在 3.5 版本變更: </span>The <em>start</em> parameter was added.</p>
 </div>
 </section>
 <section id="derived-enumerations">
@@ -1098,7 +1098,7 @@ to handle any extra arguments:</p>
 <span class="gp">... </span>    <span class="n">BLEACHED_CORAL</span> <span class="o">=</span> <span class="p">()</span> <span class="c1"># New color, no Pantone code yet!</span>
 <span class="gp">...</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">Swatch</span><span class="o">.</span><span class="n">SEA_GREEN</span>
-<span class="go">&lt;Swatch.SEA_GREEN&gt;</span>
+<span class="go">&lt;Swatch.SEA_GREEN: 2&gt;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">Swatch</span><span class="o">.</span><span class="n">SEA_GREEN</span><span class="o">.</span><span class="n">pantone</span>
 <span class="go">&#39;1246&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">Swatch</span><span class="o">.</span><span class="n">BLEACHED_CORAL</span><span class="o">.</span><span class="n">pantone</span>
@@ -1277,7 +1277,7 @@ class</p></li>
 overridden</p></li>
 </ul>
 <div class="versionadded">
-<p><span class="versionmodified added">在 3.6 版本新加入: </span><code class="docutils literal notranslate"><span class="pre">_missing_</span></code>、<code class="docutils literal notranslate"><span class="pre">_order_</span></code>、<code class="docutils literal notranslate"><span class="pre">_generate_next_value_</span></code></p>
+<p><span class="versionmodified added">在 3.6 版本新加入: </span><code class="docutils literal notranslate"><span class="pre">_missing_</span></code>, <code class="docutils literal notranslate"><span class="pre">_order_</span></code>, <code class="docutils literal notranslate"><span class="pre">_generate_next_value_</span></code></p>
 </div>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.7 版本新加入: </span><code class="docutils literal notranslate"><span class="pre">_ignore_</span></code></p>
@@ -1304,9 +1304,9 @@ order is lost before it can be recorded.</p>
 </section>
 <section id="private-names">
 <h4>_Private__names<a class="headerlink" href="#private-names" title="本標題的永久連結">¶</a></h4>
-<p><a class="reference internal" href="../reference/expressions.html#private-name-mangling"><span class="std std-ref">Private names</span></a> will be normal attributes in Python
-3.11 instead of either an error or a member (depending on if the name ends with
-an underscore). Using these names in 3.10 will issue a <a class="reference internal" href="exceptions.html#DeprecationWarning" title="DeprecationWarning"><code class="xref py py-exc docutils literal notranslate"><span class="pre">DeprecationWarning</span></code></a>.</p>
+<p><a class="reference internal" href="../reference/expressions.html#private-name-mangling"><span class="std std-ref">Private names</span></a> will be normal attributes in Python 3.11 instead of either an error
+or a member (depending on if the name ends with an underscore). Using these names
+in 3.9 and 3.10 will issue a <a class="reference internal" href="exceptions.html#DeprecationWarning" title="DeprecationWarning"><code class="xref py py-exc docutils literal notranslate"><span class="pre">DeprecationWarning</span></code></a>.</p>
 </section>
 <section id="enum-member-type">
 <h4><code class="docutils literal notranslate"><span class="pre">Enum</span></code> member type<a class="headerlink" href="#enum-member-type" title="本標題的永久連結">¶</a></h4>
@@ -1356,7 +1356,7 @@ but not of the class:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">dir</span><span class="p">(</span><span class="n">Planet</span><span class="p">)</span>
 <span class="go">[&#39;EARTH&#39;, &#39;JUPITER&#39;, &#39;MARS&#39;, &#39;MERCURY&#39;, &#39;NEPTUNE&#39;, &#39;SATURN&#39;, &#39;URANUS&#39;, &#39;VENUS&#39;, &#39;__class__&#39;, &#39;__doc__&#39;, &#39;__members__&#39;, &#39;__module__&#39;]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">dir</span><span class="p">(</span><span class="n">Planet</span><span class="o">.</span><span class="n">EARTH</span><span class="p">)</span>
-<span class="go">[&#39;__class__&#39;, &#39;__doc__&#39;, &#39;__module__&#39;, &#39;mass&#39;, &#39;name&#39;, &#39;radius&#39;, &#39;surface_gravity&#39;, &#39;value&#39;]</span>
+<span class="go">[&#39;__class__&#39;, &#39;__doc__&#39;, &#39;__module__&#39;, &#39;name&#39;, &#39;surface_gravity&#39;, &#39;value&#39;]</span>
 </pre></div>
 </div>
 </section>
@@ -1381,7 +1381,7 @@ all named flags and all named combinations of flags that are in the value:</p>
 <div class="admonition note">
 <p class="admonition-title">備註</p>
 <p>In 3.11 unnamed combinations of flags will only produce the canonical flag
-members (aka single-value flags).  So <code class="docutils literal notranslate"><span class="pre">Color(7)</span></code> will produce something
+members (aka single-value flags).  So <code class="docutils literal notranslate"><span class="pre">Color(7)</span></code> would produce something
 like <code class="docutils literal notranslate"><span class="pre">&lt;Color.BLUE|GREEN|RED:</span> <span class="pre">7&gt;</span></code>.</p>
 </div>
 </section>
@@ -1400,7 +1400,7 @@ like <code class="docutils literal notranslate"><span class="pre">&lt;Color.BLUE
     <h3><a href="../contents.html">目錄</a></h3>
     <ul>
 <li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">enum</span></code> --- Support for enumerations</a><ul>
-<li><a class="reference internal" href="#module-contents">模組內容</a></li>
+<li><a class="reference internal" href="#module-contents">Module Contents</a></li>
 <li><a class="reference internal" href="#creating-an-enum">Creating an Enum</a></li>
 <li><a class="reference internal" href="#programmatic-access-to-enumeration-members-and-their-attributes">Programmatic access to enumeration members and their attributes</a></li>
 <li><a class="reference internal" href="#duplicating-enum-members-and-values">Duplicating enum members and values</a></li>
@@ -1469,7 +1469,7 @@ like <code class="docutils literal notranslate"><span class="pre">&lt;Color.BLUE
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/library/enum.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/library/enum.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -1505,7 +1505,7 @@ like <code class="docutils literal notranslate"><span class="pre">&lt;Color.BLUE
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>

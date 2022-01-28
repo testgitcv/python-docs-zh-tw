@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Python/C API 參考手冊 &#8212; Python 3.10.2 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python/C API 參考手冊 &#8212; Python 3.9.10 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -20,7 +20,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.2 說明文件 中搜尋"
+          title="在 Python 3.9.10 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -85,7 +85,7 @@
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/c-api/index.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/c-api/index.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -122,7 +122,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
         <li class="nav-item nav-item-this"><a href="">Python/C API 參考手冊</a></li>
@@ -158,17 +158,12 @@
 <li class="toctree-l2"><a class="reference internal" href="intro.html#include-files">Include Files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="intro.html#useful-macros">Useful macros</a></li>
 <li class="toctree-l2"><a class="reference internal" href="intro.html#objects-types-and-reference-counts">Objects, Types and Reference Counts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intro.html#exceptions">例外</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#exceptions">Exceptions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="intro.html#embedding-python">嵌入式Python</a></li>
 <li class="toctree-l2"><a class="reference internal" href="intro.html#debugging-builds">Debugging Builds</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="stable.html">C API Stability</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="stable.html#stable-application-binary-interface">Stable Application Binary Interface</a></li>
-<li class="toctree-l2"><a class="reference internal" href="stable.html#platform-considerations">Platform Considerations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="stable.html#contents-of-limited-api">Contents of Limited API</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="stable.html">Stable Application Binary Interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="veryhigh.html">The Very High Level Layer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="refcounting.html">參照計數</a></li>
 <li class="toctree-l1"><a class="reference internal" href="exceptions.html">例外處理</a><ul>
@@ -177,8 +172,8 @@
 <li class="toctree-l2"><a class="reference internal" href="exceptions.html#issuing-warnings">Issuing warnings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="exceptions.html#querying-the-error-indicator">Querying the error indicator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="exceptions.html#signal-handling">Signal Handling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="exceptions.html#exception-classes">例外類別</a></li>
-<li class="toctree-l2"><a class="reference internal" href="exceptions.html#exception-objects">例外物件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exceptions.html#exception-classes">Exception Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exceptions.html#exception-objects">Exception Objects</a></li>
 <li class="toctree-l2"><a class="reference internal" href="exceptions.html#unicode-exception-objects">Unicode Exception Objects</a></li>
 <li class="toctree-l2"><a class="reference internal" href="exceptions.html#recursion-control">Recursion Control</a></li>
 <li class="toctree-l2"><a class="reference internal" href="exceptions.html#standard-exceptions">Standard Exceptions</a></li>
@@ -197,24 +192,24 @@
 <li class="toctree-l2"><a class="reference internal" href="codec.html">Codec registry and support functions</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="abstract.html">抽象物件層 (Abstract Objects Layer)</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="abstract.html">抽象物件層</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="object.html">Object Protocol</a></li>
 <li class="toctree-l2"><a class="reference internal" href="call.html">Call Protocol</a></li>
 <li class="toctree-l2"><a class="reference internal" href="number.html">Number Protocol</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sequence.html">Sequence Protocol</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mapping.html">Mapping Protocol</a></li>
 <li class="toctree-l2"><a class="reference internal" href="iter.html">Iterator Protocol</a></li>
-<li class="toctree-l2"><a class="reference internal" href="buffer.html">緩衝協定 (Buffer Protocol)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="objbuffer.html">舊式緩衝協定 (Buffer Protocol)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="buffer.html">Buffer Protocol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="objbuffer.html">Old Buffer Protocol</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="concrete.html">Concrete Objects Layer</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="concrete.html#fundamental-objects">基礎物件</a></li>
-<li class="toctree-l2"><a class="reference internal" href="concrete.html#numeric-objects">數值物件</a></li>
-<li class="toctree-l2"><a class="reference internal" href="concrete.html#sequence-objects">序列物件</a></li>
-<li class="toctree-l2"><a class="reference internal" href="concrete.html#container-objects">容器物件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="concrete.html#fundamental-objects">Fundamental Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="concrete.html#numeric-objects">Numeric Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="concrete.html#sequence-objects">Sequence Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="concrete.html#container-objects">Container Objects</a></li>
 <li class="toctree-l2"><a class="reference internal" href="concrete.html#function-objects">函式物件</a></li>
-<li class="toctree-l2"><a class="reference internal" href="concrete.html#other-objects">其他物件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="concrete.html#other-objects">Other Objects</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="init.html">Initialization, Finalization, and Threads</a><ul>
@@ -231,16 +226,15 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="init_config.html">Python Initialization Configuration</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="init_config.html#example">範例</a></li>
 <li class="toctree-l2"><a class="reference internal" href="init_config.html#pywidestringlist">PyWideStringList</a></li>
 <li class="toctree-l2"><a class="reference internal" href="init_config.html#pystatus">PyStatus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="init_config.html#pypreconfig">PyPreConfig</a></li>
-<li class="toctree-l2"><a class="reference internal" href="init_config.html#preinitialize-python-with-pypreconfig">Preinitialize Python with PyPreConfig</a></li>
+<li class="toctree-l2"><a class="reference internal" href="init_config.html#preinitialization-with-pypreconfig">Preinitialization with PyPreConfig</a></li>
 <li class="toctree-l2"><a class="reference internal" href="init_config.html#pyconfig">PyConfig</a></li>
 <li class="toctree-l2"><a class="reference internal" href="init_config.html#initialization-with-pyconfig">Initialization with PyConfig</a></li>
 <li class="toctree-l2"><a class="reference internal" href="init_config.html#isolated-configuration">Isolated Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="init_config.html#python-configuration">Python Configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="init_config.html#python-path-configuration">Python Path Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="init_config.html#path-configuration">Path Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="init_config.html#py-runmain">Py_RunMain()</a></li>
 <li class="toctree-l2"><a class="reference internal" href="init_config.html#py-getargcargv">Py_GetArgcArgv()</a></li>
 <li class="toctree-l2"><a class="reference internal" href="init_config.html#multi-phase-initialization-private-provisional-api">Multi-Phase Initialization Private Provisional API</a></li>
@@ -248,16 +242,14 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="memory.html">記憶體管理</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="memory.html#overview">總覽</a></li>
-<li class="toctree-l2"><a class="reference internal" href="memory.html#allocator-domains">Allocator Domains</a></li>
 <li class="toctree-l2"><a class="reference internal" href="memory.html#raw-memory-interface">Raw Memory Interface</a></li>
 <li class="toctree-l2"><a class="reference internal" href="memory.html#memory-interface">Memory Interface</a></li>
 <li class="toctree-l2"><a class="reference internal" href="memory.html#object-allocators">Object allocators</a></li>
 <li class="toctree-l2"><a class="reference internal" href="memory.html#default-memory-allocators">Default Memory Allocators</a></li>
 <li class="toctree-l2"><a class="reference internal" href="memory.html#customize-memory-allocators">Customize Memory Allocators</a></li>
-<li class="toctree-l2"><a class="reference internal" href="memory.html#debug-hooks-on-the-python-memory-allocators">Debug hooks on the Python memory allocators</a></li>
 <li class="toctree-l2"><a class="reference internal" href="memory.html#the-pymalloc-allocator">The pymalloc allocator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="memory.html#tracemalloc-c-api">tracemalloc C API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="memory.html#examples">範例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="memory.html#examples">Examples</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="objimpl.html">Object Implementation Support</a><ul>
@@ -270,7 +262,7 @@
 <li class="toctree-l2"><a class="reference internal" href="typeobj.html#buffer-object-structures">Buffer Object Structures</a></li>
 <li class="toctree-l2"><a class="reference internal" href="typeobj.html#async-object-structures">Async Object Structures</a></li>
 <li class="toctree-l2"><a class="reference internal" href="typeobj.html#slot-type-typedefs">Slot Type typedefs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="typeobj.html#examples">範例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="typeobj.html#examples">Examples</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gcsupport.html">Supporting Cyclic Garbage Collection</a></li>
 </ul>
 </li>
@@ -301,7 +293,7 @@
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/c-api/index.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/c-api/index.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -337,7 +329,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
         <li class="nav-item nav-item-this"><a href="">Python/C API 參考手冊</a></li>

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>binascii --- Convert between binary and ASCII &#8212; Python 3.10.2 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>binascii --- Convert between binary and ASCII &#8212; Python 3.9.10 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -20,7 +20,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.2 說明文件 中搜尋"
+          title="在 Python 3.9.10 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -85,7 +85,7 @@
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/library/binascii.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/library/binascii.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -122,7 +122,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -156,7 +156,7 @@
 <p>The <a class="reference internal" href="#module-binascii" title="binascii: Tools for converting between binary and various ASCII-encoded binary representations."><code class="xref py py-mod docutils literal notranslate"><span class="pre">binascii</span></code></a> module contains a number of methods to convert between
 binary and various ASCII-encoded binary representations. Normally, you will not
 use these functions directly but use wrapper modules like <a class="reference internal" href="uu.html#module-uu" title="uu: Encode and decode files in uuencode format."><code class="xref py py-mod docutils literal notranslate"><span class="pre">uu</span></code></a>,
-<a class="reference internal" href="base64.html#module-base64" title="base64: RFC 4648: Base16, Base32, Base64 Data Encodings; Base85 and Ascii85"><code class="xref py py-mod docutils literal notranslate"><span class="pre">base64</span></code></a>, or <a class="reference internal" href="binhex.html#module-binhex" title="binhex: Encode and decode files in binhex4 format."><code class="xref py py-mod docutils literal notranslate"><span class="pre">binhex</span></code></a> instead. The <a class="reference internal" href="#module-binascii" title="binascii: Tools for converting between binary and various ASCII-encoded binary representations."><code class="xref py py-mod docutils literal notranslate"><span class="pre">binascii</span></code></a> module contains
+<a class="reference internal" href="base64.html#module-base64" title="base64: RFC 3548: Base16, Base32, Base64 Data Encodings; Base85 and Ascii85"><code class="xref py py-mod docutils literal notranslate"><span class="pre">base64</span></code></a>, or <a class="reference internal" href="binhex.html#module-binhex" title="binhex: Encode and decode files in binhex4 format."><code class="xref py py-mod docutils literal notranslate"><span class="pre">binhex</span></code></a> instead. The <a class="reference internal" href="#module-binascii" title="binascii: Tools for converting between binary and various ASCII-encoded binary representations."><code class="xref py py-mod docutils literal notranslate"><span class="pre">binascii</span></code></a> module contains
 low-level functions written in C for greater speed that are used by the
 higher-level modules.</p>
 <div class="admonition note">
@@ -185,7 +185,7 @@ data may be followed by whitespace.</p>
 converted line, including a newline char. The length of <em>data</em> should be at most
 45. If <em>backtick</em> is true, zeros are represented by <code class="docutils literal notranslate"><span class="pre">'`'</span></code> instead of spaces.</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.7 版本變更: </span>新增 <em>backtick</em> 參數。</p>
+<p><span class="versionmodified changed">在 3.7 版本變更: </span>Added the <em>backtick</em> parameter.</p>
 </div>
 </dd></dl>
 
@@ -203,7 +203,7 @@ than one line may be passed at a time.</p>
 value is the converted line, including a newline char if <em>newline</em> is
 true.  The output of this function conforms to <span class="target" id="index-1"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc3548.html"><strong>RFC 3548</strong></a>.</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.6 版本變更: </span>新增 <em>newline</em> 參數。</p>
+<p><span class="versionmodified changed">在 3.6 版本變更: </span>Added the <em>newline</em> parameter.</p>
 </div>
 </dd></dl>
 
@@ -333,7 +333,7 @@ if you wish to count from the left, supply a negative <em>bytes_per_sep</em> val
 </pre></div>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.8 版本變更: </span>新增 <em>sep</em> 與 <em>bytes_per_sep</em> 參數。</p>
+<p><span class="versionmodified changed">在 3.8 版本變更: </span>The <em>sep</em> and <em>bytes_per_sep</em> parameters were added.</p>
 </div>
 </dd></dl>
 
@@ -367,14 +367,14 @@ but may be handled by reading a little more data and trying again.</p>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><a class="reference internal" href="base64.html#module-base64" title="base64: RFC 4648: Base16, Base32, Base64 Data Encodings; Base85 and Ascii85"><code class="xref py py-mod docutils literal notranslate"><span class="pre">base64</span></code></a> 模組</dt><dd><p>Support for RFC compliant base64-style encoding in base 16, 32, 64,
+<dt>Module <a class="reference internal" href="base64.html#module-base64" title="base64: RFC 3548: Base16, Base32, Base64 Data Encodings; Base85 and Ascii85"><code class="xref py py-mod docutils literal notranslate"><span class="pre">base64</span></code></a></dt><dd><p>Support for RFC compliant base64-style encoding in base 16, 32, 64,
 and 85.</p>
 </dd>
-<dt><a class="reference internal" href="binhex.html#module-binhex" title="binhex: Encode and decode files in binhex4 format."><code class="xref py py-mod docutils literal notranslate"><span class="pre">binhex</span></code></a> 模組</dt><dd><p>Support for the binhex format used on the Macintosh.</p>
+<dt>Module <a class="reference internal" href="binhex.html#module-binhex" title="binhex: Encode and decode files in binhex4 format."><code class="xref py py-mod docutils literal notranslate"><span class="pre">binhex</span></code></a></dt><dd><p>Support for the binhex format used on the Macintosh.</p>
 </dd>
-<dt><a class="reference internal" href="uu.html#module-uu" title="uu: Encode and decode files in uuencode format."><code class="xref py py-mod docutils literal notranslate"><span class="pre">uu</span></code></a> 模組</dt><dd><p>Support for UU encoding used on Unix.</p>
+<dt>Module <a class="reference internal" href="uu.html#module-uu" title="uu: Encode and decode files in uuencode format."><code class="xref py py-mod docutils literal notranslate"><span class="pre">uu</span></code></a></dt><dd><p>Support for UU encoding used on Unix.</p>
 </dd>
-<dt><a class="reference internal" href="quopri.html#module-quopri" title="quopri: Encode and decode files using the MIME quoted-printable encoding."><code class="xref py py-mod docutils literal notranslate"><span class="pre">quopri</span></code></a> 模組</dt><dd><p>Support for quoted-printable encoding used in MIME email messages.</p>
+<dt>Module <a class="reference internal" href="quopri.html#module-quopri" title="quopri: Encode and decode files using the MIME quoted-printable encoding."><code class="xref py py-mod docutils literal notranslate"><span class="pre">quopri</span></code></a></dt><dd><p>Support for quoted-printable encoding used in MIME email messages.</p>
 </dd>
 </dl>
 </div>
@@ -402,7 +402,7 @@ and 85.</p>
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/library/binascii.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/library/binascii.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -438,7 +438,7 @@ and 85.</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>

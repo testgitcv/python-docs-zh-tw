@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>email.header: Internationalized headers &#8212; Python 3.10.2 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>email.header: Internationalized headers &#8212; Python 3.9.10 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -20,7 +20,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.2 說明文件 中搜尋"
+          title="在 Python 3.9.10 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -85,7 +85,7 @@
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/library/email.header.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/library/email.header.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -122,7 +122,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -153,7 +153,7 @@
             
   <section id="module-email.header">
 <span id="email-header-internationalized-headers"></span><h1><a class="reference internal" href="#module-email.header" title="email.header: Representing non-ASCII headers"><code class="xref py py-mod docutils literal notranslate"><span class="pre">email.header</span></code></a>: Internationalized headers<a class="headerlink" href="#module-email.header" title="本標題的永久連結">¶</a></h1>
-<p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/email/header.py">Lib/email/header.py</a></p>
+<p><strong>Source code:</strong> <a class="reference external" href="https://github.com/python/cpython/tree/3.9/Lib/email/header.py">Lib/email/header.py</a></p>
 <hr class="docutils" />
 <p>This module is part of the legacy (<code class="docutils literal notranslate"><span class="pre">Compat32</span></code>) email API.  In the current API
 encoding and decoding of headers is handled transparently by the
@@ -246,7 +246,7 @@ if <em>s</em> is a byte string.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="email.header.Header.encode">
-<span class="sig-name descname"><span class="pre">encode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">splitchars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">';,</span> <span class="pre">\t'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxlinelen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">linesep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'\n'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#email.header.Header.encode" title="本定義的永久連結">¶</a></dt>
+<span class="sig-name descname"><span class="pre">encode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">splitchars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">';,</span> <span class="pre">\\t'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxlinelen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">linesep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'\\n'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#email.header.Header.encode" title="本定義的永久連結">¶</a></dt>
 <dd><p>Encode a message header into an RFC-compliant format, possibly wrapping
 long lines and encapsulating non-ASCII parts in base64 or quoted-printable
 encodings.</p>
@@ -266,7 +266,7 @@ folded header.  It defaults to the most useful value for Python
 application code (<code class="docutils literal notranslate"><span class="pre">\n</span></code>), but <code class="docutils literal notranslate"><span class="pre">\r\n</span></code> can be specified in order
 to produce headers with RFC-compliant line separators.</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.2 版本變更: </span>新增引數 <em>linesep</em>。</p>
+<p><span class="versionmodified changed">在 3.2 版本變更: </span>Added the <em>linesep</em> argument.</p>
 </div>
 </dd></dl>
 
@@ -311,7 +311,7 @@ value is in <em>header</em>.</p>
 each of the decoded parts of the header.  <em>charset</em> is <code class="docutils literal notranslate"><span class="pre">None</span></code> for non-encoded
 parts of the header, otherwise a lower case string containing the name of the
 character set specified in the encoded string.</p>
-<p>以下是個範例：</p>
+<p>Here's an example:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">email.header</span> <span class="kn">import</span> <span class="n">decode_header</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">decode_header</span><span class="p">(</span><span class="s1">&#39;=?iso-8859-1?q?p=F6stal?=&#39;</span><span class="p">)</span>
 <span class="go">[(b&#39;p\xf6stal&#39;, &#39;iso-8859-1&#39;)]</span>
@@ -356,7 +356,7 @@ the character set.</p>
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/library/email.header.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/library/email.header.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -392,7 +392,7 @@ the character set.</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>

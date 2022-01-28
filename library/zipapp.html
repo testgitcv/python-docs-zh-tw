@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>zipapp --- Manage executable Python zip archives &#8212; Python 3.10.2 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zipapp --- Manage executable Python zip archives &#8212; Python 3.9.10 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -20,7 +20,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.2 說明文件 中搜尋"
+          title="在 Python 3.9.10 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -74,10 +74,10 @@
     <h3><a href="../contents.html">目錄</a></h3>
     <ul>
 <li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">zipapp</span></code> --- Manage executable Python zip archives</a><ul>
-<li><a class="reference internal" href="#basic-example">基本範例</a></li>
+<li><a class="reference internal" href="#basic-example">Basic Example</a></li>
 <li><a class="reference internal" href="#command-line-interface">命令執行列介面</a></li>
 <li><a class="reference internal" href="#python-api">Python API</a></li>
-<li><a class="reference internal" href="#examples">範例</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
 <li><a class="reference internal" href="#specifying-the-interpreter">Specifying the Interpreter</a></li>
 <li><a class="reference internal" href="#creating-standalone-applications-with-zipapp">Creating Standalone Applications with zipapp</a><ul>
 <li><a class="reference internal" href="#making-a-windows-executable">Making a Windows executable</a></li>
@@ -105,7 +105,7 @@
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/library/zipapp.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/library/zipapp.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -142,7 +142,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -175,13 +175,13 @@
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.5 版本新加入.</span></p>
 </div>
-<p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/zipapp.py">Lib/zipapp.py</a></p>
+<p><strong>Source code:</strong> <a class="reference external" href="https://github.com/python/cpython/tree/3.9/Lib/zipapp.py">Lib/zipapp.py</a></p>
 <hr class="docutils" id="index-0" />
 <p>This module provides tools to manage the creation of zip files containing
 Python code, which can be  <a class="reference internal" href="../using/cmdline.html#using-on-interface-options"><span class="std std-ref">executed directly by the Python interpreter</span></a>.  The module provides both a
 <a class="reference internal" href="#zipapp-command-line-interface"><span class="std std-ref">命令執行列介面</span></a> and a <a class="reference internal" href="#zipapp-python-api"><span class="std std-ref">Python API</span></a>.</p>
 <section id="basic-example">
-<h2>基本範例<a class="headerlink" href="#basic-example" title="本標題的永久連結">¶</a></h2>
+<h2>Basic Example<a class="headerlink" href="#basic-example" title="本標題的永久連結">¶</a></h2>
 <p>The following example shows how the <a class="reference internal" href="#zipapp-command-line-interface"><span class="std std-ref">命令執行列介面</span></a>
 can be used to create an executable archive from a directory containing
 Python code.  When run, the archive will execute the <code class="docutils literal notranslate"><span class="pre">main</span></code> function from
@@ -321,7 +321,7 @@ archive from a directory, if the target is a file object it will be
 passed to the <code class="docutils literal notranslate"><span class="pre">zipfile.ZipFile</span></code> class, and must supply the methods
 needed by that class.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">在 3.7 版本新加入: </span>新增 <em>filter</em> 與 <em>compressed</em> 引數。</p>
+<p><span class="versionmodified added">在 3.7 版本新加入: </span>Added the <em>filter</em> and <em>compressed</em> arguments.</p>
 </div>
 </dd></dl>
 
@@ -336,7 +336,7 @@ for reading in bytes mode.  It is assumed to be at the start of the archive.</p>
 
 </section>
 <section id="examples">
-<span id="zipapp-examples"></span><h2>範例<a class="headerlink" href="#examples" title="本標題的永久連結">¶</a></h2>
+<span id="zipapp-examples"></span><h2>Examples<a class="headerlink" href="#examples" title="本標題的永久連結">¶</a></h2>
 <p>Pack up a directory into an archive, and run it.</p>
 <div class="highlight-shell-session notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python -m zipapp myapp
 <span class="gp">$ </span>python myapp.pyz
@@ -581,10 +581,10 @@ format created by any means are acceptable to Python.</p>
     <h3><a href="../contents.html">目錄</a></h3>
     <ul>
 <li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">zipapp</span></code> --- Manage executable Python zip archives</a><ul>
-<li><a class="reference internal" href="#basic-example">基本範例</a></li>
+<li><a class="reference internal" href="#basic-example">Basic Example</a></li>
 <li><a class="reference internal" href="#command-line-interface">命令執行列介面</a></li>
 <li><a class="reference internal" href="#python-api">Python API</a></li>
-<li><a class="reference internal" href="#examples">範例</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
 <li><a class="reference internal" href="#specifying-the-interpreter">Specifying the Interpreter</a></li>
 <li><a class="reference internal" href="#creating-standalone-applications-with-zipapp">Creating Standalone Applications with zipapp</a><ul>
 <li><a class="reference internal" href="#making-a-windows-executable">Making a Windows executable</a></li>
@@ -612,7 +612,7 @@ format created by any means are acceptable to Python.</p>
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/library/zipapp.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/library/zipapp.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -648,7 +648,7 @@ format created by any means are acceptable to Python.</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>

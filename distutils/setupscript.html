@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>2. Writing the Setup Script &#8212; Python 3.10.2 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2. Writing the Setup Script &#8212; Python 3.9.10 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -20,7 +20,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.2 說明文件 中搜尋"
+          title="在 Python 3.9.10 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -110,7 +110,7 @@
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/distutils/setupscript.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/distutils/setupscript.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -147,7 +147,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">發布 Python 模組（舊版）</a> &#187;</li>
@@ -186,7 +186,7 @@ independently covers all of the relevant information currently included here.</p
 installing modules using the Distutils.  The main purpose of the setup script is
 to describe your module distribution to the Distutils, so that the various
 commands that operate on your modules do the right thing.  As we saw in section
-<a class="reference internal" href="introduction.html#distutils-simple-example"><span class="std std-ref">一個簡單範例</span></a> above, the setup script consists mainly of a call to
+<a class="reference internal" href="introduction.html#distutils-simple-example"><span class="std std-ref">A Simple Example</span></a> above, the setup script consists mainly of a call to
 <code class="xref py py-func docutils literal notranslate"><span class="pre">setup()</span></code>, and most information supplied to the Distutils by the module
 developer is supplied as keyword arguments to <code class="xref py py-func docutils literal notranslate"><span class="pre">setup()</span></code>.</p>
 <p>Here's a slightly more involved example, which we'll follow for the next couple
@@ -210,7 +210,7 @@ the package into Python 1.5.2.)</p>
 </pre></div>
 </div>
 <p>There are only two differences between this and the trivial one-file
-distribution presented in section <a class="reference internal" href="introduction.html#distutils-simple-example"><span class="std std-ref">一個簡單範例</span></a>: more metadata, and the
+distribution presented in section <a class="reference internal" href="introduction.html#distutils-simple-example"><span class="std std-ref">A Simple Example</span></a>: more metadata, and the
 specification of pure Python modules by package, rather than by module.  This is
 important since the Distutils consist of a couple of dozen modules split into
 (so far) two packages; an explicit list of every module would be tedious to
@@ -277,7 +277,7 @@ looking for any directory with an <code class="file docutils literal notranslate
 <p>For a small module distribution, you might prefer to list all modules rather
 than listing packages---especially the case of a single module that goes in the
 &quot;root package&quot; (i.e., no package at all).  This simplest case was shown in
-section <a class="reference internal" href="introduction.html#distutils-simple-example"><span class="std std-ref">一個簡單範例</span></a>; here is a slightly more involved example:</p>
+section <a class="reference internal" href="introduction.html#distutils-simple-example"><span class="std std-ref">A Simple Example</span></a>; here is a slightly more involved example:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">py_modules</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;mod1&#39;</span><span class="p">,</span> <span class="s1">&#39;pkg.mod2&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -431,7 +431,7 @@ tuples, where <code class="docutils literal notranslate"><span class="pre">name<
 to <code class="docutils literal notranslate"><span class="pre">None</span></code> is the equivalent of a bare <code class="docutils literal notranslate"><span class="pre">#define</span> <span class="pre">FOO</span></code> in your C source: with
 most compilers, this sets <code class="docutils literal notranslate"><span class="pre">FOO</span></code> to the string <code class="docutils literal notranslate"><span class="pre">1</span></code>.)  <code class="docutils literal notranslate"><span class="pre">undef_macros</span></code> is
 just a list of macros to undefine.</p>
-<p>舉例來說：</p>
+<p>For example:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">Extension</span><span class="p">(</span><span class="o">...</span><span class="p">,</span>
           <span class="n">define_macros</span><span class="o">=</span><span class="p">[(</span><span class="s1">&#39;NDEBUG&#39;</span><span class="p">,</span> <span class="s1">&#39;1&#39;</span><span class="p">),</span>
                          <span class="p">(</span><span class="s1">&#39;HAVE_STRFTIME&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)],</span>
@@ -913,7 +913,7 @@ compiler) fails.</p>
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/distutils/setupscript.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/distutils/setupscript.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -949,7 +949,7 @@ compiler) fails.</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >發布 Python 模組（舊版）</a> &#187;</li>

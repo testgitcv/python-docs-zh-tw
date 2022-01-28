@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>faulthandler --- Dump the Python traceback &#8212; Python 3.10.2 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>faulthandler --- Dump the Python traceback &#8212; Python 3.9.10 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -20,7 +20,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.2 說明文件 中搜尋"
+          title="在 Python 3.9.10 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -79,7 +79,7 @@
 <li><a class="reference internal" href="#dumping-the-tracebacks-after-a-timeout">Dumping the tracebacks after a timeout</a></li>
 <li><a class="reference internal" href="#dumping-the-traceback-on-a-user-signal">Dumping the traceback on a user signal</a></li>
 <li><a class="reference internal" href="#issue-with-file-descriptors">Issue with file descriptors</a></li>
-<li><a class="reference internal" href="#example">範例</a></li>
+<li><a class="reference internal" href="#example">Example</a></li>
 </ul>
 </li>
 </ul>
@@ -100,7 +100,7 @@
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/library/faulthandler.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/library/faulthandler.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -137,11 +137,11 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="debug.html" accesskey="U">除錯與效能分析</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="debug.html" accesskey="U">Debugging and Profiling</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">faulthandler</span></code> --- Dump the Python traceback</a></li>
                 <li class="right">
                     
@@ -232,10 +232,6 @@ thread.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.6 版本變更: </span>On Windows, a handler for Windows exception is also installed.</p>
 </div>
-<div class="versionchanged">
-<p><span class="versionmodified changed">在 3.10 版本變更: </span>The dump now mentions if a garbage collector collection is running
-if <em>all_threads</em> is true.</p>
-</div>
 </dd></dl>
 
 <dl class="py function">
@@ -318,7 +314,7 @@ the file descriptor, the traceback will be written into a different file. Call
 these functions again each time that the file is replaced.</p>
 </section>
 <section id="example">
-<h2>範例<a class="headerlink" href="#example" title="本標題的永久連結">¶</a></h2>
+<h2>Example<a class="headerlink" href="#example" title="本標題的永久連結">¶</a></h2>
 <p>Example of a segmentation fault on Linux with and without enabling the fault
 handler:</p>
 <div class="highlight-shell-session notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3 -c <span class="s2">&quot;import ctypes; ctypes.string_at(0)&quot;</span>
@@ -354,7 +350,7 @@ handler:</p>
 <li><a class="reference internal" href="#dumping-the-tracebacks-after-a-timeout">Dumping the tracebacks after a timeout</a></li>
 <li><a class="reference internal" href="#dumping-the-traceback-on-a-user-signal">Dumping the traceback on a user signal</a></li>
 <li><a class="reference internal" href="#issue-with-file-descriptors">Issue with file descriptors</a></li>
-<li><a class="reference internal" href="#example">範例</a></li>
+<li><a class="reference internal" href="#example">Example</a></li>
 </ul>
 </li>
 </ul>
@@ -375,7 +371,7 @@ handler:</p>
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/library/faulthandler.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/library/faulthandler.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -411,11 +407,11 @@ handler:</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="debug.html" >除錯與效能分析</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="debug.html" >Debugging and Profiling</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">faulthandler</span></code> --- Dump the Python traceback</a></li>
                 <li class="right">
                     

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>compileall --- Byte-compile Python libraries &#8212; Python 3.10.2 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>compileall --- Byte-compile Python libraries &#8212; Python 3.9.10 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -20,7 +20,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.2 說明文件 中搜尋"
+          title="在 Python 3.9.10 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -96,7 +96,7 @@
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/library/compileall.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/library/compileall.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -133,7 +133,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -163,7 +163,7 @@
             
   <section id="module-compileall">
 <span id="compileall-byte-compile-python-libraries"></span><h1><a class="reference internal" href="#module-compileall" title="compileall: Tools for byte-compiling all Python source files in a directory tree."><code class="xref py py-mod docutils literal notranslate"><span class="pre">compileall</span></code></a> --- Byte-compile Python libraries<a class="headerlink" href="#module-compileall" title="本標題的永久連結">¶</a></h1>
-<p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/compileall.py">Lib/compileall.py</a></p>
+<p><strong>Source code:</strong> <a class="reference external" href="https://github.com/python/cpython/tree/3.9/Lib/compileall.py">Lib/compileall.py</a></p>
 <hr class="docutils" />
 <p>This module provides some utility functions to support installing Python
 libraries.  These functions compile Python source files in a directory tree.
@@ -305,7 +305,7 @@ the same content, use hard links to consolidate duplicate files.</p>
 </dd></dl>
 
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.2 版本變更: </span>新增選項 <code class="docutils literal notranslate"><span class="pre">-i</span></code>、<code class="docutils literal notranslate"><span class="pre">-b</span></code> 與 <code class="docutils literal notranslate"><span class="pre">-h</span></code>。</p>
+<p><span class="versionmodified changed">在 3.2 版本變更: </span>Added the <code class="docutils literal notranslate"><span class="pre">-i</span></code>, <code class="docutils literal notranslate"><span class="pre">-b</span></code> and <code class="docutils literal notranslate"><span class="pre">-h</span></code> options.</p>
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.5 版本變更: </span>Added the  <code class="docutils literal notranslate"><span class="pre">-j</span></code>, <code class="docutils literal notranslate"><span class="pre">-r</span></code>, and <code class="docutils literal notranslate"><span class="pre">-qq</span></code> options.  <code class="docutils literal notranslate"><span class="pre">-q</span></code> option
@@ -313,7 +313,7 @@ was changed to a multilevel value.  <code class="docutils literal notranslate"><
 byte-code file ending in <code class="docutils literal notranslate"><span class="pre">.pyc</span></code>, never <code class="docutils literal notranslate"><span class="pre">.pyo</span></code>.</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.7 版本變更: </span>新增選項 <code class="docutils literal notranslate"><span class="pre">--invalidation-mode</span></code>。</p>
+<p><span class="versionmodified changed">在 3.7 版本變更: </span>Added the <code class="docutils literal notranslate"><span class="pre">--invalidation-mode</span></code> option.</p>
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.9 版本變更: </span>Added the <code class="docutils literal notranslate"><span class="pre">-s</span></code>, <code class="docutils literal notranslate"><span class="pre">-p</span></code>, <code class="docutils literal notranslate"><span class="pre">-e</span></code> and <code class="docutils literal notranslate"><span class="pre">--hardlink-dupes</span></code> options.
@@ -376,10 +376,10 @@ They may be specified as <code class="docutils literal notranslate"><span class=
 <p>If <em>hardlink_dupes</em> is true and two <code class="docutils literal notranslate"><span class="pre">.pyc</span></code> files with different optimization
 level have the same content, use hard links to consolidate duplicate files.</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.2 版本變更: </span>新增 <em>legacy</em> 與 <em>optimize</em> 參數。</p>
+<p><span class="versionmodified changed">在 3.2 版本變更: </span>Added the <em>legacy</em> and <em>optimize</em> parameter.</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.5 版本變更: </span>新增 <em>workers</em> 參數。</p>
+<p><span class="versionmodified changed">在 3.5 版本變更: </span>Added the <em>workers</em> parameter.</p>
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.5 版本變更: </span><em>quiet</em> parameter was changed to a multilevel value.</p>
@@ -392,7 +392,7 @@ no matter what the value of <em>optimize</em> is.</p>
 <p><span class="versionmodified changed">在 3.6 版本變更: </span>Accepts a <a class="reference internal" href="../glossary.html#term-path-like-object"><span class="xref std std-term">path-like object</span></a>.</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.7 版本變更: </span>新增 <em>invalidation_mode</em> 參數。</p>
+<p><span class="versionmodified changed">在 3.7 版本變更: </span>The <em>invalidation_mode</em> parameter was added.</p>
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.7.2 版本變更: </span>The <em>invalidation_mode</em> parameter's default value is updated to None.</p>
@@ -450,7 +450,7 @@ level have the same content, use hard links to consolidate duplicate files.</p>
 no matter what the value of <em>optimize</em> is.</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.7 版本變更: </span>新增 <em>invalidation_mode</em> 參數。</p>
+<p><span class="versionmodified changed">在 3.7 版本變更: </span>The <em>invalidation_mode</em> parameter was added.</p>
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.7.2 版本變更: </span>The <em>invalidation_mode</em> parameter's default value is updated to None.</p>
@@ -470,7 +470,7 @@ in the search.  All other parameters are passed to the <a class="reference inter
 function.  Note that unlike the other compile functions, <code class="docutils literal notranslate"><span class="pre">maxlevels</span></code>
 defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.2 版本變更: </span>新增 <em>legacy</em> 與 <em>optimize</em> 參數。</p>
+<p><span class="versionmodified changed">在 3.2 版本變更: </span>Added the <em>legacy</em> and <em>optimize</em> parameter.</p>
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.5 版本變更: </span><em>quiet</em> parameter was changed to a multilevel value.</p>
@@ -480,7 +480,7 @@ defaults to <code class="docutils literal notranslate"><span class="pre">0</span
 no matter what the value of <em>optimize</em> is.</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.7 版本變更: </span>新增 <em>invalidation_mode</em> 參數。</p>
+<p><span class="versionmodified changed">在 3.7 版本變更: </span>The <em>invalidation_mode</em> parameter was added.</p>
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.7.2 版本變更: </span>The <em>invalidation_mode</em> parameter's default value is updated to None.</p>
@@ -505,7 +505,7 @@ subdirectory and all its subdirectories:</p>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><a class="reference internal" href="py_compile.html#module-py_compile" title="py_compile: Generate byte-code files from Python source files."><code class="xref py py-mod docutils literal notranslate"><span class="pre">py_compile</span></code></a> 模組</dt><dd><p>Byte-compile a single source file.</p>
+<dt>Module <a class="reference internal" href="py_compile.html#module-py_compile" title="py_compile: Generate byte-code files from Python source files."><code class="xref py py-mod docutils literal notranslate"><span class="pre">py_compile</span></code></a></dt><dd><p>Byte-compile a single source file.</p>
 </dd>
 </dl>
 </div>
@@ -545,7 +545,7 @@ subdirectory and all its subdirectories:</p>
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/library/compileall.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/library/compileall.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -581,7 +581,7 @@ subdirectory and all its subdirectories:</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>

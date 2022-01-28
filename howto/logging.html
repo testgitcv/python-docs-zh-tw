@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>如何使用 Logging 模組 &#8212; Python 3.10.2 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>如何使用 Logging 模組 &#8212; Python 3.9.10 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -20,7 +20,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.2 說明文件 中搜尋"
+          title="在 Python 3.9.10 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -76,7 +76,7 @@
 <li><a class="reference internal" href="#">如何使用 Logging 模組</a><ul>
 <li><a class="reference internal" href="#basic-logging-tutorial">基礎 Logging 指南</a><ul>
 <li><a class="reference internal" href="#when-to-use-logging">什麼時候使用 logging</a></li>
-<li><a class="reference internal" href="#a-simple-example">一個簡單範例</a></li>
+<li><a class="reference internal" href="#a-simple-example">A simple example</a></li>
 <li><a class="reference internal" href="#logging-to-a-file">Logging to a file</a></li>
 <li><a class="reference internal" href="#logging-from-multiple-modules">Logging from multiple modules</a></li>
 <li><a class="reference internal" href="#logging-variable-data">Logging variable data</a></li>
@@ -123,7 +123,7 @@
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/howto/logging.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/howto/logging.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -160,7 +160,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Python 如何達成任務</a> &#187;</li>
@@ -190,8 +190,8 @@
   <section id="logging-howto">
 <h1>如何使用 Logging 模組<a class="headerlink" href="#logging-howto" title="本標題的永久連結">¶</a></h1>
 <dl class="field-list simple">
-<dt class="field-odd">作者</dt>
-<dd class="field-odd"><p>Vinay Sajip &lt;vinay_sajip at red-dove dot com&gt;</p>
+<dt class="field-odd">Author</dt>
+<dd class="field-odd"><p>原文作者 Vinay Sajip &lt;vinay_sajip at red-dove dot com&gt;</p>
 </dd>
 </dl>
 <section id="basic-logging-tutorial">
@@ -302,8 +302,8 @@ handling tracked events is to print them to the console. Another common way
 is to write them to a disk file.</p>
 </section>
 <section id="a-simple-example">
-<span id="howto-minimal-example"></span><h3>一個簡單範例<a class="headerlink" href="#a-simple-example" title="本標題的永久連結">¶</a></h3>
-<p>一個非常簡單的例子是：</p>
+<span id="howto-minimal-example"></span><h3>A simple example<a class="headerlink" href="#a-simple-example" title="本標題的永久連結">¶</a></h3>
+<p>A very simple example is:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">logging</span>
 <span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s1">&#39;Watch out!&#39;</span><span class="p">)</span>  <span class="c1"># will print a message to the console</span>
 <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;I told you so&#39;</span><span class="p">)</span>  <span class="c1"># will not print anything</span>
@@ -696,7 +696,7 @@ format string is assumed to be compatible with <a class="reference internal" hre
 keyword arguments), while if the style is '$' then the message format string
 should conform to what is expected by <a class="reference internal" href="../library/string.html#string.Template.substitute" title="string.Template.substitute"><code class="xref py py-meth docutils literal notranslate"><span class="pre">string.Template.substitute()</span></code></a>.</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.2 版本變更: </span>新增 <code class="docutils literal notranslate"><span class="pre">style</span></code> 參數。</p>
+<p><span class="versionmodified changed">在 3.2 版本變更: </span>Added the <code class="docutils literal notranslate"><span class="pre">style</span></code> parameter.</p>
 </div>
 <p>The following message format string will log the time in a human-readable
 format, the severity of the message, and the contents of the message, in that
@@ -809,6 +809,7 @@ the names of the objects:</p>
 
 <span class="k">[formatter_simpleFormatter]</span><span class="w"></span>
 <span class="na">format</span><span class="o">=</span><span class="s">%(asctime)s - %(name)s - %(levelname)s - %(message)s</span><span class="w"></span>
+<span class="na">datefmt</span><span class="o">=</span><span class="w"></span>
 </pre></div>
 </div>
 <p>The output is nearly identical to that of the non-config-file-based example:</p>
@@ -1165,8 +1166,8 @@ list of things you can do to avoid processing during logging which you don't
 need:</p>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 51%" />
-<col style="width: 49%" />
+<col style="width: 54%" />
+<col style="width: 46%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>What you don't want to collect</p></th>
@@ -1176,20 +1177,17 @@ need:</p>
 <tbody>
 <tr class="row-even"><td><p>Information about where calls were made from.</p></td>
 <td><p>Set <code class="docutils literal notranslate"><span class="pre">logging._srcfile</span></code> to <code class="docutils literal notranslate"><span class="pre">None</span></code>.
-This avoids calling <a class="reference internal" href="../library/sys.html#sys._getframe" title="sys._getframe"><code class="xref py py-func docutils literal notranslate"><span class="pre">sys._getframe()</span></code></a>, which
-may help to speed up your code in environments
-like PyPy (which can't speed up code that uses
-<a class="reference internal" href="../library/sys.html#sys._getframe" title="sys._getframe"><code class="xref py py-func docutils literal notranslate"><span class="pre">sys._getframe()</span></code></a>).</p></td>
+This avoids calling
+<a class="reference internal" href="../library/sys.html#sys._getframe" title="sys._getframe"><code class="xref py py-func docutils literal notranslate"><span class="pre">sys._getframe()</span></code></a>, which may help
+to speed up your code in environments
+like PyPy (which can't speed up code
+that uses <a class="reference internal" href="../library/sys.html#sys._getframe" title="sys._getframe"><code class="xref py py-func docutils literal notranslate"><span class="pre">sys._getframe()</span></code></a>).</p></td>
 </tr>
 <tr class="row-odd"><td><p>Threading information.</p></td>
-<td><p>Set <code class="docutils literal notranslate"><span class="pre">logging.logThreads</span></code> to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></td>
+<td><p>Set <code class="docutils literal notranslate"><span class="pre">logging.logThreads</span></code> to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p></td>
 </tr>
-<tr class="row-even"><td><p>Current process ID (<a class="reference internal" href="../library/os.html#os.getpid" title="os.getpid"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.getpid()</span></code></a>)</p></td>
-<td><p>Set <code class="docutils literal notranslate"><span class="pre">logging.logProcesses</span></code> to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></td>
-</tr>
-<tr class="row-odd"><td><p>Current process name when using <code class="docutils literal notranslate"><span class="pre">multiprocessing</span></code>
-to manage multiple processes.</p></td>
-<td><p>Set <code class="docutils literal notranslate"><span class="pre">logging.logMultiprocessing</span></code> to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></td>
+<tr class="row-even"><td><p>Process information.</p></td>
+<td><p>Set <code class="docutils literal notranslate"><span class="pre">logging.logProcesses</span></code> to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1199,11 +1197,11 @@ take up any memory.</p>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><a class="reference internal" href="../library/logging.html#module-logging" title="logging: Flexible event logging system for applications."><code class="xref py py-mod docutils literal notranslate"><span class="pre">logging</span></code></a> 模組</dt><dd><p>API reference for the logging module.</p>
+<dt>Module <a class="reference internal" href="../library/logging.html#module-logging" title="logging: Flexible event logging system for applications."><code class="xref py py-mod docutils literal notranslate"><span class="pre">logging</span></code></a></dt><dd><p>API reference for the logging module.</p>
 </dd>
-<dt><a class="reference internal" href="../library/logging.config.html#module-logging.config" title="logging.config: Configuration of the logging module."><code class="xref py py-mod docutils literal notranslate"><span class="pre">logging.config</span></code></a> 模組</dt><dd><p>Configuration API for the logging module.</p>
+<dt>Module <a class="reference internal" href="../library/logging.config.html#module-logging.config" title="logging.config: Configuration of the logging module."><code class="xref py py-mod docutils literal notranslate"><span class="pre">logging.config</span></code></a></dt><dd><p>Configuration API for the logging module.</p>
 </dd>
-<dt><a class="reference internal" href="../library/logging.handlers.html#module-logging.handlers" title="logging.handlers: Handlers for the logging module."><code class="xref py py-mod docutils literal notranslate"><span class="pre">logging.handlers</span></code></a> 模組</dt><dd><p>Useful handlers included with the logging module.</p>
+<dt>Module <a class="reference internal" href="../library/logging.handlers.html#module-logging.handlers" title="logging.handlers: Handlers for the logging module."><code class="xref py py-mod docutils literal notranslate"><span class="pre">logging.handlers</span></code></a></dt><dd><p>Useful handlers included with the logging module.</p>
 </dd>
 </dl>
 <p><a class="reference internal" href="logging-cookbook.html#logging-cookbook"><span class="std std-ref">A logging cookbook</span></a></p>
@@ -1224,7 +1222,7 @@ take up any memory.</p>
 <li><a class="reference internal" href="#">如何使用 Logging 模組</a><ul>
 <li><a class="reference internal" href="#basic-logging-tutorial">基礎 Logging 指南</a><ul>
 <li><a class="reference internal" href="#when-to-use-logging">什麼時候使用 logging</a></li>
-<li><a class="reference internal" href="#a-simple-example">一個簡單範例</a></li>
+<li><a class="reference internal" href="#a-simple-example">A simple example</a></li>
 <li><a class="reference internal" href="#logging-to-a-file">Logging to a file</a></li>
 <li><a class="reference internal" href="#logging-from-multiple-modules">Logging from multiple modules</a></li>
 <li><a class="reference internal" href="#logging-variable-data">Logging variable data</a></li>
@@ -1271,7 +1269,7 @@ take up any memory.</p>
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/howto/logging.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/howto/logging.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -1307,7 +1305,7 @@ take up any memory.</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 如何達成任務</a> &#187;</li>

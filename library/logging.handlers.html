@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>logging.handlers --- Logging handlers &#8212; Python 3.10.2 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>logging.handlers --- Logging handlers &#8212; Python 3.9.10 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -20,7 +20,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.2 說明文件 中搜尋"
+          title="在 Python 3.9.10 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -110,7 +110,7 @@
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/library/logging.handlers.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/library/logging.handlers.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -147,7 +147,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -177,14 +177,14 @@
             
   <section id="module-logging.handlers">
 <span id="logging-handlers-logging-handlers"></span><h1><a class="reference internal" href="#module-logging.handlers" title="logging.handlers: Handlers for the logging module."><code class="xref py py-mod docutils literal notranslate"><span class="pre">logging.handlers</span></code></a> --- Logging handlers<a class="headerlink" href="#module-logging.handlers" title="本標題的永久連結">¶</a></h1>
-<p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/logging/handlers.py">Lib/logging/handlers.py</a></p>
+<p><strong>Source code:</strong> <a class="reference external" href="https://github.com/python/cpython/tree/3.9/Lib/logging/handlers.py">Lib/logging/handlers.py</a></p>
 <aside class="sidebar">
 <p class="sidebar-title">Important</p>
 <p>This page contains only reference information. For tutorials,
 please see</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="../howto/logging.html#logging-basic-tutorial"><span class="std std-ref">基礎教學</span></a></p></li>
-<li><p><a class="reference internal" href="../howto/logging.html#logging-advanced-tutorial"><span class="std std-ref">進階教學</span></a></p></li>
+<li><p><a class="reference internal" href="../howto/logging.html#logging-basic-tutorial"><span class="std std-ref">Basic Tutorial</span></a></p></li>
+<li><p><a class="reference internal" href="../howto/logging.html#logging-advanced-tutorial"><span class="std std-ref">Advanced Tutorial</span></a></p></li>
 <li><p><a class="reference internal" href="../howto/logging-cookbook.html#logging-cookbook"><span class="std std-ref">Logging Cookbook</span></a></p></li>
 </ul>
 </aside>
@@ -275,7 +275,7 @@ first call to <a class="reference internal" href="#logging.FileHandler.emit" tit
 for the <em>filename</em> argument.</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.9 版本變更: </span>新增 <em>errors</em> 參數。</p>
+<p><span class="versionmodified changed">在 3.9 版本變更: </span>The <em>errors</em> parameter was added.</p>
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="logging.FileHandler.close">
@@ -287,8 +287,6 @@ for the <em>filename</em> argument.</p>
 <dt class="sig sig-object py" id="logging.FileHandler.emit">
 <span class="sig-name descname"><span class="pre">emit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#logging.FileHandler.emit" title="本定義的永久連結">¶</a></dt>
 <dd><p>Outputs the record to the file.</p>
-<p>Note that if the file was closed due to logging shutdown at exit and the file
-mode is 'w', the record will not be emitted (see <a class="reference external" href="https://bugs.python.org/issue42378">bpo-42378</a>).</p>
 </dd></dl>
 
 </dd></dl>
@@ -360,7 +358,7 @@ first call to <a class="reference internal" href="#logging.handlers.WatchedFileH
 for the <em>filename</em> argument.</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.9 版本變更: </span>新增 <em>errors</em> 參數。</p>
+<p><span class="versionmodified changed">在 3.9 版本變更: </span>The <em>errors</em> parameter was added.</p>
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="logging.handlers.WatchedFileHandler.reopenIfNeeded">
@@ -520,7 +518,7 @@ and renamed to <code class="file docutils literal notranslate"><span class="pre"
 for the <em>filename</em> argument.</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.9 版本變更: </span>新增 <em>errors</em> 參數。</p>
+<p><span class="versionmodified changed">在 3.9 版本變更: </span>The <em>errors</em> parameter was added.</p>
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="logging.handlers.RotatingFileHandler.doRollover">
@@ -637,14 +635,14 @@ the file times corresponding to the minutes where no output (and hence no
 rollover) occurred.</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.4 版本變更: </span>新增 <em>atTime</em> 參數。</p>
+<p><span class="versionmodified changed">在 3.4 版本變更: </span><em>atTime</em> parameter was added.</p>
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.6 版本變更: </span>As well as string values, <a class="reference internal" href="pathlib.html#pathlib.Path" title="pathlib.Path"><code class="xref py py-class docutils literal notranslate"><span class="pre">Path</span></code></a> objects are also accepted
 for the <em>filename</em> argument.</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.9 版本變更: </span>新增 <em>errors</em> 參數。</p>
+<p><span class="versionmodified changed">在 3.9 版本變更: </span>The <em>errors</em> parameter was added.</p>
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="logging.handlers.TimedRotatingFileHandler.doRollover">
@@ -835,7 +833,7 @@ appropriate address (you may need to do this check at runtime if your
 application needs to run on several platforms). On Windows, you pretty
 much have to use the UDP option.</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.2 版本變更: </span>新增 <em>socktype</em>。</p>
+<p><span class="versionmodified changed">在 3.2 版本變更: </span><em>socktype</em> was added.</p>
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="logging.handlers.SysLogHandler.close">
@@ -897,16 +895,16 @@ mirror the values defined in the <code class="docutils literal notranslate"><spa
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">alert</span></code></p></td>
 <td><p>LOG_ALERT</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">crit</span></code> 或 <code class="docutils literal notranslate"><span class="pre">critical</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">crit</span></code> or <code class="docutils literal notranslate"><span class="pre">critical</span></code></p></td>
 <td><p>LOG_CRIT</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">debug</span></code></p></td>
 <td><p>LOG_DEBUG</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">emerg</span></code> 或 <code class="docutils literal notranslate"><span class="pre">panic</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">emerg</span></code> or <code class="docutils literal notranslate"><span class="pre">panic</span></code></p></td>
 <td><p>LOG_EMERG</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">err</span></code> 或 <code class="docutils literal notranslate"><span class="pre">error</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">err</span></code> or <code class="docutils literal notranslate"><span class="pre">error</span></code></p></td>
 <td><p>LOG_ERR</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">info</span></code></p></td>
@@ -915,7 +913,7 @@ mirror the values defined in the <code class="docutils literal notranslate"><spa
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">notice</span></code></p></td>
 <td><p>LOG_NOTICE</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">warn</span></code> 或 <code class="docutils literal notranslate"><span class="pre">warning</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">warn</span></code> or <code class="docutils literal notranslate"><span class="pre">warning</span></code></p></td>
 <td><p>LOG_WARNING</p></td>
 </tr>
 </tbody>
@@ -1102,7 +1100,7 @@ and certificate file. (This tuple is passed to the
 <p>A timeout can be specified for communication with the SMTP server using the
 <em>timeout</em> argument.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">在 3.3 版本新加入: </span>新增 <em>timeout</em> 引數。</p>
+<p><span class="versionmodified added">在 3.3 版本新加入: </span>The <em>timeout</em> argument was added.</p>
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="logging.handlers.SMTPHandler.emit">
@@ -1171,7 +1169,7 @@ then the buffer is <em>not</em> flushed when the handler is closed. If not speci
 or specified as <code class="docutils literal notranslate"><span class="pre">True</span></code>, the previous behaviour of flushing the buffer will
 occur when the handler is closed.</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.6 版本變更: </span>新增 <em>flushOnClose</em> 參數。</p>
+<p><span class="versionmodified changed">在 3.6 版本變更: </span>The <em>flushOnClose</em> parameter was added.</p>
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="logging.handlers.MemoryHandler.close">
@@ -1206,7 +1204,7 @@ this happens. Override if you want different behavior.</p>
 <section id="httphandler">
 <span id="http-handler"></span><h2>HTTPHandler<a class="headerlink" href="#httphandler" title="本標題的永久連結">¶</a></h2>
 <p>The <a class="reference internal" href="#logging.handlers.HTTPHandler" title="logging.handlers.HTTPHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">HTTPHandler</span></code></a> class, located in the <a class="reference internal" href="#module-logging.handlers" title="logging.handlers: Handlers for the logging module."><code class="xref py py-mod docutils literal notranslate"><span class="pre">logging.handlers</span></code></a> module,
-supports sending logging messages to a web server, using either <code class="docutils literal notranslate"><span class="pre">GET</span></code> or
+supports sending logging messages to a Web server, using either <code class="docutils literal notranslate"><span class="pre">GET</span></code> or
 <code class="docutils literal notranslate"><span class="pre">POST</span></code> semantics.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="logging.handlers.HTTPHandler">
@@ -1222,7 +1220,7 @@ consisting of userid and password, which will be placed in a HTTP
 credentials, you should also specify secure=True so that your userid and
 password are not passed in cleartext across the wire.</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.5 版本變更: </span>新增 <em>context</em> 參數。</p>
+<p><span class="versionmodified changed">在 3.5 版本變更: </span>The <em>context</em> parameter was added.</p>
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="logging.handlers.HTTPHandler.mapLogRecord">
@@ -1237,20 +1235,20 @@ if more specific customization of what's sent to the server is required.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="logging.handlers.HTTPHandler.emit">
 <span class="sig-name descname"><span class="pre">emit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#logging.handlers.HTTPHandler.emit" title="本定義的永久連結">¶</a></dt>
-<dd><p>Sends the record to the web server as a URL-encoded dictionary. The
+<dd><p>Sends the record to the Web server as a URL-encoded dictionary. The
 <a class="reference internal" href="#logging.handlers.HTTPHandler.mapLogRecord" title="logging.handlers.HTTPHandler.mapLogRecord"><code class="xref py py-meth docutils literal notranslate"><span class="pre">mapLogRecord()</span></code></a> method is used to convert the record to the
 dictionary to be sent.</p>
 </dd></dl>
 
 <div class="admonition note">
 <p class="admonition-title">備註</p>
-<p>Since preparing a record for sending it to a web server is not
+<p>Since preparing a record for sending it to a Web server is not
 the same as a generic formatting operation, using
 <a class="reference internal" href="logging.html#logging.Handler.setFormatter" title="logging.Handler.setFormatter"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setFormatter()</span></code></a> to specify a
 <a class="reference internal" href="logging.html#logging.Formatter" title="logging.Formatter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Formatter</span></code></a> for a <a class="reference internal" href="#logging.handlers.HTTPHandler" title="logging.handlers.HTTPHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">HTTPHandler</span></code></a> has no effect.
 Instead of calling <a class="reference internal" href="logging.html#logging.Handler.format" title="logging.Handler.format"><code class="xref py py-meth docutils literal notranslate"><span class="pre">format()</span></code></a>, this handler calls
 <a class="reference internal" href="#logging.handlers.HTTPHandler.mapLogRecord" title="logging.handlers.HTTPHandler.mapLogRecord"><code class="xref py py-meth docutils literal notranslate"><span class="pre">mapLogRecord()</span></code></a> and then <a class="reference internal" href="urllib.parse.html#urllib.parse.urlencode" title="urllib.parse.urlencode"><code class="xref py py-func docutils literal notranslate"><span class="pre">urllib.parse.urlencode()</span></code></a> to encode the
-dictionary in a form suitable for sending to a web server.</p>
+dictionary in a form suitable for sending to a Web server.</p>
 </div>
 </dd></dl>
 
@@ -1265,7 +1263,7 @@ supports sending logging messages to a queue, such as those implemented in the
 <a class="reference internal" href="queue.html#module-queue" title="queue: A synchronized queue class."><code class="xref py py-mod docutils literal notranslate"><span class="pre">queue</span></code></a> or <a class="reference internal" href="multiprocessing.html#module-multiprocessing" title="multiprocessing: Process-based parallelism."><code class="xref py py-mod docutils literal notranslate"><span class="pre">multiprocessing</span></code></a> modules.</p>
 <p>Along with the <a class="reference internal" href="#logging.handlers.QueueListener" title="logging.handlers.QueueListener"><code class="xref py py-class docutils literal notranslate"><span class="pre">QueueListener</span></code></a> class, <a class="reference internal" href="#logging.handlers.QueueHandler" title="logging.handlers.QueueHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">QueueHandler</span></code></a> can be used
 to let handlers do their work on a separate thread from the one which does the
-logging. This is important in web applications and also other service
+logging. This is important in Web applications and also other service
 applications where threads servicing clients need to respond as quickly as
 possible, while any potentially slow operations (such as sending an email via
 <a class="reference internal" href="#logging.handlers.SMTPHandler" title="logging.handlers.SMTPHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">SMTPHandler</span></code></a>) are done on a separate thread.</p>
@@ -1327,7 +1325,7 @@ the same thread, to one or more handlers for processing. While
 because it works hand-in-hand with <a class="reference internal" href="#logging.handlers.QueueHandler" title="logging.handlers.QueueHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">QueueHandler</span></code></a>.</p>
 <p>Along with the <a class="reference internal" href="#logging.handlers.QueueHandler" title="logging.handlers.QueueHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">QueueHandler</span></code></a> class, <a class="reference internal" href="#logging.handlers.QueueListener" title="logging.handlers.QueueListener"><code class="xref py py-class docutils literal notranslate"><span class="pre">QueueListener</span></code></a> can be used
 to let handlers do their work on a separate thread from the one which does the
-logging. This is important in web applications and also other service
+logging. This is important in Web applications and also other service
 applications where threads servicing clients need to respond as quickly as
 possible, while any potentially slow operations (such as sending an email via
 <a class="reference internal" href="#logging.handlers.SMTPHandler" title="logging.handlers.SMTPHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">SMTPHandler</span></code></a>) are done on a separate thread.</p>
@@ -1346,7 +1344,7 @@ use <a class="reference internal" href="queue.html#queue.SimpleQueue" title="que
 messages to that handler; otherwise, the behaviour is as in previous Python
 versions - to always pass each message to each handler.</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.5 版本變更: </span>新增 <code class="docutils literal notranslate"><span class="pre">respect_handler_level</span></code> 引數。</p>
+<p><span class="versionmodified changed">在 3.5 版本變更: </span>The <code class="docutils literal notranslate"><span class="pre">respect_handler_level</span></code> argument was added.</p>
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="logging.handlers.QueueListener.dequeue">
@@ -1409,9 +1407,9 @@ implementations.</p>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><a class="reference internal" href="logging.html#module-logging" title="logging: Flexible event logging system for applications."><code class="xref py py-mod docutils literal notranslate"><span class="pre">logging</span></code></a> 模組</dt><dd><p>API reference for the logging module.</p>
+<dt>Module <a class="reference internal" href="logging.html#module-logging" title="logging: Flexible event logging system for applications."><code class="xref py py-mod docutils literal notranslate"><span class="pre">logging</span></code></a></dt><dd><p>API reference for the logging module.</p>
 </dd>
-<dt><a class="reference internal" href="logging.config.html#module-logging.config" title="logging.config: Configuration of the logging module."><code class="xref py py-mod docutils literal notranslate"><span class="pre">logging.config</span></code></a> 模組</dt><dd><p>Configuration API for the logging module.</p>
+<dt>Module <a class="reference internal" href="logging.config.html#module-logging.config" title="logging.config: Configuration of the logging module."><code class="xref py py-mod docutils literal notranslate"><span class="pre">logging.config</span></code></a></dt><dd><p>Configuration API for the logging module.</p>
 </dd>
 </dl>
 </div>
@@ -1465,7 +1463,7 @@ implementations.</p>
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/library/logging.handlers.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/library/logging.handlers.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -1501,7 +1499,7 @@ implementations.</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>

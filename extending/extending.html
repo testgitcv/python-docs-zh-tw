@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>1. 以 C 或 C++ 擴充 Python &#8212; Python 3.10.2 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1. 以 C 或 C++ 擴充 Python &#8212; Python 3.9.10 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -20,7 +20,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.2 說明文件 中搜尋"
+          title="在 Python 3.9.10 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -74,9 +74,9 @@
     <h3><a href="../contents.html">目錄</a></h3>
     <ul>
 <li><a class="reference internal" href="#">1. 以 C 或 C++ 擴充 Python</a><ul>
-<li><a class="reference internal" href="#a-simple-example">1.1. 一個簡單範例</a></li>
+<li><a class="reference internal" href="#a-simple-example">1.1. A Simple Example</a></li>
 <li><a class="reference internal" href="#intermezzo-errors-and-exceptions">1.2. Intermezzo: Errors and Exceptions</a></li>
-<li><a class="reference internal" href="#back-to-the-example">1.3. 回到範例</a></li>
+<li><a class="reference internal" href="#back-to-the-example">1.3. Back to the Example</a></li>
 <li><a class="reference internal" href="#the-module-s-method-table-and-initialization-function">1.4. The Module's Method Table and Initialization Function</a></li>
 <li><a class="reference internal" href="#compilation-and-linkage">1.5. Compilation and Linkage</a></li>
 <li><a class="reference internal" href="#calling-python-functions-from-c">1.6. Calling Python Functions from C</a></li>
@@ -112,7 +112,7 @@
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/extending/extending.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/extending/extending.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -149,7 +149,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">擴充和嵌入 Python 直譯器</a> &#187;</li>
@@ -201,7 +201,7 @@ portable between implementations of Python than writing and compiling a C
 extension module.</p>
 </div>
 <section id="a-simple-example">
-<span id="extending-simpleexample"></span><h2><span class="section-number">1.1. </span>一個簡單範例<a class="headerlink" href="#a-simple-example" title="本標題的永久連結">¶</a></h2>
+<span id="extending-simpleexample"></span><h2><span class="section-number">1.1. </span>A Simple Example<a class="headerlink" href="#a-simple-example" title="本標題的永久連結">¶</a></h2>
 <p>Let's create an extension module called <code class="docutils literal notranslate"><span class="pre">spam</span></code> (the favorite food of Monty
 Python fans...) and let's say we want to create a Python interface to the C
 library function <code class="xref c c-func docutils literal notranslate"><span class="pre">system()</span></code> <a class="footnote-reference brackets" href="#id5" id="id1">1</a>. This function takes a null-terminated
@@ -401,7 +401,7 @@ call to <a class="reference internal" href="../c-api/exceptions.html#c.PyErr_Set
 </div>
 </section>
 <section id="back-to-the-example">
-<span id="backtoexample"></span><h2><span class="section-number">1.3. </span>回到範例<a class="headerlink" href="#back-to-the-example" title="本標題的永久連結">¶</a></h2>
+<span id="backtoexample"></span><h2><span class="section-number">1.3. </span>Back to the Example<a class="headerlink" href="#back-to-the-example" title="本標題的永久連結">¶</a></h2>
 <p>Going back to our example function, you should now be able to understand this
 statement:</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">PyArg_ParseTuple</span><span class="p">(</span><span class="n">args</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;s&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">command</span><span class="p">))</span><span class="w"></span>
@@ -738,7 +738,7 @@ passed to the call: if you make mistakes there, your code will probably crash or
 at least overwrite random bits in memory.  So be careful!</p>
 <p>Note that any Python object references which are provided to the caller are
 <em>borrowed</em> references; do not decrement their reference count!</p>
-<p>一些呼叫範例：</p>
+<p>Some example calls:</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#define PY_SSIZE_T_CLEAN  </span><span class="cm">/* Make &quot;s#&quot; use Py_ssize_t rather than int. */</span><span class="cp"></span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Python.h&gt;</span><span class="cp"></span>
 </pre></div>
@@ -969,7 +969,12 @@ the cycle itself.</p>
 <p>The cycle detector is able to detect garbage cycles and can reclaim them.
 The <a class="reference internal" href="../library/gc.html#module-gc" title="gc: Interface to the cycle-detecting garbage collector."><code class="xref py py-mod docutils literal notranslate"><span class="pre">gc</span></code></a> module exposes a way to run the detector (the
 <a class="reference internal" href="../library/gc.html#gc.collect" title="gc.collect"><code class="xref py py-func docutils literal notranslate"><span class="pre">collect()</span></code></a> function), as well as configuration
-interfaces and the ability to disable the detector at runtime.</p>
+interfaces and the ability to disable the detector at runtime.  The cycle
+detector is considered an optional component; though it is included by default,
+it can be disabled at build time using the <code class="xref std std-option docutils literal notranslate"><span class="pre">--without-cycle-gc</span></code> option
+to the <strong class="program">configure</strong> script on Unix platforms (including Mac OS X).  If
+the cycle detector is disabled in this way, the <a class="reference internal" href="../library/gc.html#module-gc" title="gc: Interface to the cycle-detecting garbage collector."><code class="xref py py-mod docutils literal notranslate"><span class="pre">gc</span></code></a> module will not be
+available.</p>
 <section id="reference-counting-in-python">
 <span id="refcountsinpython"></span><h3><span class="section-number">1.10.1. </span>Reference Counting in Python<a class="headerlink" href="#reference-counting-in-python" title="本標題的永久連結">¶</a></h3>
 <p>There are two macros, <code class="docutils literal notranslate"><span class="pre">Py_INCREF(x)</span></code> and <code class="docutils literal notranslate"><span class="pre">Py_DECREF(x)</span></code>, which handle the
@@ -1210,7 +1215,7 @@ file corresponding to the module provides a macro that takes care of importing
 the module and retrieving its C API pointers; client modules only have to call
 this macro before accessing the C API.</p>
 <p>The exporting module is a modification of the <code class="xref py py-mod docutils literal notranslate"><span class="pre">spam</span></code> module from section
-<a class="reference internal" href="#extending-simpleexample"><span class="std std-ref">一個簡單範例</span></a>. The function <code class="xref py py-func docutils literal notranslate"><span class="pre">spam.system()</span></code> does not call
+<a class="reference internal" href="#extending-simpleexample"><span class="std std-ref">A Simple Example</span></a>. The function <code class="xref py py-func docutils literal notranslate"><span class="pre">spam.system()</span></code> does not call
 the C library function <code class="xref c c-func docutils literal notranslate"><span class="pre">system()</span></code> directly, but a function
 <code class="xref c c-func docutils literal notranslate"><span class="pre">PySpam_System()</span></code>, which would of course do something more complicated in
 reality (such as adding &quot;spam&quot; to every command). This function
@@ -1391,9 +1396,9 @@ this is still found in much existing code.</p>
     <h3><a href="../contents.html">目錄</a></h3>
     <ul>
 <li><a class="reference internal" href="#">1. 以 C 或 C++ 擴充 Python</a><ul>
-<li><a class="reference internal" href="#a-simple-example">1.1. 一個簡單範例</a></li>
+<li><a class="reference internal" href="#a-simple-example">1.1. A Simple Example</a></li>
 <li><a class="reference internal" href="#intermezzo-errors-and-exceptions">1.2. Intermezzo: Errors and Exceptions</a></li>
-<li><a class="reference internal" href="#back-to-the-example">1.3. 回到範例</a></li>
+<li><a class="reference internal" href="#back-to-the-example">1.3. Back to the Example</a></li>
 <li><a class="reference internal" href="#the-module-s-method-table-and-initialization-function">1.4. The Module's Method Table and Initialization Function</a></li>
 <li><a class="reference internal" href="#compilation-and-linkage">1.5. Compilation and Linkage</a></li>
 <li><a class="reference internal" href="#calling-python-functions-from-c">1.6. Calling Python Functions from C</a></li>
@@ -1429,7 +1434,7 @@ this is still found in much existing code.</p>
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/extending/extending.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/extending/extending.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -1465,7 +1470,7 @@ this is still found in much existing code.</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >擴充和嵌入 Python 直譯器</a> &#187;</li>

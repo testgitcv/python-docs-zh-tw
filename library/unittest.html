@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>unittest --- 單元測試框架 &#8212; Python 3.10.2 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>unittest --- 單元測試框架 &#8212; Python 3.9.10 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -20,7 +20,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.2 說明文件 中搜尋"
+          title="在 Python 3.9.10 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -122,7 +122,7 @@
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/library/unittest.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/library/unittest.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -159,7 +159,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -189,7 +189,7 @@
             
   <section id="module-unittest">
 <span id="unittest-unit-testing-framework"></span><h1><a class="reference internal" href="#module-unittest" title="unittest: Unit testing framework for Python."><code class="xref py py-mod docutils literal notranslate"><span class="pre">unittest</span></code></a> --- 單元測試框架<a class="headerlink" href="#module-unittest" title="本標題的永久連結">¶</a></h1>
-<p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/unittest/__init__.py">Lib/unittest/__init__.py</a></p>
+<p><strong>Source code:</strong> <a class="reference external" href="https://github.com/python/cpython/tree/3.9/Lib/unittest/__init__.py">Lib/unittest/__init__.py</a></p>
 <hr class="docutils" />
 <p>（假如你已經熟悉相關基礎的測試概念，你可能會希望跳過以下段落，直接參考 <a class="reference internal" href="#assert-methods"><span class="std std-ref">assert 方法清單</span></a>。）</p>
 <p><a class="reference internal" href="#module-unittest" title="unittest: Unit testing framework for Python."><code class="xref py py-mod docutils literal notranslate"><span class="pre">unittest</span></code></a> 原生的單元測試框架最初由 JUnit 開發，和其他程式語言相似有主要的單元測試框架。支援自動化測試，對測試分享安裝與關閉程式碼，集合所有匯總的測試，並且獨立各個測試報告框架。</p>
@@ -360,7 +360,7 @@ imported by the test loader.</p>
 <p><span class="versionmodified added">在 3.5 版本新加入: </span>命令列選項 <code class="docutils literal notranslate"><span class="pre">--locals</span></code>。</p>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">在 3.7 版本新加入: </span>命令列選項 <code class="docutils literal notranslate"><span class="pre">-k</span></code>。</p>
+<p><span class="versionmodified added">在 3.7 版本新加入: </span>The command-line option <code class="docutils literal notranslate"><span class="pre">-k</span></code>.</p>
 </div>
 <p>對執行所有的專案或是一個子集合測試，命令列模式可以可以被用來做測試探索。</p>
 </section>
@@ -703,7 +703,7 @@ Skipped modules will not have <code class="xref py py-func docutils literal notr
 <p>When there are very small differences among your tests, for
 instance some parameters, unittest allows you to distinguish them inside
 the body of a test method using the <a class="reference internal" href="#unittest.TestCase.subTest" title="unittest.TestCase.subTest"><code class="xref py py-meth docutils literal notranslate"><span class="pre">subTest()</span></code></a> context manager.</p>
-<p>舉例來說，以下測試：</p>
+<p>For example, the following test:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">NumbersTest</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
 
     <span class="k">def</span> <span class="nf">test_even</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -715,7 +715,7 @@ the body of a test method using the <a class="reference internal" href="#unittes
                 <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">i</span> <span class="o">%</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>會有以下輸出：</p>
+<p>will produce the following output:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="o">======================================================================</span>
 <span class="n">FAIL</span><span class="p">:</span> <span class="n">test_even</span> <span class="p">(</span><span class="n">__main__</span><span class="o">.</span><span class="n">NumbersTest</span><span class="p">)</span> <span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="o">----------------------------------------------------------------------</span>
@@ -816,7 +816,7 @@ and must be decorated as a <a class="reference internal" href="functions.html#cl
     <span class="o">...</span>
 </pre></div>
 </div>
-<p>更多細節請見 <a class="reference internal" href="#class-and-module-fixtures">Class and Module Fixtures</a>。</p>
+<p>See <a class="reference internal" href="#class-and-module-fixtures">Class and Module Fixtures</a> for more details.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.2 版本新加入.</span></p>
 </div>
@@ -833,7 +833,7 @@ and must be decorated as a <a class="reference internal" href="functions.html#cl
     <span class="o">...</span>
 </pre></div>
 </div>
-<p>更多細節請見 <a class="reference internal" href="#class-and-module-fixtures">Class and Module Fixtures</a>。</p>
+<p>See <a class="reference internal" href="#class-and-module-fixtures">Class and Module Fixtures</a> for more details.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.2 版本新加入.</span></p>
 </div>
@@ -874,7 +874,7 @@ displayed whenever a subtest fails, allowing you to identify them
 clearly.</p>
 <p>A test case can contain any number of subtest declarations, and
 they can be arbitrarily nested.</p>
-<p>更多資訊請見 <a class="reference internal" href="#subtests"><span class="std std-ref">Distinguishing test iterations using subtests</span></a>。</p>
+<p>See <a class="reference internal" href="#subtests"><span class="std std-ref">Distinguishing test iterations using subtests</span></a> for more information.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.4 版本新加入.</span></p>
 </div>
@@ -1082,14 +1082,6 @@ and the message matches regex <em>r</em></p></td>
 with minimum <em>level</em></p></td>
 <td><p>3.4</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#unittest.TestCase.assertNoLogs" title="unittest.TestCase.assertNoLogs"><code class="xref py py-meth docutils literal notranslate"><span class="pre">assertNoLogs(logger,</span> <span class="pre">level)</span></code></a></p></td>
-<td><dl class="simple">
-<dt>The <code class="docutils literal notranslate"><span class="pre">with</span></code> block does not log on</dt><dd><p><em>logger</em> with minimum <em>level</em></p>
-</dd>
-</dl>
-</td>
-<td><p>3.10</p></td>
-</tr>
 </tbody>
 </table>
 <dl class="py method">
@@ -1126,7 +1118,7 @@ is to perform additional checks on the exception raised:</p>
 <p><span class="versionmodified changed">在 3.1 版本變更: </span>Added the ability to use <a class="reference internal" href="#unittest.TestCase.assertRaises" title="unittest.TestCase.assertRaises"><code class="xref py py-meth docutils literal notranslate"><span class="pre">assertRaises()</span></code></a> as a context manager.</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.2 版本變更: </span>新增 <code class="xref py py-attr docutils literal notranslate"><span class="pre">exception</span></code> 屬性。</p>
+<p><span class="versionmodified changed">在 3.2 版本變更: </span>Added the <code class="xref py py-attr docutils literal notranslate"><span class="pre">exception</span></code> attribute.</p>
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.3 版本變更: </span>Added the <em>msg</em> keyword argument when used as a context manager.</p>
@@ -1155,7 +1147,7 @@ suitable for use by <a class="reference internal" href="re.html#re.search" title
 <p><span class="versionmodified added">在 3.1 版本新加入: </span>Added under the name <code class="docutils literal notranslate"><span class="pre">assertRaisesRegexp</span></code>.</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.2 版本變更: </span>重新命名為 <a class="reference internal" href="#unittest.TestCase.assertRaisesRegex" title="unittest.TestCase.assertRaisesRegex"><code class="xref py py-meth docutils literal notranslate"><span class="pre">assertRaisesRegex()</span></code></a>。</p>
+<p><span class="versionmodified changed">在 3.2 版本變更: </span>Renamed to <a class="reference internal" href="#unittest.TestCase.assertRaisesRegex" title="unittest.TestCase.assertRaisesRegex"><code class="xref py py-meth docutils literal notranslate"><span class="pre">assertRaisesRegex()</span></code></a>.</p>
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.3 版本變更: </span>Added the <em>msg</em> keyword argument when used as a context manager.</p>
@@ -1263,7 +1255,7 @@ log messages.</p>
 matching messages.</p>
 </dd></dl>
 
-<p>範例：</p>
+<p>Example:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">assertLogs</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="s1">&#39;INFO&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">cm</span><span class="p">:</span>
    <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;first message&#39;</span><span class="p">)</span>
    <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s1">&#39;foo.bar&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s1">&#39;second message&#39;</span><span class="p">)</span>
@@ -1273,25 +1265,6 @@ matching messages.</p>
 </div>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.4 版本新加入.</span></p>
-</div>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="unittest.TestCase.assertNoLogs">
-<span class="sig-name descname"><span class="pre">assertNoLogs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">logger</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#unittest.TestCase.assertNoLogs" title="本定義的永久連結">¶</a></dt>
-<dd><p>A context manager to test that no messages are logged on
-the <em>logger</em> or one of its children, with at least the given
-<em>level</em>.</p>
-<p>If given, <em>logger</em> should be a <a class="reference internal" href="logging.html#logging.Logger" title="logging.Logger"><code class="xref py py-class docutils literal notranslate"><span class="pre">logging.Logger</span></code></a> object or a
-<a class="reference internal" href="stdtypes.html#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a> giving the name of a logger.  The default is the root
-logger, which will catch all messages.</p>
-<p>If given, <em>level</em> should be either a numeric logging level or
-its string equivalent (for example either <code class="docutils literal notranslate"><span class="pre">&quot;ERROR&quot;</span></code> or
-<code class="xref py py-attr docutils literal notranslate"><span class="pre">logging.ERROR</span></code>).  The default is <code class="xref py py-attr docutils literal notranslate"><span class="pre">logging.INFO</span></code>.</p>
-<p>Unlike <a class="reference internal" href="#unittest.TestCase.assertLogs" title="unittest.TestCase.assertLogs"><code class="xref py py-meth docutils literal notranslate"><span class="pre">assertLogs()</span></code></a>, nothing will be returned by the context
-manager.</p>
-<div class="versionadded">
-<p><span class="versionmodified added">在 3.10 版本新加入.</span></p>
 </div>
 </dd></dl>
 
@@ -1407,7 +1380,7 @@ expression suitable for use by <a class="reference internal" href="re.html#re.se
 <a class="reference internal" href="#unittest.TestCase.assertRegex" title="unittest.TestCase.assertRegex"><code class="xref py py-meth docutils literal notranslate"><span class="pre">assertRegex()</span></code></a>.</p>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">在 3.2 版本新加入: </span><a class="reference internal" href="#unittest.TestCase.assertNotRegex" title="unittest.TestCase.assertNotRegex"><code class="xref py py-meth docutils literal notranslate"><span class="pre">assertNotRegex()</span></code></a>。</p>
+<p><span class="versionmodified added">在 3.2 版本新加入: </span><a class="reference internal" href="#unittest.TestCase.assertNotRegex" title="unittest.TestCase.assertNotRegex"><code class="xref py py-meth docutils literal notranslate"><span class="pre">assertNotRegex()</span></code></a>.</p>
 </div>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.5 版本新加入: </span>The name <code class="docutils literal notranslate"><span class="pre">assertNotRegexpMatches</span></code> is a deprecated alias
@@ -2455,14 +2428,14 @@ be overridden using Python's <code class="xref std std-option docutils literal n
 (see <a class="reference internal" href="../using/cmdline.html#using-on-warnings"><span class="std std-ref">Warning control</span></a>) and leaving
 <em>warnings</em> to <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.2 版本變更: </span>新增 <code class="docutils literal notranslate"><span class="pre">warnings</span></code> 引數。</p>
+<p><span class="versionmodified changed">在 3.2 版本變更: </span>Added the <code class="docutils literal notranslate"><span class="pre">warnings</span></code> argument.</p>
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.2 版本變更: </span>The default stream is set to <a class="reference internal" href="sys.html#sys.stderr" title="sys.stderr"><code class="xref py py-data docutils literal notranslate"><span class="pre">sys.stderr</span></code></a> at instantiation time rather
 than import time.</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.5 版本變更: </span>新增 tb_locals 參數。</p>
+<p><span class="versionmodified changed">在 3.5 版本變更: </span>Added the tb_locals parameter.</p>
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="unittest.TextTestRunner._makeResult">
@@ -2537,7 +2510,7 @@ otherwise it will be set to <code class="docutils literal notranslate"><span cla
 <p>Calling <code class="docutils literal notranslate"><span class="pre">main</span></code> actually returns an instance of the <code class="docutils literal notranslate"><span class="pre">TestProgram</span></code> class.
 This stores the result of the tests run as the <code class="docutils literal notranslate"><span class="pre">result</span></code> attribute.</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.1 版本變更: </span>新增 <em>exit</em> 參數。</p>
+<p><span class="versionmodified changed">在 3.1 版本變更: </span>The <em>exit</em> parameter was added.</p>
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.2 版本變更: </span>The <em>verbosity</em>, <em>failfast</em>, <em>catchbreak</em>, <em>buffer</em>
@@ -2835,7 +2808,7 @@ to temporarily remove the handler while the test is being executed:</p>
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/library/unittest.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/library/unittest.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -2871,7 +2844,7 @@ to temporarily remove the handler while the test is being executed:</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>

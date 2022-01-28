@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>XML 處理模組 &#8212; Python 3.10.2 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML 處理模組 &#8212; Python 3.9.10 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -20,7 +20,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.2 說明文件 中搜尋"
+          title="在 Python 3.9.10 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -75,7 +75,7 @@
     <ul>
 <li><a class="reference internal" href="#">XML 處理模組</a><ul>
 <li><a class="reference internal" href="#xml-vulnerabilities">XML vulnerabilities</a></li>
-<li><a class="reference internal" href="#the-defusedxml-package"><code class="xref py py-mod docutils literal notranslate"><span class="pre">defusedxml</span></code> 套件</a></li>
+<li><a class="reference internal" href="#the-defusedxml-package">The <code class="xref py py-mod docutils literal notranslate"><span class="pre">defusedxml</span></code> Package</a></li>
 </ul>
 </li>
 </ul>
@@ -96,7 +96,7 @@
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/library/xml.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/library/xml.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -133,7 +133,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -163,7 +163,7 @@
             
   <section id="module-xml">
 <span id="xml-processing-modules"></span><span id="xml"></span><h1>XML 處理模組<a class="headerlink" href="#module-xml" title="本標題的永久連結">¶</a></h1>
-<p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/xml/">Lib/xml/</a></p>
+<p><strong>Source code:</strong> <a class="reference external" href="https://github.com/python/cpython/tree/3.9/Lib/xml/">Lib/xml/</a></p>
 <hr class="docutils" />
 <p>Python's interfaces for processing XML are grouped in the <code class="docutils literal notranslate"><span class="pre">xml</span></code> package.</p>
 <div class="admonition warning">
@@ -171,7 +171,7 @@
 <p>The XML modules are not secure against erroneous or maliciously
 constructed data.  If you need to parse untrusted or
 unauthenticated data see the <a class="reference internal" href="#xml-vulnerabilities"><span class="std std-ref">XML vulnerabilities</span></a> and
-<a class="reference internal" href="#defusedxml-package"><span class="std std-ref">defusedxml 套件</span></a> sections.</p>
+<a class="reference internal" href="#defusedxml-package"><span class="std std-ref">The defusedxml Package</span></a> sections.</p>
 </div>
 <p>It is important to note that modules in the <a class="reference internal" href="#module-xml" title="xml: Package containing XML processing modules"><code class="xref py py-mod docutils literal notranslate"><span class="pre">xml</span></code></a> package require that
 there be at least one SAX-compliant XML parser available. The Expat parser is
@@ -302,7 +302,7 @@ magnitudes or more.</p>
 all known attack vectors with examples and references.</p>
 </section>
 <section id="the-defusedxml-package">
-<span id="defusedxml-package"></span><h2><code class="xref py py-mod docutils literal notranslate"><span class="pre">defusedxml</span></code> 套件<a class="headerlink" href="#the-defusedxml-package" title="本標題的永久連結">¶</a></h2>
+<span id="defusedxml-package"></span><h2>The <code class="xref py py-mod docutils literal notranslate"><span class="pre">defusedxml</span></code> Package<a class="headerlink" href="#the-defusedxml-package" title="本標題的永久連結">¶</a></h2>
 <p><a class="reference external" href="https://pypi.org/project/defusedxml/">defusedxml</a> is a pure Python package with modified subclasses of all stdlib
 XML parsers that prevent any potentially malicious operation. Use of this
 package is recommended for any server code that parses untrusted XML data. The
@@ -323,7 +323,7 @@ XML exploits such as XPath injection.</p>
     <ul>
 <li><a class="reference internal" href="#">XML 處理模組</a><ul>
 <li><a class="reference internal" href="#xml-vulnerabilities">XML vulnerabilities</a></li>
-<li><a class="reference internal" href="#the-defusedxml-package"><code class="xref py py-mod docutils literal notranslate"><span class="pre">defusedxml</span></code> 套件</a></li>
+<li><a class="reference internal" href="#the-defusedxml-package">The <code class="xref py py-mod docutils literal notranslate"><span class="pre">defusedxml</span></code> Package</a></li>
 </ul>
 </li>
 </ul>
@@ -344,7 +344,7 @@ XML exploits such as XPath injection.</p>
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/library/xml.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/library/xml.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -380,7 +380,7 @@ XML exploits such as XPath injection.</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Python 3.8 有什麼新功能 &#8212; Python 3.10.2 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What&#39;s New In Python 3.8 &#8212; Python 3.9.10 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -20,14 +20,14 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.2 說明文件 中搜尋"
+          title="在 Python 3.9.10 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜尋" href="../search.html" />
     <link rel="copyright" title="版權" href="../copyright.html" />
-    <link rel="next" title="Python 3.7 有什麼新功能" href="3.7.html" />
-    <link rel="prev" title="Python 3.9 有什麼新功能" href="3.9.html" />
+    <link rel="next" title="What&#39;s New In Python 3.7" href="3.7.html" />
+    <link rel="prev" title="What&#39;s New In Python 3.9" href="3.9.html" />
     <link rel="canonical" href="https://docs.python.org/3/whatsnew/3.8.html" />
     
       
@@ -73,7 +73,7 @@
   <div>
     <h3><a href="../contents.html">目錄</a></h3>
     <ul>
-<li><a class="reference internal" href="#">Python 3.8 有什麼新功能</a><ul>
+<li><a class="reference internal" href="#">What's New In Python 3.8</a><ul>
 <li><a class="reference internal" href="#summary-release-highlights">Summary -- Release highlights</a></li>
 <li><a class="reference internal" href="#new-features">New Features</a><ul>
 <li><a class="reference internal" href="#assignment-expressions">Assignment expressions</a></li>
@@ -162,19 +162,19 @@
   <div>
     <h4>上個主題</h4>
     <p class="topless"><a href="3.9.html"
-                          title="上一章">Python 3.9 有什麼新功能</a></p>
+                          title="上一章">What's New In Python 3.9</a></p>
   </div>
   <div>
     <h4>下個主題</h4>
     <p class="topless"><a href="3.7.html"
-                          title="下一章">Python 3.7 有什麼新功能</a></p>
+                          title="下一章">What's New In Python 3.7</a></p>
   </div>
   <div role="note" aria-label="source link">
     <h3>此頁面</h3>
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/whatsnew/3.8.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/whatsnew/3.8.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -195,10 +195,10 @@
           <a href="../py-modindex.html" title="Python 模組索引"
              >模組</a> |</li>
         <li class="right" >
-          <a href="3.7.html" title="Python 3.7 有什麼新功能"
+          <a href="3.7.html" title="What&#39;s New In Python 3.7"
              accesskey="N">下一頁</a> |</li>
         <li class="right" >
-          <a href="3.9.html" title="Python 3.9 有什麼新功能"
+          <a href="3.9.html" title="What&#39;s New In Python 3.9"
              accesskey="P">上一頁</a> |</li>
 
           <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
@@ -211,11 +211,11 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Python 有什麼新功能？</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Python 3.8 有什麼新功能</a></li>
+        <li class="nav-item nav-item-this"><a href="">What's New In Python 3.8</a></li>
                 <li class="right">
                     
 
@@ -239,9 +239,9 @@
           <div class="body" role="main">
             
   <section id="what-s-new-in-python-3-8">
-<h1>Python 3.8 有什麼新功能<a class="headerlink" href="#what-s-new-in-python-3-8" title="本標題的永久連結">¶</a></h1>
+<h1>What's New In Python 3.8<a class="headerlink" href="#what-s-new-in-python-3-8" title="本標題的永久連結">¶</a></h1>
 <dl class="field-list simple">
-<dt class="field-odd">編輯者</dt>
+<dt class="field-odd">Editor</dt>
 <dd class="field-odd"><p>Raymond Hettinger</p>
 </dd>
 </dl>
@@ -288,7 +288,7 @@ the expression body:</p>
 </div>
 <p>Try to limit use of the walrus operator to clean cases that reduce
 complexity and improve readability.</p>
-<p>完整敘述請見 <span class="target" id="index-31"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0572"><strong>PEP 572</strong></a>。</p>
+<p>See <span class="target" id="index-0"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0572"><strong>PEP 572</strong></a> for a full description.</p>
 <p>(Contributed by Emily Morehouse in <a class="reference external" href="https://bugs.python.org/issue35224">bpo-35224</a>.)</p>
 </section>
 <section id="positional-only-parameters">
@@ -354,7 +354,7 @@ is an excerpt from code in the <a class="reference internal" href="../library/co
         <span class="c1"># Note &quot;iterable&quot; is a possible keyword argument</span>
 </pre></div>
 </div>
-<p>完整敘述請見 <span class="target" id="index-32"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0570"><strong>PEP 570</strong></a>。</p>
+<p>See <span class="target" id="index-1"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0570"><strong>PEP 570</strong></a> for a full description.</p>
 <p>(Contributed by Pablo Galindo in <a class="reference external" href="https://bugs.python.org/issue36540">bpo-36540</a>.)</p>
 </section>
 <section id="parallel-filesystem-cache-for-compiled-bytecode-files">
@@ -374,12 +374,12 @@ subdirectories).</p>
 <p>Python now uses the same ABI whether it's built in release or debug mode. On
 Unix, when Python is built in debug mode, it is now possible to load C
 extensions built in release mode and C extensions built using the stable ABI.</p>
-<p>Release builds and <a class="reference internal" href="../using/configure.html#debug-build"><span class="std std-ref">debug builds</span></a> are now ABI compatible: defining the
+<p>Release builds and debug builds are now ABI compatible: defining the
 <code class="docutils literal notranslate"><span class="pre">Py_DEBUG</span></code> macro no longer implies the <code class="docutils literal notranslate"><span class="pre">Py_TRACE_REFS</span></code> macro, which
 introduces the only ABI incompatibility. The <code class="docutils literal notranslate"><span class="pre">Py_TRACE_REFS</span></code> macro, which
 adds the <code class="xref py py-func docutils literal notranslate"><span class="pre">sys.getobjects()</span></code> function and the <span class="target" id="index-3"></span><a class="reference internal" href="../using/cmdline.html#envvar-PYTHONDUMPREFS"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYTHONDUMPREFS</span></code></a>
-environment variable, can be set using the new <a class="reference internal" href="../using/configure.html#cmdoption-with-trace-refs"><code class="xref std std-option docutils literal notranslate"><span class="pre">./configure</span>
-<span class="pre">--with-trace-refs</span></code></a> build option.
+environment variable, can be set using the new <code class="docutils literal notranslate"><span class="pre">./configure</span> <span class="pre">--with-trace-refs</span></code>
+build option.
 (Contributed by Victor Stinner in <a class="reference external" href="https://bugs.python.org/issue36465">bpo-36465</a>.)</p>
 <p>On Unix, C extensions are no longer linked to libpython except on Android
 and Cygwin.
@@ -440,7 +440,7 @@ Python and native code, allowing applications and frameworks written in pure
 Python code to take advantage of extra notifications, while also allowing
 embedders or system administrators to deploy builds of Python where auditing is
 always enabled.</p>
-<p>完整細節請見 <span class="target" id="index-33"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0578"><strong>PEP 578</strong></a>。</p>
+<p>See <span class="target" id="index-4"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0578"><strong>PEP 578</strong></a> for full details.</p>
 </section>
 <section id="pep-587-python-initialization-configuration">
 <h3>PEP 587: Python Initialization Configuration<a class="headerlink" href="#pep-587-python-initialization-configuration" title="本標題的永久連結">¶</a></h3>
@@ -489,7 +489,7 @@ reference configuration, replacing global configuration variables and
 other private variables.</p>
 <p>See <a class="reference internal" href="../c-api/init_config.html#init-config"><span class="std std-ref">Python Initialization Configuration</span></a> for the
 documentation.</p>
-<p>完整敘述請見 <span class="target" id="index-34"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0587"><strong>PEP 587</strong></a>。</p>
+<p>See <span class="target" id="index-6"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0587"><strong>PEP 587</strong></a> for a full description.</p>
 <p>(Contributed by Victor Stinner in <a class="reference external" href="https://bugs.python.org/issue36763">bpo-36763</a>.)</p>
 </section>
 <section id="pep-590-vectorcall-a-fast-calling-protocol-for-cpython">
@@ -497,11 +497,10 @@ documentation.</p>
 <p><a class="reference internal" href="../c-api/call.html#vectorcall"><span class="std std-ref">The Vectorcall Protocol</span></a> is added to the Python/C API.
 It is meant to formalize existing optimizations which were already done
 for various classes.
-Any <a class="reference internal" href="../c-api/typeobj.html#static-types"><span class="std std-ref">static type</span></a> implementing a callable can use this
-protocol.</p>
+Any static type implementing a callable can use this protocol.</p>
 <p>This is currently provisional.
 The aim is to make it fully public in Python 3.9.</p>
-<p>完整敘述請見 <span class="target" id="index-35"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0590"><strong>PEP 590</strong></a>。</p>
+<p>See <span class="target" id="index-7"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0590"><strong>PEP 590</strong></a> for a full description.</p>
 <p>(Contributed by Jeroen Demeyer, Mark Shannon and Petr Viktorin in <a class="reference external" href="https://bugs.python.org/issue36974">bpo-36974</a>.)</p>
 </section>
 <section id="pickle-protocol-5-with-out-of-band-data-buffers">
@@ -513,7 +512,7 @@ possibly by applying custom techniques such as data-dependent compression.</p>
 <p>The <a class="reference internal" href="../library/pickle.html#module-pickle" title="pickle: Convert Python objects to streams of bytes and back."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pickle</span></code></a> protocol 5 introduces support for out-of-band buffers
 where <span class="target" id="index-8"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-3118"><strong>PEP 3118</strong></a>-compatible data can be transmitted separately from the
 main pickle stream, at the discretion of the communication layer.</p>
-<p>完整敘述請見 <span class="target" id="index-36"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0574"><strong>PEP 574</strong></a>。</p>
+<p>See <span class="target" id="index-9"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0574"><strong>PEP 574</strong></a> for a full description.</p>
 <p>(Contributed by Antoine Pitrou in <a class="reference external" href="https://bugs.python.org/issue36785">bpo-36785</a>.)</p>
 </section>
 </section>
@@ -727,7 +726,7 @@ automatically managing the event loop. For example:</p>
 <span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
 </pre></div>
 </div>
-<p>這<em>大致</em>等價於：</p>
+<p>This is <em>roughly</em> equivalent to:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">asyncio</span>
 
 <span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
@@ -975,7 +974,7 @@ for <a class="reference internal" href="../library/functions.html#property" titl
 </section>
 <section id="io">
 <h3>io<a class="headerlink" href="#io" title="本標題的永久連結">¶</a></h3>
-<p>In development mode (<a class="reference internal" href="../using/cmdline.html#cmdoption-X"><code class="xref std std-option docutils literal notranslate"><span class="pre">-X</span></code></a> <code class="docutils literal notranslate"><span class="pre">env</span></code>) and in <a class="reference internal" href="../using/configure.html#debug-build"><span class="std std-ref">debug build</span></a>, the
+<p>In development mode (<a class="reference internal" href="../using/cmdline.html#cmdoption-X"><code class="xref std std-option docutils literal notranslate"><span class="pre">-X</span></code></a> <code class="docutils literal notranslate"><span class="pre">env</span></code>) and in debug build, the
 <a class="reference internal" href="../library/io.html#io.IOBase" title="io.IOBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">io.IOBase</span></code></a> finalizer now logs the exception if the <code class="docutils literal notranslate"><span class="pre">close()</span></code> method
 fails. The exception is ignored silently by default in release build.
 (Contributed by Victor Stinner in <a class="reference external" href="https://bugs.python.org/issue18748">bpo-18748</a>.)</p>
@@ -1358,7 +1357,7 @@ failure. (Contributed by Petter Strandmark in <a class="reference external" href
 <p><a class="reference internal" href="../library/unittest.html#module-unittest" title="unittest: Unit testing framework for Python."><code class="xref py py-mod docutils literal notranslate"><span class="pre">unittest</span></code></a> module gained support for coroutines to be used as test cases
 with <a class="reference internal" href="../library/unittest.html#unittest.IsolatedAsyncioTestCase" title="unittest.IsolatedAsyncioTestCase"><code class="xref py py-class docutils literal notranslate"><span class="pre">unittest.IsolatedAsyncioTestCase</span></code></a>.
 (Contributed by Andrew Svetlov in <a class="reference external" href="https://bugs.python.org/issue32972">bpo-32972</a>.)</p>
-<p>範例：</p>
+<p>Example:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">unittest</span>
 
 
@@ -1931,7 +1930,7 @@ Increasing the reference count of these type objects has been moved from
 <a class="reference internal" href="../c-api/allocation.html#c.PyObject_Init" title="PyObject_Init"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyObject_Init()</span></code></a> and <code class="xref c c-func docutils literal notranslate"><span class="pre">PyObject_INIT()</span></code>.
 This makes types created through <a class="reference internal" href="../c-api/type.html#c.PyType_FromSpec" title="PyType_FromSpec"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyType_FromSpec()</span></code></a> behave like
 other classes in managed code.</p>
-<p><a class="reference internal" href="../c-api/typeobj.html#static-types"><span class="std std-ref">Statically allocated types</span></a> are not affected.</p>
+<p>Statically allocated types are not affected.</p>
 <p>For the vast majority of cases, there should be no side effect.
 However, types that manually increase the reference count after allocating
 an instance (perhaps to work around the bug) may now become immortal.
@@ -1946,7 +1945,7 @@ This may happen after calling <a class="reference internal" href="../c-api/alloc
 <a class="reference internal" href="../c-api/allocation.html#c.PyObject_NewVar" title="PyObject_NewVar"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyObject_NewVar()</span></code></a>, <a class="reference internal" href="../c-api/gcsupport.html#c.PyObject_GC_New" title="PyObject_GC_New"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyObject_GC_New()</span></code></a>,
 <a class="reference internal" href="../c-api/gcsupport.html#c.PyObject_GC_NewVar" title="PyObject_GC_NewVar"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyObject_GC_NewVar()</span></code></a>, or any other custom allocator that uses
 <a class="reference internal" href="../c-api/allocation.html#c.PyObject_Init" title="PyObject_Init"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyObject_Init()</span></code></a> or <code class="xref c c-func docutils literal notranslate"><span class="pre">PyObject_INIT()</span></code>.</p>
-<p>範例：</p>
+<p>Example:</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="n">foo_struct</span><span class="w"> </span><span class="o">*</span><span class="w"></span>
 <span class="nf">foo_new</span><span class="p">(</span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="n">type</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="n">foo_struct</span><span class="w"> </span><span class="o">*</span><span class="n">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PyObject_GC_New</span><span class="p">(</span><span class="n">foo_struct</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">PyTypeObject</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="n">type</span><span class="p">);</span><span class="w"></span>
@@ -1963,7 +1962,7 @@ This may happen after calling <a class="reference internal" href="../c-api/alloc
 </li>
 <li><p>Ensure that all custom <code class="docutils literal notranslate"><span class="pre">tp_dealloc</span></code> functions of heap-allocated types
 decrease the type's reference count.</p>
-<p>範例：</p>
+<p>Example:</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"></span>
 <span class="nf">foo_dealloc</span><span class="p">(</span><span class="n">foo_struct</span><span class="w"> </span><span class="o">*</span><span class="n">instance</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Py_TYPE</span><span class="p">(</span><span class="n">instance</span><span class="p">);</span><span class="w"></span>
@@ -1981,7 +1980,7 @@ decrease the type's reference count.</p>
 </li>
 <li><p>The <a class="reference internal" href="../c-api/intro.html#c.Py_DEPRECATED" title="Py_DEPRECATED"><code class="xref c c-macro docutils literal notranslate"><span class="pre">Py_DEPRECATED()</span></code></a> macro has been implemented for MSVC.
 The macro now must be placed before the symbol name.</p>
-<p>範例：</p>
+<p>Example:</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">Py_DEPRECATED</span><span class="p">(</span><span class="mf">3.8</span><span class="p">)</span><span class="w"> </span><span class="n">PyAPI_FUNC</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">Py_OldFunction</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
@@ -2140,7 +2139,7 @@ to 3.8 by Achraf Merzouki.)</p>
   <div>
     <h3><a href="../contents.html">目錄</a></h3>
     <ul>
-<li><a class="reference internal" href="#">Python 3.8 有什麼新功能</a><ul>
+<li><a class="reference internal" href="#">What's New In Python 3.8</a><ul>
 <li><a class="reference internal" href="#summary-release-highlights">Summary -- Release highlights</a></li>
 <li><a class="reference internal" href="#new-features">New Features</a><ul>
 <li><a class="reference internal" href="#assignment-expressions">Assignment expressions</a></li>
@@ -2229,19 +2228,19 @@ to 3.8 by Achraf Merzouki.)</p>
   <div>
     <h4>上個主題</h4>
     <p class="topless"><a href="3.9.html"
-                          title="上一章">Python 3.9 有什麼新功能</a></p>
+                          title="上一章">What's New In Python 3.9</a></p>
   </div>
   <div>
     <h4>下個主題</h4>
     <p class="topless"><a href="3.7.html"
-                          title="下一章">Python 3.7 有什麼新功能</a></p>
+                          title="下一章">What's New In Python 3.7</a></p>
   </div>
   <div role="note" aria-label="source link">
     <h3>此頁面</h3>
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/whatsnew/3.8.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/whatsnew/3.8.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -2261,10 +2260,10 @@ to 3.8 by Achraf Merzouki.)</p>
           <a href="../py-modindex.html" title="Python 模組索引"
              >模組</a> |</li>
         <li class="right" >
-          <a href="3.7.html" title="Python 3.7 有什麼新功能"
+          <a href="3.7.html" title="What&#39;s New In Python 3.7"
              >下一頁</a> |</li>
         <li class="right" >
-          <a href="3.9.html" title="Python 3.9 有什麼新功能"
+          <a href="3.9.html" title="What&#39;s New In Python 3.9"
              >上一頁</a> |</li>
 
           <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
@@ -2277,11 +2276,11 @@ to 3.8 by Achraf Merzouki.)</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 有什麼新功能？</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Python 3.8 有什麼新功能</a></li>
+        <li class="nav-item nav-item-this"><a href="">What's New In Python 3.8</a></li>
                 <li class="right">
                     
 

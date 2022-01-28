@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>MS Windows Specific Services &#8212; Python 3.10.2 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MS Windows Specific Services &#8212; Python 3.9.10 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -20,14 +20,14 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.2 說明文件 中搜尋"
+          title="在 Python 3.9.10 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜尋" href="../search.html" />
     <link rel="copyright" title="版權" href="../copyright.html" />
     <link rel="next" title="msilib --- Read and write Microsoft Installer files" href="msilib.html" />
-    <link rel="prev" title="pickletools --- Tools for pickle developers" href="pickletools.html" />
+    <link rel="prev" title="formatter --- Generic output formatting" href="formatter.html" />
     <link rel="canonical" href="https://docs.python.org/3/library/windows.html" />
     
       
@@ -72,8 +72,8 @@
             <div class="language_switcher_placeholder"></div>
   <div>
     <h4>上個主題</h4>
-    <p class="topless"><a href="pickletools.html"
-                          title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pickletools</span></code> --- Tools for pickle developers</a></p>
+    <p class="topless"><a href="formatter.html"
+                          title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">formatter</span></code> --- Generic output formatting</a></p>
   </div>
   <div>
     <h4>下個主題</h4>
@@ -85,7 +85,7 @@
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/library/windows.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/library/windows.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -109,7 +109,7 @@
           <a href="msilib.html" title="msilib --- Read and write Microsoft Installer files"
              accesskey="N">下一頁</a> |</li>
         <li class="right" >
-          <a href="pickletools.html" title="pickletools --- Tools for pickle developers"
+          <a href="formatter.html" title="formatter --- Generic output formatting"
              accesskey="P">上一頁</a> |</li>
 
           <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
@@ -122,7 +122,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -160,7 +160,7 @@
 <li class="toctree-l2"><a class="reference internal" href="msilib.html#summary-information-objects">Summary Information Objects</a></li>
 <li class="toctree-l2"><a class="reference internal" href="msilib.html#record-objects">Record Objects</a></li>
 <li class="toctree-l2"><a class="reference internal" href="msilib.html#errors">Errors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="msilib.html#cab-objects">CAB 物件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="msilib.html#cab-objects">CAB Objects</a></li>
 <li class="toctree-l2"><a class="reference internal" href="msilib.html#directory-objects">Directory Objects</a></li>
 <li class="toctree-l2"><a class="reference internal" href="msilib.html#features">Features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="msilib.html#gui-classes">GUI classes</a></li>
@@ -174,8 +174,8 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="winreg.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">winreg</span></code> --- Windows registry access</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="winreg.html#functions">函式</a></li>
-<li class="toctree-l2"><a class="reference internal" href="winreg.html#constants">常數</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="winreg.html#functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="winreg.html#constants">Constants</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="winreg.html#hkey-constants">HKEY_* Constants</a></li>
 <li class="toctree-l3"><a class="reference internal" href="winreg.html#access-rights">Access Rights</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="winreg.html#bit-specific">64-bit Specific</a></li>
@@ -201,8 +201,8 @@
         <div class="sphinxsidebarwrapper">
   <div>
     <h4>上個主題</h4>
-    <p class="topless"><a href="pickletools.html"
-                          title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pickletools</span></code> --- Tools for pickle developers</a></p>
+    <p class="topless"><a href="formatter.html"
+                          title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">formatter</span></code> --- Generic output formatting</a></p>
   </div>
   <div>
     <h4>下個主題</h4>
@@ -214,7 +214,7 @@
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/library/windows.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/library/windows.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -237,7 +237,7 @@
           <a href="msilib.html" title="msilib --- Read and write Microsoft Installer files"
              >下一頁</a> |</li>
         <li class="right" >
-          <a href="pickletools.html" title="pickletools --- Tools for pickle developers"
+          <a href="formatter.html" title="formatter --- Generic output formatting"
              >上一頁</a> |</li>
 
           <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
@@ -250,7 +250,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>

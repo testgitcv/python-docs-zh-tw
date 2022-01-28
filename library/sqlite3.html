@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>sqlite3 --- DB-API 2.0 interface for SQLite databases &#8212; Python 3.10.2 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sqlite3 --- DB-API 2.0 interface for SQLite databases &#8212; Python 3.9.10 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -20,7 +20,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.2 說明文件 中搜尋"
+          title="在 Python 3.9.10 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -78,7 +78,7 @@
 <li><a class="reference internal" href="#connection-objects">Connection Objects</a></li>
 <li><a class="reference internal" href="#cursor-objects">Cursor Objects</a></li>
 <li><a class="reference internal" href="#row-objects">Row Objects</a></li>
-<li><a class="reference internal" href="#exceptions">例外</a></li>
+<li><a class="reference internal" href="#exceptions">Exceptions</a></li>
 <li><a class="reference internal" href="#sqlite-and-python-types">SQLite and Python types</a><ul>
 <li><a class="reference internal" href="#introduction">簡介</a></li>
 <li><a class="reference internal" href="#using-adapters-to-store-additional-python-types-in-sqlite-databases">Using adapters to store additional Python types in SQLite databases</a><ul>
@@ -117,7 +117,7 @@
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/library/sqlite3.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/library/sqlite3.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -154,7 +154,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -184,7 +184,7 @@
             
   <section id="module-sqlite3">
 <span id="sqlite3-db-api-2-0-interface-for-sqlite-databases"></span><h1><a class="reference internal" href="#module-sqlite3" title="sqlite3: A DB-API 2.0 implementation using SQLite 3.x."><code class="xref py py-mod docutils literal notranslate"><span class="pre">sqlite3</span></code></a> --- DB-API 2.0 interface for SQLite databases<a class="headerlink" href="#module-sqlite3" title="本標題的永久連結">¶</a></h1>
-<p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/sqlite3/">Lib/sqlite3/</a></p>
+<p><strong>Source code:</strong> <a class="reference external" href="https://github.com/python/cpython/tree/3.9/Lib/sqlite3/">Lib/sqlite3/</a></p>
 <hr class="docutils" />
 <p>SQLite is a C library that provides a lightweight disk-based database that
 doesn't require a separate server process and allows accessing the database
@@ -193,8 +193,7 @@ SQLite for internal data storage.  It's also possible to prototype an
 application using SQLite and then port the code to a larger database such as
 PostgreSQL or Oracle.</p>
 <p>The sqlite3 module was written by Gerhard Häring.  It provides a SQL interface
-compliant with the DB-API 2.0 specification described by <span class="target" id="index-0"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0249"><strong>PEP 249</strong></a>, and
-requires SQLite 3.7.15 or newer.</p>
+compliant with the DB-API 2.0 specification described by <span class="target" id="index-0"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0249"><strong>PEP 249</strong></a>.</p>
 <p>To use the module, start by creating a <a class="reference internal" href="#sqlite3.Connection" title="sqlite3.Connection"><code class="xref py py-class docutils literal notranslate"><span class="pre">Connection</span></code></a> object that
 represents the database.  Here the data will be stored in the
 <code class="file docutils literal notranslate"><span class="pre">example.db</span></code> file:</p>
@@ -296,7 +295,7 @@ available data types for the supported SQL dialect.</p>
 </dd>
 <dt><a class="reference external" href="https://www.w3schools.com/sql/">https://www.w3schools.com/sql/</a></dt><dd><p>Tutorial, reference and examples for learning SQL syntax.</p>
 </dd>
-<dt><span class="target" id="index-1"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0249"><strong>PEP 249</strong></a> - Database API Specification 2.0</dt><dd><p>PEP 由 Marc-André Lemburg 撰寫。</p>
+<dt><span class="target" id="index-1"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0249"><strong>PEP 249</strong></a> - Database API Specification 2.0</dt><dd><p>PEP written by Marc-André Lemburg.</p>
 </dd>
 </dl>
 </div>
@@ -460,15 +459,11 @@ parameters to SQLite. Some useful URI tricks include:</p>
 parameters, can be found in the
 <a class="reference external" href="https://www.sqlite.org/uri.html">SQLite URI documentation</a>.</p>
 <p class="audit-hook">Raises an <a class="reference internal" href="sys.html#auditing"><span class="std std-ref">auditing event</span></a> <code class="docutils literal notranslate"><span class="pre">sqlite3.connect</span></code> with argument <code class="docutils literal notranslate"><span class="pre">database</span></code>.</p>
-<p class="audit-hook">Raises an <a class="reference internal" href="sys.html#auditing"><span class="std std-ref">auditing event</span></a> <code class="docutils literal notranslate"><span class="pre">sqlite3.connect/handle</span></code> with argument <code class="docutils literal notranslate"><span class="pre">connection_handle</span></code>.</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.4 版本變更: </span>新增 <em>uri</em> 參數。</p>
+<p><span class="versionmodified changed">在 3.4 版本變更: </span>Added the <em>uri</em> parameter.</p>
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.7 版本變更: </span><em>database</em> can now also be a <a class="reference internal" href="../glossary.html#term-path-like-object"><span class="xref std std-term">path-like object</span></a>, not only a string.</p>
-</div>
-<div class="versionchanged">
-<p><span class="versionmodified changed">在 3.10 版本變更: </span>Added the <code class="docutils literal notranslate"><span class="pre">sqlite3.connect/handle</span></code> auditing event.</p>
 </div>
 </dd></dl>
 
@@ -642,9 +637,9 @@ with older versions.</p>
 <p>The function can return any of the types supported by SQLite: bytes, str, int,
 float and <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.8 版本變更: </span>新增 <em>deterministic</em> 參數。</p>
+<p><span class="versionmodified changed">在 3.8 版本變更: </span>The <em>deterministic</em> parameter was added.</p>
 </div>
-<p>範例：</p>
+<p>Example:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
 <span class="kn">import</span> <span class="nn">hashlib</span>
 
@@ -672,7 +667,7 @@ any number of arguments), and a <code class="docutils literal notranslate"><span
 final result of the aggregate.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">finalize</span></code> method can return any of the types supported by SQLite:
 bytes, str, int, float and <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
-<p>範例：</p>
+<p>Example:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
 
 <span class="k">class</span> <span class="nc">MySum</span><span class="p">:</span>
@@ -813,12 +808,8 @@ from shared libraries.  SQLite extensions can define new functions,
 aggregates or whole new virtual table implementations.  One well-known
 extension is the fulltext-search extension distributed with SQLite.</p>
 <p>Loadable extensions are disabled by default. See <a class="footnote-reference brackets" href="#f1" id="id1">1</a>.</p>
-<p class="audit-hook">Raises an <a class="reference internal" href="sys.html#auditing"><span class="std std-ref">auditing event</span></a> <code class="docutils literal notranslate"><span class="pre">sqlite3.enable_load_extension</span></code> with arguments <code class="docutils literal notranslate"><span class="pre">connection</span></code>, <code class="docutils literal notranslate"><span class="pre">enabled</span></code>.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.2 版本新加入.</span></p>
-</div>
-<div class="versionchanged">
-<p><span class="versionmodified changed">在 3.10 版本變更: </span>Added the <code class="docutils literal notranslate"><span class="pre">sqlite3.enable_load_extension</span></code> auditing event.</p>
 </div>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
 
@@ -859,12 +850,8 @@ extension is the fulltext-search extension distributed with SQLite.</p>
 enable extension loading with <a class="reference internal" href="#sqlite3.Connection.enable_load_extension" title="sqlite3.Connection.enable_load_extension"><code class="xref py py-meth docutils literal notranslate"><span class="pre">enable_load_extension()</span></code></a> before you can
 use this routine.</p>
 <p>Loadable extensions are disabled by default. See <a class="footnote-reference brackets" href="#f1" id="id2">1</a>.</p>
-<p class="audit-hook">Raises an <a class="reference internal" href="sys.html#auditing"><span class="std std-ref">auditing event</span></a> <code class="docutils literal notranslate"><span class="pre">sqlite3.load_extension</span></code> with arguments <code class="docutils literal notranslate"><span class="pre">connection</span></code>, <code class="docutils literal notranslate"><span class="pre">path</span></code>.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.2 版本新加入.</span></p>
-</div>
-<div class="versionchanged">
-<p><span class="versionmodified changed">在 3.10 版本變更: </span>Added the <code class="docutils literal notranslate"><span class="pre">sqlite3.load_extension</span></code> auditing event.</p>
 </div>
 </dd></dl>
 
@@ -875,7 +862,7 @@ use this routine.</p>
 original row as a tuple and will return the real result row.  This way, you can
 implement more advanced ways of returning results, such  as returning an object
 that can also access columns by name.</p>
-<p>範例：</p>
+<p>Example:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
 
 <span class="k">def</span> <span class="nf">dict_factory</span><span class="p">(</span><span class="n">cursor</span><span class="p">,</span> <span class="n">row</span><span class="p">):</span>
@@ -958,7 +945,7 @@ deleted since the database connection was opened.</p>
 saving an in-memory database for later restoration.  This function provides
 the same capabilities as the <kbd class="kbd docutils literal notranslate">.dump</kbd> command in the <strong class="program">sqlite3</strong>
 shell.</p>
-<p>範例：</p>
+<p>Example:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Convert file existing_db.db to SQL dump file dump.sql</span>
 <span class="kn">import</span> <span class="nn">sqlite3</span>
 
@@ -1015,6 +1002,7 @@ integer or a floating point value.</p>
 <span class="n">source</span><span class="o">.</span><span class="n">backup</span><span class="p">(</span><span class="n">dest</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Availability: SQLite 3.6.11 or higher</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.7 版本新加入.</span></p>
 </div>
@@ -1105,7 +1093,7 @@ at once. It issues a <code class="docutils literal notranslate"><span class="pre
 gets as a parameter.  This method disregards <code class="xref py py-attr docutils literal notranslate"><span class="pre">isolation_level</span></code>; any
 transaction control must be added to <em>sql_script</em>.</p>
 <p><em>sql_script</em> can be an instance of <a class="reference internal" href="stdtypes.html#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>.</p>
-<p>範例：</p>
+<p>Example:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
 
 <span class="n">con</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;:memory:&quot;</span><span class="p">)</span>
@@ -1199,6 +1187,8 @@ case no <code class="docutils literal notranslate"><span class="pre">executeXX()
 last operation is not determinable by the interface&quot;. This includes <code class="docutils literal notranslate"><span class="pre">SELECT</span></code>
 statements because we cannot determine the number of rows a query produced
 until all rows were fetched.</p>
+<p>With SQLite versions before 3.6.5, <a class="reference internal" href="#sqlite3.Cursor.rowcount" title="sqlite3.Cursor.rowcount"><code class="xref py py-attr docutils literal notranslate"><span class="pre">rowcount</span></code></a> is set to 0 if
+you make a <code class="docutils literal notranslate"><span class="pre">DELETE</span> <span class="pre">FROM</span> <span class="pre">table</span></code> without any condition.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1215,7 +1205,7 @@ the value of <code class="docutils literal notranslate"><span class="pre">lastro
 <p>Inserts into <code class="docutils literal notranslate"><span class="pre">WITHOUT</span> <span class="pre">ROWID</span></code> tables are not recorded.</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.6 版本變更: </span>新增 <code class="docutils literal notranslate"><span class="pre">REPLACE</span></code> 陳述式的支援。</p>
+<p><span class="versionmodified changed">在 3.6 版本變更: </span>Added support for the <code class="docutils literal notranslate"><span class="pre">REPLACE</span></code> statement.</p>
 </div>
 </dd></dl>
 
@@ -1319,7 +1309,7 @@ it is the first member of each tuple in <a class="reference internal" href="#sql
 </div>
 </section>
 <section id="exceptions">
-<span id="sqlite3-exceptions"></span><h2>例外<a class="headerlink" href="#exceptions" title="本標題的永久連結">¶</a></h2>
+<span id="sqlite3-exceptions"></span><h2>Exceptions<a class="headerlink" href="#exceptions" title="本標題的永久連結">¶</a></h2>
 <dl class="py exception">
 <dt class="sig sig-object py" id="sqlite3.Warning">
 <em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sqlite3.</span></span><span class="sig-name descname"><span class="pre">Warning</span></span><a class="headerlink" href="#sqlite3.Warning" title="本定義的永久連結">¶</a></dt>
@@ -1785,8 +1775,8 @@ committed:</p>
 <dd><p>The sqlite3 module is not built with loadable extension support by
 default, because some platforms (notably macOS) have SQLite
 libraries which are compiled without this feature. To get loadable
-extension support, you must pass the
-<a class="reference internal" href="../using/configure.html#cmdoption-enable-loadable-sqlite-extensions"><code class="xref std std-option docutils literal notranslate"><span class="pre">--enable-loadable-sqlite-extensions</span></code></a> option to configure.</p>
+extension support, you must pass <code class="docutils literal notranslate"><span class="pre">--enable-loadable-sqlite-extensions</span></code> to
+configure.</p>
 </dd>
 </dl>
 </section>
@@ -1808,7 +1798,7 @@ extension support, you must pass the
 <li><a class="reference internal" href="#connection-objects">Connection Objects</a></li>
 <li><a class="reference internal" href="#cursor-objects">Cursor Objects</a></li>
 <li><a class="reference internal" href="#row-objects">Row Objects</a></li>
-<li><a class="reference internal" href="#exceptions">例外</a></li>
+<li><a class="reference internal" href="#exceptions">Exceptions</a></li>
 <li><a class="reference internal" href="#sqlite-and-python-types">SQLite and Python types</a><ul>
 <li><a class="reference internal" href="#introduction">簡介</a></li>
 <li><a class="reference internal" href="#using-adapters-to-store-additional-python-types-in-sqlite-databases">Using adapters to store additional Python types in SQLite databases</a><ul>
@@ -1847,7 +1837,7 @@ extension support, you must pass the
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/library/sqlite3.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/library/sqlite3.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -1883,7 +1873,7 @@ extension support, you must pass the
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>

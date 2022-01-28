@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Python 3.2 有什麼新功能 &#8212; Python 3.10.2 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What&#39;s New In Python 3.2 &#8212; Python 3.9.10 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -20,14 +20,14 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.2 說明文件 中搜尋"
+          title="在 Python 3.9.10 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜尋" href="../search.html" />
     <link rel="copyright" title="版權" href="../copyright.html" />
-    <link rel="next" title="Python 3.1 有什麼新功能" href="3.1.html" />
-    <link rel="prev" title="Python 3.3 有什麼新功能" href="3.3.html" />
+    <link rel="next" title="What&#39;s New In Python 3.1" href="3.1.html" />
+    <link rel="prev" title="What&#39;s New In Python 3.3" href="3.3.html" />
     <link rel="canonical" href="https://docs.python.org/3/whatsnew/3.2.html" />
     
       
@@ -73,7 +73,7 @@
   <div>
     <h3><a href="../contents.html">目錄</a></h3>
     <ul>
-<li><a class="reference internal" href="#">Python 3.2 有什麼新功能</a><ul>
+<li><a class="reference internal" href="#">What's New In Python 3.2</a><ul>
 <li><a class="reference internal" href="#pep-384-defining-a-stable-abi">PEP 384: Defining a Stable ABI</a></li>
 <li><a class="reference internal" href="#pep-389-argparse-command-line-parsing-module">PEP 389: Argparse Command Line Parsing Module</a></li>
 <li><a class="reference internal" href="#pep-391-dictionary-based-configuration-for-logging">PEP 391:  Dictionary Based Configuration for Logging</a></li>
@@ -89,7 +89,7 @@
 <li><a class="reference internal" href="#itertools">itertools</a></li>
 <li><a class="reference internal" href="#collections">collections</a></li>
 <li><a class="reference internal" href="#threading">threading</a></li>
-<li><a class="reference internal" href="#datetime-and-time">datetime 和 time</a></li>
+<li><a class="reference internal" href="#datetime-and-time">datetime and time</a></li>
 <li><a class="reference internal" href="#math">math</a></li>
 <li><a class="reference internal" href="#abc">abc</a></li>
 <li><a class="reference internal" href="#io">io</a></li>
@@ -101,7 +101,7 @@
 <li><a class="reference internal" href="#ftp">ftp</a></li>
 <li><a class="reference internal" href="#popen">popen</a></li>
 <li><a class="reference internal" href="#select">select</a></li>
-<li><a class="reference internal" href="#gzip-and-zipfile">gzip 和 zipfile</a></li>
+<li><a class="reference internal" href="#gzip-and-zipfile">gzip and zipfile</a></li>
 <li><a class="reference internal" href="#tarfile">tarfile</a></li>
 <li><a class="reference internal" href="#hashlib">hashlib</a></li>
 <li><a class="reference internal" href="#ast">ast</a></li>
@@ -138,7 +138,7 @@
 <li><a class="reference internal" href="#optimizations">Optimizations</a></li>
 <li><a class="reference internal" href="#unicode">Unicode</a></li>
 <li><a class="reference internal" href="#codecs">Codecs</a></li>
-<li><a class="reference internal" href="#documentation">文件</a></li>
+<li><a class="reference internal" href="#documentation">Documentation</a></li>
 <li><a class="reference internal" href="#idle">IDLE</a></li>
 <li><a class="reference internal" href="#code-repository">Code Repository</a></li>
 <li><a class="reference internal" href="#build-and-c-api-changes">Build and C API Changes</a></li>
@@ -151,19 +151,19 @@
   <div>
     <h4>上個主題</h4>
     <p class="topless"><a href="3.3.html"
-                          title="上一章">Python 3.3 有什麼新功能</a></p>
+                          title="上一章">What's New In Python 3.3</a></p>
   </div>
   <div>
     <h4>下個主題</h4>
     <p class="topless"><a href="3.1.html"
-                          title="下一章">Python 3.1 有什麼新功能</a></p>
+                          title="下一章">What's New In Python 3.1</a></p>
   </div>
   <div role="note" aria-label="source link">
     <h3>此頁面</h3>
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/whatsnew/3.2.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/whatsnew/3.2.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -184,10 +184,10 @@
           <a href="../py-modindex.html" title="Python 模組索引"
              >模組</a> |</li>
         <li class="right" >
-          <a href="3.1.html" title="Python 3.1 有什麼新功能"
+          <a href="3.1.html" title="What&#39;s New In Python 3.1"
              accesskey="N">下一頁</a> |</li>
         <li class="right" >
-          <a href="3.3.html" title="Python 3.3 有什麼新功能"
+          <a href="3.3.html" title="What&#39;s New In Python 3.3"
              accesskey="P">上一頁</a> |</li>
 
           <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
@@ -200,11 +200,11 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Python 有什麼新功能？</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Python 3.2 有什麼新功能</a></li>
+        <li class="nav-item nav-item-this"><a href="">What's New In Python 3.2</a></li>
                 <li class="right">
                     
 
@@ -228,9 +228,9 @@
           <div class="body" role="main">
             
   <section id="what-s-new-in-python-3-2">
-<h1>Python 3.2 有什麼新功能<a class="headerlink" href="#what-s-new-in-python-3-2" title="本標題的永久連結">¶</a></h1>
+<h1>What's New In Python 3.2<a class="headerlink" href="#what-s-new-in-python-3-2" title="本標題的永久連結">¶</a></h1>
 <dl class="field-list simple">
-<dt class="field-odd">作者</dt>
+<dt class="field-odd">Author</dt>
 <dd class="field-odd"><p>Raymond Hettinger</p>
 </dd>
 </dl>
@@ -260,7 +260,7 @@ need to be recompiled for every feature release.</p>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><span class="target" id="index-1"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0384"><strong>PEP 384</strong></a> - Defining a Stable ABI</dt><dd><p>由 Martin von Löwis 撰寫 PEP。</p>
+<dt><span class="target" id="index-1"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0384"><strong>PEP 384</strong></a> - Defining a Stable ABI</dt><dd><p>PEP written by Martin von Löwis.</p>
 </dd>
 </dl>
 </div>
@@ -350,7 +350,7 @@ each with their own argument patterns and help displays:</p>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><span class="target" id="index-2"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0389"><strong>PEP 389</strong></a> - New Command Line Parsing Module</dt><dd><p>由 Steven Bethard 撰寫 PEP。</p>
+<dt><span class="target" id="index-2"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0389"><strong>PEP 389</strong></a> - New Command Line Parsing Module</dt><dd><p>PEP written by Steven Bethard.</p>
 </dd>
 </dl>
 <p><a class="reference internal" href="../library/argparse.html#upgrading-optparse-code"><span class="std std-ref">Upgrading optparse code</span></a> for details on the differences from <a class="reference internal" href="../library/optparse.html#module-optparse" title="optparse: Command-line option parsing library.（已棄用）"><code class="xref py py-mod docutils literal notranslate"><span class="pre">optparse</span></code></a>.</p>
@@ -403,7 +403,7 @@ loaded and called with code like this:</p>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><span class="target" id="index-3"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0391"><strong>PEP 391</strong></a> - Dictionary Based Configuration for Logging</dt><dd><p>由 Vinay Sajip 撰寫 PEP。</p>
+<dt><span class="target" id="index-3"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0391"><strong>PEP 391</strong></a> - Dictionary Based Configuration for Logging</dt><dd><p>PEP written by Vinay Sajip.</p>
 </dd>
 </dl>
 </div>
@@ -450,7 +450,7 @@ launch of four parallel threads for copying files:</p>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><span class="target" id="index-4"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-3148"><strong>PEP 3148</strong></a> - Futures -- Execute Computations Asynchronously</dt><dd><p>由 Brian Quinlan 撰寫 PEP。</p>
+<dt><span class="target" id="index-4"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-3148"><strong>PEP 3148</strong></a> - Futures -- Execute Computations Asynchronously</dt><dd><p>PEP written by Brian Quinlan.</p>
 </dd>
 </dl>
 <p><a class="reference internal" href="../library/concurrent.futures.html#threadpoolexecutor-example"><span class="std std-ref">Code for Threaded Parallel URL reads</span></a>, an
@@ -520,7 +520,7 @@ to stay Python 3.1 compatible are included with the documentation).</p></li>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><span class="target" id="index-5"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-3147"><strong>PEP 3147</strong></a> - PYC Repository Directories</dt><dd><p>由 Barry Warsaw 撰寫 PEP。</p>
+<dt><span class="target" id="index-5"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-3147"><strong>PEP 3147</strong></a> - PYC Repository Directories</dt><dd><p>PEP written by Barry Warsaw.</p>
 </dd>
 </dl>
 </div>
@@ -551,7 +551,7 @@ module:</p>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><span class="target" id="index-6"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-3149"><strong>PEP 3149</strong></a> - ABI Version Tagged .so Files</dt><dd><p>由 Barry Warsaw 撰寫 PEP。</p>
+<dt><span class="target" id="index-6"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-3149"><strong>PEP 3149</strong></a> - ABI Version Tagged .so Files</dt><dd><p>PEP written by Barry Warsaw.</p>
 </dd>
 </dl>
 </div>
@@ -593,7 +593,7 @@ this gap, the <a class="reference internal" href="../library/wsgiref.html#module
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><span class="target" id="index-9"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-3333"><strong>PEP 3333</strong></a> - Python Web Server Gateway Interface v1.0.1</dt><dd><p>由 Phillip Eby 撰寫 PEP。</p>
+<dt><span class="target" id="index-9"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-3333"><strong>PEP 3333</strong></a> - Python Web Server Gateway Interface v1.0.1</dt><dd><p>PEP written by Phillip Eby.</p>
 </dd>
 </dl>
 </div>
@@ -729,7 +729,7 @@ is cleared, so this code which used to work with Python 2.6, raised a
         <span class="c1"># implicit &quot;del e&quot; here</span>
 </pre></div>
 </div>
-<p>（請見 <a class="reference external" href="https://bugs.python.org/issue4617">bpo-4617</a>。）</p>
+<p>(See <a class="reference external" href="https://bugs.python.org/issue4617">bpo-4617</a>.)</p>
 </li>
 <li><p>The internal <code class="xref c c-type docutils literal notranslate"><span class="pre">structsequence</span></code> tool now creates subclasses of tuple.
 This means that C structures like those returned by <a class="reference internal" href="../library/os.html#os.stat" title="os.stat"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.stat()</span></code></a>,
@@ -805,7 +805,7 @@ expression like <code class="docutils literal notranslate"><span class="pre">isi
 <span class="go">False</span>
 </pre></div>
 </div>
-<p>（請見 <a class="reference external" href="https://bugs.python.org/issue10518">bpo-10518</a>。）</p>
+<p>(See <a class="reference external" href="https://bugs.python.org/issue10518">bpo-10518</a>.)</p>
 </li>
 <li><p>Python's import mechanism can now load modules installed in directories with
 non-ASCII characters in the path name.  This solved an aggravating problem
@@ -1116,7 +1116,7 @@ a simple but thorough explanation of barriers in <a class="reference external" h
 <a class="reference external" href="https://bugs.python.org/issue8777">bpo-8777</a>.)</p>
 </section>
 <section id="datetime-and-time">
-<h3>datetime 和 time<a class="headerlink" href="#datetime-and-time" title="本標題的永久連結">¶</a></h3>
+<h3>datetime and time<a class="headerlink" href="#datetime-and-time" title="本標題的永久連結">¶</a></h3>
 <ul>
 <li><p>The <a class="reference internal" href="../library/datetime.html#module-datetime" title="datetime: Basic date and time types."><code class="xref py py-mod docutils literal notranslate"><span class="pre">datetime</span></code></a> module has a new type <a class="reference internal" href="../library/datetime.html#datetime.timezone" title="datetime.timezone"><code class="xref py py-class docutils literal notranslate"><span class="pre">timezone</span></code></a> that
 implements the <a class="reference internal" href="../library/datetime.html#datetime.tzinfo" title="datetime.tzinfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">tzinfo</span></code></a> interface by returning a fixed UTC
@@ -1494,7 +1494,7 @@ for writing.</p>
 <p>(Available on Unix systems. Patch by Sébastien Sablé in <a class="reference external" href="https://bugs.python.org/issue9862">bpo-9862</a>)</p>
 </section>
 <section id="gzip-and-zipfile">
-<h3>gzip 和 zipfile<a class="headerlink" href="#gzip-and-zipfile" title="本標題的永久連結">¶</a></h3>
+<h3>gzip and zipfile<a class="headerlink" href="#gzip-and-zipfile" title="本標題的永久連結">¶</a></h3>
 <p><a class="reference internal" href="../library/gzip.html#gzip.GzipFile" title="gzip.GzipFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">gzip.GzipFile</span></code></a> now implements the <a class="reference internal" href="../library/io.html#io.BufferedIOBase" title="io.BufferedIOBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">io.BufferedIOBase</span></code></a>
 <a class="reference internal" href="../glossary.html#term-abstract-base-class"><span class="xref std std-term">abstract base class</span></a> (except for <code class="docutils literal notranslate"><span class="pre">truncate()</span></code>).  It also has a
 <a class="reference internal" href="../library/gzip.html#gzip.GzipFile.peek" title="gzip.GzipFile.peek"><code class="xref py py-meth docutils literal notranslate"><span class="pre">peek()</span></code></a> method and supports unseekable as well as
@@ -1984,7 +1984,7 @@ change state while it is searching:</p>
 </section>
 <section id="pydoc">
 <h3>pydoc<a class="headerlink" href="#pydoc" title="本標題的永久連結">¶</a></h3>
-<p>The <a class="reference internal" href="../library/pydoc.html#module-pydoc" title="pydoc: Documentation generator and online help system."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pydoc</span></code></a> module now provides a much-improved web server interface, as
+<p>The <a class="reference internal" href="../library/pydoc.html#module-pydoc" title="pydoc: Documentation generator and online help system."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pydoc</span></code></a> module now provides a much-improved Web server interface, as
 well as a new command-line option <code class="docutils literal notranslate"><span class="pre">-b</span></code> to automatically open a browser window
 to display that server:</p>
 <div class="highlight-shell-session notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pydoc3.2 -b
@@ -2453,7 +2453,7 @@ the locale encoding.</p>
 systems.</p>
 </section>
 <section id="documentation">
-<h2>文件<a class="headerlink" href="#documentation" title="本標題的永久連結">¶</a></h2>
+<h2>Documentation<a class="headerlink" href="#documentation" title="本標題的永久連結">¶</a></h2>
 <p>The documentation continues to be improved.</p>
 <ul>
 <li><p>A table of quick links has been added to the top of lengthy sections such as
@@ -2465,7 +2465,7 @@ documentation, so now many modules now feature quick links to the latest
 version of the source code.  For example, the <a class="reference internal" href="../library/functools.html#module-functools" title="functools: Higher-order functions and operations on callable objects."><code class="xref py py-mod docutils literal notranslate"><span class="pre">functools</span></code></a> module
 documentation has a quick link at the top labeled:</p>
 <blockquote>
-<div><p><strong>Source code</strong> <a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/functools.py">Lib/functools.py</a>.</p>
+<div><p><strong>Source code</strong> <a class="reference external" href="https://github.com/python/cpython/tree/3.9/Lib/functools.py">Lib/functools.py</a>.</p>
 </div></blockquote>
 <p>(Contributed by Raymond Hettinger; see
 <a class="reference external" href="https://rhettinger.wordpress.com/2011/01/28/open-your-source-more/">rationale</a>.)</p>
@@ -2569,9 +2569,9 @@ advantage of pymalloc at other times (<a class="reference external" href="https:
 longer used and it had never been documented (<a class="reference external" href="https://bugs.python.org/issue8837">bpo-8837</a>).</p></li>
 </ul>
 <p>There were a number of other small changes to the C-API.  See the
-<a class="reference external" href="https://github.com/python/cpython/tree/3.10/Misc/NEWS">Misc/NEWS</a> file for a complete list.</p>
+<a class="reference external" href="https://github.com/python/cpython/tree/3.9/Misc/NEWS">Misc/NEWS</a> file for a complete list.</p>
 <p>Also, there were a number of updates to the Mac OS X build, see
-<a class="reference external" href="https://github.com/python/cpython/tree/3.10/Mac/BuildScript/README.txt">Mac/BuildScript/README.txt</a> for details.  For users running a 32/64-bit
+<a class="reference external" href="https://github.com/python/cpython/tree/3.9/Mac/BuildScript/README.txt">Mac/BuildScript/README.txt</a> for details.  For users running a 32/64-bit
 build, there is a known problem with the default Tcl/Tk on Mac OS X 10.6.
 Accordingly, we recommend installing an updated alternative such as
 <a class="reference external" href="https://www.activestate.com/activetcl/downloads">ActiveState Tcl/Tk 8.5.9</a>.
@@ -2708,7 +2708,7 @@ cannot be called before <a class="reference internal" href="../c-api/init.html#c
   <div>
     <h3><a href="../contents.html">目錄</a></h3>
     <ul>
-<li><a class="reference internal" href="#">Python 3.2 有什麼新功能</a><ul>
+<li><a class="reference internal" href="#">What's New In Python 3.2</a><ul>
 <li><a class="reference internal" href="#pep-384-defining-a-stable-abi">PEP 384: Defining a Stable ABI</a></li>
 <li><a class="reference internal" href="#pep-389-argparse-command-line-parsing-module">PEP 389: Argparse Command Line Parsing Module</a></li>
 <li><a class="reference internal" href="#pep-391-dictionary-based-configuration-for-logging">PEP 391:  Dictionary Based Configuration for Logging</a></li>
@@ -2724,7 +2724,7 @@ cannot be called before <a class="reference internal" href="../c-api/init.html#c
 <li><a class="reference internal" href="#itertools">itertools</a></li>
 <li><a class="reference internal" href="#collections">collections</a></li>
 <li><a class="reference internal" href="#threading">threading</a></li>
-<li><a class="reference internal" href="#datetime-and-time">datetime 和 time</a></li>
+<li><a class="reference internal" href="#datetime-and-time">datetime and time</a></li>
 <li><a class="reference internal" href="#math">math</a></li>
 <li><a class="reference internal" href="#abc">abc</a></li>
 <li><a class="reference internal" href="#io">io</a></li>
@@ -2736,7 +2736,7 @@ cannot be called before <a class="reference internal" href="../c-api/init.html#c
 <li><a class="reference internal" href="#ftp">ftp</a></li>
 <li><a class="reference internal" href="#popen">popen</a></li>
 <li><a class="reference internal" href="#select">select</a></li>
-<li><a class="reference internal" href="#gzip-and-zipfile">gzip 和 zipfile</a></li>
+<li><a class="reference internal" href="#gzip-and-zipfile">gzip and zipfile</a></li>
 <li><a class="reference internal" href="#tarfile">tarfile</a></li>
 <li><a class="reference internal" href="#hashlib">hashlib</a></li>
 <li><a class="reference internal" href="#ast">ast</a></li>
@@ -2773,7 +2773,7 @@ cannot be called before <a class="reference internal" href="../c-api/init.html#c
 <li><a class="reference internal" href="#optimizations">Optimizations</a></li>
 <li><a class="reference internal" href="#unicode">Unicode</a></li>
 <li><a class="reference internal" href="#codecs">Codecs</a></li>
-<li><a class="reference internal" href="#documentation">文件</a></li>
+<li><a class="reference internal" href="#documentation">Documentation</a></li>
 <li><a class="reference internal" href="#idle">IDLE</a></li>
 <li><a class="reference internal" href="#code-repository">Code Repository</a></li>
 <li><a class="reference internal" href="#build-and-c-api-changes">Build and C API Changes</a></li>
@@ -2786,19 +2786,19 @@ cannot be called before <a class="reference internal" href="../c-api/init.html#c
   <div>
     <h4>上個主題</h4>
     <p class="topless"><a href="3.3.html"
-                          title="上一章">Python 3.3 有什麼新功能</a></p>
+                          title="上一章">What's New In Python 3.3</a></p>
   </div>
   <div>
     <h4>下個主題</h4>
     <p class="topless"><a href="3.1.html"
-                          title="下一章">Python 3.1 有什麼新功能</a></p>
+                          title="下一章">What's New In Python 3.1</a></p>
   </div>
   <div role="note" aria-label="source link">
     <h3>此頁面</h3>
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/whatsnew/3.2.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/whatsnew/3.2.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -2818,10 +2818,10 @@ cannot be called before <a class="reference internal" href="../c-api/init.html#c
           <a href="../py-modindex.html" title="Python 模組索引"
              >模組</a> |</li>
         <li class="right" >
-          <a href="3.1.html" title="Python 3.1 有什麼新功能"
+          <a href="3.1.html" title="What&#39;s New In Python 3.1"
              >下一頁</a> |</li>
         <li class="right" >
-          <a href="3.3.html" title="Python 3.3 有什麼新功能"
+          <a href="3.3.html" title="What&#39;s New In Python 3.3"
              >上一頁</a> |</li>
 
           <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
@@ -2834,11 +2834,11 @@ cannot be called before <a class="reference internal" href="../c-api/init.html#c
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 有什麼新功能？</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Python 3.2 有什麼新功能</a></li>
+        <li class="nav-item nav-item-this"><a href="">What's New In Python 3.2</a></li>
                 <li class="right">
                     
 

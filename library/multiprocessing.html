@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>multiprocessing --- Process-based parallelism &#8212; Python 3.10.2 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>multiprocessing --- Process-based parallelism &#8212; Python 3.9.10 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -20,7 +20,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.2 說明文件 中搜尋"
+          title="在 Python 3.9.10 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -84,7 +84,7 @@
 </ul>
 </li>
 <li><a class="reference internal" href="#reference">Reference</a><ul>
-<li><a class="reference internal" href="#process-and-exceptions"><code class="xref py py-class docutils literal notranslate"><span class="pre">Process</span></code> 與例外</a></li>
+<li><a class="reference internal" href="#process-and-exceptions"><code class="xref py py-class docutils literal notranslate"><span class="pre">Process</span></code> and exceptions</a></li>
 <li><a class="reference internal" href="#pipes-and-queues">Pipes and Queues</a></li>
 <li><a class="reference internal" href="#miscellaneous">Miscellaneous</a></li>
 <li><a class="reference internal" href="#connection-objects">Connection Objects</a></li>
@@ -117,7 +117,7 @@
 <li><a class="reference internal" href="#the-spawn-and-forkserver-start-methods">The <em>spawn</em> and <em>forkserver</em> start methods</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#examples">範例</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
 </ul>
 </li>
 </ul>
@@ -138,7 +138,7 @@
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/library/multiprocessing.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/library/multiprocessing.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -175,11 +175,11 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="concurrency.html" accesskey="U">並行執行 (Concurrent Execution)</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="concurrency.html" accesskey="U">Concurrent Execution</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">multiprocessing</span></code> --- Process-based parallelism</a></li>
                 <li class="right">
                     
@@ -205,7 +205,7 @@
             
   <section id="module-multiprocessing">
 <span id="multiprocessing-process-based-parallelism"></span><h1><a class="reference internal" href="#module-multiprocessing" title="multiprocessing: Process-based parallelism."><code class="xref py py-mod docutils literal notranslate"><span class="pre">multiprocessing</span></code></a> --- Process-based parallelism<a class="headerlink" href="#module-multiprocessing" title="本標題的永久連結">¶</a></h1>
-<p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/multiprocessing/">Lib/multiprocessing/</a></p>
+<p><strong>Source code:</strong> <a class="reference external" href="https://github.com/python/cpython/tree/3.9/Lib/multiprocessing/">Lib/multiprocessing/</a></p>
 <hr class="docutils" />
 <section id="introduction">
 <h2>簡介<a class="headerlink" href="#introduction" title="本標題的永久連結">¶</a></h2>
@@ -551,7 +551,7 @@ They are, however, slower than using shared memory.</p>
 <p>The <a class="reference internal" href="#multiprocessing.pool.Pool" title="multiprocessing.pool.Pool"><code class="xref py py-class docutils literal notranslate"><span class="pre">Pool</span></code></a> class represents a pool of worker
 processes.  It has methods which allows tasks to be offloaded to the worker
 processes in a few different ways.</p>
-<p>舉例來說：</p>
+<p>For example:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">multiprocessing</span> <span class="kn">import</span> <span class="n">Pool</span><span class="p">,</span> <span class="ne">TimeoutError</span>
 <span class="kn">import</span> <span class="nn">time</span>
 <span class="kn">import</span> <span class="nn">os</span>
@@ -631,7 +631,7 @@ stop the parent process somehow.)</p>
 <p>The <a class="reference internal" href="#module-multiprocessing" title="multiprocessing: Process-based parallelism."><code class="xref py py-mod docutils literal notranslate"><span class="pre">multiprocessing</span></code></a> package mostly replicates the API of the
 <a class="reference internal" href="threading.html#module-threading" title="threading: Thread-based parallelism."><code class="xref py py-mod docutils literal notranslate"><span class="pre">threading</span></code></a> module.</p>
 <section id="process-and-exceptions">
-<h3><code class="xref py py-class docutils literal notranslate"><span class="pre">Process</span></code> 與例外<a class="headerlink" href="#process-and-exceptions" title="本標題的永久連結">¶</a></h3>
+<h3><a class="reference internal" href="#multiprocessing.Process" title="multiprocessing.Process"><code class="xref py py-class docutils literal notranslate"><span class="pre">Process</span></code></a> and exceptions<a class="headerlink" href="#process-and-exceptions" title="本標題的永久連結">¶</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="multiprocessing.Process">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">multiprocessing.</span></span><span class="sig-name descname"><span class="pre">Process</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">daemon</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multiprocessing.Process" title="本定義的永久連結">¶</a></dt>
@@ -653,7 +653,7 @@ inherited from the creating process.</p>
 base class constructor (<code class="xref py py-meth docutils literal notranslate"><span class="pre">Process.__init__()</span></code>) before doing anything else
 to the process.</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.3 版本變更: </span>新增 <em>daemon</em> 引數。</p>
+<p><span class="versionmodified changed">在 3.3 版本變更: </span>Added the <em>daemon</em> argument.</p>
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="multiprocessing.Process.run">
@@ -753,7 +753,7 @@ random string using <a class="reference internal" href="os.html#os.urandom" titl
 <p>When a <a class="reference internal" href="#multiprocessing.Process" title="multiprocessing.Process"><code class="xref py py-class docutils literal notranslate"><span class="pre">Process</span></code></a> object is created, it will inherit the
 authentication key of its parent process, although this may be changed by
 setting <a class="reference internal" href="#multiprocessing.Process.authkey" title="multiprocessing.Process.authkey"><code class="xref py py-attr docutils literal notranslate"><span class="pre">authkey</span></code></a> to another byte string.</p>
-<p>參閱 <a class="reference internal" href="#multiprocessing-auth-keys"><span class="std std-ref">Authentication keys</span></a>。</p>
+<p>See <a class="reference internal" href="#multiprocessing-auth-keys"><span class="std std-ref">Authentication keys</span></a>.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -926,7 +926,7 @@ process may hang on exit when it tries to join all its non-daemonic children.</p
 <a class="reference internal" href="#multiprocessing-programming"><span class="std std-ref">Programming guidelines</span></a>.</p>
 </div>
 <p>For an example of the usage of queues for interprocess communication see
-<a class="reference internal" href="#multiprocessing-examples"><span class="std std-ref">範例</span></a>.</p>
+<a class="reference internal" href="#multiprocessing-examples"><span class="std std-ref">Examples</span></a>.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="multiprocessing.Pipe">
 <span class="sig-prename descclassname"><span class="pre">multiprocessing.</span></span><span class="sig-name descname"><span class="pre">Pipe</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">duplex</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#multiprocessing.Pipe" title="本定義的永久連結">¶</a></dt>
@@ -1048,7 +1048,7 @@ the background thread from being joined automatically when the process
 exits -- see <a class="reference internal" href="#multiprocessing.Queue.join_thread" title="multiprocessing.Queue.join_thread"><code class="xref py py-meth docutils literal notranslate"><span class="pre">join_thread()</span></code></a>.</p>
 <p>A better name for this method might be
 <code class="docutils literal notranslate"><span class="pre">allow_exit_without_flush()</span></code>.  It is likely to cause enqueued
-data to be lost, and you almost certainly will not need to use it.
+data to lost, and you almost certainly will not need to use it.
 It is really only there if you need the current process to exit
 immediately without waiting to flush enqueued data to the
 underlying pipe, and you don't care about lost data.</p>
@@ -2372,7 +2372,7 @@ the process which created the pool.</p>
 properly managed (like any other resource) by using the pool as a context manager
 or by calling <a class="reference internal" href="#multiprocessing.pool.Pool.close" title="multiprocessing.pool.Pool.close"><code class="xref py py-meth docutils literal notranslate"><span class="pre">close()</span></code></a> and <a class="reference internal" href="#multiprocessing.pool.Pool.terminate" title="multiprocessing.pool.Pool.terminate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">terminate()</span></code></a> manually. Failure to do this
 can lead to the process hanging on finalization.</p>
-<p>Note that it is <strong>not correct</strong> to rely on the garbage collector to destroy the pool
+<p>Note that is <strong>not correct</strong> to rely on the garbage colletor to destroy the pool
 as CPython does not assure that the finalizer of the pool will be called
 (see <a class="reference internal" href="../reference/datamodel.html#object.__del__" title="object.__del__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">object.__del__()</span></code></a> for more information).</p>
 </div>
@@ -3142,7 +3142,7 @@ module.</p>
 </section>
 </section>
 <section id="examples">
-<span id="multiprocessing-examples"></span><h2>範例<a class="headerlink" href="#examples" title="本標題的永久連結">¶</a></h2>
+<span id="multiprocessing-examples"></span><h2>Examples<a class="headerlink" href="#examples" title="本標題的永久連結">¶</a></h2>
 <p>Demonstration of how to create and use customized managers and proxies:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">multiprocessing</span> <span class="kn">import</span> <span class="n">freeze_support</span>
 <span class="kn">from</span> <span class="nn">multiprocessing.managers</span> <span class="kn">import</span> <span class="n">BaseManager</span><span class="p">,</span> <span class="n">BaseProxy</span>
@@ -3496,7 +3496,7 @@ processes and collect the results:</p>
 </ul>
 </li>
 <li><a class="reference internal" href="#reference">Reference</a><ul>
-<li><a class="reference internal" href="#process-and-exceptions"><code class="xref py py-class docutils literal notranslate"><span class="pre">Process</span></code> 與例外</a></li>
+<li><a class="reference internal" href="#process-and-exceptions"><code class="xref py py-class docutils literal notranslate"><span class="pre">Process</span></code> and exceptions</a></li>
 <li><a class="reference internal" href="#pipes-and-queues">Pipes and Queues</a></li>
 <li><a class="reference internal" href="#miscellaneous">Miscellaneous</a></li>
 <li><a class="reference internal" href="#connection-objects">Connection Objects</a></li>
@@ -3529,7 +3529,7 @@ processes and collect the results:</p>
 <li><a class="reference internal" href="#the-spawn-and-forkserver-start-methods">The <em>spawn</em> and <em>forkserver</em> start methods</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#examples">範例</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
 </ul>
 </li>
 </ul>
@@ -3550,7 +3550,7 @@ processes and collect the results:</p>
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/library/multiprocessing.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/library/multiprocessing.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -3586,11 +3586,11 @@ processes and collect the results:</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="concurrency.html" >並行執行 (Concurrent Execution)</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="concurrency.html" >Concurrent Execution</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">multiprocessing</span></code> --- Process-based parallelism</a></li>
                 <li class="right">
                     

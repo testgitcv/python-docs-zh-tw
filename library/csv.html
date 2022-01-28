@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>csv --- CSV File Reading and Writing &#8212; Python 3.10.2 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>csv --- CSV File Reading and Writing &#8212; Python 3.9.10 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -20,7 +20,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.2 說明文件 中搜尋"
+          title="在 Python 3.9.10 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -74,11 +74,11 @@
     <h3><a href="../contents.html">目錄</a></h3>
     <ul>
 <li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">csv</span></code> --- CSV File Reading and Writing</a><ul>
-<li><a class="reference internal" href="#module-contents">模組內容</a></li>
+<li><a class="reference internal" href="#module-contents">Module Contents</a></li>
 <li><a class="reference internal" href="#dialects-and-formatting-parameters">Dialects and Formatting Parameters</a></li>
 <li><a class="reference internal" href="#reader-objects">Reader Objects</a></li>
 <li><a class="reference internal" href="#writer-objects">Writer Objects</a></li>
-<li><a class="reference internal" href="#examples">範例</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
 </ul>
 </li>
 </ul>
@@ -99,7 +99,7 @@
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/library/csv.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/library/csv.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -136,7 +136,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -166,7 +166,7 @@
             
   <section id="module-csv">
 <span id="csv-csv-file-reading-and-writing"></span><h1><a class="reference internal" href="#module-csv" title="csv: Write and read tabular data to and from delimited files."><code class="xref py py-mod docutils literal notranslate"><span class="pre">csv</span></code></a> --- CSV File Reading and Writing<a class="headerlink" href="#module-csv" title="本標題的永久連結">¶</a></h1>
-<p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/csv.py">Lib/csv.py</a></p>
+<p><strong>Source code:</strong> <a class="reference external" href="https://github.com/python/cpython/tree/3.9/Lib/csv.py">Lib/csv.py</a></p>
 <hr class="docutils" id="index-0" />
 <p>The so-called CSV (Comma Separated Values) format is the most common import and
 export format for spreadsheets and databases.  CSV format was used for many
@@ -190,13 +190,13 @@ using the <a class="reference internal" href="#csv.DictReader" title="csv.DictRe
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><span class="target" id="index-5"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0305"><strong>PEP 305</strong></a> - CSV 檔案 API</dt><dd><p>The Python Enhancement Proposal which proposed this addition to Python.</p>
+<dt><span class="target" id="index-2"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0305"><strong>PEP 305</strong></a> - CSV File API</dt><dd><p>The Python Enhancement Proposal which proposed this addition to Python.</p>
 </dd>
 </dl>
 </div>
 <section id="module-contents">
-<span id="csv-contents"></span><h2>模組內容<a class="headerlink" href="#module-contents" title="本標題的永久連結">¶</a></h2>
-<p><a class="reference internal" href="#module-csv" title="csv: Write and read tabular data to and from delimited files."><code class="xref py py-mod docutils literal notranslate"><span class="pre">csv</span></code></a> 模組定義了以下函式：</p>
+<span id="csv-contents"></span><h2>Module Contents<a class="headerlink" href="#module-contents" title="本標題的永久連結">¶</a></h2>
+<p>The <a class="reference internal" href="#module-csv" title="csv: Write and read tabular data to and from delimited files."><code class="xref py py-mod docutils literal notranslate"><span class="pre">csv</span></code></a> module defines the following functions:</p>
 <span class="target" id="index-3"></span><dl class="py function">
 <dt class="sig sig-object py" id="csv.reader">
 <span class="sig-prename descclassname"><span class="pre">csv.</span></span><span class="sig-name descname"><span class="pre">reader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">csvfile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dialect</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'excel'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">fmtparams</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csv.reader" title="本定義的永久連結">¶</a></dt>
@@ -214,7 +214,7 @@ section <a class="reference internal" href="#csv-fmt-params"><span class="std st
 <p>Each row read from the csv file is returned as a list of strings.  No
 automatic data type conversion is performed unless the <code class="docutils literal notranslate"><span class="pre">QUOTE_NONNUMERIC</span></code> format
 option is specified (in which case unquoted fields are transformed into floats).</p>
-<p>一個簡短的用法範例：</p>
+<p>A short usage example:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">csv</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;eggs.csv&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">csvfile</span><span class="p">:</span>
 <span class="gp">... </span>    <span class="n">spamreader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">csvfile</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">quotechar</span><span class="o">=</span><span class="s1">&#39;|&#39;</span><span class="p">)</span>
@@ -245,7 +245,7 @@ value <a class="reference internal" href="constants.html#None" title="None"><cod
 reversible transformation, it makes it easier to dump SQL NULL data values to
 CSV files without preprocessing the data returned from a <code class="docutils literal notranslate"><span class="pre">cursor.fetch*</span></code> call.
 All other non-string data are stringified with <a class="reference internal" href="stdtypes.html#str" title="str"><code class="xref py py-func docutils literal notranslate"><span class="pre">str()</span></code></a> before being written.</p>
-<p>一個簡短的用法範例：</p>
+<p>A short usage example:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;eggs.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">csvfile</span><span class="p">:</span>
     <span class="n">spamwriter</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">csvfile</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">,</span>
@@ -318,7 +318,7 @@ to <code class="docutils literal notranslate"><span class="pre">None</span></cod
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.8 版本變更: </span>Returned rows are now of type <a class="reference internal" href="stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a>.</p>
 </div>
-<p>一個簡短的用法範例：</p>
+<p>A short usage example:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">csv</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;names.csv&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">csvfile</span><span class="p">:</span>
 <span class="gp">... </span>    <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">csvfile</span><span class="p">)</span>
@@ -352,7 +352,7 @@ Any other optional or keyword arguments are passed to the underlying
 <a class="reference internal" href="#csv.writer" title="csv.writer"><code class="xref py py-class docutils literal notranslate"><span class="pre">writer</span></code></a> instance.</p>
 <p>Note that unlike the <a class="reference internal" href="#csv.DictReader" title="csv.DictReader"><code class="xref py py-class docutils literal notranslate"><span class="pre">DictReader</span></code></a> class, the <em>fieldnames</em> parameter
 of the <a class="reference internal" href="#csv.DictWriter" title="csv.DictWriter"><code class="xref py py-class docutils literal notranslate"><span class="pre">DictWriter</span></code></a> class is not optional.</p>
-<p>一個簡短的用法範例：</p>
+<p>A short usage example:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
 
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;names.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">csvfile</span><span class="p">:</span>
@@ -430,25 +430,9 @@ delimiter characters.</p>
 <dt class="sig sig-object py" id="csv.Sniffer.has_header">
 <span class="sig-name descname"><span class="pre">has_header</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sample</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#csv.Sniffer.has_header" title="本定義的永久連結">¶</a></dt>
 <dd><p>Analyze the sample text (presumed to be in CSV format) and return
-<a class="reference internal" href="constants.html#True" title="True"><code class="xref py py-const docutils literal notranslate"><span class="pre">True</span></code></a> if the first row appears to be a series of column headers.
-Inspecting each column, one of two key criteria will be considered to
-estimate if the sample contains a header:</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>the second through n-th rows contain numeric values</p></li>
-<li><p>the second through n-th rows contain strings where at least one value's
-length differs from that of the putative header of that column.</p></li>
-</ul>
-</div></blockquote>
-<p>Twenty rows after the first row are sampled; if more than half of columns +
-rows meet the criteria, <a class="reference internal" href="constants.html#True" title="True"><code class="xref py py-const docutils literal notranslate"><span class="pre">True</span></code></a> is returned.</p>
+<a class="reference internal" href="constants.html#True" title="True"><code class="xref py py-const docutils literal notranslate"><span class="pre">True</span></code></a> if the first row appears to be a series of column headers.</p>
 </dd></dl>
 
-<div class="admonition note">
-<p class="admonition-title">備註</p>
-<p>This method is a rough heuristic and may produce both false positives and
-negatives.</p>
-</div>
 </dd></dl>
 
 <p>An example for <a class="reference internal" href="#csv.Sniffer" title="csv.Sniffer"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sniffer</span></code></a> use:</p>
@@ -563,7 +547,7 @@ defaults to <code class="docutils literal notranslate"><span class="pre">'&quot;
 <span class="sig-prename descclassname"><span class="pre">Dialect.</span></span><span class="sig-name descname"><span class="pre">quoting</span></span><a class="headerlink" href="#csv.Dialect.quoting" title="本定義的永久連結">¶</a></dt>
 <dd><p>Controls when quotes should be generated by the writer and recognised by the
 reader.  It can take on any of the <code class="xref py py-const docutils literal notranslate"><span class="pre">QUOTE_*</span></code> constants (see section
-<a class="reference internal" href="#csv-contents"><span class="std std-ref">模組內容</span></a>) and defaults to <a class="reference internal" href="#csv.QUOTE_MINIMAL" title="csv.QUOTE_MINIMAL"><code class="xref py py-const docutils literal notranslate"><span class="pre">QUOTE_MINIMAL</span></code></a>.</p>
+<a class="reference internal" href="#csv-contents"><span class="std std-ref">Module Contents</span></a>) and defaults to <a class="reference internal" href="#csv.QUOTE_MINIMAL" title="csv.QUOTE_MINIMAL"><code class="xref py py-const docutils literal notranslate"><span class="pre">QUOTE_MINIMAL</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -671,7 +655,7 @@ the <a class="reference internal" href="#csv.csvwriter.writerow" title="csv.csvw
 
 </section>
 <section id="examples">
-<span id="csv-examples"></span><h2>範例<a class="headerlink" href="#examples" title="本標題的永久連結">¶</a></h2>
+<span id="csv-examples"></span><h2>Examples<a class="headerlink" href="#examples" title="本標題的永久連結">¶</a></h2>
 <p>The simplest example of reading a CSV file:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;some.csv&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
@@ -758,11 +742,11 @@ on write an extra <code class="docutils literal notranslate"><span class="pre">\
     <h3><a href="../contents.html">目錄</a></h3>
     <ul>
 <li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">csv</span></code> --- CSV File Reading and Writing</a><ul>
-<li><a class="reference internal" href="#module-contents">模組內容</a></li>
+<li><a class="reference internal" href="#module-contents">Module Contents</a></li>
 <li><a class="reference internal" href="#dialects-and-formatting-parameters">Dialects and Formatting Parameters</a></li>
 <li><a class="reference internal" href="#reader-objects">Reader Objects</a></li>
 <li><a class="reference internal" href="#writer-objects">Writer Objects</a></li>
-<li><a class="reference internal" href="#examples">範例</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
 </ul>
 </li>
 </ul>
@@ -783,7 +767,7 @@ on write an extra <code class="docutils literal notranslate"><span class="pre">\
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/library/csv.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/library/csv.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -819,7 +803,7 @@ on write an extra <code class="docutils literal notranslate"><span class="pre">\
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>

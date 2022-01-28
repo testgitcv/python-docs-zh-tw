@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Python 2.4 有什麼新功能 &#8212; Python 3.10.2 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What&#39;s New in Python 2.4 &#8212; Python 3.9.10 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -20,14 +20,14 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.2 說明文件 中搜尋"
+          title="在 Python 3.9.10 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜尋" href="../search.html" />
     <link rel="copyright" title="版權" href="../copyright.html" />
-    <link rel="next" title="Python 2.3 有什麼新功能" href="2.3.html" />
-    <link rel="prev" title="Python 2.5 有什麼新功能" href="2.5.html" />
+    <link rel="next" title="What&#39;s New in Python 2.3" href="2.3.html" />
+    <link rel="prev" title="What&#39;s New in Python 2.5" href="2.5.html" />
     <link rel="canonical" href="https://docs.python.org/3/whatsnew/2.4.html" />
     
       
@@ -73,7 +73,7 @@
   <div>
     <h3><a href="../contents.html">目錄</a></h3>
     <ul>
-<li><a class="reference internal" href="#">Python 2.4 有什麼新功能</a><ul>
+<li><a class="reference internal" href="#">What's New in Python 2.4</a><ul>
 <li><a class="reference internal" href="#pep-218-built-in-set-objects">PEP 218: Built-In Set Objects</a></li>
 <li><a class="reference internal" href="#pep-237-unifying-long-integers-and-integers">PEP 237: Unifying Long Integers and Integers</a></li>
 <li><a class="reference internal" href="#pep-289-generator-expressions">PEP 289: Generator Expressions</a></li>
@@ -83,8 +83,8 @@
 <li><a class="reference internal" href="#pep-324-new-subprocess-module">PEP 324: New subprocess Module</a></li>
 <li><a class="reference internal" href="#pep-327-decimal-data-type">PEP 327: Decimal Data Type</a><ul>
 <li><a class="reference internal" href="#why-is-decimal-needed">Why is Decimal needed?</a></li>
-<li><a class="reference internal" href="#the-decimal-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Decimal</span></code> 型別</a></li>
-<li><a class="reference internal" href="#the-context-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Context</span></code> 型別</a></li>
+<li><a class="reference internal" href="#the-decimal-type">The <code class="xref py py-class docutils literal notranslate"><span class="pre">Decimal</span></code> type</a></li>
+<li><a class="reference internal" href="#the-context-type">The <code class="xref py py-class docutils literal notranslate"><span class="pre">Context</span></code> type</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#pep-328-multi-line-imports">PEP 328: Multi-line Imports</a></li>
@@ -103,7 +103,7 @@
 </ul>
 </li>
 <li><a class="reference internal" href="#porting-to-python-2-4">Porting to Python 2.4</a></li>
-<li><a class="reference internal" href="#acknowledgements">致謝</a></li>
+<li><a class="reference internal" href="#acknowledgements">Acknowledgements</a></li>
 </ul>
 </li>
 </ul>
@@ -112,19 +112,19 @@
   <div>
     <h4>上個主題</h4>
     <p class="topless"><a href="2.5.html"
-                          title="上一章">Python 2.5 有什麼新功能</a></p>
+                          title="上一章">What's New in Python 2.5</a></p>
   </div>
   <div>
     <h4>下個主題</h4>
     <p class="topless"><a href="2.3.html"
-                          title="下一章">Python 2.3 有什麼新功能</a></p>
+                          title="下一章">What's New in Python 2.3</a></p>
   </div>
   <div role="note" aria-label="source link">
     <h3>此頁面</h3>
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/whatsnew/2.4.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/whatsnew/2.4.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -145,10 +145,10 @@
           <a href="../py-modindex.html" title="Python 模組索引"
              >模組</a> |</li>
         <li class="right" >
-          <a href="2.3.html" title="Python 2.3 有什麼新功能"
+          <a href="2.3.html" title="What&#39;s New in Python 2.3"
              accesskey="N">下一頁</a> |</li>
         <li class="right" >
-          <a href="2.5.html" title="Python 2.5 有什麼新功能"
+          <a href="2.5.html" title="What&#39;s New in Python 2.5"
              accesskey="P">上一頁</a> |</li>
 
           <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
@@ -161,11 +161,11 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Python 有什麼新功能？</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Python 2.4 有什麼新功能</a></li>
+        <li class="nav-item nav-item-this"><a href="">What's New in Python 2.4</a></li>
                 <li class="right">
                     
 
@@ -189,9 +189,9 @@
           <div class="body" role="main">
             
   <section id="what-s-new-in-python-2-4">
-<h1>Python 2.4 有什麼新功能<a class="headerlink" href="#what-s-new-in-python-2-4" title="本標題的永久連結">¶</a></h1>
+<h1>What's New in Python 2.4<a class="headerlink" href="#what-s-new-in-python-2-4" title="本標題的永久連結">¶</a></h1>
 <dl class="field-list simple">
-<dt class="field-odd">作者</dt>
+<dt class="field-odd">Author</dt>
 <dd class="field-odd"><p>A.M. Kuchling</p>
 </dd>
 </dl>
@@ -655,7 +655,7 @@ routines.</p>
 <p>Hence, the <code class="xref py py-class docutils literal notranslate"><span class="pre">Decimal</span></code> type was created.</p>
 </section>
 <section id="the-decimal-type">
-<h3><code class="xref py py-class docutils literal notranslate"><span class="pre">Decimal</span></code> 型別<a class="headerlink" href="#the-decimal-type" title="本標題的永久連結">¶</a></h3>
+<h3>The <code class="xref py py-class docutils literal notranslate"><span class="pre">Decimal</span></code> type<a class="headerlink" href="#the-decimal-type" title="本標題的永久連結">¶</a></h3>
 <p>A new module, <a class="reference internal" href="../library/decimal.html#module-decimal" title="decimal: Implementation of the General Decimal Arithmetic  Specification."><code class="xref py py-mod docutils literal notranslate"><span class="pre">decimal</span></code></a>, was added to Python's standard library.  It
 contains two classes, <code class="xref py py-class docutils literal notranslate"><span class="pre">Decimal</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">Context</span></code>.  <code class="xref py py-class docutils literal notranslate"><span class="pre">Decimal</span></code>
 instances represent numbers, and <code class="xref py py-class docutils literal notranslate"><span class="pre">Context</span></code> instances are used to wrap up
@@ -746,7 +746,7 @@ you'll have to implement them.</p>
 </div>
 </section>
 <section id="the-context-type">
-<h3><code class="xref py py-class docutils literal notranslate"><span class="pre">Context</span></code> 型別<a class="headerlink" href="#the-context-type" title="本標題的永久連結">¶</a></h3>
+<h3>The <code class="xref py py-class docutils literal notranslate"><span class="pre">Context</span></code> type<a class="headerlink" href="#the-context-type" title="本標題的永久連結">¶</a></h3>
 <p>Instances of the <code class="xref py py-class docutils literal notranslate"><span class="pre">Context</span></code> class encapsulate several settings for
 decimal operations:</p>
 <ul class="simple">
@@ -1060,7 +1060,7 @@ complete list of changes, or look through the CVS logs for all the details.</p>
 <li><p>The <a class="reference internal" href="../library/asyncore.html#module-asyncore" title="asyncore: A base class for developing asynchronous socket handling services."><code class="xref py py-mod docutils literal notranslate"><span class="pre">asyncore</span></code></a> module's <code class="xref py py-func docutils literal notranslate"><span class="pre">loop()</span></code> function now has a <em>count</em> parameter
 that lets you perform a limited number of passes through the polling loop.  The
 default is still to loop forever.</p></li>
-<li><p>The <a class="reference internal" href="../library/base64.html#module-base64" title="base64: RFC 4648: Base16, Base32, Base64 Data Encodings; Base85 and Ascii85"><code class="xref py py-mod docutils literal notranslate"><span class="pre">base64</span></code></a> module now has more complete <span class="target" id="index-18"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc3548.html"><strong>RFC 3548</strong></a> support for Base64,
+<li><p>The <a class="reference internal" href="../library/base64.html#module-base64" title="base64: RFC 3548: Base16, Base32, Base64 Data Encodings; Base85 and Ascii85"><code class="xref py py-mod docutils literal notranslate"><span class="pre">base64</span></code></a> module now has more complete <span class="target" id="index-18"></span><a class="rfc reference external" href="https://datatracker.ietf.org/doc/html/rfc3548.html"><strong>RFC 3548</strong></a> support for Base64,
 Base32, and Base16 encoding and decoding, including optional case folding and
 optional alternative alphabets. (Contributed by Barry Warsaw.)</p></li>
 <li><p>The <a class="reference internal" href="../library/bisect.html#module-bisect" title="bisect: Array bisection algorithms for binary searching."><code class="xref py py-mod docutils literal notranslate"><span class="pre">bisect</span></code></a> module now has an underlying C implementation for improved
@@ -1536,7 +1536,7 @@ example, you can no longer set a handler on the <code class="xref py py-const do
 </ul>
 </section>
 <section id="acknowledgements">
-<span id="acks"></span><h2>致謝<a class="headerlink" href="#acknowledgements" title="本標題的永久連結">¶</a></h2>
+<span id="acks"></span><h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="本標題的永久連結">¶</a></h2>
 <p>The author would like to thank the following people for offering suggestions,
 corrections and assistance with various drafts of this article: Koray Can,
 Hye-Shik Chang, Michael Dyck, Raymond Hettinger, Brian Hurt, Hamish Lawson,
@@ -1554,7 +1554,7 @@ Fredrik Lundh, Sean Reifschneider, Sadruddin Rejeb.</p>
   <div>
     <h3><a href="../contents.html">目錄</a></h3>
     <ul>
-<li><a class="reference internal" href="#">Python 2.4 有什麼新功能</a><ul>
+<li><a class="reference internal" href="#">What's New in Python 2.4</a><ul>
 <li><a class="reference internal" href="#pep-218-built-in-set-objects">PEP 218: Built-In Set Objects</a></li>
 <li><a class="reference internal" href="#pep-237-unifying-long-integers-and-integers">PEP 237: Unifying Long Integers and Integers</a></li>
 <li><a class="reference internal" href="#pep-289-generator-expressions">PEP 289: Generator Expressions</a></li>
@@ -1564,8 +1564,8 @@ Fredrik Lundh, Sean Reifschneider, Sadruddin Rejeb.</p>
 <li><a class="reference internal" href="#pep-324-new-subprocess-module">PEP 324: New subprocess Module</a></li>
 <li><a class="reference internal" href="#pep-327-decimal-data-type">PEP 327: Decimal Data Type</a><ul>
 <li><a class="reference internal" href="#why-is-decimal-needed">Why is Decimal needed?</a></li>
-<li><a class="reference internal" href="#the-decimal-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Decimal</span></code> 型別</a></li>
-<li><a class="reference internal" href="#the-context-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Context</span></code> 型別</a></li>
+<li><a class="reference internal" href="#the-decimal-type">The <code class="xref py py-class docutils literal notranslate"><span class="pre">Decimal</span></code> type</a></li>
+<li><a class="reference internal" href="#the-context-type">The <code class="xref py py-class docutils literal notranslate"><span class="pre">Context</span></code> type</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#pep-328-multi-line-imports">PEP 328: Multi-line Imports</a></li>
@@ -1584,7 +1584,7 @@ Fredrik Lundh, Sean Reifschneider, Sadruddin Rejeb.</p>
 </ul>
 </li>
 <li><a class="reference internal" href="#porting-to-python-2-4">Porting to Python 2.4</a></li>
-<li><a class="reference internal" href="#acknowledgements">致謝</a></li>
+<li><a class="reference internal" href="#acknowledgements">Acknowledgements</a></li>
 </ul>
 </li>
 </ul>
@@ -1593,19 +1593,19 @@ Fredrik Lundh, Sean Reifschneider, Sadruddin Rejeb.</p>
   <div>
     <h4>上個主題</h4>
     <p class="topless"><a href="2.5.html"
-                          title="上一章">Python 2.5 有什麼新功能</a></p>
+                          title="上一章">What's New in Python 2.5</a></p>
   </div>
   <div>
     <h4>下個主題</h4>
     <p class="topless"><a href="2.3.html"
-                          title="下一章">Python 2.3 有什麼新功能</a></p>
+                          title="下一章">What's New in Python 2.3</a></p>
   </div>
   <div role="note" aria-label="source link">
     <h3>此頁面</h3>
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/whatsnew/2.4.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/whatsnew/2.4.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -1625,10 +1625,10 @@ Fredrik Lundh, Sean Reifschneider, Sadruddin Rejeb.</p>
           <a href="../py-modindex.html" title="Python 模組索引"
              >模組</a> |</li>
         <li class="right" >
-          <a href="2.3.html" title="Python 2.3 有什麼新功能"
+          <a href="2.3.html" title="What&#39;s New in Python 2.3"
              >下一頁</a> |</li>
         <li class="right" >
-          <a href="2.5.html" title="Python 2.5 有什麼新功能"
+          <a href="2.5.html" title="What&#39;s New in Python 2.5"
              >上一頁</a> |</li>
 
           <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
@@ -1641,11 +1641,11 @@ Fredrik Lundh, Sean Reifschneider, Sadruddin Rejeb.</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 有什麼新功能？</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Python 2.4 有什麼新功能</a></li>
+        <li class="nav-item nav-item-this"><a href="">What's New in Python 2.4</a></li>
                 <li class="right">
                     
 

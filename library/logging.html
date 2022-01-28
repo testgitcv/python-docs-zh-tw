@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>logging --- Logging facility for Python &#8212; Python 3.10.2 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>logging --- Logging facility for Python &#8212; Python 3.9.10 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -20,7 +20,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.2 說明文件 中搜尋"
+          title="在 Python 3.9.10 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -79,9 +79,9 @@
 <li><a class="reference internal" href="#handler-objects">Handler Objects</a></li>
 <li><a class="reference internal" href="#formatter-objects">Formatter Objects</a></li>
 <li><a class="reference internal" href="#filter-objects">Filter Objects</a></li>
-<li><a class="reference internal" href="#logrecord-objects">LogRecord 物件</a></li>
+<li><a class="reference internal" href="#logrecord-objects">LogRecord Objects</a></li>
 <li><a class="reference internal" href="#logrecord-attributes">LogRecord attributes</a></li>
-<li><a class="reference internal" href="#loggeradapter-objects">LoggerAdapter 物件</a></li>
+<li><a class="reference internal" href="#loggeradapter-objects">LoggerAdapter Objects</a></li>
 <li><a class="reference internal" href="#thread-safety">Thread Safety</a></li>
 <li><a class="reference internal" href="#module-level-functions">Module-Level Functions</a></li>
 <li><a class="reference internal" href="#module-level-attributes">Module-Level Attributes</a></li>
@@ -106,7 +106,7 @@
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/library/logging.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/library/logging.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -143,7 +143,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -173,14 +173,14 @@
             
   <section id="module-logging">
 <span id="logging-logging-facility-for-python"></span><h1><a class="reference internal" href="#module-logging" title="logging: Flexible event logging system for applications."><code class="xref py py-mod docutils literal notranslate"><span class="pre">logging</span></code></a> --- Logging facility for Python<a class="headerlink" href="#module-logging" title="本標題的永久連結">¶</a></h1>
-<p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/logging/__init__.py">Lib/logging/__init__.py</a></p>
-<aside class="sidebar">
+<p><strong>Source code:</strong> <a class="reference external" href="https://github.com/python/cpython/tree/3.9/Lib/logging/__init__.py">Lib/logging/__init__.py</a></p>
+<aside class="sidebar" id="index-0">
 <p class="sidebar-title">Important</p>
 <p>This page contains the API reference information. For tutorial
 information and discussion of more advanced topics, see</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="../howto/logging.html#logging-basic-tutorial"><span class="std std-ref">基礎教學</span></a></p></li>
-<li><p><a class="reference internal" href="../howto/logging.html#logging-advanced-tutorial"><span class="std std-ref">進階教學</span></a></p></li>
+<li><p><a class="reference internal" href="../howto/logging.html#logging-basic-tutorial"><span class="std std-ref">Basic Tutorial</span></a></p></li>
+<li><p><a class="reference internal" href="../howto/logging.html#logging-advanced-tutorial"><span class="std std-ref">Advanced Tutorial</span></a></p></li>
 <li><p><a class="reference internal" href="../howto/logging-cookbook.html#logging-cookbook"><span class="std std-ref">Logging Cookbook</span></a></p></li>
 </ul>
 </aside>
@@ -274,7 +274,7 @@ level is treated as the effective level of the logger where the ancestor search
 began, and is used to determine how a logging event is handled.</p>
 <p>If the root is reached, and it has a level of NOTSET, then all messages will be
 processed. Otherwise, the root's level will be used as the effective level.</p>
-<p>層級清單請見 <a class="reference internal" href="#levels"><span class="std std-ref">Logging Levels</span></a>。</p>
+<p>See <a class="reference internal" href="#levels"><span class="std std-ref">Logging Levels</span></a> for a list of levels.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.2 版本變更: </span>The <em>level</em> parameter now accepts a string representation of the
 level such as 'INFO' as an alternative to the integer constants
@@ -386,13 +386,13 @@ context (such as remote client IP address and authenticated user name, in the
 above example). In such circumstances, it is likely that specialized
 <a class="reference internal" href="#logging.Formatter" title="logging.Formatter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Formatter</span></code></a>s would be used with particular <a class="reference internal" href="#logging.Handler" title="logging.Handler"><code class="xref py py-class docutils literal notranslate"><span class="pre">Handler</span></code></a>s.</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.2 版本變更: </span>新增 <em>stack_info</em> 參數。</p>
+<p><span class="versionmodified changed">在 3.2 版本變更: </span>The <em>stack_info</em> parameter was added.</p>
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.5 版本變更: </span>The <em>exc_info</em> parameter can now accept exception instances.</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.8 版本變更: </span>新增 <em>stacklevel</em> 參數。</p>
+<p><span class="versionmodified changed">在 3.8 版本變更: </span>The <em>stacklevel</em> parameter was added.</p>
 </div>
 </dd></dl>
 
@@ -611,7 +611,7 @@ I/O functionality which may not be threadsafe.</p>
 less severe than <em>level</em> will be ignored. When a handler is created, the
 level is set to <code class="xref py py-const docutils literal notranslate"><span class="pre">NOTSET</span></code> (which causes all messages to be
 processed).</p>
-<p>層級清單請見 <a class="reference internal" href="#levels"><span class="std std-ref">Logging Levels</span></a>。</p>
+<p>See <a class="reference internal" href="#levels"><span class="std std-ref">Logging Levels</span></a> for a list of levels.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.2 版本變更: </span>The <em>level</em> parameter now accepts a string representation of the
 level such as 'INFO' as an alternative to the integer constants
@@ -723,7 +723,7 @@ for more information on string formatting.</p>
 <a class="reference internal" href="#logrecord-attributes"><span class="std std-ref">LogRecord attributes</span></a>.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="logging.Formatter">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">logging.</span></span><span class="sig-name descname"><span class="pre">Formatter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fmt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datefmt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">style</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'%'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">validate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">defaults</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#logging.Formatter" title="本定義的永久連結">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">logging.</span></span><span class="sig-name descname"><span class="pre">Formatter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fmt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datefmt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">style</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'%'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">validate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#logging.Formatter" title="本定義的永久連結">¶</a></dt>
 <dd><p>Returns a new instance of the <a class="reference internal" href="#logging.Formatter" title="logging.Formatter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Formatter</span></code></a> class.  The instance is
 initialized with a format string for the message as a whole, as well as a
 format string for the date/time portion of a message.  If no <em>fmt</em> is
@@ -736,19 +736,13 @@ format string <em>fmt</em> (e.g. <code class="docutils literal notranslate"><spa
 actual log messages passed to <code class="docutils literal notranslate"><span class="pre">Logger.debug</span></code> etc; see
 <a class="reference internal" href="../howto/logging-cookbook.html#formatting-styles"><span class="std std-ref">Using particular formatting styles throughout your application</span></a> for more information on using {- and $-formatting
 for log messages.</p>
-<p>The <em>defaults</em> parameter can be a dictionary with default values to use in
-custom fields. For example:
-<code class="docutils literal notranslate"><span class="pre">logging.Formatter('%(ip)s</span> <span class="pre">%(message)s',</span> <span class="pre">defaults={&quot;ip&quot;:</span> <span class="pre">None})</span></code></p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.2 版本變更: </span>新增 <em>style</em> 參數。</p>
+<p><span class="versionmodified changed">在 3.2 版本變更: </span>The <em>style</em> parameter was added.</p>
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.8 版本變更: </span>The <em>validate</em> parameter was added. Incorrect or mismatched style and fmt
 will raise a <code class="docutils literal notranslate"><span class="pre">ValueError</span></code>.
 For example: <code class="docutils literal notranslate"><span class="pre">logging.Formatter('%(asctime)s</span> <span class="pre">-</span> <span class="pre">%(message)s',</span> <span class="pre">style='{')</span></code>.</p>
-</div>
-<div class="versionchanged">
-<p><span class="versionmodified changed">在 3.10 版本變更: </span>新增 <em>defaults</em> 參數。</p>
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="logging.Formatter.format">
@@ -765,9 +759,9 @@ that the formatted exception information is cached in attribute
 pickled and sent across the wire, but you should be careful if you have
 more than one <a class="reference internal" href="#logging.Formatter" title="logging.Formatter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Formatter</span></code></a> subclass which customizes the formatting
 of exception information. In this case, you will have to clear the cached
-value (by setting the <em>exc_text</em> attribute to <code class="docutils literal notranslate"><span class="pre">None</span></code>) after a formatter
-has done its formatting, so that the next formatter to handle the event
-doesn't use the cached value, but recalculates it afresh.</p>
+value after a formatter has done its formatting, so that the next
+formatter to handle the event doesn't use the cached value but
+recalculates it afresh.</p>
 <p>If stack information is available, it's appended after the exception
 information, using <a class="reference internal" href="#logging.Formatter.formatStack" title="logging.Formatter.formatStack"><code class="xref py py-meth docutils literal notranslate"><span class="pre">formatStack()</span></code></a> to transform it if necessary.</p>
 </dd></dl>
@@ -881,7 +875,7 @@ to be done with some care, but it does allow the injection of contextual
 information into logs (see <a class="reference internal" href="../howto/logging-cookbook.html#filters-contextual"><span class="std std-ref">Using Filters to impart contextual information</span></a>).</p>
 </section>
 <section id="logrecord-objects">
-<span id="log-record"></span><h2>LogRecord 物件<a class="headerlink" href="#logrecord-objects" title="本標題的永久連結">¶</a></h2>
+<span id="log-record"></span><h2>LogRecord Objects<a class="headerlink" href="#logrecord-objects" title="本標題的永久連結">¶</a></h2>
 <p><a class="reference internal" href="#logging.LogRecord" title="logging.LogRecord"><code class="xref py py-class docutils literal notranslate"><span class="pre">LogRecord</span></code></a> instances are created automatically by the <a class="reference internal" href="#logging.Logger" title="logging.Logger"><code class="xref py py-class docutils literal notranslate"><span class="pre">Logger</span></code></a>
 every time something is logged, and can be created manually via
 <a class="reference internal" href="#logging.makeLogRecord" title="logging.makeLogRecord"><code class="xref py py-func docutils literal notranslate"><span class="pre">makeLogRecord()</span></code></a> (for example, from a pickled event received over the
@@ -984,7 +978,7 @@ the options available to you.</p>
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Attribute name</p></th>
-<th class="head"><p>格式</p></th>
+<th class="head"><p>Format</p></th>
 <th class="head"><p>描述</p></th>
 </tr>
 </thead>
@@ -1048,7 +1042,7 @@ issued (if available).</p></td>
 <span class="pre">args</span></code>. This is set when
 <a class="reference internal" href="#logging.Formatter.format" title="logging.Formatter.format"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Formatter.format()</span></code></a> is invoked.</p></td>
 </tr>
-<tr class="row-even"><td><p>模組</p></td>
+<tr class="row-even"><td><p>module</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">%(module)s</span></code></p></td>
 <td><p>Module (name portion of <code class="docutils literal notranslate"><span class="pre">filename</span></code>).</p></td>
 </tr>
@@ -1108,11 +1102,11 @@ creation of this record.</p></td>
 </tbody>
 </table>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.1 版本變更: </span>新增 <em>processName</em>。</p>
+<p><span class="versionmodified changed">在 3.1 版本變更: </span><em>processName</em> was added.</p>
 </div>
 </section>
 <section id="loggeradapter-objects">
-<span id="logger-adapter"></span><h2>LoggerAdapter 物件<a class="headerlink" href="#loggeradapter-objects" title="本標題的永久連結">¶</a></h2>
+<span id="logger-adapter"></span><h2>LoggerAdapter Objects<a class="headerlink" href="#loggeradapter-objects" title="本標題的永久連結">¶</a></h2>
 <p><a class="reference internal" href="#logging.LoggerAdapter" title="logging.LoggerAdapter"><code class="xref py py-class docutils literal notranslate"><span class="pre">LoggerAdapter</span></code></a> instances are used to conveniently pass contextual
 information into logging calls. For a usage example, see the section on
 <a class="reference internal" href="../howto/logging-cookbook.html#context-info"><span class="std std-ref">adding contextual information to your logging output</span></a>.</p>
@@ -1263,7 +1257,7 @@ context (such as remote client IP address and authenticated user name, in the
 above example). In such circumstances, it is likely that specialized
 <a class="reference internal" href="#logging.Formatter" title="logging.Formatter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Formatter</span></code></a>s would be used with particular <a class="reference internal" href="#logging.Handler" title="logging.Handler"><code class="xref py py-class docutils literal notranslate"><span class="pre">Handler</span></code></a>s.</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.2 版本變更: </span>新增 <em>stack_info</em> 參數。</p>
+<p><span class="versionmodified changed">在 3.2 版本變更: </span>The <em>stack_info</em> parameter was added.</p>
 </div>
 </dd></dl>
 
@@ -1433,15 +1427,15 @@ such as messages being duplicated in the log.</p>
 <col style="width: 76%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p>格式</p></th>
+<tr class="row-odd"><th class="head"><p>Format</p></th>
 <th class="head"><p>描述</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p><em>filename</em></p></td>
-<td><p>Specifies that a <a class="reference internal" href="logging.handlers.html#logging.FileHandler" title="logging.FileHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">FileHandler</span></code></a> be
-created, using the specified filename,
-rather than a <a class="reference internal" href="logging.handlers.html#logging.StreamHandler" title="logging.StreamHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamHandler</span></code></a>.</p></td>
+<td><p>Specifies that a FileHandler be created,
+using the specified filename, rather than a
+StreamHandler.</p></td>
 </tr>
 <tr class="row-odd"><td><p><em>filemode</em></p></td>
 <td><p>If <em>filename</em> is specified, open the file
@@ -1472,10 +1466,9 @@ Defaults to <code class="docutils literal notranslate"><span class="pre">'%'</sp
 </tr>
 <tr class="row-even"><td><p><em>stream</em></p></td>
 <td><p>Use the specified stream to initialize the
-<a class="reference internal" href="logging.handlers.html#logging.StreamHandler" title="logging.StreamHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamHandler</span></code></a>. Note that this
-argument is incompatible with <em>filename</em> -
-if both are present, a <code class="docutils literal notranslate"><span class="pre">ValueError</span></code> is
-raised.</p></td>
+StreamHandler. Note that this argument is
+incompatible with <em>filename</em> - if both
+are present, a <code class="docutils literal notranslate"><span class="pre">ValueError</span></code> is raised.</p></td>
 </tr>
 <tr class="row-odd"><td><p><em>handlers</em></p></td>
 <td><p>If specified, this should be an iterable of
@@ -1497,24 +1490,24 @@ by the other arguments.</p></td>
 <tr class="row-odd"><td><p><em>encoding</em></p></td>
 <td><p>If this keyword argument is specified along
 with <em>filename</em>, its value is used when the
-<a class="reference internal" href="logging.handlers.html#logging.FileHandler" title="logging.FileHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">FileHandler</span></code></a> is created, and thus
-used when opening the output file.</p></td>
+FileHandler is created, and thus used when
+opening the output file.</p></td>
 </tr>
 <tr class="row-even"><td><p><em>errors</em></p></td>
 <td><p>If this keyword argument is specified along
 with <em>filename</em>, its value is used when the
-<a class="reference internal" href="logging.handlers.html#logging.FileHandler" title="logging.FileHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">FileHandler</span></code></a> is created, and thus
-used when opening the output file. If not
-specified, the value 'backslashreplace' is
-used. Note that if <code class="docutils literal notranslate"><span class="pre">None</span></code> is specified,
-it will be passed as such to <a class="reference internal" href="functions.html#open" title="open"><code class="xref py py-func docutils literal notranslate"><span class="pre">open()</span></code></a>,
-which means that it will be treated the
-same as passing 'errors'.</p></td>
+FileHandler is created, and thus used when
+opening the output file. If not specified,
+the value 'backslashreplace' is used. Note
+that if <code class="docutils literal notranslate"><span class="pre">None</span></code> is specified, it will be
+passed as such to func:<cite>open</cite>, which means
+that it will be treated the same as passing
+'errors'.</p></td>
 </tr>
 </tbody>
 </table>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.2 版本變更: </span>新增 <em>style</em> 引數。</p>
+<p><span class="versionmodified changed">在 3.2 版本變更: </span>The <em>style</em> argument was added.</p>
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.3 版本變更: </span>The <em>handlers</em> argument was added. Additional checks were added to
@@ -1523,10 +1516,10 @@ catch situations where incompatible arguments are specified (e.g.
 together with <em>filename</em>).</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.8 版本變更: </span>新增 <em>force</em> 引數。</p>
+<p><span class="versionmodified changed">在 3.8 版本變更: </span>The <em>force</em> argument was added.</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.9 版本變更: </span>新增 <em>encoding</em> 與 <em>errors</em> 引數。</p>
+<p><span class="versionmodified changed">在 3.9 版本變更: </span>The <em>encoding</em> and <em>errors</em> arguments were added.</p>
 </div>
 </dd></dl>
 
@@ -1601,7 +1594,7 @@ call.</p>
 <a class="reference internal" href="traceback.html#traceback.print_stack" title="traceback.print_stack"><code class="xref py py-func docutils literal notranslate"><span class="pre">traceback.print_stack()</span></code></a>, showing the call hierarchy.</p>
 </dd>
 <dt class="field-even">kwargs</dt>
-<dd class="field-even"><p>額外的關鍵字引數。</p>
+<dd class="field-even"><p>Additional keyword arguments.</p>
 </dd>
 </dl>
 </div></blockquote>
@@ -1680,9 +1673,9 @@ library.</p>
 <li><a class="reference internal" href="#handler-objects">Handler Objects</a></li>
 <li><a class="reference internal" href="#formatter-objects">Formatter Objects</a></li>
 <li><a class="reference internal" href="#filter-objects">Filter Objects</a></li>
-<li><a class="reference internal" href="#logrecord-objects">LogRecord 物件</a></li>
+<li><a class="reference internal" href="#logrecord-objects">LogRecord Objects</a></li>
 <li><a class="reference internal" href="#logrecord-attributes">LogRecord attributes</a></li>
-<li><a class="reference internal" href="#loggeradapter-objects">LoggerAdapter 物件</a></li>
+<li><a class="reference internal" href="#loggeradapter-objects">LoggerAdapter Objects</a></li>
 <li><a class="reference internal" href="#thread-safety">Thread Safety</a></li>
 <li><a class="reference internal" href="#module-level-functions">Module-Level Functions</a></li>
 <li><a class="reference internal" href="#module-level-attributes">Module-Level Attributes</a></li>
@@ -1707,7 +1700,7 @@ library.</p>
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/library/logging.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/library/logging.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -1743,7 +1736,7 @@ library.</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>

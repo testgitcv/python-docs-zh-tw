@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>zoneinfo --- IANA time zone support &#8212; Python 3.10.2 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zoneinfo --- IANA time zone support &#8212; Python 3.9.10 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -20,14 +20,14 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.2 說明文件 中搜尋"
+          title="在 Python 3.9.10 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜尋" href="../search.html" />
     <link rel="copyright" title="版權" href="../copyright.html" />
     <link rel="next" title="calendar --- General calendar-related functions" href="calendar.html" />
-    <link rel="prev" title="datetime --- 日期與時間的基本型別" href="datetime.html" />
+    <link rel="prev" title="datetime --- Basic date and time types" href="datetime.html" />
     <link rel="canonical" href="https://docs.python.org/3/library/zoneinfo.html" />
     
       
@@ -89,7 +89,7 @@
 <li><a class="reference internal" href="#pickle-serialization">Pickle serialization</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#functions">函式</a></li>
+<li><a class="reference internal" href="#functions">Functions</a></li>
 <li><a class="reference internal" href="#globals">Globals</a></li>
 <li><a class="reference internal" href="#exceptions-and-warnings">Exceptions and warnings</a></li>
 </ul>
@@ -100,7 +100,7 @@
   <div>
     <h4>上個主題</h4>
     <p class="topless"><a href="datetime.html"
-                          title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">datetime</span></code> --- 日期與時間的基本型別</a></p>
+                          title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">datetime</span></code> --- Basic date and time types</a></p>
   </div>
   <div>
     <h4>下個主題</h4>
@@ -112,7 +112,7 @@
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/library/zoneinfo.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/library/zoneinfo.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -136,7 +136,7 @@
           <a href="calendar.html" title="calendar --- General calendar-related functions"
              accesskey="N">下一頁</a> |</li>
         <li class="right" >
-          <a href="datetime.html" title="datetime --- 日期與時間的基本型別"
+          <a href="datetime.html" title="datetime --- Basic date and time types"
              accesskey="P">上一頁</a> |</li>
 
           <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
@@ -149,7 +149,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -191,7 +191,7 @@ first-party <a class="reference external" href="https://pypi.org/project/tzdata/
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><a class="reference internal" href="datetime.html#module-datetime" title="datetime: Basic date and time types."><code class="xref py py-mod docutils literal notranslate"><span class="pre">datetime</span></code></a> 模組</dt><dd><p>Provides the <a class="reference internal" href="datetime.html#datetime.time" title="datetime.time"><code class="xref py py-class docutils literal notranslate"><span class="pre">time</span></code></a> and <a class="reference internal" href="datetime.html#datetime.datetime" title="datetime.datetime"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime</span></code></a>
+<dt>Module: <a class="reference internal" href="datetime.html#module-datetime" title="datetime: Basic date and time types."><code class="xref py py-mod docutils literal notranslate"><span class="pre">datetime</span></code></a></dt><dd><p>Provides the <a class="reference internal" href="datetime.html#datetime.time" title="datetime.time"><code class="xref py py-class docutils literal notranslate"><span class="pre">time</span></code></a> and <a class="reference internal" href="datetime.html#datetime.datetime" title="datetime.datetime"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime</span></code></a>
 types with which the <a class="reference internal" href="#zoneinfo.ZoneInfo" title="zoneinfo.ZoneInfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">ZoneInfo</span></code></a> class is designed to be used.</p>
 </dd>
 <dt>Package <a class="reference external" href="https://pypi.org/project/tzdata/">tzdata</a></dt><dd><p>First-party package maintained by the CPython core developers to supply
@@ -286,9 +286,8 @@ time zone database (except on Windows, where there are no &quot;well-known&quot;
 locations for time zone data). On POSIX systems, downstream distributors and
 those building Python from source who know where their system
 time zone data is deployed may change the default time zone path by specifying
-the compile-time option <code class="docutils literal notranslate"><span class="pre">TZPATH</span></code> (or, more likely, the <a class="reference internal" href="../using/configure.html#cmdoption-with-tzpath"><code class="xref std std-option docutils literal notranslate"><span class="pre">configure</span>
-<span class="pre">flag</span> <span class="pre">--with-tzpath</span></code></a>), which should be a string delimited by
-<a class="reference internal" href="os.html#os.pathsep" title="os.pathsep"><code class="xref py py-data docutils literal notranslate"><span class="pre">os.pathsep</span></code></a>.</p>
+the compile-time option <code class="docutils literal notranslate"><span class="pre">TZPATH</span></code> (or, more likely, the <code class="docutils literal notranslate"><span class="pre">configure</span></code> flag
+<code class="docutils literal notranslate"><span class="pre">--with-tzpath</span></code>), which should be a string delimited by <a class="reference internal" href="os.html#os.pathsep" title="os.pathsep"><code class="xref py py-data docutils literal notranslate"><span class="pre">os.pathsep</span></code></a>.</p>
 <p>On all platforms, the configured value is available as the <code class="docutils literal notranslate"><span class="pre">TZPATH</span></code> key in
 <a class="reference internal" href="sysconfig.html#sysconfig.get_config_var" title="sysconfig.get_config_var"><code class="xref py py-func docutils literal notranslate"><span class="pre">sysconfig.get_config_var()</span></code></a>.</p>
 </section>
@@ -480,7 +479,7 @@ pickled in an environment with a different version of the time zone data.</p>
 </section>
 </section>
 <section id="functions">
-<h2>函式<a class="headerlink" href="#functions" title="本標題的永久連結">¶</a></h2>
+<h2>Functions<a class="headerlink" href="#functions" title="本標題的永久連結">¶</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="zoneinfo.available_timezones">
 <span class="sig-prename descclassname"><span class="pre">zoneinfo.</span></span><span class="sig-name descname"><span class="pre">available_timezones</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#zoneinfo.available_timezones" title="本定義的永久連結">¶</a></dt>
@@ -585,7 +584,7 @@ be filtered out, such as a relative path.</p>
 <li><a class="reference internal" href="#pickle-serialization">Pickle serialization</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#functions">函式</a></li>
+<li><a class="reference internal" href="#functions">Functions</a></li>
 <li><a class="reference internal" href="#globals">Globals</a></li>
 <li><a class="reference internal" href="#exceptions-and-warnings">Exceptions and warnings</a></li>
 </ul>
@@ -596,7 +595,7 @@ be filtered out, such as a relative path.</p>
   <div>
     <h4>上個主題</h4>
     <p class="topless"><a href="datetime.html"
-                          title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">datetime</span></code> --- 日期與時間的基本型別</a></p>
+                          title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">datetime</span></code> --- Basic date and time types</a></p>
   </div>
   <div>
     <h4>下個主題</h4>
@@ -608,7 +607,7 @@ be filtered out, such as a relative path.</p>
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/library/zoneinfo.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/library/zoneinfo.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -631,7 +630,7 @@ be filtered out, such as a relative path.</p>
           <a href="calendar.html" title="calendar --- General calendar-related functions"
              >下一頁</a> |</li>
         <li class="right" >
-          <a href="datetime.html" title="datetime --- 日期與時間的基本型別"
+          <a href="datetime.html" title="datetime --- Basic date and time types"
              >上一頁</a> |</li>
 
           <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
@@ -644,7 +643,7 @@ be filtered out, such as a relative path.</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>

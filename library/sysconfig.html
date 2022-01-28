@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>sysconfig --- Provide access to Python&#39;s configuration information &#8212; Python 3.10.2 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sysconfig --- Provide access to Python&#39;s configuration information &#8212; Python 3.9.10 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -20,13 +20,13 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.2 說明文件 中搜尋"
+          title="在 Python 3.9.10 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜尋" href="../search.html" />
     <link rel="copyright" title="版權" href="../copyright.html" />
-    <link rel="next" title="builtins --- 內建物件" href="builtins.html" />
+    <link rel="next" title="builtins --- Built-in objects" href="builtins.html" />
     <link rel="prev" title="sys --- System-specific parameters and functions" href="sys.html" />
     <link rel="canonical" href="https://docs.python.org/3/library/sysconfig.html" />
     
@@ -76,7 +76,7 @@
 <li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sysconfig</span></code> --- Provide access to Python's configuration information</a><ul>
 <li><a class="reference internal" href="#configuration-variables">Configuration variables</a></li>
 <li><a class="reference internal" href="#installation-paths">Installation paths</a></li>
-<li><a class="reference internal" href="#other-functions">其他函式</a></li>
+<li><a class="reference internal" href="#other-functions">Other functions</a></li>
 <li><a class="reference internal" href="#using-sysconfig-as-a-script">Using <code class="xref py py-mod docutils literal notranslate"><span class="pre">sysconfig</span></code> as a script</a></li>
 </ul>
 </li>
@@ -91,14 +91,14 @@
   <div>
     <h4>下個主題</h4>
     <p class="topless"><a href="builtins.html"
-                          title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">builtins</span></code> --- 內建物件</a></p>
+                          title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">builtins</span></code> --- Built-in objects</a></p>
   </div>
   <div role="note" aria-label="source link">
     <h3>此頁面</h3>
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/library/sysconfig.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/library/sysconfig.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -119,7 +119,7 @@
           <a href="../py-modindex.html" title="Python 模組索引"
              >模組</a> |</li>
         <li class="right" >
-          <a href="builtins.html" title="builtins --- 內建物件"
+          <a href="builtins.html" title="builtins --- Built-in objects"
              accesskey="N">下一頁</a> |</li>
         <li class="right" >
           <a href="sys.html" title="sys --- System-specific parameters and functions"
@@ -135,7 +135,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -168,7 +168,7 @@
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.2 版本新加入.</span></p>
 </div>
-<p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/sysconfig.py">Lib/sysconfig.py</a></p>
+<p><strong>Source code:</strong> <a class="reference external" href="https://github.com/python/cpython/tree/3.9/Lib/sysconfig.py">Lib/sysconfig.py</a></p>
 <hr class="docutils" id="index-0" />
 <p>The <a class="reference internal" href="#module-sysconfig" title="sysconfig: Python's configuration information"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sysconfig</span></code></a> module provides access to Python's configuration
 information like the list of installation paths and the configuration variables
@@ -199,7 +199,7 @@ argument in the configuration variable dictionary.</p>
 <p>If <em>name</em> is not found, return <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
 </dd></dl>
 
-<p>用法範例：</p>
+<p>Example of usage:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">sysconfig</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sysconfig</span><span class="o">.</span><span class="n">get_config_var</span><span class="p">(</span><span class="s1">&#39;Py_ENABLE_SHARED&#39;</span><span class="p">)</span>
 <span class="go">0</span>
@@ -255,45 +255,6 @@ platform-specific.</p></li>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="sysconfig.get_default_scheme">
-<span class="sig-prename descclassname"><span class="pre">sysconfig.</span></span><span class="sig-name descname"><span class="pre">get_default_scheme</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sysconfig.get_default_scheme" title="本定義的永久連結">¶</a></dt>
-<dd><p>Return the default scheme name for the current platform.</p>
-<div class="versionchanged">
-<p><span class="versionmodified changed">在 3.10 版本變更: </span>This function was previously named <code class="docutils literal notranslate"><span class="pre">_get_default_scheme()</span></code> and
-considered an implementation detail.</p>
-</div>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="sysconfig.get_preferred_scheme">
-<span class="sig-prename descclassname"><span class="pre">sysconfig.</span></span><span class="sig-name descname"><span class="pre">get_preferred_scheme</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sysconfig.get_preferred_scheme" title="本定義的永久連結">¶</a></dt>
-<dd><p>Return a preferred scheme name for an installation layout specified by <em>key</em>.</p>
-<p><em>key</em> must be either <code class="docutils literal notranslate"><span class="pre">&quot;prefix&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;home&quot;</span></code>, or <code class="docutils literal notranslate"><span class="pre">&quot;user&quot;</span></code>.</p>
-<p>The return value is a scheme name listed in <a class="reference internal" href="#sysconfig.get_scheme_names" title="sysconfig.get_scheme_names"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_scheme_names()</span></code></a>. It
-can be passed to <a class="reference internal" href="#module-sysconfig" title="sysconfig: Python's configuration information"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sysconfig</span></code></a> functions that take a <em>scheme</em> argument,
-such as <a class="reference internal" href="#sysconfig.get_paths" title="sysconfig.get_paths"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_paths()</span></code></a>.</p>
-<div class="versionadded">
-<p><span class="versionmodified added">在 3.10 版本新加入.</span></p>
-</div>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="sysconfig._get_preferred_schemes">
-<span class="sig-prename descclassname"><span class="pre">sysconfig.</span></span><span class="sig-name descname"><span class="pre">_get_preferred_schemes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sysconfig._get_preferred_schemes" title="本定義的永久連結">¶</a></dt>
-<dd><p>Return a dict containing preferred scheme names on the current platform.
-Python implementers and redistributors may add their preferred schemes to
-the <code class="docutils literal notranslate"><span class="pre">_INSTALL_SCHEMES</span></code> module-level global value, and modify this function
-to return those scheme names, to e.g. provide different schemes for system
-and language package managers to use, so packages installed by either do not
-mix with those by the other.</p>
-<p>End users should not use this function, but <a class="reference internal" href="#sysconfig.get_default_scheme" title="sysconfig.get_default_scheme"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_default_scheme()</span></code></a> and
-<a class="reference internal" href="#sysconfig.get_preferred_scheme" title="sysconfig.get_preferred_scheme"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_preferred_scheme()</span></code></a> instead.</p>
-<div class="versionadded">
-<p><span class="versionmodified added">在 3.10 版本新加入.</span></p>
-</div>
-</dd></dl>
-
-<dl class="py function">
 <dt class="sig sig-object py" id="sysconfig.get_path_names">
 <span class="sig-prename descclassname"><span class="pre">sysconfig.</span></span><span class="sig-name descname"><span class="pre">get_path_names</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sysconfig.get_path_names" title="本定義的永久連結">¶</a></dt>
 <dd><p>Return a tuple containing all path names currently supported in
@@ -338,7 +299,7 @@ update the dictionary used to expand the paths.</p>
 
 </section>
 <section id="other-functions">
-<h2>其他函式<a class="headerlink" href="#other-functions" title="本標題的永久連結">¶</a></h2>
+<h2>Other functions<a class="headerlink" href="#other-functions" title="本標題的永久連結">¶</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="sysconfig.get_python_version">
 <span class="sig-prename descclassname"><span class="pre">sysconfig.</span></span><span class="sig-name descname"><span class="pre">get_python_version</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sysconfig.get_python_version" title="本定義的永久連結">¶</a></dt>
@@ -452,7 +413,7 @@ dictionary, and updated with the values read in the file.</p>
 <li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sysconfig</span></code> --- Provide access to Python's configuration information</a><ul>
 <li><a class="reference internal" href="#configuration-variables">Configuration variables</a></li>
 <li><a class="reference internal" href="#installation-paths">Installation paths</a></li>
-<li><a class="reference internal" href="#other-functions">其他函式</a></li>
+<li><a class="reference internal" href="#other-functions">Other functions</a></li>
 <li><a class="reference internal" href="#using-sysconfig-as-a-script">Using <code class="xref py py-mod docutils literal notranslate"><span class="pre">sysconfig</span></code> as a script</a></li>
 </ul>
 </li>
@@ -467,14 +428,14 @@ dictionary, and updated with the values read in the file.</p>
   <div>
     <h4>下個主題</h4>
     <p class="topless"><a href="builtins.html"
-                          title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">builtins</span></code> --- 內建物件</a></p>
+                          title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">builtins</span></code> --- Built-in objects</a></p>
   </div>
   <div role="note" aria-label="source link">
     <h3>此頁面</h3>
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/library/sysconfig.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/library/sysconfig.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -494,7 +455,7 @@ dictionary, and updated with the values read in the file.</p>
           <a href="../py-modindex.html" title="Python 模組索引"
              >模組</a> |</li>
         <li class="right" >
-          <a href="builtins.html" title="builtins --- 內建物件"
+          <a href="builtins.html" title="builtins --- Built-in objects"
              >下一頁</a> |</li>
         <li class="right" >
           <a href="sys.html" title="sys --- System-specific parameters and functions"
@@ -510,7 +471,7 @@ dictionary, and updated with the values read in the file.</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>

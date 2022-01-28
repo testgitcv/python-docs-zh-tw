@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Python 2.5 有什麼新功能 &#8212; Python 3.10.2 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What&#39;s New in Python 2.5 &#8212; Python 3.9.10 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -20,14 +20,14 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.2 說明文件 中搜尋"
+          title="在 Python 3.9.10 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜尋" href="../search.html" />
     <link rel="copyright" title="版權" href="../copyright.html" />
-    <link rel="next" title="Python 2.4 有什麼新功能" href="2.4.html" />
-    <link rel="prev" title="Python 2.6 有什麼新功能" href="2.6.html" />
+    <link rel="next" title="What&#39;s New in Python 2.4" href="2.4.html" />
+    <link rel="prev" title="What&#39;s New in Python 2.6" href="2.6.html" />
     <link rel="canonical" href="https://docs.python.org/3/whatsnew/2.5.html" />
     
       
@@ -73,7 +73,7 @@
   <div>
     <h3><a href="../contents.html">目錄</a></h3>
     <ul>
-<li><a class="reference internal" href="#">Python 2.5 有什麼新功能</a><ul>
+<li><a class="reference internal" href="#">What's New in Python 2.5</a><ul>
 <li><a class="reference internal" href="#pep-308-conditional-expressions">PEP 308: Conditional Expressions</a></li>
 <li><a class="reference internal" href="#pep-309-partial-function-application">PEP 309: Partial Function Application</a></li>
 <li><a class="reference internal" href="#pep-314-metadata-for-python-software-packages-v1-1">PEP 314: Metadata for Python Software Packages v1.1</a></li>
@@ -95,11 +95,11 @@
 </ul>
 </li>
 <li><a class="reference internal" href="#new-improved-and-removed-modules">New, Improved, and Removed Modules</a><ul>
-<li><a class="reference internal" href="#the-ctypes-package">ctypes 套件</a></li>
-<li><a class="reference internal" href="#the-elementtree-package">ElementTree 套件</a></li>
-<li><a class="reference internal" href="#the-hashlib-package">hashlib 套件</a></li>
-<li><a class="reference internal" href="#the-sqlite3-package">sqlite3 套件</a></li>
-<li><a class="reference internal" href="#the-wsgiref-package">wsgiref 套件</a></li>
+<li><a class="reference internal" href="#the-ctypes-package">The ctypes package</a></li>
+<li><a class="reference internal" href="#the-elementtree-package">The ElementTree package</a></li>
+<li><a class="reference internal" href="#the-hashlib-package">The hashlib package</a></li>
+<li><a class="reference internal" href="#the-sqlite3-package">The sqlite3 package</a></li>
+<li><a class="reference internal" href="#the-wsgiref-package">The wsgiref package</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#build-and-c-api-changes">Build and C API Changes</a><ul>
@@ -107,7 +107,7 @@
 </ul>
 </li>
 <li><a class="reference internal" href="#porting-to-python-2-5">Porting to Python 2.5</a></li>
-<li><a class="reference internal" href="#acknowledgements">致謝</a></li>
+<li><a class="reference internal" href="#acknowledgements">Acknowledgements</a></li>
 </ul>
 </li>
 </ul>
@@ -116,19 +116,19 @@
   <div>
     <h4>上個主題</h4>
     <p class="topless"><a href="2.6.html"
-                          title="上一章">Python 2.6 有什麼新功能</a></p>
+                          title="上一章">What's New in Python 2.6</a></p>
   </div>
   <div>
     <h4>下個主題</h4>
     <p class="topless"><a href="2.4.html"
-                          title="下一章">Python 2.4 有什麼新功能</a></p>
+                          title="下一章">What's New in Python 2.4</a></p>
   </div>
   <div role="note" aria-label="source link">
     <h3>此頁面</h3>
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/whatsnew/2.5.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/whatsnew/2.5.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -149,10 +149,10 @@
           <a href="../py-modindex.html" title="Python 模組索引"
              >模組</a> |</li>
         <li class="right" >
-          <a href="2.4.html" title="Python 2.4 有什麼新功能"
+          <a href="2.4.html" title="What&#39;s New in Python 2.4"
              accesskey="N">下一頁</a> |</li>
         <li class="right" >
-          <a href="2.6.html" title="Python 2.6 有什麼新功能"
+          <a href="2.6.html" title="What&#39;s New in Python 2.6"
              accesskey="P">上一頁</a> |</li>
 
           <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
@@ -165,11 +165,11 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Python 有什麼新功能？</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Python 2.5 有什麼新功能</a></li>
+        <li class="nav-item nav-item-this"><a href="">What's New in Python 2.5</a></li>
                 <li class="right">
                     
 
@@ -193,9 +193,9 @@
           <div class="body" role="main">
             
   <section id="what-s-new-in-python-2-5">
-<h1>Python 2.5 有什麼新功能<a class="headerlink" href="#what-s-new-in-python-2-5" title="本標題的永久連結">¶</a></h1>
+<h1>What's New in Python 2.5<a class="headerlink" href="#what-s-new-in-python-2-5" title="本標題的永久連結">¶</a></h1>
 <dl class="field-list simple">
-<dt class="field-odd">作者</dt>
+<dt class="field-odd">Author</dt>
 <dd class="field-odd"><p>A.M. Kuchling</p>
 </dd>
 </dl>
@@ -473,7 +473,7 @@ statement, only the <code class="docutils literal notranslate"><span class="pre"
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><span class="target" id="index-6"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0328"><strong>PEP 328</strong></a> - Imports: Multi-Line and Absolute/Relative</dt><dd><p>由 Aahz 撰寫 PEP；由 Thomas Wouters 實作。</p>
+<dt><span class="target" id="index-6"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0328"><strong>PEP 328</strong></a> - Imports: Multi-Line and Absolute/Relative</dt><dd><p>PEP written by Aahz; implemented by Thomas Wouters.</p>
 </dd>
 <dt><a class="reference external" href="https://pylib.readthedocs.io/">https://pylib.readthedocs.io/</a></dt><dd><p>The py library by Holger Krekel, which contains the <code class="xref py py-mod docutils literal notranslate"><span class="pre">py.std</span></code> package.</p>
 </dd>
@@ -495,7 +495,7 @@ archive.</p>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><span class="target" id="index-7"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0338"><strong>PEP 338</strong></a> - Executing modules as scripts</dt><dd><p>由 Nick Coghlan 撰寫 PEP 與實作。</p>
+<dt><span class="target" id="index-7"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0338"><strong>PEP 338</strong></a> - Executing modules as scripts</dt><dd><p>PEP written and  implemented by Nick Coghlan.</p>
 </dd>
 </dl>
 </div>
@@ -536,7 +536,7 @@ in the <em>final-block</em> is still run.</p>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><span class="target" id="index-8"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0341"><strong>PEP 341</strong></a> - Unifying try-except and try-finally</dt><dd><p>由 Georg Brandl 撰寫 PEP；由 Thomas Lee 實作。</p>
+<dt><span class="target" id="index-8"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0341"><strong>PEP 341</strong></a> - Unifying try-except and try-finally</dt><dd><p>PEP written by Georg Brandl;  implementation by Thomas Lee.</p>
 </dd>
 </dl>
 </div>
@@ -986,7 +986,7 @@ read to learn about supporting 64-bit platforms.</p>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><span class="target" id="index-17"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0353"><strong>PEP 353</strong></a> - Using ssize_t as the index type</dt><dd><p>由 Martin von Löwis 撰寫 PEP 與實作。</p>
+<dt><span class="target" id="index-17"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0353"><strong>PEP 353</strong></a> - Using ssize_t as the index type</dt><dd><p>PEP written and implemented by Martin von Löwis.</p>
 </dd>
 </dl>
 </div>
@@ -1021,7 +1021,7 @@ interpreter will check that the type returned is correct, and raises a
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><span class="target" id="index-18"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0357"><strong>PEP 357</strong></a> - Allowing Any Object to be Used for Slicing</dt><dd><p>由 Travis Oliphant 撰寫 PEP 與實作。</p>
+<dt><span class="target" id="index-18"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0357"><strong>PEP 357</strong></a> - Allowing Any Object to be Used for Slicing</dt><dd><p>PEP written  and implemented by Travis Oliphant.</p>
 </dd>
 </dl>
 </div>
@@ -1594,7 +1594,7 @@ weak references contained in the dictionary.  <code class="xref py py-meth docut
 <code class="xref py py-meth docutils literal notranslate"><span class="pre">keyrefs()</span></code> methods were added to <code class="xref py py-class docutils literal notranslate"><span class="pre">WeakKeyDictionary</span></code>, and
 <code class="xref py py-meth docutils literal notranslate"><span class="pre">itervaluerefs()</span></code> and <code class="xref py py-meth docutils literal notranslate"><span class="pre">valuerefs()</span></code> were added to
 <code class="xref py py-class docutils literal notranslate"><span class="pre">WeakValueDictionary</span></code>.  (Contributed by Fred L. Drake, Jr.)</p></li>
-<li><p>The <a class="reference internal" href="../library/webbrowser.html#module-webbrowser" title="webbrowser: Easy-to-use controller for web browsers."><code class="xref py py-mod docutils literal notranslate"><span class="pre">webbrowser</span></code></a> module received a number of enhancements. It's now
+<li><p>The <a class="reference internal" href="../library/webbrowser.html#module-webbrowser" title="webbrowser: Easy-to-use controller for Web browsers."><code class="xref py py-mod docutils literal notranslate"><span class="pre">webbrowser</span></code></a> module received a number of enhancements. It's now
 usable as a script with <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">webbrowser</span></code>, taking a URL as the argument;
 there are a number of switches  to control the behaviour (<code class="xref std std-option docutils literal notranslate"><span class="pre">-n</span></code> for a new
 browser window,  <code class="xref std std-option docutils literal notranslate"><span class="pre">-t</span></code> for a new tab).  New module-level functions,
@@ -1620,7 +1620,7 @@ and returns a new  <code class="xref py py-class docutils literal notranslate"><
 </li>
 </ul>
 <section id="the-ctypes-package">
-<span id="module-ctypes"></span><h3>ctypes 套件<a class="headerlink" href="#the-ctypes-package" title="本標題的永久連結">¶</a></h3>
+<span id="module-ctypes"></span><h3>The ctypes package<a class="headerlink" href="#the-ctypes-package" title="本標題的永久連結">¶</a></h3>
 <p>The <a class="reference internal" href="../library/ctypes.html#module-ctypes" title="ctypes: A foreign function library for Python."><code class="xref py py-mod docutils literal notranslate"><span class="pre">ctypes</span></code></a> package, written by Thomas Heller, has been added  to the
 standard library.  <a class="reference internal" href="../library/ctypes.html#module-ctypes" title="ctypes: A foreign function library for Python."><code class="xref py py-mod docutils literal notranslate"><span class="pre">ctypes</span></code></a> lets you call arbitrary functions  in shared
 libraries or DLLs.  Long-time users may remember the <code class="xref py py-mod docutils literal notranslate"><span class="pre">dl</span></code> module, which
@@ -1691,7 +1691,7 @@ modules, now that <a class="reference internal" href="../library/ctypes.html#mod
 </div>
 </section>
 <section id="the-elementtree-package">
-<span id="module-etree"></span><h3>ElementTree 套件<a class="headerlink" href="#the-elementtree-package" title="本標題的永久連結">¶</a></h3>
+<span id="module-etree"></span><h3>The ElementTree package<a class="headerlink" href="#the-elementtree-package" title="本標題的永久連結">¶</a></h3>
 <p>A subset of Fredrik Lundh's ElementTree library for processing XML has been
 added to the standard library as <code class="xref py py-mod docutils literal notranslate"><span class="pre">xml.etree</span></code>.  The available modules are
 <code class="xref py py-mod docutils literal notranslate"><span class="pre">ElementTree</span></code>, <code class="xref py py-mod docutils literal notranslate"><span class="pre">ElementPath</span></code>, and <code class="xref py py-mod docutils literal notranslate"><span class="pre">ElementInclude</span></code> from
@@ -1818,7 +1818,7 @@ read the package's official documentation for more details.</p>
 </div>
 </section>
 <section id="the-hashlib-package">
-<span id="module-hashlib"></span><h3>hashlib 套件<a class="headerlink" href="#the-hashlib-package" title="本標題的永久連結">¶</a></h3>
+<span id="module-hashlib"></span><h3>The hashlib package<a class="headerlink" href="#the-hashlib-package" title="本標題的永久連結">¶</a></h3>
 <p>A new <a class="reference internal" href="../library/hashlib.html#module-hashlib" title="hashlib: Secure hash and message digest algorithms."><code class="xref py py-mod docutils literal notranslate"><span class="pre">hashlib</span></code></a> module, written by Gregory P. Smith,  has been added to
 replace the <code class="xref py py-mod docutils literal notranslate"><span class="pre">md5</span></code> and <code class="xref py py-mod docutils literal notranslate"><span class="pre">sha</span></code> modules.  <a class="reference internal" href="../library/hashlib.html#module-hashlib" title="hashlib: Secure hash and message digest algorithms."><code class="xref py py-mod docutils literal notranslate"><span class="pre">hashlib</span></code></a> adds support for
 additional secure hashes (SHA-224, SHA-256, SHA-384, and SHA-512). When
@@ -1864,7 +1864,7 @@ with the same digest state.</p>
 </div>
 </section>
 <section id="the-sqlite3-package">
-<span id="module-sqlite"></span><h3>sqlite3 套件<a class="headerlink" href="#the-sqlite3-package" title="本標題的永久連結">¶</a></h3>
+<span id="module-sqlite"></span><h3>The sqlite3 package<a class="headerlink" href="#the-sqlite3-package" title="本標題的永久連結">¶</a></h3>
 <p>The pysqlite module (<a class="reference external" href="http://www.pysqlite.org">http://www.pysqlite.org</a>), a wrapper for the SQLite embedded
 database, has been added to the standard library under the package name
 <a class="reference internal" href="../library/sqlite3.html#module-sqlite3" title="sqlite3: A DB-API 2.0 implementation using SQLite 3.x."><code class="xref py py-mod docutils literal notranslate"><span class="pre">sqlite3</span></code></a>.</p>
@@ -1954,13 +1954,13 @@ data types for the supported SQL dialect.</p>
 </dl>
 <p>The documentation  for the <a class="reference internal" href="../library/sqlite3.html#module-sqlite3" title="sqlite3: A DB-API 2.0 implementation using SQLite 3.x."><code class="xref py py-mod docutils literal notranslate"><span class="pre">sqlite3</span></code></a> module.</p>
 <dl class="simple">
-<dt><span class="target" id="index-25"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0249"><strong>PEP 249</strong></a> - Database API Specification 2.0</dt><dd><p>由 Marc-André Lemburg 撰寫 PEP。</p>
+<dt><span class="target" id="index-25"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0249"><strong>PEP 249</strong></a> - Database API Specification 2.0</dt><dd><p>PEP written by Marc-André Lemburg.</p>
 </dd>
 </dl>
 </div>
 </section>
 <section id="the-wsgiref-package">
-<span id="module-wsgiref"></span><h3>wsgiref 套件<a class="headerlink" href="#the-wsgiref-package" title="本標題的永久連結">¶</a></h3>
+<span id="module-wsgiref"></span><h3>The wsgiref package<a class="headerlink" href="#the-wsgiref-package" title="本標題的永久連結">¶</a></h3>
 <p>The Web Server Gateway Interface (WSGI) v1.0 defines a standard interface
 between web servers and Python web applications and is described in <span class="target" id="index-26"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0333"><strong>PEP 333</strong></a>.
 The <a class="reference internal" href="../library/wsgiref.html#module-wsgiref" title="wsgiref: WSGI Utilities and Reference Implementation."><code class="xref py py-mod docutils literal notranslate"><span class="pre">wsgiref</span></code></a> package is a reference implementation of the WSGI
@@ -1983,7 +1983,7 @@ up a server takes only a few lines of code:</p>
 <dl class="simple">
 <dt><a class="reference external" href="http://www.wsgi.org">http://www.wsgi.org</a></dt><dd><p>A central web site for WSGI-related resources.</p>
 </dd>
-<dt><span class="target" id="index-27"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0333"><strong>PEP 333</strong></a> - Python Web Server Gateway Interface v1.0</dt><dd><p>由 Phillip J. Eby 撰寫 PEP。</p>
+<dt><span class="target" id="index-27"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0333"><strong>PEP 333</strong></a> - Python Web Server Gateway Interface v1.0</dt><dd><p>PEP written by Phillip J. Eby.</p>
 </dd>
 </dl>
 </div>
@@ -2155,7 +2155,7 @@ corresponding family's <span class="xref c c-texpr"><span class="o">*</span><spa
 </ul>
 </section>
 <section id="acknowledgements">
-<h2>致謝<a class="headerlink" href="#acknowledgements" title="本標題的永久連結">¶</a></h2>
+<h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="本標題的永久連結">¶</a></h2>
 <p>The author would like to thank the following people for offering suggestions,
 corrections and assistance with various drafts of this article: Georg Brandl,
 Nick Coghlan, Phillip J. Eby, Lars Gustäbel, Raymond Hettinger, Ralf W.
@@ -2175,7 +2175,7 @@ Rovner, Scott Weikart, Barry Warsaw, Thomas Wouters.</p>
   <div>
     <h3><a href="../contents.html">目錄</a></h3>
     <ul>
-<li><a class="reference internal" href="#">Python 2.5 有什麼新功能</a><ul>
+<li><a class="reference internal" href="#">What's New in Python 2.5</a><ul>
 <li><a class="reference internal" href="#pep-308-conditional-expressions">PEP 308: Conditional Expressions</a></li>
 <li><a class="reference internal" href="#pep-309-partial-function-application">PEP 309: Partial Function Application</a></li>
 <li><a class="reference internal" href="#pep-314-metadata-for-python-software-packages-v1-1">PEP 314: Metadata for Python Software Packages v1.1</a></li>
@@ -2197,11 +2197,11 @@ Rovner, Scott Weikart, Barry Warsaw, Thomas Wouters.</p>
 </ul>
 </li>
 <li><a class="reference internal" href="#new-improved-and-removed-modules">New, Improved, and Removed Modules</a><ul>
-<li><a class="reference internal" href="#the-ctypes-package">ctypes 套件</a></li>
-<li><a class="reference internal" href="#the-elementtree-package">ElementTree 套件</a></li>
-<li><a class="reference internal" href="#the-hashlib-package">hashlib 套件</a></li>
-<li><a class="reference internal" href="#the-sqlite3-package">sqlite3 套件</a></li>
-<li><a class="reference internal" href="#the-wsgiref-package">wsgiref 套件</a></li>
+<li><a class="reference internal" href="#the-ctypes-package">The ctypes package</a></li>
+<li><a class="reference internal" href="#the-elementtree-package">The ElementTree package</a></li>
+<li><a class="reference internal" href="#the-hashlib-package">The hashlib package</a></li>
+<li><a class="reference internal" href="#the-sqlite3-package">The sqlite3 package</a></li>
+<li><a class="reference internal" href="#the-wsgiref-package">The wsgiref package</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#build-and-c-api-changes">Build and C API Changes</a><ul>
@@ -2209,7 +2209,7 @@ Rovner, Scott Weikart, Barry Warsaw, Thomas Wouters.</p>
 </ul>
 </li>
 <li><a class="reference internal" href="#porting-to-python-2-5">Porting to Python 2.5</a></li>
-<li><a class="reference internal" href="#acknowledgements">致謝</a></li>
+<li><a class="reference internal" href="#acknowledgements">Acknowledgements</a></li>
 </ul>
 </li>
 </ul>
@@ -2218,19 +2218,19 @@ Rovner, Scott Weikart, Barry Warsaw, Thomas Wouters.</p>
   <div>
     <h4>上個主題</h4>
     <p class="topless"><a href="2.6.html"
-                          title="上一章">Python 2.6 有什麼新功能</a></p>
+                          title="上一章">What's New in Python 2.6</a></p>
   </div>
   <div>
     <h4>下個主題</h4>
     <p class="topless"><a href="2.4.html"
-                          title="下一章">Python 2.4 有什麼新功能</a></p>
+                          title="下一章">What's New in Python 2.4</a></p>
   </div>
   <div role="note" aria-label="source link">
     <h3>此頁面</h3>
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/whatsnew/2.5.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/whatsnew/2.5.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -2250,10 +2250,10 @@ Rovner, Scott Weikart, Barry Warsaw, Thomas Wouters.</p>
           <a href="../py-modindex.html" title="Python 模組索引"
              >模組</a> |</li>
         <li class="right" >
-          <a href="2.4.html" title="Python 2.4 有什麼新功能"
+          <a href="2.4.html" title="What&#39;s New in Python 2.4"
              >下一頁</a> |</li>
         <li class="right" >
-          <a href="2.6.html" title="Python 2.6 有什麼新功能"
+          <a href="2.6.html" title="What&#39;s New in Python 2.6"
              >上一頁</a> |</li>
 
           <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
@@ -2266,11 +2266,11 @@ Rovner, Scott Weikart, Barry Warsaw, Thomas Wouters.</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 有什麼新功能？</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Python 2.5 有什麼新功能</a></li>
+        <li class="nav-item nav-item-this"><a href="">What's New in Python 2.5</a></li>
                 <li class="right">
                     
 

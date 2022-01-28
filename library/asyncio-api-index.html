@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>High-level API Index &#8212; Python 3.10.2 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High-level API Index &#8212; Python 3.9.10 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -20,14 +20,14 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.2 說明文件 中搜尋"
+          title="在 Python 3.9.10 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜尋" href="../search.html" />
     <link rel="copyright" title="版權" href="../copyright.html" />
     <link rel="next" title="Low-level API Index" href="asyncio-llapi-index.html" />
-    <link rel="prev" title="平臺支援" href="asyncio-platforms.html" />
+    <link rel="prev" title="Platform Support" href="asyncio-platforms.html" />
     <link rel="canonical" href="https://docs.python.org/3/library/asyncio-api-index.html" />
     
       
@@ -79,7 +79,7 @@
 <li><a class="reference internal" href="#subprocesses">Subprocesses</a></li>
 <li><a class="reference internal" href="#streams">Streams</a></li>
 <li><a class="reference internal" href="#synchronization">Synchronization</a></li>
-<li><a class="reference internal" href="#exceptions">例外</a></li>
+<li><a class="reference internal" href="#exceptions">Exceptions</a></li>
 </ul>
 </li>
 </ul>
@@ -88,7 +88,7 @@
   <div>
     <h4>上個主題</h4>
     <p class="topless"><a href="asyncio-platforms.html"
-                          title="上一章">平臺支援</a></p>
+                          title="上一章">Platform Support</a></p>
   </div>
   <div>
     <h4>下個主題</h4>
@@ -100,7 +100,7 @@
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/library/asyncio-api-index.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/library/asyncio-api-index.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -124,7 +124,7 @@
           <a href="asyncio-llapi-index.html" title="Low-level API Index"
              accesskey="N">下一頁</a> |</li>
         <li class="right" >
-          <a href="asyncio-platforms.html" title="平臺支援"
+          <a href="asyncio-platforms.html" title="Platform Support"
              accesskey="P">上一頁</a> |</li>
 
           <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
@@ -137,12 +137,12 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="ipc.html" >Networking and Interprocess Communication</a> &#187;</li>
-          <li class="nav-item nav-item-3"><a href="asyncio.html" accesskey="U"><code class="xref py py-mod docutils literal notranslate"><span class="pre">asyncio</span></code> --- 非同步 I/O</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="asyncio.html" accesskey="U"><code class="xref py py-mod docutils literal notranslate"><span class="pre">asyncio</span></code> --- Asynchronous I/O</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">High-level API Index</a></li>
                 <li class="right">
                     
@@ -210,7 +210,7 @@ await on multiple things with timeouts.</p>
 <td><p>Task object.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="asyncio-task.html#asyncio.to_thread" title="asyncio.to_thread"><code class="xref py py-func docutils literal notranslate"><span class="pre">to_thread()</span></code></a></p></td>
-<td><p>Asynchronously run a function in a separate OS thread.</p></td>
+<td><p>Asychronously run a function in a separate OS thread.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="asyncio-task.html#asyncio.run_coroutine_threadsafe" title="asyncio.run_coroutine_threadsafe"><code class="xref py py-func docutils literal notranslate"><span class="pre">run_coroutine_threadsafe()</span></code></a></p></td>
 <td><p>Schedule a coroutine from another OS thread.</p></td>
@@ -220,7 +220,7 @@ await on multiple things with timeouts.</p>
 </tr>
 </tbody>
 </table>
-<p class="rubric">範例</p>
+<p class="rubric">Examples</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="asyncio-task.html#asyncio-example-gather"><span class="std std-ref">Using asyncio.gather() to run things in parallel</span></a>.</p></li>
 <li><p><a class="reference internal" href="asyncio-task.html#asyncio-example-waitfor"><span class="std std-ref">Using asyncio.wait_for() to enforce a timeout</span></a>.</p></li>
@@ -250,7 +250,7 @@ implement connection pools, and pub/sub patterns.</p>
 </tr>
 </tbody>
 </table>
-<p class="rubric">範例</p>
+<p class="rubric">Examples</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="asyncio-queue.html#asyncio-example-queue-dist"><span class="std std-ref">Using asyncio.Queue to distribute workload between several
 Tasks</span></a>.</p></li>
@@ -274,7 +274,7 @@ Tasks</span></a>.</p></li>
 </tr>
 </tbody>
 </table>
-<p class="rubric">範例</p>
+<p class="rubric">Examples</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="asyncio-subprocess.html#asyncio-example-subprocess-shell"><span class="std std-ref">Executing a shell command</span></a>.</p></li>
 <li><p>See also the <a class="reference internal" href="asyncio-subprocess.html#asyncio-subprocess"><span class="std std-ref">subprocess APIs</span></a>
@@ -310,7 +310,7 @@ documentation.</p></li>
 </tr>
 </tbody>
 </table>
-<p class="rubric">範例</p>
+<p class="rubric">Examples</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="asyncio-stream.html#asyncio-example-stream"><span class="std std-ref">Example TCP client</span></a>.</p></li>
 <li><p>See also the <a class="reference internal" href="asyncio-stream.html#asyncio-streams"><span class="std std-ref">streams APIs</span></a>
@@ -343,15 +343,15 @@ documentation.</p></li>
 </tr>
 </tbody>
 </table>
-<p class="rubric">範例</p>
+<p class="rubric">Examples</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="asyncio-sync.html#asyncio-example-sync-event"><span class="std std-ref">使用 asyncio.Event</span></a>。</p></li>
+<li><p><a class="reference internal" href="asyncio-sync.html#asyncio-example-sync-event"><span class="std std-ref">Using asyncio.Event</span></a>.</p></li>
 <li><p>See also the documentation of asyncio
 <a class="reference internal" href="asyncio-sync.html#asyncio-sync"><span class="std std-ref">synchronization primitives</span></a>.</p></li>
 </ul>
 </section>
 <section id="exceptions">
-<h2>例外<a class="headerlink" href="#exceptions" title="本標題的永久連結">¶</a></h2>
+<h2>Exceptions<a class="headerlink" href="#exceptions" title="本標題的永久連結">¶</a></h2>
 <table class="colwidths-given full-width-table docutils align-default">
 <colgroup>
 <col style="width: 50%" />
@@ -368,7 +368,7 @@ to the built-in <a class="reference internal" href="exceptions.html#TimeoutError
 </tr>
 </tbody>
 </table>
-<p class="rubric">範例</p>
+<p class="rubric">Examples</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="asyncio-task.html#asyncio-example-task-cancel"><span class="std std-ref">Handling CancelledError to run code on cancellation request</span></a>.</p></li>
 <li><p>See also the full list of
@@ -393,7 +393,7 @@ to the built-in <a class="reference internal" href="exceptions.html#TimeoutError
 <li><a class="reference internal" href="#subprocesses">Subprocesses</a></li>
 <li><a class="reference internal" href="#streams">Streams</a></li>
 <li><a class="reference internal" href="#synchronization">Synchronization</a></li>
-<li><a class="reference internal" href="#exceptions">例外</a></li>
+<li><a class="reference internal" href="#exceptions">Exceptions</a></li>
 </ul>
 </li>
 </ul>
@@ -402,7 +402,7 @@ to the built-in <a class="reference internal" href="exceptions.html#TimeoutError
   <div>
     <h4>上個主題</h4>
     <p class="topless"><a href="asyncio-platforms.html"
-                          title="上一章">平臺支援</a></p>
+                          title="上一章">Platform Support</a></p>
   </div>
   <div>
     <h4>下個主題</h4>
@@ -414,7 +414,7 @@ to the built-in <a class="reference internal" href="exceptions.html#TimeoutError
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/library/asyncio-api-index.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/library/asyncio-api-index.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -437,7 +437,7 @@ to the built-in <a class="reference internal" href="exceptions.html#TimeoutError
           <a href="asyncio-llapi-index.html" title="Low-level API Index"
              >下一頁</a> |</li>
         <li class="right" >
-          <a href="asyncio-platforms.html" title="平臺支援"
+          <a href="asyncio-platforms.html" title="Platform Support"
              >上一頁</a> |</li>
 
           <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
@@ -450,12 +450,12 @@ to the built-in <a class="reference internal" href="exceptions.html#TimeoutError
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="ipc.html" >Networking and Interprocess Communication</a> &#187;</li>
-          <li class="nav-item nav-item-3"><a href="asyncio.html" ><code class="xref py py-mod docutils literal notranslate"><span class="pre">asyncio</span></code> --- 非同步 I/O</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="asyncio.html" ><code class="xref py py-mod docutils literal notranslate"><span class="pre">asyncio</span></code> --- Asynchronous I/O</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">High-level API Index</a></li>
                 <li class="right">
                     

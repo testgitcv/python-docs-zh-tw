@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>zipfile --- Work with ZIP archives &#8212; Python 3.10.2 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zipfile --- Work with ZIP archives &#8212; Python 3.9.10 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -20,7 +20,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.2 說明文件 中搜尋"
+          title="在 Python 3.9.10 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -74,10 +74,10 @@
     <h3><a href="../contents.html">目錄</a></h3>
     <ul>
 <li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">zipfile</span></code> --- Work with ZIP archives</a><ul>
-<li><a class="reference internal" href="#zipfile-objects">ZipFile 物件</a></li>
+<li><a class="reference internal" href="#zipfile-objects">ZipFile Objects</a></li>
 <li><a class="reference internal" href="#path-objects">Path Objects</a></li>
-<li><a class="reference internal" href="#pyzipfile-objects">PyZipFile 物件</a></li>
-<li><a class="reference internal" href="#zipinfo-objects">ZipInfo 物件</a></li>
+<li><a class="reference internal" href="#pyzipfile-objects">PyZipFile Objects</a></li>
+<li><a class="reference internal" href="#zipinfo-objects">ZipInfo Objects</a></li>
 <li><a class="reference internal" href="#command-line-interface">Command-Line Interface</a><ul>
 <li><a class="reference internal" href="#command-line-options">Command-line options</a></li>
 </ul>
@@ -110,7 +110,7 @@
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/library/zipfile.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/library/zipfile.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -147,7 +147,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -177,7 +177,7 @@
             
   <section id="module-zipfile">
 <span id="zipfile-work-with-zip-archives"></span><h1><a class="reference internal" href="#module-zipfile" title="zipfile: Read and write ZIP-format archive files."><code class="xref py py-mod docutils literal notranslate"><span class="pre">zipfile</span></code></a> --- Work with ZIP archives<a class="headerlink" href="#module-zipfile" title="本標題的永久連結">¶</a></h1>
-<p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/zipfile.py">Lib/zipfile.py</a></p>
+<p><strong>Source code:</strong> <a class="reference external" href="https://github.com/python/cpython/tree/3.9/Lib/zipfile.py">Lib/zipfile.py</a></p>
 <hr class="docutils" />
 <p>The ZIP file format is a common archive and compression standard. This module
 provides tools to create, read, write, append, and list a ZIP file.  Any
@@ -219,7 +219,7 @@ not been enabled.</p>
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">zipfile.</span></span><span class="sig-name descname"><span class="pre">ZipFile</span></span></dt>
 <dd><p>The class for reading and writing ZIP files.  See section
-<a class="reference internal" href="#zipfile-objects"><span class="std std-ref">ZipFile 物件</span></a> for constructor details.</p>
+<a class="reference internal" href="#zipfile-objects"><span class="std std-ref">ZipFile Objects</span></a> for constructor details.</p>
 </dd></dl>
 
 <dl class="py class">
@@ -248,7 +248,7 @@ will not need to create these, but only use those created by this
 module. <em>filename</em> should be the full name of the archive member, and
 <em>date_time</em> should be a tuple containing six fields which describe the time
 of the last modification to the file; the fields are described in section
-<a class="reference internal" href="#zipinfo-objects"><span class="std std-ref">ZipInfo 物件</span></a>.</p>
+<a class="reference internal" href="#zipinfo-objects"><span class="std std-ref">ZipInfo Objects</span></a>.</p>
 </dd></dl>
 
 <dl class="py function">
@@ -308,13 +308,13 @@ or fail to extract individual files.</p>
 <dt><a class="reference external" href="https://pkware.cachefly.net/webdocs/casestudies/APPNOTE.TXT">PKZIP Application Note</a></dt><dd><p>Documentation on the ZIP file format by Phil Katz, the creator of the format and
 algorithms used.</p>
 </dd>
-<dt><a class="reference external" href="http://www.info-zip.org/">Info-ZIP 首頁</a></dt><dd><p>Information about the Info-ZIP project's ZIP archive programs and development
+<dt><a class="reference external" href="http://www.info-zip.org/">Info-ZIP Home Page</a></dt><dd><p>Information about the Info-ZIP project's ZIP archive programs and development
 libraries.</p>
 </dd>
 </dl>
 </div>
 <section id="zipfile-objects">
-<span id="id1"></span><h2>ZipFile 物件<a class="headerlink" href="#zipfile-objects" title="本標題的永久連結">¶</a></h2>
+<span id="id1"></span><h2>ZipFile Objects<a class="headerlink" href="#zipfile-objects" title="本標題的永久連結">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="zipfile.ZipFile">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">zipfile.</span></span><span class="sig-name descname"><span class="pre">ZipFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'r'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compression</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">ZIP_STORED</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allowZip64</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compresslevel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strict_timestamps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#zipfile.ZipFile" title="本定義的永久連結">¶</a></dt>
@@ -616,7 +616,7 @@ member of the given <a class="reference internal" href="#zipfile.ZipInfo" title=
 <a class="reference internal" href="#zipfile.ZipInfo" title="zipfile.ZipInfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">ZipInfo</span></code></a> constructor sets this member to <a class="reference internal" href="#zipfile.ZIP_STORED" title="zipfile.ZIP_STORED"><code class="xref py py-const docutils literal notranslate"><span class="pre">ZIP_STORED</span></code></a>.</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.2 版本變更: </span><em>compress_type</em> 引數。</p>
+<p><span class="versionmodified changed">在 3.2 版本變更: </span>The <em>compress_type</em> argument.</p>
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.6 版本變更: </span>Calling <a class="reference internal" href="#zipfile.ZipFile.writestr" title="zipfile.ZipFile.writestr"><code class="xref py py-meth docutils literal notranslate"><span class="pre">writestr()</span></code></a> on a ZipFile created with mode <code class="docutils literal notranslate"><span class="pre">'r'</span></code> or
@@ -666,7 +666,7 @@ indicating the root.</p>
 
 <p>Path objects expose the following features of <a class="reference internal" href="pathlib.html#pathlib.Path" title="pathlib.Path"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pathlib.Path</span></code></a>
 objects:</p>
-<p>Path objects are traversable using the <code class="docutils literal notranslate"><span class="pre">/</span></code> operator or <code class="docutils literal notranslate"><span class="pre">joinpath</span></code>.</p>
+<p>Path objects are traversable using the <code class="docutils literal notranslate"><span class="pre">/</span></code> operator.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="zipfile.Path.name">
 <span class="sig-prename descclassname"><span class="pre">Path.</span></span><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#zipfile.Path.name" title="本定義的永久連結">¶</a></dt>
@@ -730,32 +730,16 @@ implied by the context).</p>
 <dd><p>Read the current file as bytes.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt class="sig sig-object py" id="zipfile.Path.joinpath">
-<span class="sig-prename descclassname"><span class="pre">Path.</span></span><span class="sig-name descname"><span class="pre">joinpath</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#zipfile.Path.joinpath" title="本定義的永久連結">¶</a></dt>
-<dd><p>Return a new Path object with each of the <em>other</em> arguments
-joined. The following are equivalent:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Path</span><span class="p">(</span><span class="o">...</span><span class="p">)</span><span class="o">.</span><span class="n">joinpath</span><span class="p">(</span><span class="s1">&#39;child&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">joinpath</span><span class="p">(</span><span class="s1">&#39;grandchild&#39;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">Path</span><span class="p">(</span><span class="o">...</span><span class="p">)</span><span class="o">.</span><span class="n">joinpath</span><span class="p">(</span><span class="s1">&#39;child&#39;</span><span class="p">,</span> <span class="s1">&#39;grandchild&#39;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">Path</span><span class="p">(</span><span class="o">...</span><span class="p">)</span> <span class="o">/</span> <span class="s1">&#39;child&#39;</span> <span class="o">/</span> <span class="s1">&#39;grandchild&#39;</span>
-</pre></div>
-</div>
-<div class="versionchanged">
-<p><span class="versionmodified changed">在 3.10 版本變更: </span>Prior to 3.10, <code class="docutils literal notranslate"><span class="pre">joinpath</span></code> was undocumented and accepted
-exactly one parameter.</p>
-</div>
-</dd></dl>
-
 </section>
 <section id="pyzipfile-objects">
-<span id="id3"></span><h2>PyZipFile 物件<a class="headerlink" href="#pyzipfile-objects" title="本標題的永久連結">¶</a></h2>
+<span id="id3"></span><h2>PyZipFile Objects<a class="headerlink" href="#pyzipfile-objects" title="本標題的永久連結">¶</a></h2>
 <p>The <a class="reference internal" href="#zipfile.PyZipFile" title="zipfile.PyZipFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyZipFile</span></code></a> constructor takes the same parameters as the
 <a class="reference internal" href="#zipfile.ZipFile" title="zipfile.ZipFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">ZipFile</span></code></a> constructor, and one additional parameter, <em>optimize</em>.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="zipfile.PyZipFile">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">zipfile.</span></span><span class="sig-name descname"><span class="pre">PyZipFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'r'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compression</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">ZIP_STORED</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allowZip64</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">optimize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#zipfile.PyZipFile" title="本定義的永久連結">¶</a></dt>
 <dd><div class="versionadded">
-<p><span class="versionmodified added">在 3.2 版本新加入: </span><em>optimize</em> 參數。</p>
+<p><span class="versionmodified added">在 3.2 版本新加入: </span>The <em>optimize</em> parameter.</p>
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.4 版本變更: </span>ZIP64 extensions are enabled by default.</p>
@@ -805,7 +789,7 @@ this:</p>
 </pre></div>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">在 3.4 版本新加入: </span><em>filterfunc</em> 參數。</p>
+<p><span class="versionmodified added">在 3.4 版本新加入: </span>The <em>filterfunc</em> parameter.</p>
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.6.2 版本變更: </span>The <em>pathname</em> parameter accepts a <a class="reference internal" href="../glossary.html#term-path-like-object"><span class="xref std std-term">path-like object</span></a>.</p>
@@ -819,7 +803,7 @@ this:</p>
 
 </section>
 <section id="zipinfo-objects">
-<span id="id4"></span><h2>ZipInfo 物件<a class="headerlink" href="#zipinfo-objects" title="本標題的永久連結">¶</a></h2>
+<span id="id4"></span><h2>ZipInfo Objects<a class="headerlink" href="#zipinfo-objects" title="本標題的永久連結">¶</a></h2>
 <p>Instances of the <a class="reference internal" href="#zipfile.ZipInfo" title="zipfile.ZipInfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">ZipInfo</span></code></a> class are returned by the <a class="reference internal" href="#zipfile.ZipFile.getinfo" title="zipfile.ZipFile.getinfo"><code class="xref py py-meth docutils literal notranslate"><span class="pre">getinfo()</span></code></a> and
 <a class="reference internal" href="#zipfile.ZipFile.infolist" title="zipfile.ZipFile.infolist"><code class="xref py py-meth docutils literal notranslate"><span class="pre">infolist()</span></code></a> methods of <a class="reference internal" href="#zipfile.ZipFile" title="zipfile.ZipFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">ZipFile</span></code></a> objects.  Each object stores
 information about a single member of the ZIP archive.</p>
@@ -1106,10 +1090,10 @@ it overwrites files without asking.</p>
     <h3><a href="../contents.html">目錄</a></h3>
     <ul>
 <li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">zipfile</span></code> --- Work with ZIP archives</a><ul>
-<li><a class="reference internal" href="#zipfile-objects">ZipFile 物件</a></li>
+<li><a class="reference internal" href="#zipfile-objects">ZipFile Objects</a></li>
 <li><a class="reference internal" href="#path-objects">Path Objects</a></li>
-<li><a class="reference internal" href="#pyzipfile-objects">PyZipFile 物件</a></li>
-<li><a class="reference internal" href="#zipinfo-objects">ZipInfo 物件</a></li>
+<li><a class="reference internal" href="#pyzipfile-objects">PyZipFile Objects</a></li>
+<li><a class="reference internal" href="#zipinfo-objects">ZipInfo Objects</a></li>
 <li><a class="reference internal" href="#command-line-interface">Command-Line Interface</a><ul>
 <li><a class="reference internal" href="#command-line-options">Command-line options</a></li>
 </ul>
@@ -1142,7 +1126,7 @@ it overwrites files without asking.</p>
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/library/zipfile.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/library/zipfile.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -1178,7 +1162,7 @@ it overwrites files without asking.</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Argument Clinic How-To &#8212; Python 3.10.2 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Argument Clinic How-To &#8212; Python 3.9.10 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -20,14 +20,14 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.2 說明文件 中搜尋"
+          title="在 Python 3.9.10 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜尋" href="../search.html" />
     <link rel="copyright" title="版權" href="../copyright.html" />
     <link rel="next" title="Instrumenting CPython with DTrace and SystemTap" href="instrumentation.html" />
-    <link rel="prev" title="ipaddress 模組介紹" href="ipaddress.html" />
+    <link rel="prev" title="ipaddress模組介紹" href="ipaddress.html" />
     <link rel="canonical" href="https://docs.python.org/3/howto/clinic.html" />
     
       
@@ -92,7 +92,6 @@
 <li><a class="reference internal" href="#cloning-existing-functions">Cloning existing functions</a></li>
 <li><a class="reference internal" href="#calling-python-code">Calling Python code</a></li>
 <li><a class="reference internal" href="#using-a-self-converter">Using a &quot;self converter&quot;</a></li>
-<li><a class="reference internal" href="#using-a-defining-class-converter">Using a &quot;defining class&quot; converter</a></li>
 <li><a class="reference internal" href="#writing-a-custom-converter">Writing a custom converter</a></li>
 <li><a class="reference internal" href="#writing-a-custom-return-converter">Writing a custom return converter</a></li>
 <li><a class="reference internal" href="#meth-o-and-meth-noargs">METH_O and METH_NOARGS</a></li>
@@ -110,7 +109,7 @@
   <div>
     <h4>上個主題</h4>
     <p class="topless"><a href="ipaddress.html"
-                          title="上一章">ipaddress 模組介紹</a></p>
+                          title="上一章">ipaddress模組介紹</a></p>
   </div>
   <div>
     <h4>下個主題</h4>
@@ -122,7 +121,7 @@
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/howto/clinic.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/howto/clinic.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -146,7 +145,7 @@
           <a href="instrumentation.html" title="Instrumenting CPython with DTrace and SystemTap"
              accesskey="N">下一頁</a> |</li>
         <li class="right" >
-          <a href="ipaddress.html" title="ipaddress 模組介紹"
+          <a href="ipaddress.html" title="ipaddress模組介紹"
              accesskey="P">上一頁</a> |</li>
 
           <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
@@ -159,7 +158,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Python 如何達成任務</a> &#187;</li>
@@ -189,12 +188,12 @@
   <section id="argument-clinic-how-to">
 <h1>Argument Clinic How-To<a class="headerlink" href="#argument-clinic-how-to" title="本標題的永久連結">¶</a></h1>
 <dl class="field-list simple">
-<dt class="field-odd">作者</dt>
+<dt class="field-odd">author</dt>
 <dd class="field-odd"><p>Larry Hastings</p>
 </dd>
 </dl>
 <div class="topic">
-<p class="topic-title">摘要</p>
+<p class="topic-title">Abstract</p>
 <p>Argument Clinic is a preprocessor for CPython C files.
 Its purpose is to automate all the boilerplate involved
 with writing argument parsing code for &quot;builtins&quot;.
@@ -1335,60 +1334,6 @@ type for <code class="docutils literal notranslate"><span class="pre">self</span
 </pre></div>
 </div>
 </section>
-<section id="using-a-defining-class-converter">
-<h3>Using a &quot;defining class&quot; converter<a class="headerlink" href="#using-a-defining-class-converter" title="本標題的永久連結">¶</a></h3>
-<p>Argument Clinic facilitates gaining access to the defining class of a method.
-This is useful for <a class="reference internal" href="../c-api/typeobj.html#heap-types"><span class="std std-ref">heap type</span></a> methods that need to fetch
-module level state.  Use <a class="reference internal" href="../c-api/type.html#c.PyType_FromModuleAndSpec" title="PyType_FromModuleAndSpec"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyType_FromModuleAndSpec()</span></code></a> to associate a new
-heap type with a module.  You can now use <a class="reference internal" href="../c-api/type.html#c.PyType_GetModuleState" title="PyType_GetModuleState"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyType_GetModuleState()</span></code></a> on
-the defining class to fetch the module state, for example from a module method.</p>
-<p>Example from <code class="docutils literal notranslate"><span class="pre">Modules/zlibmodule.c</span></code>.  First, <code class="docutils literal notranslate"><span class="pre">defining_class</span></code> is added to
-the clinic input:</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cm">/*[clinic input]</span>
-<span class="cm">zlib.Compress.compress</span>
-
-<span class="cm">  cls: defining_class</span>
-<span class="cm">  data: Py_buffer</span>
-<span class="cm">    Binary data to be compressed.</span>
-<span class="cm">  /</span>
-</pre></div>
-</div>
-<p>After running the Argument Clinic tool, the following function signature is
-generated:</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cm">/*[clinic start generated code]*/</span><span class="w"></span>
-<span class="k">static</span><span class="w"> </span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="w"></span>
-<span class="n">zlib_Compress_compress_impl</span><span class="p">(</span><span class="n">compobject</span><span class="w"> </span><span class="o">*</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">PyTypeObject</span><span class="w"> </span><span class="o">*</span><span class="n">cls</span><span class="p">,</span><span class="w"></span>
-<span class="w">                            </span><span class="n">Py_buffer</span><span class="w"> </span><span class="o">*</span><span class="n">data</span><span class="p">)</span><span class="w"></span>
-<span class="cm">/*[clinic end generated code: output=6731b3f0ff357ca6 input=04d00f65ab01d260]*/</span><span class="w"></span>
-</pre></div>
-</div>
-<p>The following code can now use <code class="docutils literal notranslate"><span class="pre">PyType_GetModuleState(cls)</span></code> to fetch the
-module state:</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">zlibstate</span><span class="w"> </span><span class="o">*</span><span class="n">state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PyType_GetModuleState</span><span class="p">(</span><span class="n">cls</span><span class="p">);</span><span class="w"></span>
-</pre></div>
-</div>
-<p>Each method may only have one argument using this converter, and it must appear
-after <code class="docutils literal notranslate"><span class="pre">self</span></code>, or, if <code class="docutils literal notranslate"><span class="pre">self</span></code> is not used, as the first argument.  The argument
-will be of type <code class="docutils literal notranslate"><span class="pre">PyTypeObject</span> <span class="pre">*</span></code>.  The argument will not appear in the
-<code class="docutils literal notranslate"><span class="pre">__text_signature__</span></code>.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">defining_class</span></code> converter is not compatible with <code class="docutils literal notranslate"><span class="pre">__init__</span></code> and <code class="docutils literal notranslate"><span class="pre">__new__</span></code>
-methods, which cannot use the <code class="docutils literal notranslate"><span class="pre">METH_METHOD</span></code> convention.</p>
-<p>It is not possible to use <code class="docutils literal notranslate"><span class="pre">defining_class</span></code> with slot methods.  In order to
-fetch the module state from such methods, use <code class="docutils literal notranslate"><span class="pre">_PyType_GetModuleByDef</span></code> to
-look up the module and then <a class="reference internal" href="../c-api/module.html#c.PyModule_GetState" title="PyModule_GetState"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyModule_GetState()</span></code></a> to fetch the module
-state.  Example from the <code class="docutils literal notranslate"><span class="pre">setattro</span></code> slot method in
-<code class="docutils literal notranslate"><span class="pre">Modules/_threadmodule.c</span></code>:</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"></span>
-<span class="nf">local_setattro</span><span class="p">(</span><span class="n">localobject</span><span class="w"> </span><span class="o">*</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="n">v</span><span class="p">)</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="n">module</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_PyType_GetModuleByDef</span><span class="p">(</span><span class="n">Py_TYPE</span><span class="p">(</span><span class="n">self</span><span class="p">),</span><span class="w"> </span><span class="o">&amp;</span><span class="n">thread_module</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">thread_module_state</span><span class="w"> </span><span class="o">*</span><span class="n">state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_thread_state</span><span class="p">(</span><span class="n">module</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">...</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</pre></div>
-</div>
-<p>也請見 <span class="target" id="index-3"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0573"><strong>PEP 573</strong></a>。</p>
-</section>
 <section id="writing-a-custom-converter">
 <h3>Writing a custom converter<a class="headerlink" href="#writing-a-custom-converter" title="本標題的永久連結">¶</a></h3>
 <p>As we hinted at in the previous section... you can write your own converters!
@@ -1869,7 +1814,6 @@ blocks embedded in Python files look slightly different.  They look like this:</
 <li><a class="reference internal" href="#cloning-existing-functions">Cloning existing functions</a></li>
 <li><a class="reference internal" href="#calling-python-code">Calling Python code</a></li>
 <li><a class="reference internal" href="#using-a-self-converter">Using a &quot;self converter&quot;</a></li>
-<li><a class="reference internal" href="#using-a-defining-class-converter">Using a &quot;defining class&quot; converter</a></li>
 <li><a class="reference internal" href="#writing-a-custom-converter">Writing a custom converter</a></li>
 <li><a class="reference internal" href="#writing-a-custom-return-converter">Writing a custom return converter</a></li>
 <li><a class="reference internal" href="#meth-o-and-meth-noargs">METH_O and METH_NOARGS</a></li>
@@ -1887,7 +1831,7 @@ blocks embedded in Python files look slightly different.  They look like this:</
   <div>
     <h4>上個主題</h4>
     <p class="topless"><a href="ipaddress.html"
-                          title="上一章">ipaddress 模組介紹</a></p>
+                          title="上一章">ipaddress模組介紹</a></p>
   </div>
   <div>
     <h4>下個主題</h4>
@@ -1899,7 +1843,7 @@ blocks embedded in Python files look slightly different.  They look like this:</
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/howto/clinic.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/howto/clinic.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -1922,7 +1866,7 @@ blocks embedded in Python files look slightly different.  They look like this:</
           <a href="instrumentation.html" title="Instrumenting CPython with DTrace and SystemTap"
              >下一頁</a> |</li>
         <li class="right" >
-          <a href="ipaddress.html" title="ipaddress 模組介紹"
+          <a href="ipaddress.html" title="ipaddress模組介紹"
              >上一頁</a> |</li>
 
           <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
@@ -1935,7 +1879,7 @@ blocks embedded in Python files look slightly different.  They look like this:</
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 如何達成任務</a> &#187;</li>

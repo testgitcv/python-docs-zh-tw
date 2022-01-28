@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>xml.dom.minidom --- Minimal DOM implementation &#8212; Python 3.10.2 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xml.dom.minidom --- Minimal DOM implementation &#8212; Python 3.9.10 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -20,7 +20,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.2 說明文件 中搜尋"
+          title="在 Python 3.9.10 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -74,8 +74,8 @@
     <h3><a href="../contents.html">目錄</a></h3>
     <ul>
 <li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">xml.dom.minidom</span></code> --- Minimal DOM implementation</a><ul>
-<li><a class="reference internal" href="#dom-objects">DOM 物件</a></li>
-<li><a class="reference internal" href="#dom-example">DOM 範例</a></li>
+<li><a class="reference internal" href="#dom-objects">DOM Objects</a></li>
+<li><a class="reference internal" href="#dom-example">DOM Example</a></li>
 <li><a class="reference internal" href="#minidom-and-the-dom-standard">minidom and the DOM standard</a></li>
 </ul>
 </li>
@@ -97,7 +97,7 @@
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/library/xml.dom.minidom.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/library/xml.dom.minidom.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -134,7 +134,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -164,7 +164,7 @@
             
   <section id="module-xml.dom.minidom">
 <span id="xml-dom-minidom-minimal-dom-implementation"></span><h1><a class="reference internal" href="#module-xml.dom.minidom" title="xml.dom.minidom: Minimal Document Object Model (DOM) implementation."><code class="xref py py-mod docutils literal notranslate"><span class="pre">xml.dom.minidom</span></code></a> --- Minimal DOM implementation<a class="headerlink" href="#module-xml.dom.minidom" title="本標題的永久連結">¶</a></h1>
-<p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/xml/dom/minidom.py">Lib/xml/dom/minidom.py</a></p>
+<p><strong>Source code:</strong> <a class="reference external" href="https://github.com/python/cpython/tree/3.9/Lib/xml/dom/minidom.py">Lib/xml/dom/minidom.py</a></p>
 <hr class="docutils" />
 <p><a class="reference internal" href="#module-xml.dom.minidom" title="xml.dom.minidom: Minimal Document Object Model (DOM) implementation."><code class="xref py py-mod docutils literal notranslate"><span class="pre">xml.dom.minidom</span></code></a> is a minimal implementation of the Document Object
 Model interface, with an API similar to that in other languages.  It is intended
@@ -255,7 +255,7 @@ eventually take care of the objects in the tree.</p>
 </dl>
 </div>
 <section id="dom-objects">
-<span id="minidom-objects"></span><h2>DOM 物件<a class="headerlink" href="#dom-objects" title="本標題的永久連結">¶</a></h2>
+<span id="minidom-objects"></span><h2>DOM Objects<a class="headerlink" href="#dom-objects" title="本標題的永久連結">¶</a></h2>
 <p>The definition of the DOM API for Python is given as part of the <a class="reference internal" href="xml.dom.html#module-xml.dom" title="xml.dom: Document Object Model API for Python."><code class="xref py py-mod docutils literal notranslate"><span class="pre">xml.dom</span></code></a>
 module documentation.  This section lists the differences between the API and
 <a class="reference internal" href="#module-xml.dom.minidom" title="xml.dom.minidom: Minimal Document Object Model (DOM) implementation."><code class="xref py py-mod docutils literal notranslate"><span class="pre">xml.dom.minidom</span></code></a>.</p>
@@ -299,7 +299,7 @@ Not stating the argument will omit the declaration from the document.</p>
 by the user.</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.9 版本變更: </span>新增 <em>standalone</em> 參數。</p>
+<p><span class="versionmodified changed">在 3.9 版本變更: </span>The <em>standalone</em> parameter was added.</p>
 </div>
 </dd></dl>
 
@@ -320,13 +320,13 @@ likely incorrect, since UTF-8 is the default encoding of XML.</p>
 by the user.</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.9 版本變更: </span>新增 <em>standalone</em> 參數。</p>
+<p><span class="versionmodified changed">在 3.9 版本變更: </span>The <em>standalone</em> parameter was added.</p>
 </div>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="xml.dom.minidom.Node.toprettyxml">
-<span class="sig-prename descclassname"><span class="pre">Node.</span></span><span class="sig-name descname"><span class="pre">toprettyxml</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">indent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'\t'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">newl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'\n'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">standalone</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#xml.dom.minidom.Node.toprettyxml" title="本定義的永久連結">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">Node.</span></span><span class="sig-name descname"><span class="pre">toprettyxml</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">indent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'\\t'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">newl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'\\n'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">standalone</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#xml.dom.minidom.Node.toprettyxml" title="本定義的永久連結">¶</a></dt>
 <dd><p>Return a pretty-printed version of the document. <em>indent</em> specifies the
 indentation string and defaults to a tabulator; <em>newl</em> specifies the string
 emitted at the end of each line and defaults to <code class="docutils literal notranslate"><span class="pre">\n</span></code>.</p>
@@ -338,13 +338,13 @@ emitted at the end of each line and defaults to <code class="docutils literal no
 by the user.</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.9 版本變更: </span>新增 <em>standalone</em> 參數。</p>
+<p><span class="versionmodified changed">在 3.9 版本變更: </span>The <em>standalone</em> parameter was added.</p>
 </div>
 </dd></dl>
 
 </section>
 <section id="dom-example">
-<span id="id2"></span><h2>DOM 範例<a class="headerlink" href="#dom-example" title="本標題的永久連結">¶</a></h2>
+<span id="id2"></span><h2>DOM Example<a class="headerlink" href="#dom-example" title="本標題的永久連結">¶</a></h2>
 <p>This example program is a fairly realistic example of a simple program. In this
 particular case, we do not take much advantage of the flexibility of the DOM.</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">xml.dom.minidom</span>
@@ -481,8 +481,8 @@ and <a class="reference external" href="https://www.iana.org/assignments/charact
     <h3><a href="../contents.html">目錄</a></h3>
     <ul>
 <li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">xml.dom.minidom</span></code> --- Minimal DOM implementation</a><ul>
-<li><a class="reference internal" href="#dom-objects">DOM 物件</a></li>
-<li><a class="reference internal" href="#dom-example">DOM 範例</a></li>
+<li><a class="reference internal" href="#dom-objects">DOM Objects</a></li>
+<li><a class="reference internal" href="#dom-example">DOM Example</a></li>
 <li><a class="reference internal" href="#minidom-and-the-dom-standard">minidom and the DOM standard</a></li>
 </ul>
 </li>
@@ -504,7 +504,7 @@ and <a class="reference external" href="https://www.iana.org/assignments/charact
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/library/xml.dom.minidom.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/library/xml.dom.minidom.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -540,7 +540,7 @@ and <a class="reference external" href="https://www.iana.org/assignments/charact
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>

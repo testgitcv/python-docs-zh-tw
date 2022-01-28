@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Developing with asyncio &#8212; Python 3.10.2 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developing with asyncio &#8212; Python 3.9.10 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -20,7 +20,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.2 說明文件 中搜尋"
+          title="在 Python 3.9.10 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -100,7 +100,7 @@
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/library/asyncio-dev.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/library/asyncio-dev.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -137,12 +137,12 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="ipc.html" >Networking and Interprocess Communication</a> &#187;</li>
-          <li class="nav-item nav-item-3"><a href="asyncio.html" accesskey="U"><code class="xref py py-mod docutils literal notranslate"><span class="pre">asyncio</span></code> --- 非同步 I/O</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="asyncio.html" accesskey="U"><code class="xref py py-mod docutils literal notranslate"><span class="pre">asyncio</span></code> --- Asynchronous I/O</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Developing with asyncio</a></li>
                 <li class="right">
                     
@@ -298,7 +298,7 @@ will emit a <a class="reference internal" href="exceptions.html#RuntimeWarning" 
 <span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
 </pre></div>
 </div>
-<p>輸出：</p>
+<p>Output:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">test</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">7</span><span class="p">:</span> <span class="ne">RuntimeWarning</span><span class="p">:</span> <span class="n">coroutine</span> <span class="s1">&#39;test&#39;</span> <span class="n">was</span> <span class="n">never</span> <span class="n">awaited</span>
   <span class="n">test</span><span class="p">()</span>
 </pre></div>
@@ -341,7 +341,7 @@ Future object is garbage collected.</p>
 <span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
 </pre></div>
 </div>
-<p>輸出：</p>
+<p>Output:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">Task</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">never</span> <span class="n">retrieved</span>
 <span class="n">future</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">Task</span> <span class="n">finished</span> <span class="n">coro</span><span class="o">=&lt;</span><span class="n">bug</span><span class="p">()</span> <span class="n">done</span><span class="p">,</span> <span class="n">defined</span> <span class="n">at</span> <span class="n">test</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">3</span><span class="o">&gt;</span>
   <span class="n">exception</span><span class="o">=</span><span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;not consumed&#39;</span><span class="p">)</span><span class="o">&gt;</span>
@@ -414,7 +414,7 @@ traceback where the task was created:</p>
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/library/asyncio-dev.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/library/asyncio-dev.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -450,12 +450,12 @@ traceback where the task was created:</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="ipc.html" >Networking and Interprocess Communication</a> &#187;</li>
-          <li class="nav-item nav-item-3"><a href="asyncio.html" ><code class="xref py py-mod docutils literal notranslate"><span class="pre">asyncio</span></code> --- 非同步 I/O</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="asyncio.html" ><code class="xref py py-mod docutils literal notranslate"><span class="pre">asyncio</span></code> --- Asynchronous I/O</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Developing with asyncio</a></li>
                 <li class="right">
                     

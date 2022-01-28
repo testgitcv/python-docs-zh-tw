@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>ossaudiodev --- Access to OSS-compatible audio devices &#8212; Python 3.10.2 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ossaudiodev --- Access to OSS-compatible audio devices &#8212; Python 3.9.10 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -20,7 +20,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.2 說明文件 中搜尋"
+          title="在 Python 3.9.10 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -96,7 +96,7 @@
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/library/ossaudiodev.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/library/ossaudiodev.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -133,7 +133,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -318,7 +318,7 @@ of the formats supported by OSS are:</p>
 <col style="width: 64%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p>格式</p></th>
+<tr class="row-odd"><th class="head"><p>Format</p></th>
 <th class="head"><p>描述</p></th>
 </tr>
 </thead>
@@ -456,11 +456,11 @@ see if each parameter was actually set to the requested value, and raises
 <em>samplerate</em>) indicating the parameter values that were actually set by the
 device driver (i.e., the same as the return values of <a class="reference internal" href="#ossaudiodev.oss_audio_device.setfmt" title="ossaudiodev.oss_audio_device.setfmt"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setfmt()</span></code></a>,
 <a class="reference internal" href="#ossaudiodev.oss_audio_device.channels" title="ossaudiodev.oss_audio_device.channels"><code class="xref py py-meth docutils literal notranslate"><span class="pre">channels()</span></code></a>, and <a class="reference internal" href="#ossaudiodev.oss_audio_device.speed" title="ossaudiodev.oss_audio_device.speed"><code class="xref py py-meth docutils literal notranslate"><span class="pre">speed()</span></code></a>).</p>
-<p>舉例來說：</p>
+<p>For example,</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">fmt</span><span class="p">,</span> <span class="n">channels</span><span class="p">,</span> <span class="n">rate</span><span class="p">)</span> <span class="o">=</span> <span class="n">dsp</span><span class="o">.</span><span class="n">setparameters</span><span class="p">(</span><span class="n">fmt</span><span class="p">,</span> <span class="n">channels</span><span class="p">,</span> <span class="n">rate</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>等價於：</p>
+<p>is equivalent to</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">fmt</span> <span class="o">=</span> <span class="n">dsp</span><span class="o">.</span><span class="n">setfmt</span><span class="p">(</span><span class="n">fmt</span><span class="p">)</span>
 <span class="n">channels</span> <span class="o">=</span> <span class="n">dsp</span><span class="o">.</span><span class="n">channels</span><span class="p">(</span><span class="n">channels</span><span class="p">)</span>
 <span class="n">rate</span> <span class="o">=</span> <span class="n">dsp</span><span class="o">.</span><span class="n">rate</span><span class="p">(</span><span class="n">rate</span><span class="p">)</span>
@@ -644,7 +644,7 @@ microphone input:</p>
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/library/ossaudiodev.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/library/ossaudiodev.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -680,7 +680,7 @@ microphone input:</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>

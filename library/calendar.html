@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>calendar --- General calendar-related functions &#8212; Python 3.10.2 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calendar --- General calendar-related functions &#8212; Python 3.9.10 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -20,7 +20,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.2 說明文件 中搜尋"
+          title="在 Python 3.9.10 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -85,7 +85,7 @@
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/library/calendar.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/library/calendar.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -122,7 +122,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -152,7 +152,7 @@
             
   <section id="module-calendar">
 <span id="calendar-general-calendar-related-functions"></span><h1><a class="reference internal" href="#module-calendar" title="calendar: Functions for working with calendars, including some emulation of the Unix cal program."><code class="xref py py-mod docutils literal notranslate"><span class="pre">calendar</span></code></a> --- General calendar-related functions<a class="headerlink" href="#module-calendar" title="本標題的永久連結">¶</a></h1>
-<p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.10/Lib/calendar.py">Lib/calendar.py</a></p>
+<p><strong>Source code:</strong> <a class="reference external" href="https://github.com/python/cpython/tree/3.9/Lib/calendar.py">Lib/calendar.py</a></p>
 <hr class="docutils" />
 <p>This module allows you to output calendars like the Unix <strong class="program">cal</strong> program,
 and provides additional useful functions related to the calendar. By default,
@@ -172,7 +172,7 @@ interpreted as prescribed by the ISO 8601 standard.  Year 0 is 1 BC, year -1 is
 <dt class="sig sig-object py" id="calendar.Calendar">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">calendar.</span></span><span class="sig-name descname"><span class="pre">Calendar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">firstweekday</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.Calendar" title="本定義的永久連結">¶</a></dt>
 <dd><p>Creates a <a class="reference internal" href="#calendar.Calendar" title="calendar.Calendar"><code class="xref py py-class docutils literal notranslate"><span class="pre">Calendar</span></code></a> object. <em>firstweekday</em> is an integer specifying the
-first day of the week. <a class="reference internal" href="#calendar.MONDAY" title="calendar.MONDAY"><code class="xref py py-const docutils literal notranslate"><span class="pre">MONDAY</span></code></a> is <code class="docutils literal notranslate"><span class="pre">0</span></code> (the default), <a class="reference internal" href="#calendar.SUNDAY" title="calendar.SUNDAY"><code class="xref py py-const docutils literal notranslate"><span class="pre">SUNDAY</span></code></a> is <code class="docutils literal notranslate"><span class="pre">6</span></code>.</p>
+first day of the week. <code class="docutils literal notranslate"><span class="pre">0</span></code> is Monday (the default), <code class="docutils literal notranslate"><span class="pre">6</span></code> is Sunday.</p>
 <p>A <a class="reference internal" href="#calendar.Calendar" title="calendar.Calendar"><code class="xref py py-class docutils literal notranslate"><span class="pre">Calendar</span></code></a> object provides several methods that can be used for
 preparing the calendar data for formatting. This class doesn't do any formatting
 itself. This is the job of subclasses.</p>
@@ -436,7 +436,7 @@ single CSS class with a space separated list of CSS classes, for example:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;text-bold text-red&quot;</span>
 </pre></div>
 </div>
-<p>以下是客製化 <code class="xref py py-class docutils literal notranslate"><span class="pre">HTMLCalendar</span></code> 的範例：</p>
+<p>Here is an example how <code class="xref py py-class docutils literal notranslate"><span class="pre">HTMLCalendar</span></code> can be customized:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">CustomHTMLCal</span><span class="p">(</span><span class="n">calendar</span><span class="o">.</span><span class="n">HTMLCalendar</span><span class="p">):</span>
     <span class="n">cssclasses</span> <span class="o">=</span> <span class="p">[</span><span class="n">style</span> <span class="o">+</span> <span class="s2">&quot; text-nowrap&quot;</span> <span class="k">for</span> <span class="n">style</span> <span class="ow">in</span>
                   <span class="n">calendar</span><span class="o">.</span><span class="n">HTMLCalendar</span><span class="o">.</span><span class="n">cssclasses</span><span class="p">]</span>
@@ -476,8 +476,8 @@ the current locale is a process-wide setting, they are not thread-safe.</p>
 <dt class="sig sig-object py" id="calendar.setfirstweekday">
 <span class="sig-prename descclassname"><span class="pre">calendar.</span></span><span class="sig-name descname"><span class="pre">setfirstweekday</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">weekday</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#calendar.setfirstweekday" title="本定義的永久連結">¶</a></dt>
 <dd><p>Sets the weekday (<code class="docutils literal notranslate"><span class="pre">0</span></code> is Monday, <code class="docutils literal notranslate"><span class="pre">6</span></code> is Sunday) to start each week. The
-values <a class="reference internal" href="#calendar.MONDAY" title="calendar.MONDAY"><code class="xref py py-const docutils literal notranslate"><span class="pre">MONDAY</span></code></a>, <a class="reference internal" href="#calendar.TUESDAY" title="calendar.TUESDAY"><code class="xref py py-const docutils literal notranslate"><span class="pre">TUESDAY</span></code></a>, <a class="reference internal" href="#calendar.WEDNESDAY" title="calendar.WEDNESDAY"><code class="xref py py-const docutils literal notranslate"><span class="pre">WEDNESDAY</span></code></a>, <a class="reference internal" href="#calendar.THURSDAY" title="calendar.THURSDAY"><code class="xref py py-const docutils literal notranslate"><span class="pre">THURSDAY</span></code></a>,
-<a class="reference internal" href="#calendar.FRIDAY" title="calendar.FRIDAY"><code class="xref py py-const docutils literal notranslate"><span class="pre">FRIDAY</span></code></a>, <a class="reference internal" href="#calendar.SATURDAY" title="calendar.SATURDAY"><code class="xref py py-const docutils literal notranslate"><span class="pre">SATURDAY</span></code></a>, and <a class="reference internal" href="#calendar.SUNDAY" title="calendar.SUNDAY"><code class="xref py py-const docutils literal notranslate"><span class="pre">SUNDAY</span></code></a> are provided for
+values <code class="xref py py-const docutils literal notranslate"><span class="pre">MONDAY</span></code>, <code class="xref py py-const docutils literal notranslate"><span class="pre">TUESDAY</span></code>, <code class="xref py py-const docutils literal notranslate"><span class="pre">WEDNESDAY</span></code>, <code class="xref py py-const docutils literal notranslate"><span class="pre">THURSDAY</span></code>,
+<code class="xref py py-const docutils literal notranslate"><span class="pre">FRIDAY</span></code>, <code class="xref py py-const docutils literal notranslate"><span class="pre">SATURDAY</span></code>, and <code class="xref py py-const docutils literal notranslate"><span class="pre">SUNDAY</span></code> are provided for
 convenience. For example, to set the first weekday to Sunday:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">calendar</span>
 <span class="n">calendar</span><span class="o">.</span><span class="n">setfirstweekday</span><span class="p">(</span><span class="n">calendar</span><span class="o">.</span><span class="n">SUNDAY</span><span class="p">)</span>
@@ -599,31 +599,13 @@ locale.  This follows normal convention of January being month number 1, so it
 has a length of 13 and  <code class="docutils literal notranslate"><span class="pre">month_abbr[0]</span></code> is the empty string.</p>
 </dd></dl>
 
-<dl class="py data">
-<dt class="sig sig-object py" id="calendar.MONDAY">
-<span class="sig-prename descclassname"><span class="pre">calendar.</span></span><span class="sig-name descname"><span class="pre">MONDAY</span></span><a class="headerlink" href="#calendar.MONDAY" title="本定義的永久連結">¶</a></dt>
-<dt class="sig sig-object py" id="calendar.TUESDAY">
-<span class="sig-prename descclassname"><span class="pre">calendar.</span></span><span class="sig-name descname"><span class="pre">TUESDAY</span></span><a class="headerlink" href="#calendar.TUESDAY" title="本定義的永久連結">¶</a></dt>
-<dt class="sig sig-object py" id="calendar.WEDNESDAY">
-<span class="sig-prename descclassname"><span class="pre">calendar.</span></span><span class="sig-name descname"><span class="pre">WEDNESDAY</span></span><a class="headerlink" href="#calendar.WEDNESDAY" title="本定義的永久連結">¶</a></dt>
-<dt class="sig sig-object py" id="calendar.THURSDAY">
-<span class="sig-prename descclassname"><span class="pre">calendar.</span></span><span class="sig-name descname"><span class="pre">THURSDAY</span></span><a class="headerlink" href="#calendar.THURSDAY" title="本定義的永久連結">¶</a></dt>
-<dt class="sig sig-object py" id="calendar.FRIDAY">
-<span class="sig-prename descclassname"><span class="pre">calendar.</span></span><span class="sig-name descname"><span class="pre">FRIDAY</span></span><a class="headerlink" href="#calendar.FRIDAY" title="本定義的永久連結">¶</a></dt>
-<dt class="sig sig-object py" id="calendar.SATURDAY">
-<span class="sig-prename descclassname"><span class="pre">calendar.</span></span><span class="sig-name descname"><span class="pre">SATURDAY</span></span><a class="headerlink" href="#calendar.SATURDAY" title="本定義的永久連結">¶</a></dt>
-<dt class="sig sig-object py" id="calendar.SUNDAY">
-<span class="sig-prename descclassname"><span class="pre">calendar.</span></span><span class="sig-name descname"><span class="pre">SUNDAY</span></span><a class="headerlink" href="#calendar.SUNDAY" title="本定義的永久連結">¶</a></dt>
-<dd><p>Aliases for day numbers, where <code class="docutils literal notranslate"><span class="pre">MONDAY</span></code> is <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">SUNDAY</span></code> is <code class="docutils literal notranslate"><span class="pre">6</span></code>.</p>
-</dd></dl>
-
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
 <dl class="simple">
-<dt><a class="reference internal" href="datetime.html#module-datetime" title="datetime: Basic date and time types."><code class="xref py py-mod docutils literal notranslate"><span class="pre">datetime</span></code></a> 模組</dt><dd><p>Object-oriented interface to dates and times with similar functionality to the
+<dt>Module <a class="reference internal" href="datetime.html#module-datetime" title="datetime: Basic date and time types."><code class="xref py py-mod docutils literal notranslate"><span class="pre">datetime</span></code></a></dt><dd><p>Object-oriented interface to dates and times with similar functionality to the
 <a class="reference internal" href="time.html#module-time" title="time: Time access and conversions."><code class="xref py py-mod docutils literal notranslate"><span class="pre">time</span></code></a> module.</p>
 </dd>
-<dt><a class="reference internal" href="time.html#module-time" title="time: Time access and conversions."><code class="xref py py-mod docutils literal notranslate"><span class="pre">time</span></code></a> 模組</dt><dd><p>Low-level time related functions.</p>
+<dt>Module <a class="reference internal" href="time.html#module-time" title="time: Time access and conversions."><code class="xref py py-mod docutils literal notranslate"><span class="pre">time</span></code></a></dt><dd><p>Low-level time related functions.</p>
 </dd>
 </dl>
 </div>
@@ -651,7 +633,7 @@ has a length of 13 and  <code class="docutils literal notranslate"><span class="
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/library/calendar.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/library/calendar.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -687,7 +669,7 @@ has a length of 13 and  <code class="docutils literal notranslate"><span class="
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>

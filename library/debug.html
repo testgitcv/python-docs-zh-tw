@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>除錯與效能分析 &#8212; Python 3.10.2 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debugging and Profiling &#8212; Python 3.9.10 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
@@ -20,13 +20,13 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.10.2 說明文件 中搜尋"
+          title="在 Python 3.9.10 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜尋" href="../search.html" />
     <link rel="copyright" title="版權" href="../copyright.html" />
-    <link rel="next" title="稽核事件表" href="audit_events.html" />
+    <link rel="next" title="Audit events table" href="audit_events.html" />
     <link rel="prev" title="test --- Regression tests package for Python" href="test.html" />
     <link rel="canonical" href="https://docs.python.org/3/library/debug.html" />
     
@@ -78,14 +78,14 @@
   <div>
     <h4>下個主題</h4>
     <p class="topless"><a href="audit_events.html"
-                          title="下一章">稽核事件表</a></p>
+                          title="下一章">Audit events table</a></p>
   </div>
   <div role="note" aria-label="source link">
     <h3>此頁面</h3>
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/library/debug.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/library/debug.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -106,7 +106,7 @@
           <a href="../py-modindex.html" title="Python 模組索引"
              >模組</a> |</li>
         <li class="right" >
-          <a href="audit_events.html" title="稽核事件表"
+          <a href="audit_events.html" title="Audit events table"
              accesskey="N">下一頁</a> |</li>
         <li class="right" >
           <a href="test.html" title="test --- Regression tests package for Python"
@@ -122,11 +122,11 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Python 標準函式庫 (Standard Library)</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">除錯與效能分析</a></li>
+        <li class="nav-item nav-item-this"><a href="">Debugging and Profiling</a></li>
                 <li class="right">
                     
 
@@ -150,11 +150,16 @@
           <div class="body" role="main">
             
   <section id="debugging-and-profiling">
-<h1>除錯與效能分析<a class="headerlink" href="#debugging-and-profiling" title="本標題的永久連結">¶</a></h1>
-<p>這些函式庫幫助你進行 Python 程式開發：除錯器允許你在程式碼中單步 (step) 執行、分析堆疊框 (stack frames) 以及設置中斷點 (breakpoints) 等，效能分析工具執行程式碼並提供關於執行時間的詳細分析，讓你找到程式中的瓶頸 (bottlenecks)。事件稽核 (auditing events) 提供執行時期行為的可見性，否則的話可能需要更侵入性的除錯或修補。</p>
+<h1>Debugging and Profiling<a class="headerlink" href="#debugging-and-profiling" title="本標題的永久連結">¶</a></h1>
+<p>These libraries help you with Python development: the debugger enables you to
+step through code, analyze stack frames and set breakpoints etc., and the
+profilers run code and give you a detailed breakdown of execution times,
+allowing you to identify bottlenecks in your programs. Auditing events
+provide visibility into runtime behaviors that would otherwise require
+intrusive debugging or patching.</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="audit_events.html">稽核事件表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="audit_events.html">Audit events table</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bdb.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">bdb</span></code> --- Debugger framework</a></li>
 <li class="toctree-l1"><a class="reference internal" href="faulthandler.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">faulthandler</span></code> --- Dump the Python traceback</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="faulthandler.html#dumping-the-traceback">Dumping the traceback</a></li>
@@ -162,7 +167,7 @@
 <li class="toctree-l2"><a class="reference internal" href="faulthandler.html#dumping-the-tracebacks-after-a-timeout">Dumping the tracebacks after a timeout</a></li>
 <li class="toctree-l2"><a class="reference internal" href="faulthandler.html#dumping-the-traceback-on-a-user-signal">Dumping the traceback on a user signal</a></li>
 <li class="toctree-l2"><a class="reference internal" href="faulthandler.html#issue-with-file-descriptors">Issue with file descriptors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="faulthandler.html#example">範例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faulthandler.html#example">Example</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="pdb.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pdb</span></code> --- The Python Debugger</a><ul>
@@ -175,8 +180,8 @@
 <li class="toctree-l2"><a class="reference internal" href="profile.html#module-cProfile"><code class="xref py py-mod docutils literal notranslate"><span class="pre">profile</span></code> and <code class="xref py py-mod docutils literal notranslate"><span class="pre">cProfile</span></code> Module Reference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="profile.html#the-stats-class">The <code class="xref py py-class docutils literal notranslate"><span class="pre">Stats</span></code> Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="profile.html#what-is-deterministic-profiling">What Is Deterministic Profiling?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="profile.html#limitations">限制</a></li>
-<li class="toctree-l2"><a class="reference internal" href="profile.html#calibration">校正</a></li>
+<li class="toctree-l2"><a class="reference internal" href="profile.html#limitations">Limitations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="profile.html#calibration">Calibration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="profile.html#using-a-custom-timer">Using a custom timer</a></li>
 </ul>
 </li>
@@ -184,7 +189,7 @@
 <li class="toctree-l2"><a class="reference internal" href="timeit.html#basic-examples">基礎範例</a></li>
 <li class="toctree-l2"><a class="reference internal" href="timeit.html#python-interface">Python Interface</a></li>
 <li class="toctree-l2"><a class="reference internal" href="timeit.html#command-line-interface">命令執行列介面</a></li>
-<li class="toctree-l2"><a class="reference internal" href="timeit.html#examples">範例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="timeit.html#examples">Examples</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="trace.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">trace</span></code> --- Trace or track Python statement execution</a><ul>
@@ -198,7 +203,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="tracemalloc.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tracemalloc</span></code> --- Trace memory allocations</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="tracemalloc.html#examples">範例</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tracemalloc.html#examples">Examples</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="tracemalloc.html#display-the-top-10">Display the top 10</a></li>
 <li class="toctree-l3"><a class="reference internal" href="tracemalloc.html#compute-differences">Compute differences</a></li>
 <li class="toctree-l3"><a class="reference internal" href="tracemalloc.html#get-the-traceback-of-a-memory-block">Get the traceback of a memory block</a></li>
@@ -209,7 +214,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="tracemalloc.html#api">API</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="tracemalloc.html#functions">函式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tracemalloc.html#functions">Functions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="tracemalloc.html#domainfilter">DomainFilter</a></li>
 <li class="toctree-l3"><a class="reference internal" href="tracemalloc.html#filter">Filter</a></li>
 <li class="toctree-l3"><a class="reference internal" href="tracemalloc.html#frame">Frame</a></li>
@@ -241,14 +246,14 @@
   <div>
     <h4>下個主題</h4>
     <p class="topless"><a href="audit_events.html"
-                          title="下一章">稽核事件表</a></p>
+                          title="下一章">Audit events table</a></p>
   </div>
   <div role="note" aria-label="source link">
     <h3>此頁面</h3>
     <ul class="this-page-menu">
       <li><a href="../bugs.html">回報錯誤</a></li>
       <li>
-        <a href="https://github.com/python/cpython/blob/3.10/Doc/library/debug.rst"
+        <a href="https://github.com/python/cpython/blob/3.9/Doc/library/debug.rst"
             rel="nofollow">顯示原始碼
         </a>
       </li>
@@ -268,7 +273,7 @@
           <a href="../py-modindex.html" title="Python 模組索引"
              >模組</a> |</li>
         <li class="right" >
-          <a href="audit_events.html" title="稽核事件表"
+          <a href="audit_events.html" title="Audit events table"
              >下一頁</a> |</li>
         <li class="right" >
           <a href="test.html" title="test --- Regression tests package for Python"
@@ -284,11 +289,11 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.10.2 Documentation</a> &#187;
+      <a href="../index.html">3.9.10 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">除錯與效能分析</a></li>
+        <li class="nav-item nav-item-this"><a href="">Debugging and Profiling</a></li>
                 <li class="right">
                     
 
